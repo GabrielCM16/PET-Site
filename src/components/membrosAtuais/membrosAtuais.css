@@ -1,0 +1,36 @@
+html,
+body {
+  background-color: #04105d !important;
+  color: white;
+  height: 100%;
+}
+
+.card-custom {
+  background-color: #576e8e;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 270px;
+  padding: 1rem;
+  height: auto;
+}
+
+.card-custom p {
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

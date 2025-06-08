@@ -1,0 +1,157 @@
+
+header {
+  background-color: #ffffff;
+  padding: 0 50px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Hind', sans-serif;
+  position: relative;
+}
+
+header img {
+  height: 48px;
+  width: 160px;
+  filter: brightness(0) saturate(100%);
+}
+
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: black;
+}
+
+#nav-menu {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#nav-menu a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+#nav-menu a:hover {
+  color: #007bff;
+}
+
+#nav-menu div {
+  width: 2px;
+  height: 28px;
+  background-color: black;
+}
+
+/* Profile Section Styles */
+.profile-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 50px;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info {
+  max-width: 500px;
+}
+
+.profile-info h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.profile-info p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}
+
+.profile-links a {
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.profile-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 20px;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  #nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #ffffff;
+    flex-direction: column;
+    width: 200px;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 0 0 8px 8px;
+    gap: 0;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  #nav-menu.open {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  #nav-menu a {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+  }
+
+  #nav-menu a:last-child {
+    border-bottom: none;
+  }
+
+  #nav-menu div {
+    display: none;
+  }
+
+  header img {
+    height: 40px;
+    width: 140px;
+  }
+
+}

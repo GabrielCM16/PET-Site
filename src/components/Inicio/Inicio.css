@@ -1,0 +1,31 @@
+html, body {
+  background-color: #04105d !important;
+  color: white;
+  height: 100%;
+}
+
+.card-custom {
+  background-color: #576e8e;
+  border-radius: 25px;
+  height: 300px;
+  width: 270px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.card-custom:hover {
+  background-color: #435575; /* tom mais escuro/forte */
+}
+
+
+.logo-img {
+  width: 420px;
+  height: 120px;
+  margin-top: 80px;
+}
+
+.group-img {
+  width: 400px;
+  height: 410px;
+  margin: 50px 0;
+}

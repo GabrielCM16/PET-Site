@@ -18,14 +18,15 @@ html, body {
 }
 
 
-.logo-img {
-  width: 420px;
-  height: 120px;
-  margin-top: 80px;
-}
-
 .group-img {
   width: 400px;
   height: 410px;
   margin: 50px 0;
+}
+
+.logo-img {
+  max-width: 350px;  /* controla o tamanho máximo da imagem */
+  width: 100%;       /* faz a imagem escalar dentro do container */
+  height: auto;      /* mantém proporção */
+  margin-top: 80px;
 }

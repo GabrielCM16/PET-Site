@@ -21,7 +21,7 @@ const membros = [
       cidadeNatal: "Cascavel - PR",
       motivoCurso:
         "Fazendo técnico em informática junto com o Ensino Médio descobri que gosto bastante de programar e de resolver problemas usando programação. Também tive alguns professores que foram fonte de inspiração e incentivo, o que me levou a considerar e, em 2024, escolher o curso como graduação.",
-      alternativaCurso: "TADS, Engenharia da Computação ou Engenharia de Produção.",
+      alternativaCurso: "TADS, Engenharia da Computação ou Engenharia de Controle & Automação.",
       academica: "Grande duvida por enquanto, mas acho que sim... depende... talvez?! quem sabe.",
       hobby: "tocar teclado/piano, fazer um som com a galera da banda, jogar quando tenho um tempo livre. ",
       filme: "Corações de Ferro",

@@ -147,10 +147,11 @@ const Membros: React.FC = () => {
                             className="rounded-circle mb-3"
                             style={{ width: "200px", height: "200px" }}
                         />
-                        <h3 className="fs-2">Guilherme Galante</h3>
-                        <p className="fs-4">Tutor desde 2023</p>
+                        <h3 className="fs-2">Marcio Seiji Oyamada</h3>
+                        <p className="fs-4">Tutor desde 2016</p>
                     </div>
 
+                    
                     <div className="col-md-4 d-flex flex-column align-items-center mb-4">
                         <img
                             src={tutorImg}
@@ -158,19 +159,8 @@ const Membros: React.FC = () => {
                             className="rounded-circle mb-3"
                             style={{ width: "200px", height: "200px" }}
                         />
-                        <h3 className="fs-2">Vanessa Silva</h3>
-                        <p className="fs-4">Tutora desde 2022</p>
-                    </div>
-
-                    <div className="col-md-4 d-flex flex-column align-items-center mb-4">
-                        <img
-                            src={tutorImg}
-                            alt="Tutor Vanessa Silva"
-                            className="rounded-circle mb-3"
-                            style={{ width: "200px", height: "200px" }}
-                        />
-                        <h3 className="fs-2">Vanessa Silva</h3>
-                        <p className="fs-4">Tutora desde 2022</p>
+                        <h3 className="fs-2">Clodis Boscarioli</h3>
+                        <p className="fs-4">Tutor desde 2010</p>
                     </div>
                 </div>
             </div>

@@ -7,6 +7,7 @@ import gabrielImg from "./../../assets/images/members/gabriel.png";
 import qvd from "./../../assets/images/members/qvd.png";
 import dudu from "./../../assets/images/members/eduardo.png";
 import lenser from "./../../assets/images/members/Lenser.png";
+import thiago from "./../../assets/images/members/thiago.png";
 
 const membros = [
   {
@@ -110,27 +111,27 @@ const membros = [
 
   // Outros membros...
   {
-    nome: "Ronaldo Farias",
-    icv: "ICV de pesquisa em IA ICV sobre sistemas embarcados avançados",
-    membroDesde: "2022",
+    nome: "Thiago Oliveira Dupim",
+    foto: thiago,
+    icv: "ICV: TBD",
+    membroDesde: "2025",
     links: {
-      lattes: "https://orcid.org/0000-0002-0437-7249",
-      instagram: "https://www.instagram.com/ronaldo.dck/",
-      github: "https://github.com/ronaldo",
-      email: "mailto:ronaldo@example.com",
+      lattes: "",
+      instagram: "https://www.instagram.com/thiagodpim/",
+      github: "https://github.com/umthiago",
+      email: "mailto:thiagoflx.y@gmail.com",
     },
     saibaMais: {
       cidadeNatal: "Cascavel - PR",
       motivoCurso:
-        "Sempre me dei muito bem com matemática. Fazendo técnico em informática junto com o Ensino Médio descobri que gosto bastante de programar e de resolver problemas usando programação. Também tive alguns professores que foram fonte de inspiração e incentivo, o que me levou a considerar e, em 2019, escolher o curso como graduação.",
-      alternativaCurso: "Música ou matemática.",
-      academica: "Sim. Acho o trabalho na pesquisa científica incrível e me vejo também como professor no futuro.",
-      hobby: "Principalmente tocar flauta e ouvir música, mas também jogar RPG de mesa e ler.",
-      livro: "“O Temor do Sábio”.",
-      filme: "“Os Miseráveis”",
-      jogo: "Pathfinder, Dungeons and Dragons, Ragnarok, Truco e Cacheta.",
-      musica: "“Prince Igor” - Borodin.",
-      comida: "Estrogonofe, pizza, lasanha, feijão e arroz, batata frita, risoto.",
+        "Optei por Ciência da Computação porque é uma área em constante crescimento e com ampla demanda no mercado e a possibilidade de atuar em diversos setores, que foi um grande atrativo para mim",
+      alternativaCurso: "TADS & Engenharia de Software",
+      academica: "Pretendo seguir atuando com ênfase em inteligência artificial, que é uma das áreas mais promissoras e transformadoras da atualidade",
+      hobby: "Ensaiar com a banda, ir a academia",
+      filme: "Ilha do Medo",
+      jogo: "Red Dead Redemption 2, Uncharted",
+      musica: "Need 2 - Pinegrove.",
+      comida: "Macarrão ao molho bechamel, BomBom Aberto",
     },
   },
   {
@@ -225,7 +226,7 @@ const Membros: React.FC = () => {
           style={{ width: "250px", height: "250px" }}
         />
         <h3 className="fs-2">Guilherme Galante</h3>
-        <p className="fs-3">Tutor desde 2023</p>
+        <p className="fs-3">Tutor desde 2022</p>
       </div>
 
       <div className="row justify-content-center mt-5">

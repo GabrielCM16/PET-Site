@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         <div className="footer-section about">
           <h3 className="footer-title">PETComp</h3>
           <p>
-            Programa de Educação Tutorial em Ciência da Computação da Unioeste – Campus Cascavel. 
+            Programa de Educação Tutorial em Ciência da Computação da Unioeste – Campus Cascavel.
             Promovendo conhecimento, pesquisa e extensão.
           </p>
         </div>
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
 
 
 
-        
+
 
         <div className="footer-section links">
           <h3 className="footer-title">Links Úteis</h3>
@@ -68,8 +68,13 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2025 PETComp Unioeste - Todos os direitos reservados.</p>
+        <p>
+          © <a href="https://www.youtube.com/@trestroxa" target="_blank" style={{ textDecoration: 'none', color: 'inherit' }}>
+            2025
+          </a> PETComp Unioeste - Todos os direitos reservados.
+        </p>
       </div>
+
     </footer>
   );
 };

@@ -6,6 +6,7 @@ import tutorImg from "./../../assets/images/members/profile.png";
 import gabrielImg from "./../../assets/images/members/gabriel.png";
 import qvd from "./../../assets/images/members/qvd.png";
 import dudu from "./../../assets/images/members/eduardo.png";
+import lenser from "./../../assets/images/members/Lenser.png";
 
 const membros = [
   {
@@ -53,7 +54,7 @@ const membros = [
       jogo: "Earthbound, Fran Bow e Lisa: The Painful",
       LIVRO: "Qualquer obra do Junji Ito",
       musica: "Blow Out - Radiohead",
-      comida: "Arroz e feijão da minha vó e churrasco hmm"
+      comida: "Arroz e feijão da minha vó e churrasco hmm"
     },
   },
   {
@@ -79,6 +80,32 @@ const membros = [
       musica: "Nothing Else Matters - Metallica e War Pigs - Black Sabbath",
       comida: "Sushi, café, Petit gateau e qualquer coisa com Beacon e barbecue.",
     },
+  },
+  {
+    nome : "Gabriel Lenser",
+    foto: lenser,
+    icv : "ICV: Otimização de métodos de pré-processamento de texto com o uso de técnicas de programação paralela: uma análise comparativa de desempenho",
+    membroDesde: "2023",
+    links : {
+      lattes: "http://lattes.cnpq.br/1714539603430097",
+      instagram: "https://www.instagram.com/gabxlenser?igsh=dXF1a3M2N3hsZWE5",
+      github: "https://github.com/gabriellenser",
+      email: "gabxlenser1@gmail.com",
+    },
+    saibaMais:{
+      cidadeNatal : "Cascavel - PR",
+      motivoCurso :
+        "Impulsionado pela matemática, estatística e pelo contato com máquinas desde criança.",
+      alternativaCurso : "Música",
+      academica : "Ciência de Dados",
+      hobby : "instrumentos musicais, jogos, cozinhar etc. ",
+      filme : "slashers clássicos",
+      jogo : "jrpgs clássicos",
+      livro: "Toda luz que não podemos ver",
+      musica : "Let down - Radiohead",
+      comida : "Sushi, Hambúrguer, pistache, banoffee e risotos em geral",
+    }
+      
   },
 
   // Outros membros...

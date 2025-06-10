@@ -4,6 +4,8 @@ import "./membrosAtuais.css";
 
 import tutorImg from "./../../assets/images/members/profile.png";
 import gabrielImg from "./../../assets/images/members/gabriel.png";
+import qvd from "./../../assets/images/members/qvd.png";
+import dudu from "./../../assets/images/members/eduardo.png";
 
 const membros = [
   {
@@ -21,8 +23,8 @@ const membros = [
       cidadeNatal: "Cascavel - PR",
       motivoCurso:
         "Fazendo técnico em informática junto com o Ensino Médio descobri que gosto bastante de programar e de resolver problemas usando programação. Também tive alguns professores que foram fonte de inspiração e incentivo, o que me levou a considerar e, em 2024, escolher o curso como graduação.",
-      alternativaCurso: "TADS, Engenharia da Computação ou Engenharia de Controle & Automação.",
-      academica: "Grande duvida por enquanto, mas acho que sim... depende... talvez?! quem sabe.",
+      alternativaCurso: "TADS, Engenharia da Computação ou Engenharia de Controle e Automação.",
+      academica: "Minha empresa? Talvez em breve. Mestrado? Grande duvida por enquanto, mas acho que sim... depende... talvez?! quem sabe.",
       hobby: "tocar teclado/piano, fazer um som com a galera da banda, jogar quando tenho um tempo livre. ",
       filme: "Corações de Ferro",
       jogo: "battlefield 1, PvZGW2, Truco.",
@@ -30,6 +32,55 @@ const membros = [
       comida: "Pizza, Lasanha, Tacos, Chico balanceado, Pudim ",
     },
   },
+  {
+    nome: "Maria Quevedo",
+    foto: qvd,
+    icv: "ICV: Estudo da biblioteca NLTK para geração de textos: aplicação em diálogos cotidianos",
+    membroDesde: "2023",
+    links: {
+      lattes: "http://lattes.cnpq.br/3097985855355895",
+      instagram: "https://www.instagram.com/quevs__?igsh=MWoybXlnc3NvN2c1Yg==",
+      email: "mariaquevedo.capanema@gmail.com",
+    },
+    saibaMais: {
+      cidadeNatal: "Capanema - PR",
+      motivoCurso:
+        "Busquei um meio-termo entre algo com o qual eu minimamente me identifico e que também ofereça boas oportunidades de atuação. Como gosto de resolver problemas e pesquisar, escolhi Ciência da Computação.",
+      alternativaCurso: "Filosofia ou Psicologia.",
+      academica: "Tenho bastante vontade de realizar programas de pós-graduação fora do Brasil.",
+      hobby: "Beber muito café, escutar muita música, ir no bar com os amigos, pesquisar, crochetar e não fazer absolutamente nada.",
+      filme: "Kill Bill e The Handmaiden",
+      jogo: "Earthbound, Fran Bow e Lisa: The Painful",
+      LIVRO: "Qualquer obra do Junji Ito",
+      musica: "Blow Out - Radiohead",
+      comida: "Arroz e feijão da minha vó e churrasco hmm"
+    },
+  },
+  {
+    nome: "Eduardo Nogueira Korte",
+    foto: dudu,
+    icv: "ICV: TBD",
+    membroDesde: "2025",
+    links: {
+      lattes: "http://lattes.cnpq.br/5439196476136251",
+      instagram: "https://www.instagram.com/esquilo.korte",
+      github: "https://github.com/DUDUKorte",
+      email: "mailto:dudu.korte@gmail.com",
+    },
+    saibaMais: {
+      cidadeNatal: "Curitiba - PR",
+      motivoCurso:
+        "Sou apaixonado por programação desde pequeno, minha primeira experiência refazendo um Megaman clássico no construct 2 em 2016 foi só o início de uma jornada que cada vez mais eu descubro o quanto a computação combina comigo e segue sendo minha paixão ao lado do cafézinho clássico que todos amam.",
+      alternativaCurso: "TADS ou, na pior das hipóteses engenharia de computação.",
+      academica: "Não planejo, tenho grandes sonhos e ambições que quero seguir, as quais a área acadêmica não pode me proporcionar, infelizmente.",
+      hobby: "Meu canal no YouTube: www.youtube.com/@esquilopng junto disso a edição de vídeos, design e claro... Jogos, amo jogos e nunca vou deixar esse hobby de lado.",
+      filme: "Deu a louca na chapeuzinho",
+      jogo: "Bioshock infinite, Bully e The Outer Worlds",
+      musica: "Nothing Else Matters - Metallica e War Pigs - Black Sabbath",
+      comida: "Sushi, café, Petit gateau e qualquer coisa com Beacon e barbecue.",
+    },
+  },
+
   // Outros membros...
   {
     nome: "Ronaldo Farias",

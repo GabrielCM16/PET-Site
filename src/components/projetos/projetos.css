@@ -1,0 +1,17 @@
+
+
+.projetos-container h1.display-1 {
+  font-size: 2.5rem !important; /* diminui o display-1 padrão (normal é ~6rem) */
+}
+
+.projetos-container h2.display-4 {
+  font-size: 1.75rem !important; /* diminui o display-4 padrão (normal é ~2.5rem) */
+}
+
+.projetos-container p.fs-4 {
+  font-size: 0.9rem !important; /* diminui fs-4 (normal 1.25rem) */
+}
+
+.projetos-container a.fs-5 {
+  font-size: 0.85rem !important; /* diminui fs-5 (normal 1.1rem) */
+}

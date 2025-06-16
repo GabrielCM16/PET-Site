@@ -69,6 +69,8 @@ const Header: React.FC = () => {
         <Link to="/ex-membros">EX-MEMBROS</Link>
         <div></div>
         <Link to="/sala">SALA</Link>
+        <div></div>
+        <Link to="/projetos">PROJETOS</Link>
       </nav>
     </header>
   );

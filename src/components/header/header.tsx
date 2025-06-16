@@ -8,34 +8,48 @@ const Header: React.FC = () => {
   const toggleButtonRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
-    const toggleButton = toggleButtonRef.current;
-    const navMenu = navMenuRef.current;
+  const toggleButton = toggleButtonRef.current;
+  const navMenu = navMenuRef.current;
 
-    if (!toggleButton || !navMenu) return;
+  if (!toggleButton || !navMenu) return;
 
-    const handleToggle = () => {
-      navMenu.classList.toggle('open');
-    };
+  const handleToggle = () => {
+    navMenu.classList.toggle('open');
+  };
 
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        navMenu &&
-        toggleButton &&
-        !navMenu.contains(event.target as Node) &&
-        !toggleButton.contains(event.target as Node)
-      ) {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      navMenu &&
+      toggleButton &&
+      !navMenu.contains(event.target as Node) &&
+      !toggleButton.contains(event.target as Node)
+    ) {
+      navMenu.classList.remove('open');
+    }
+  };
+
+  // Fechar menu ao clicar em um link
+  const links = navMenu.querySelectorAll('a');
+  links.forEach((link) =>
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+    })
+  );
+
+  toggleButton.addEventListener('click', handleToggle);
+  document.addEventListener('click', handleClickOutside);
+
+  return () => {
+    toggleButton.removeEventListener('click', handleToggle);
+    document.removeEventListener('click', handleClickOutside);
+    links.forEach((link) =>
+      link.removeEventListener('click', () => {
         navMenu.classList.remove('open');
-      }
-    };
+      })
+    );
+  };
+}, []);
 
-    toggleButton.addEventListener('click', handleToggle);
-    document.addEventListener('click', handleClickOutside);
-
-    return () => {
-      toggleButton.removeEventListener('click', handleToggle);
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, []);
 
   return (
     <header>

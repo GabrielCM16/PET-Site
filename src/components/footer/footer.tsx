@@ -17,18 +17,12 @@ const Footer: React.FC = () => {
           </p>
         </div>
 
-
-
-
-
-
         <div className="footer-section links">
           <h3 className="footer-title">Links Úteis</h3>
           <ul>
             <li><a href="/sobre">Sobre</a></li>
             <li><a href="/projetos">Projetos</a></li>
             <li><a href="/eventos">Eventos</a></li>
-            <li><a href="/contato">Contato</a></li>
           </ul>
         </div>
 

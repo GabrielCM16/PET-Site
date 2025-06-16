@@ -19,6 +19,14 @@ body {
   word-break: break-word;
 }
 
+.list-group-item {
+  background-color: transparent !important;
+  border: none;
+  padding-left: 0;
+    color: white;
+}
+
+
 
 .profile-avatar {
   width: 120px;

@@ -46,7 +46,7 @@ const App: React.FC = () => {
             </p>
           </div>
         </a>
-        <a href="/extensao" className="text-decoration-none text-dark">
+        <a href="/projetos" className="text-decoration-none text-dark">
           <div className="card shadow card-custom d-flex align-items-center justify-content-center p-3">
             <h2 className='custom-font' >EXTENSÃO</h2>
             <p className="mt-3 text-center inter-regular">

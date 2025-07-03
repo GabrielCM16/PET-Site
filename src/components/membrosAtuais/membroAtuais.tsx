@@ -189,7 +189,7 @@ const membros = [
     icv: "ICV: TBD",
     membroDesde: "2025",
     links: {
-      lattes: "",
+      lattes: "https://lattes.cnpq.br/5041997105837766",
       instagram: "https://www.instagram.com/thiagodpim/",
       github: "https://github.com/umthiago",
       email: "mailto:thiagoflx.y@gmail.com",

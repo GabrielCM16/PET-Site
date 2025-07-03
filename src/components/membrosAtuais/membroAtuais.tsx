@@ -10,58 +10,10 @@ import lenser from "./../../assets/images/members/Lenser.png";
 import thiago from "./../../assets/images/members/thiago.png";
 import cabrera from "./../../assets/images/members/cabrera.png";
 import thalita from "./../../assets/images/members/thalita.png";
-import rafael from "./../../assets/images/members/cabrera.png";
+import rafael from "./../../assets/images/members/rafael.png";
 
 
 const membros = [
-  {
-    nome: "Gabriel Costa de Moraes",
-    foto: gabrielImg,
-    icv: "ICV: Construção de Material de Divulgação do Curso de Ciência da Computação utilizando matriz de LED",
-    membroDesde: "2025",
-    links: {
-      lattes: "https://lattes.cnpq.br/1734464258932426",
-      instagram: "https://www.instagram.com/gcmoraes__/",
-      github: "https://github.com/GabrielCM16",
-      email: "mailto:gabrielcostademoraes13@gmail.com",
-    },
-    saibaMais: {
-      cidadeNatal: "Cascavel - PR",
-      motivoCurso:
-        "Fazendo técnico em informática junto com o Ensino Médio descobri que gosto bastante de programar e de resolver problemas usando programação. Também tive alguns professores que foram fonte de inspiração e incentivo, o que me levou a considerar e, em 2024, escolher o curso como graduação.",
-      alternativaCurso: "TADS, Engenharia da Computação ou Engenharia de Controle e Automação.",
-      academica: "Minha empresa? Talvez em breve. Mestrado? Grande duvida por enquanto, mas acho que sim... depende... talvez?! quem sabe.",
-      hobby: "tocar teclado/piano, fazer um som com a galera da banda, jogar quando tenho um tempo livre. ",
-      filme: "Corações de Ferro",
-      jogo: "battlefield 1, PvZGW2, Truco.",
-      musica: "Tear In My Heart - Twenty One Pilots",
-      comida: "Pizza, Lasanha, Tacos, Chico balanceado, Pudim ",
-    },
-  },
-  {
-    nome: "Maria Quevedo",
-    foto: qvd,
-    icv: "ICV: Estudo da biblioteca NLTK para geração de textos: aplicação em diálogos cotidianos",
-    membroDesde: "2023",
-    links: {
-      lattes: "http://lattes.cnpq.br/3097985855355895",
-      instagram: "https://www.instagram.com/quevs__?igsh=MWoybXlnc3NvN2c1Yg==",
-      email: "mariaquevedo.capanema@gmail.com",
-    },
-    saibaMais: {
-      cidadeNatal: "Capanema - PR",
-      motivoCurso:
-        "Busquei um meio-termo entre algo com o qual eu minimamente me identifico e que também ofereça boas oportunidades de atuação. Como gosto de resolver problemas e pesquisar, escolhi Ciência da Computação.",
-      alternativaCurso: "Filosofia ou Psicologia.",
-      academica: "Tenho bastante vontade de realizar programas de pós-graduação fora do Brasil.",
-      hobby: "Beber muito café, escutar muita música, ir no bar com os amigos, pesquisar, crochetar e não fazer absolutamente nada.",
-      filme: "Kill Bill e The Handmaiden",
-      jogo: "Earthbound, Fran Bow e Lisa: The Painful",
-      LIVRO: "Qualquer obra do Junji Ito",
-      musica: "Blow Out - Radiohead",
-      comida: "Arroz e feijão da minha vó e churrasco hmm"
-    },
-  },
   {
     nome: "Eduardo Nogueira Korte",
     foto: dudu,
@@ -84,6 +36,30 @@ const membros = [
       jogo: "Bioshock infinite, Bully e The Outer Worlds",
       musica: "Nothing Else Matters - Metallica e War Pigs - Black Sabbath",
       comida: "Sushi, café, Petit gateau e qualquer coisa com Beacon e barbecue.",
+    },
+  },
+  {
+    nome: "Gabriel Costa de Moraes",
+    foto: gabrielImg,
+    icv: "ICV: Construção de Material de Divulgação do Curso de Ciência da Computação utilizando matriz de LED",
+    membroDesde: "2025",
+    links: {
+      lattes: "https://lattes.cnpq.br/1734464258932426",
+      instagram: "https://www.instagram.com/gcmoraes__/",
+      github: "https://github.com/GabrielCM16",
+      email: "mailto:gabrielcostademoraes13@gmail.com",
+    },
+    saibaMais: {
+      cidadeNatal: "Cascavel - PR",
+      motivoCurso:
+        "Fazendo técnico em informática junto com o Ensino Médio descobri que gosto bastante de programar e de resolver problemas usando programação. Também tive alguns professores que foram fonte de inspiração e incentivo, o que me levou a considerar e, em 2024, escolher o curso como graduação.",
+      alternativaCurso: "TADS, Engenharia da Computação ou Engenharia de Controle e Automação.",
+      academica: "Minha empresa? Talvez em breve. Mestrado? Grande duvida por enquanto, mas acho que sim... depende... talvez?! quem sabe.",
+      hobby: "tocar teclado/piano, fazer um som com a galera da banda, jogar quando tenho um tempo livre. ",
+      filme: "Corações de Ferro",
+      jogo: "battlefield 1, PvZGW2, Truco.",
+      musica: "Tear In My Heart - Twenty One Pilots",
+      comida: "Pizza, Lasanha, Tacos, Chico balanceado, Pudim ",
     },
   },
   {
@@ -110,38 +86,35 @@ const membros = [
       musica: "Let down - Radiohead",
       comida: "Sushi, Hambúrguer, pistache, banoffee e risotos em geral",
     }
-
   },
-
-  // Outros membros...
   {
-    nome: "Thiago Oliveira Dupim",
-    foto: thiago,
-    icv: "ICV: TBD",
-    membroDesde: "2025",
+    nome: "Maria Quevedo",
+    foto: qvd,
+    icv: "ICV: Estudo da biblioteca NLTK para geração de textos: aplicação em diálogos cotidianos",
+    membroDesde: "2023",
     links: {
-      lattes: "",
-      instagram: "https://www.instagram.com/thiagodpim/",
-      github: "https://github.com/umthiago",
-      email: "mailto:thiagoflx.y@gmail.com",
+      lattes: "http://lattes.cnpq.br/3097985855355895",
+      instagram: "https://www.instagram.com/quevs__?igsh=MWoybXlnc3NvN2c1Yg==",
+      email: "mariaquevedo.capanema@gmail.com",
     },
     saibaMais: {
-      cidadeNatal: "Cascavel - PR",
+      cidadeNatal: "Capanema - PR",
       motivoCurso:
-        "Optei por Ciência da Computação porque é uma área em constante crescimento e com ampla demanda no mercado e a possibilidade de atuar em diversos setores, que foi um grande atrativo para mim",
-      alternativaCurso: "TADS & Engenharia de Software",
-      academica: "Pretendo seguir atuando com ênfase em inteligência artificial, que é uma das áreas mais promissoras e transformadoras da atualidade",
-      hobby: "Ensaiar com a banda, ir a academia",
-      filme: "Ilha do Medo",
-      jogo: "Red Dead Redemption 2, Uncharted",
-      musica: "Need 2 - Pinegrove.",
-      comida: "Macarrão ao molho bechamel, BomBom Aberto",
+        "Busquei um meio-termo entre algo com o qual eu minimamente me identifico e que também ofereça boas oportunidades de atuação. Como gosto de resolver problemas e pesquisar, escolhi Ciência da Computação.",
+      alternativaCurso: "Filosofia ou Psicologia.",
+      academica: "Tenho bastante vontade de realizar programas de pós-graduação fora do Brasil.",
+      hobby: "Beber muito café, escutar muita música, ir no bar com os amigos, pesquisar, crochetar e não fazer absolutamente nada.",
+      filme: "Kill Bill e The Handmaiden",
+      jogo: "Earthbound, Fran Bow e Lisa: The Painful",
+      LIVRO: "Qualquer obra do Junji Ito",
+      musica: "Blow Out - Radiohead",
+      comida: "Arroz e feijão da minha vó e churrasco hmm"
     },
   },
   {
     nome: "Pedro Augusto Silva Cabrera",
     foto: cabrera,
-    icv: "ICV TBD",
+    icv: "ICV: TBD",
     membroDesde: "2024",
     links: {
       lattes: "https://lattes.cnpq.br/5325089615556004",
@@ -161,7 +134,6 @@ const membros = [
       musica: "I Will Find - Vintage Culture",
       comida: "pizza, comida japonesa e massas em geral",
     }
-
   },
   {
     nome: "Ronaldo Farias",
@@ -188,9 +160,8 @@ const membros = [
     },
   },
   {
-
     nome: "Thalita Wiederkehr Pereira",
-    foto: thalita, // Adicione a URL da imagem aqui, se tiver
+    foto: thalita,
     icv: "ICV: Computação Auditiva",
     membroDesde: "2024",
     links: {
@@ -212,7 +183,32 @@ const membros = [
       comida: "Não me fazendo mal, o que vier é lucro!",
     },
   },
+  {
+    nome: "Thiago Oliveira Dupim",
+    foto: thiago,
+    icv: "ICV: TBD",
+    membroDesde: "2025",
+    links: {
+      lattes: "",
+      instagram: "https://www.instagram.com/thiagodpim/",
+      github: "https://github.com/umthiago",
+      email: "mailto:thiagoflx.y@gmail.com",
+    },
+    saibaMais: {
+      cidadeNatal: "Cascavel - PR",
+      motivoCurso:
+        "Optei por Ciência da Computação porque é uma área em constante crescimento e com ampla demanda no mercado e a possibilidade de atuar em diversos setores, que foi um grande atrativo para mim",
+      alternativaCurso: "TADS & Engenharia de Software",
+      academica: "Pretendo seguir atuando com ênfase em inteligência artificial, que é uma das áreas mais promissoras e transformadoras da atualidade",
+      hobby: "Ensaiar com a banda, ir a academia",
+      filme: "Ilha do Medo",
+      jogo: "Red Dead Redemption 2, Uncharted",
+      musica: "Need 2 - Pinegrove.",
+      comida: "Macarrão ao molho bechamel, BomBom Aberto",
+    },
+  },
 ];
+
 
 const Membros: React.FC = () => {
   const [selectedMembro, setSelectedMembro] = React.useState<number | null>(null);

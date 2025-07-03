@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./exmembros.css";
 
 import tutorImg from "./../../assets/images/members/profile.png";
+//me 
 
 const membros = ['1 - Eduardo Vansetto 09/12/2010 até 03/03/2011,',
  '2 - Eliezer De Souza Dos Reis 09/12/2010 até 03/03/2011,',

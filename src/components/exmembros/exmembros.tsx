@@ -133,6 +133,7 @@ const Membros: React.FC = () => {
 
             <div className="mt-5">
   <h2 className="display-6 mb-4">Ex-membros</h2>
+  <p>Aqui registramos aqueles que já integraram o grupo ao longo dos anos. Esta seção serve como histórico das pessoas que fizeram parte da equipe em diferentes momentos.</p>
   <div className="table-responsive">
     <table className="table table-bordered table-hover align-middle">
       <thead className="table-light">

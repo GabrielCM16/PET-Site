@@ -8,14 +8,16 @@ const Footer: React.FC = () => {
         <div className="footer-columns">
           <div className="footer-section">
             <h4>Institucional</h4>
-            <a href="https://suporte.kirvano.com/hc/central-de-ajuda/pt_BR">Central de ajuda</a>
-            <a href="https://forms.kirvano.com/denuncia-de-plagio/">Canal de Denúncias</a>
+            <a href="https://www.unioeste.br/portal/pro-reitoria-de-graduacao">Pró-Reitoria de Graduação</a>
+            <a href="https://www.unioeste.br/portal/prograd-outros/cursos-campus-todos/cascavelcursos?campi=0&curso=CSC0050">Curso de Ciência da Computação</a>
+            <a href="http://sigpet.mec.gov.br/primeiro-acesso">SIGPET</a>
+       
           </div>
 
           <div className="footer-section">
-            <h4>Aprenda com a Kirvano</h4>
+            <h4>Aprenda com o PETComp</h4>
             <a href="https://www.youtube.com/@kirvanobr/">Canal do YouTube</a>
-            <a href="https://blog.kirvano.com/">Blog da Kirvano</a>
+            <a href="https://blog.kirvano.com/">Blog do PETComp</a>
           </div>
 
           <div className="footer-section">
@@ -32,12 +34,12 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>© 2025 Kirvano. Todos os direitos reservados.</p>
+          <p>© 2025 PETComp. Todos os direitos reservados.</p>
           <div className="social-icons">
-            <a href="https://www.instagram.com/kirvanobr/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
-            <a href="https://www.linkedin.com/company/kirvano/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
-            <a href="https://www.youtube.com/channel/UCLB5miwVtZ2RQWFJMfVnKuA" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
-            <a href="https://www.facebook.com/kirvano.com.br" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+            <a href="https://www.instagram.com/petcomp_unioeste/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+            <a href="" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://www.youtube.com/@petcomputacao-unioeste7552" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+            <a href="https://www.facebook.com/petcomp/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
           </div>
 
           

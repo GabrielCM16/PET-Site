@@ -11,6 +11,8 @@ import thiago from "./../../assets/images/members/thiago.png";
 import cabrera from "./../../assets/images/members/cabrera.png";
 import thalita from "./../../assets/images/members/thalita.png";
 import rafael from "./../../assets/images/members/rafael.png";
+import deitos from "./../../assets/images/members/deitos.png";
+import vinicius from "./../../assets/images/members/vinicius.png";
 
 
 const membros = [
@@ -136,30 +138,6 @@ const membros = [
     }
   },
   {
-    nome: "Ronaldo Farias",
-    icv: "ICV de pesquisa em IA ICV sobre sistemas embarcados avançados",
-    membroDesde: "2022",
-    links: {
-      lattes: "https://orcid.org/0000-0002-0437-7249",
-      instagram: "https://www.instagram.com/ronaldo.dck/",
-      github: "https://github.com/ronaldo",
-      email: "mailto:ronaldo@example.com",
-    },
-    saibaMais: {
-      cidadeNatal: "Cascavel - PR",
-      motivoCurso:
-        "Sempre me dei muito bem com matemática. Fazendo técnico em informática junto com o Ensino Médio descobri que gosto bastante de programar e de resolver problemas usando programação. Também tive alguns professores que foram fonte de inspiração e incentivo, o que me levou a considerar e, em 2019, escolher o curso como graduação.",
-      alternativaCurso: "Música ou matemática.",
-      academica: "Sim. Acho o trabalho na pesquisa científica incrível e me vejo também como professor no futuro.",
-      hobby: "Principalmente tocar flauta e ouvir música, mas também jogar RPG de mesa e ler.",
-      livro: "“O Temor do Sábio”.",
-      filme: "“Os Miseráveis”",
-      jogo: "Pathfinder, Dungeons and Dragons, Ragnarok, Truco e Cacheta.",
-      musica: "“Prince Igor” - Borodin.",
-      comida: "Estrogonofe, pizza, lasanha, feijão e arroz, batata frita, risoto.",
-    },
-  },
-  {
     nome: "Thalita Wiederkehr Pereira",
     foto: thalita,
     icv: "ICV: Computação Auditiva",
@@ -207,6 +185,81 @@ const membros = [
       comida: "Macarrão ao molho bechamel, BomBom Aberto",
     },
   },
+  {
+    nome: "Guilherme Augusto Deitos Alves",
+    foto: deitos,
+    icv: "ICV: Portal de visualização sobre o financiamento das Universidades Estaduais do Paraná: ferramenta de apoio a decisões estratégicas sobre financiamento e expansão entre 2002 e 2023.",
+    membroDesde: "2023",
+    links: {
+      lattes: "https://lattes.cnpq.br/6399928456538096",
+      instagram: "https://www.instagram.com/guilherme_deitos/",
+      github: "https://github.com/GuilhermeDeitos",
+      email: "mailto:guilherme.cascavel@gmail.com",
+    },
+    saibaMais: {
+      cidadeNatal: "Cascavel - PR",
+      motivoCurso:
+        "Após finalizar o curso técnico em informática pelo IFPR não conseguia me ver em outra área (tirando nutrição, mas não dá dinheiro).",
+      alternativaCurso: "TADS, Engenharia de Software, Nutrição & Psicologia",
+      academica: "Trabalho visando a área de desenvolvimento WEB, tanto no front quanto no back-end. Além disso, tenho muito apreço pela área de dados e engenharia de software.",
+      hobby: "Treinar, ler, sair para cafezinhos e assistir séries",
+      filme: "Interestelar",
+      jogo: "Naruto Ultimate Ninja Storm (saga), Minecraft e Call Of Duty BO2",
+      musica: "Across the Line - Linkin Park",
+      comida: "Pizza de Atum, Sushi",
+    },
+  },
+  {
+    nome: "Vinícius A. Hermes",
+    foto: vinicius,
+    icv: "ICV: TBD",
+    membroDesde: "2025",
+    links: {
+      lattes:"",
+      instagram: "https://www.instagram.com/vncs.hrms/",
+      github: "https://github.com/vinihrms",
+      email: "vinicius.hermes@unioeste.br",
+    },
+    saibaMais: {
+      cidadeNatal: "Corbélia - PR",
+      motivoCurso: "Ter tido experiência de trabalho no setor de suporte de informática e gostar de hardware",
+      alternativaCurso: "Letras, PT-ING",
+      academica: "Gosto muito de infra, redes, database e hardware, pretendo seguir nesta área",
+      hobby: "Leitura, música, ciclismo",
+      filme: "Sacrface (1983)",
+      jogo: "Futebol, truco, xadrez",
+      música: "So Appalled - Ye",
+      comida: "Arroz, feijão, bife e salada"
+    },
+  },
+{
+  nome: "Rafael Mendonça Vaz",
+  foto: rafael,
+  icv: "ICV: TBD",
+  membroDesde: "2025",
+  links: {
+    instagram: "https://www.instagram.com/rafaellmv",
+    github: "https://github.com/rafaelmendoncavaz",
+    email: "rafael.vaz1@unioeste.br",
+  },
+  saibaMais: {
+    cidadeNatal: "São Paulo - SP",
+    motivoCurso:
+      "Decidi retornar a minha vida na área de tecnologia, e após voltar dos EUA, decidi que iria tentar. Comprei um curso de Desenvolvedor Web, e me apaixonei a ponto de consumir conteúdos que iam além. Quando notei que o que queria aprender ia além do curso, decidi ingressar em Ciência da Computação.",
+    alternativaCurso: null,
+    academica:
+      "Grande dúvida por enquanto, mas acho que sim... depende... talvez?! quem sabe.",
+    hobby:
+      "Futebol Americano, Basquete, Esportes em Geral, Academia, Leitura, Programar, Passear com meu Cachorro.",
+    filme: "Bastardos Inglórios",
+    jogo: "Counter-Strike, Madden, Resident Evil, RDR2",
+    livro: "O Senhor dos Anéis",
+    música: "Space Oddity - David Bowie",
+    comida: "Lasanha, Pizza, Guisado de Carne, Churrasco",
+  },
+}
+
+
 ];
 
 

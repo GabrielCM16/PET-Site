@@ -132,15 +132,34 @@ const Membros: React.FC = () => {
             </div>
 
             <div className="mt-5">
-                <h2 className="display-6 mb-4">Ex-membros</h2>
-                <ul className="list-group list-group-flush">
-                    {membros.map((nome, index) => (
-                        <li key={index} className="list-group-item fs-5">
-                            {nome}
-                        </li>
-                    ))}
-                </ul>
-            </div>
+  <h2 className="display-6 mb-4">Ex-membros</h2>
+  <div className="table-responsive">
+    <table className="table table-bordered table-hover align-middle">
+      <thead className="table-light">
+        <tr>
+          <th>#</th>
+          <th>Nome</th>
+          <th>Período</th>
+        </tr>
+      </thead>
+      <tbody>
+        {membros.map((linha, index) => {
+          const [numeroENome, datas] = linha.split(/(?<=\d+\s-\s[^0-9]+?)\s(?=\d{2}\/\d{2}\/\d{4})/);
+          const [numero, nome] = numeroENome.split(' - ');
+          const [inicio, fim] = datas.replace(',', '').split(' até ');
+          return (
+            <tr key={index}>
+              <td>{numero}</td>
+              <td>{nome}</td>
+              <td>{`${inicio} até ${fim}`}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+</div>
+
 
         </main>
     );

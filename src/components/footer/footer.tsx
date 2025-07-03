@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
 
           <div className="social-icons">
             <a href="https://www.instagram.com/petcomp_unioeste/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+              <img src="" alt="Instagram" />
             </a>
             <a href="https://github.com/petcompgroup" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />

@@ -74,12 +74,12 @@
 
 .social-icons img {
   width: 20px;
-  height: 20px;
+  height: 24px;
   filter: brightness(0) invert(1); /* Deixa os ícones brancos */
 }
 
 .footer-cnpj {
-  font-size: 13px;
+  font-size: 14px;
   color: #fff;
   opacity: 0.85;
 }

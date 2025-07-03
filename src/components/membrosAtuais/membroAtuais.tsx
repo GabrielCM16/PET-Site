@@ -8,6 +8,10 @@ import qvd from "./../../assets/images/members/qvd.png";
 import dudu from "./../../assets/images/members/eduardo.png";
 import lenser from "./../../assets/images/members/Lenser.png";
 import thiago from "./../../assets/images/members/thiago.png";
+import cabrera from "./../../assets/images/members/cabrera.png";
+import thalita from "./../../assets/images/members/thalita.png";
+import rafael from "./../../assets/images/members/cabrera.png";
+
 
 const membros = [
   {
@@ -61,7 +65,7 @@ const membros = [
   {
     nome: "Eduardo Nogueira Korte",
     foto: dudu,
-    icv: "ICV: TBD",
+    icv: "ICV: Ferramenta gamificada de criação de jogos para auxiliar no aprendizado de geometria analítica e álgebra linear",
     membroDesde: "2025",
     links: {
       lattes: "http://lattes.cnpq.br/5439196476136251",
@@ -83,30 +87,30 @@ const membros = [
     },
   },
   {
-    nome : "Gabriel Lenser",
+    nome: "Gabriel Lenser",
     foto: lenser,
-    icv : "ICV: Otimização de métodos de pré-processamento de texto com o uso de técnicas de programação paralela: uma análise comparativa de desempenho",
+    icv: "ICV: Otimização de métodos de pré-processamento de texto com o uso de técnicas de programação paralela: uma análise comparativa de desempenho",
     membroDesde: "2023",
-    links : {
+    links: {
       lattes: "http://lattes.cnpq.br/1714539603430097",
       instagram: "https://www.instagram.com/gabxlenser?igsh=dXF1a3M2N3hsZWE5",
       github: "https://github.com/gabriellenser",
       email: "gabxlenser1@gmail.com",
     },
-    saibaMais:{
-      cidadeNatal : "Cascavel - PR",
-      motivoCurso :
+    saibaMais: {
+      cidadeNatal: "Cascavel - PR",
+      motivoCurso:
         "Impulsionado pela matemática, estatística e pelo contato com máquinas desde criança.",
-      alternativaCurso : "Música",
-      academica : "Ciência de Dados",
-      hobby : "instrumentos musicais, jogos, cozinhar etc. ",
-      filme : "slashers clássicos",
-      jogo : "jrpgs clássicos",
+      alternativaCurso: "Música",
+      academica: "Ciência de Dados",
+      hobby: "instrumentos musicais, jogos, cozinhar etc. ",
+      filme: "slashers clássicos",
+      jogo: "jrpgs clássicos",
       livro: "Toda luz que não podemos ver",
-      musica : "Let down - Radiohead",
-      comida : "Sushi, Hambúrguer, pistache, banoffee e risotos em geral",
+      musica: "Let down - Radiohead",
+      comida: "Sushi, Hambúrguer, pistache, banoffee e risotos em geral",
     }
-      
+
   },
 
   // Outros membros...
@@ -135,28 +139,29 @@ const membros = [
     },
   },
   {
-    nome: "Ronaldo Farias",
-    icv: "ICV de pesquisa em IA ICV sobre sistemas embarcados avançados",
-    membroDesde: "2022",
+    nome: "Pedro Augusto Silva Cabrera",
+    foto: cabrera,
+    icv: "ICV TBD",
+    membroDesde: "2024",
     links: {
-      lattes: "https://orcid.org/0000-0002-0437-7249",
-      instagram: "https://www.instagram.com/ronaldo.dck/",
-      github: "https://github.com/ronaldo",
-      email: "mailto:ronaldo@example.com",
+      lattes: "https://lattes.cnpq.br/5325089615556004",
+      instagram: "https://www.instagram.com/peedrocabrera",
+      github: "https://github.com/peedrocabrera",
+      email: "pedroaugusto8720@gmail.com",
     },
     saibaMais: {
-      cidadeNatal: "Cascavel - PR",
-      motivoCurso:
-        "Sempre me dei muito bem com matemática. Fazendo técnico em informática junto com o Ensino Médio descobri que gosto bastante de programar e de resolver problemas usando programação. Também tive alguns professores que foram fonte de inspiração e incentivo, o que me levou a considerar e, em 2019, escolher o curso como graduação.",
-      alternativaCurso: "Música ou matemática.",
-      academica: "Sim. Acho o trabalho na pesquisa científica incrível e me vejo também como professor no futuro.",
-      hobby: "Principalmente tocar flauta e ouvir música, mas também jogar RPG de mesa e ler.",
-      livro: "“O Temor do Sábio”.",
-      filme: "“Os Miseráveis”",
-      jogo: "Pathfinder, Dungeons and Dragons, Ragnarok, Truco e Cacheta.",
-      musica: "“Prince Igor” - Borodin.",
-      comida: "Estrogonofe, pizza, lasanha, feijão e arroz, batata frita, risoto.",
-    },
+      cidadeNatal: "Ubiratã - PR",
+      motivoCurso: "Sempre gostei de tecnologia e com o passar do tempo isso foi se fortificando. Acredito que essa área oferece muitas oportunidades de aprendizado, inovação e impacto no futuro",
+      alternaticaCurso: "Engenharia Civil",
+      academica: "Por enquanto analisando sobre, mas quem sabe talvez um dia",
+      hobby: "Assistir filmes e séries, vídeos sobre tecnologia. Rolê de música eletrônica e sair com pessoas próximas ",
+      filme: "Franquia Resident Evil",
+      jogo: "cs",
+      livro: "Sherlock Holmes",
+      musica: "I Will Find - Vintage Culture",
+      comida: "pizza, comida japonesa e massas em geral",
+    }
+
   },
   {
     nome: "Ronaldo Farias",
@@ -183,27 +188,28 @@ const membros = [
     },
   },
   {
-    nome: "Ronaldo Farias",
-    icv: "ICV de pesquisa em IA ICV sobre sistemas embarcados avançados",
-    membroDesde: "2022",
+
+    nome: "Thalita Wiederkehr Pereira",
+    foto: thalita, // Adicione a URL da imagem aqui, se tiver
+    icv: "ICV: Computação Auditiva",
+    membroDesde: "2024",
     links: {
-      lattes: "https://orcid.org/0000-0002-0437-7249",
-      instagram: "https://www.instagram.com/ronaldo.dck/",
-      github: "https://github.com/ronaldo",
-      email: "mailto:ronaldo@example.com",
+      lattes: "http://lattes.cnpq.br/5647218203879099",
+      github: "https://github.com/TWPalita",
+      email: "mailto:talitaw09@gmail.com",
     },
     saibaMais: {
       cidadeNatal: "Cascavel - PR",
       motivoCurso:
-        "Sempre me dei muito bem com matemática. Fazendo técnico em informática junto com o Ensino Médio descobri que gosto bastante de programar e de resolver problemas usando programação. Também tive alguns professores que foram fonte de inspiração e incentivo, o que me levou a considerar e, em 2019, escolher o curso como graduação.",
-      alternativaCurso: "Música ou matemática.",
-      academica: "Sim. Acho o trabalho na pesquisa científica incrível e me vejo também como professor no futuro.",
-      hobby: "Principalmente tocar flauta e ouvir música, mas também jogar RPG de mesa e ler.",
-      livro: "“O Temor do Sábio”.",
-      filme: "“Os Miseráveis”",
-      jogo: "Pathfinder, Dungeons and Dragons, Ragnarok, Truco e Cacheta.",
-      musica: "“Prince Igor” - Borodin.",
-      comida: "Estrogonofe, pizza, lasanha, feijão e arroz, batata frita, risoto.",
+        "Sempre gostei de tecnologia e acredito que devemos perseguir aquilo que realmente gostamos.",
+      alternativaCurso: "Engenharia Civil, Pedagogia ou Biologia",
+      academica: "Não sei ainda... talvez fazer um mestrado.",
+      hobby: "Assistir filmes, séries e animes, aprender sobre curiosidades e comer bem.",
+      livro: "Assassinato no Expresso do Oriente",
+      filme: "Indiana Jones",
+      jogo: "Loop Hero e Guitar Hero",
+      musica: "Tim Maia - Você e Pet Shop Boys - Domino Dancing",
+      comida: "Não me fazendo mal, o que vier é lucro!",
     },
   },
 ];

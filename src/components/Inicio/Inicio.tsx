@@ -7,7 +7,7 @@ import PetGroup from './../../assets/petGroup.png';
 const App: React.FC = () => {
   return (
     <>
-    
+
       <main className="container text-center mt-5 ">
         <img
           src={LogoPET}
@@ -74,7 +74,15 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      
+      <section className="container my-5 px-3 text-center">
+        <h1 className="display-6 custom-font">NOSSO DIA A DIA</h1>
+        <p className="lead inter-regular mx-auto" style={{ maxWidth: '800px' }}>
+          Acompanhe abaixo as publicações mais recentes do nosso perfil no Instagram. Compartilhamos os bastidores, eventos, projetos e momentos que fazem parte da nossa rotina no PET.
+        </p>
+      </section>
+
+
+
     </>
   );
 };

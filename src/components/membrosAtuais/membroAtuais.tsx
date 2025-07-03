@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./membrosAtuais.css";
 
-import tutorImg from "./../../assets/images/members/profile.png";
+import tutorImg from "./../../assets/images/members/galante.png";
 import gabrielImg from "./../../assets/images/members/gabriel.png";
 import qvd from "./../../assets/images/members/qvd.png";
 import dudu from "./../../assets/images/members/eduardo.png";
@@ -13,6 +13,7 @@ import thalita from "./../../assets/images/members/thalita.png";
 import rafael from "./../../assets/images/members/rafael.png";
 import deitos from "./../../assets/images/members/deitos.png";
 import vinicius from "./../../assets/images/members/vinicius.png";
+import altmeyer from "./../../assets/images/members/altmeyer.png";
 
 
 const membros = [
@@ -257,7 +258,30 @@ const membros = [
     música: "Space Oddity - David Bowie",
     comida: "Lasanha, Pizza, Guisado de Carne, Churrasco",
   },
-}
+},
+{
+    nome: "Guilherme Altmeyer Soares",
+    foto: altmeyer,
+    icv: "ICV: Evolução e Segurança no HTTP: Uma Análise Comparativa das suas Principais Versões",
+    membroDesde: "2024",
+    links: {
+      lattes:" http://lattes.cnpq.br/8705018917673747",
+      instagram: "https://www.instagram.com/gui_alt_soa/",
+      github: "https://github.com/Gstyx",
+      email: "altmeyergui@gmail.com",
+    },
+    saibaMais: {
+      cidadeNatal: "Laranjeiras do Sul - PR",
+      motivoCurso: "Gostar de puzzles",
+      alternativaCurso: "Relações Internacionais",
+      academica: "Tenho bastante interesse na área de CyberSegurança focado na análise Forense",
+      hobby: "Leitura e Piano",
+      filme: "Jojo Rabbit",
+      jogo: "Futebol, xadrez e vôlei",
+      música: "nope your too late i already died",
+      comida: "bife a parmegiana"
+    },
+  },
 
 
 ];

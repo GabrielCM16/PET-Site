@@ -37,20 +37,21 @@ const Footer: React.FC = () => {
         <div className="footer-bottom">
           <p>© 2025 PETComp. Todos os direitos reservados.</p>
 
-          <div className="social-icons">
+          <div className="social-icons" style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
             <a href="https://www.instagram.com/petcomp_unioeste/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <img src="" alt="Instagram" />
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" width="30" height="30" style={{ filter: 'invert(0.5)' }} />
             </a>
             <a href="https://github.com/petcompgroup" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub" width="30" height="30" style={{ filter: 'invert(0.5)' }} />
             </a>
             <a href="https://www.youtube.com/@petcomputacao-unioeste7552" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-              <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" />
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/youtube.svg" alt="YouTube" width="30" height="30" style={{ filter: 'invert(0.5)' }} />
             </a>
             <a href="https://www.facebook.com/petcomp/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook" width="30" height="30" style={{ filter: 'invert(0.5)' }} />
             </a>
           </div>
+
         </div>
       </div>
     </footer>

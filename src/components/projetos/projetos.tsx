@@ -14,6 +14,7 @@ import avaliacao from './../../assets/images/projects/avaliacaoDisciplinas.png';
 import seminarios from './../../assets/images/projects/SeminariosMult.png';
 import newspet from './../../assets/images/projects/newspet.png';
 import visitasTEC from './../../assets/images/projects/VisitasTec.png';
+import cinepet from './../../assets/images/projects/cinepet.png';
 
 
 const Projetos: React.FC = () => {
@@ -290,6 +291,13 @@ const Projetos: React.FC = () => {
                 <p className="fs-4 mx-auto" style={{ maxWidth: 1200 }}>
                     O CinePET é uma atividade realizada periodicamente pelo grupo, na qual são exibidos documentários, palestras, filmes ou TED Talks que abordam temas relevantes para a formação pessoal, acadêmica ou profissional dos petianos. Após a exibição, os participantes são convidados a refletir e debater sobre o conteúdo apresentado, promovendo senso crítico e troca de perspectivas.
                 </p>
+                <div className="mx-auto" style={{ maxWidth: 600 }}>
+                    <img
+                        src={cinepet}
+                        alt="CinePET"
+                        className="img-fluid w-100 mt-4"
+                    />
+                </div>
             </section>
 
             {/* Projetos Individuais */}

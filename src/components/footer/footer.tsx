@@ -26,10 +26,10 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="footer-section">
-            <h4>Baixe nosso app</h4>
+            <h4>Contato</h4>
             <div className="app-buttons">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/512px-Google_Play_Store_badge_EN.svg.png" alt="Google Play" />
-              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" />
+              <a href="https://app.kirvano.com/terms-of-use#terms-of-use">Sala PETComp</a>
+              <a href="https://app.kirvano.com/terms-of-use#terms-of-use">petcomp.cascavel@gmail.com</a>
             </div>
           </div>
         </div>

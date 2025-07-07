@@ -16,6 +16,7 @@
   justify-content: space-between;
   gap: 24px;
   flex-wrap: wrap;
+  position: relative; /* Necessário para centralizar o menu */
 }
 
 .pet-logo {
@@ -30,7 +31,11 @@
   object-fit: contain;
 }
 
-.pet-nav {
+/* Centralização absoluta do menu de navegação */
+.pet-nav.desktop {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 24px;
   background-color: rgba(0, 0, 0, 0.04);
@@ -90,7 +95,7 @@
   opacity: 0.9;
 }
 
-/*Adaptacao para o celular*/
+/* Menu Mobile */
 .mobile-menu {
   display: flex;
   flex-direction: column;
@@ -137,7 +142,7 @@
   border-radius: 4px;
 }
 
-/*Responsivo*/
+/* Responsivo */
 @media (max-width: 768px) {
   .desktop {
     display: none;
@@ -156,5 +161,15 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .pet-nav.desktop {
+    position: static;
+    transform: none;
+    justify-content: center;
+    width: 100%;
+    margin-top: 12px;
+    background-color: transparent;
+    padding: 0;
   }
 }

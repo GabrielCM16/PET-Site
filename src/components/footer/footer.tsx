@@ -15,21 +15,21 @@ const Footer: React.FC = () => {
 
           <div className="footer-section">
             <h4>Aprenda com o PETComp</h4>
-            <a href="https://www.youtube.com/@kirvanobr/">Canal do YouTube</a>
-            <a href="https://blog.kirvano.com/">Blog do PETComp</a>
+            <a href="https://www.youtube.com/@petcomputacao-unioeste7552">Canal do YouTube</a>
+            <a href="">Blog do PETComp</a>
           </div>
 
           <div className="footer-section">
-            <h4>Termos e Condições de Uso</h4>
-            <a href="https://app.kirvano.com/terms-of-use#terms-of-use">Termos Gerais de Uso</a>
-            <a href="https://app.kirvano.com/terms-of-use#content-policy">Política de Conteúdo</a>
+            <h4>Complementos</h4>
+            <a href="">Projetos</a>
+            <a href="">NewsPETLetter</a>
           </div>
 
           <div className="footer-section">
             <h4>Contato</h4>
             <div className="app-buttons">
-              <a href="https://app.kirvano.com/terms-of-use#terms-of-use">Sala PETComp</a>
-              <a href="https://app.kirvano.com/terms-of-use#terms-of-use">petcomp.cascavel@gmail.com</a>
+              <a href="">petcomp.cascavel@gmail.com</a>
+              <a href="">Sala PETComp</a>
             </div>
           </div>
         </div>

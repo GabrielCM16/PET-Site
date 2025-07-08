@@ -11,7 +11,7 @@ const App: React.FC = () => {
       <main className="container text-center mt-5 ">
         <img
           src={LogoPET}
-          alt="Logo Petcomp"
+          alt="Logo Petcomp"  
           className="logo-img mx-auto d-block"
         />
         <h1 className="mt-5 display-5 press-start-font">O QUE É?</h1>

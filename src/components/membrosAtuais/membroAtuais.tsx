@@ -393,7 +393,7 @@ const Membros: React.FC = () => {
 
       {/* Tutor atual */}
       <div className="mt-5">
-        <h2 className="display-6">Tutor</h2>
+        <h2 className="fs-2">Tutor</h2>
         <img
           src={galante}
           alt="Tutor profile"
@@ -452,7 +452,7 @@ const Membros: React.FC = () => {
       {/* Botão de expansão (mesmo estilo do "Saiba mais...") */}
       <div className="d-flex justify-content-center mt-4 mb-5">
         <button className="btn btn-outline-light" onClick={toggleExMembros}>
-          {showExMembros ? "Mostrar menos..." : "Saiba mais..."}
+          {showExMembros ? "Mostrar menos" : "Tutores / Membros Egressos"}
         </button>
       </div>
 

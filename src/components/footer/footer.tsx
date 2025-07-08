@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="footer-section">
-            <h4>Complementos</h4>
+            <h4>Recursos</h4>
             <a href="">Projetos</a>
             <a href="">NewsPETLetter</a>
           </div>

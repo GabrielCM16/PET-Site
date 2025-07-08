@@ -1,23 +1,48 @@
-html, body {
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Pixelify+Sans:wght@400..700&display=swap'); /*importando a fonte*/
+
+html, body, main {
   background-color: #44599ff1 !important;
   color: white;
   height: 100%;
+  font-family: "Pixelify Sans", sans-serif;
 }
 
+.press-start-font { 
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 12px; /* essa fonte é pequena por padrão */
+  color: white;
+}
+
+/* Se quiser sobrescrever especificamente os textos customizados */
+.custom-font {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #ffffff; /* ou qualquer outra cor desejada, ex: #FFEB3B */
+}
+
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 220;
+  font-style: normal;
+  color: #ffffff; /* ou qualquer outra cor desejada */
+}
 
 .card-custom {
-  background-color: #576e8e;
+  background-color: #44599ff1;
   border-radius: 25px;
   height: 300px;
   width: 270px;
   transition: background-color 0.3s ease;
   cursor: pointer;
+  color: white; /* garante que o texto dentro do card fique branco */
 }
 
 .card-custom:hover {
-  background-color: #435575; /* tom mais escuro/forte */
+  background-color: #44599ff1;
 }
-
 
 .group-img {
   width: 400px;
@@ -26,21 +51,8 @@ html, body {
 }
 
 .logo-img {
-  max-width: 350px;  /* controla o tamanho máximo da imagem */
-  width: 100%;       /* faz a imagem escalar dentro do container */
-  height: auto;      /* mantém proporção */
+  max-width: 350px;
+  width: 100%;
+  height: auto;
   margin-top: 80px;
-}
-
-.custom-font {
-  font-family: 'Poppins', sans-serif; 
-   font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-}
-.inter-regular {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 220;
-  font-style: normal;
 }

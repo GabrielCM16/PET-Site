@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Pixelify+Sans:wght@400..700&display=swap'); /*importando a fonte*/
 
 html, body {
-  background-color: #44599ff1 !important;
+  background-color: #44599f !important;
   color: white;
   height: 100%;
   font-family: "Pixelify Sans", sans-serif;
@@ -23,7 +23,7 @@ html, body {
 }
 
 .inter-regular {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif; 
   font-optical-sizing: auto;
   font-weight: 220;
   font-style: normal;
@@ -31,7 +31,7 @@ html, body {
 }
 
 .card-custom {
-  background-color: #44599ff1;
+  background-color: #749BC2 !important ;
   border-radius: 25px;
   height: 300px;
   width: 270px;
@@ -41,7 +41,7 @@ html, body {
 }
 
 .card-custom:hover {
-  background-color: #44599ff1;
+  background-color: #173969 !important;
 }
 
 .group-img {

@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Pixelify+Sans:wght@400..700&display=swap'); /*importando a fonte*/
 
 .card-custom {
-  background-color: #576e8e;
+  background-color: #576e8e ;
   border-radius: 25px;
   width: 100%;
   max-width: 270px;

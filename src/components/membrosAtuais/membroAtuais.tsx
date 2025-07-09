@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from 'react';
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./membrosAtuais.css";
 
@@ -17,6 +18,8 @@ import deitos from "./../../assets/images/members/deitos.png";
 import vinicius from "./../../assets/images/members/vinicius.png";
 import altmeyer from "./../../assets/images/members/altmeyer.png";
 import tutorImg from "./../../assets/images/members/profile.png"; 
+import carol from "./../../assets/images/members/carol.png"; 
+import maria from "./../../assets/images/members/maria.png"; 
 
 
 const membros = [
@@ -285,6 +288,50 @@ const membros = [
       comida: "bife a parmegiana"
     },
   },
+  {
+    nome: "Caroline Mayumi Grellmann Saito",
+    foto: carol,
+    icv: "ICV: Manutenção lab 4.0",
+    membroDesde: "2025",
+    links: {
+      instagram: "https://www.instagram.com/c.mayymi?igsh=MXc4M2ltaW1peGpwbg%3D%3D&utm_source=qr",
+      github: "https://github.com/cmayymi",
+      email: "mailto:carolinegrell@hotmail.com",
+    },
+    saibaMais: {
+      cidadeNatal: "Foz do Iguaçu - PR",
+      motivoCurso:
+        "Escolhi o curso de Ciência da Computação porque é uma área em expansão, com múltiplas oportunidades de atuação, o que me motivou bastante.",
+      alternativaCurso: "Engenharia de Software & Publicidade Propaganda",
+      academica: "Ainda não tenho certeza de que área quero seguir.",
+      hobby: "Jogar jogos online, pilates",
+      filme: "Como treinar seu dragão",
+      jogo: "Stardew Valley",
+      musica: "Roommates - Malcom Todd",
+      comida: "Sushi e strogonoff.",
+    },
+  },
+{
+    nome: "Maria Clara S. Guiotti",
+    foto: maria,
+    icv: "ICV: TBD",
+    membroDesde: "2025",
+    links: {
+      instagram: "mariaguiotti_",
+      email: "maria.guiotti@unioeste.br",
+    },
+    saibaMais: {
+      cidadeNatal: "Brasília",
+      motivoCurso: "curso promissor e bem remunerado",
+      alternativaCurso: "Fisioterapia",
+      academica: "software",
+      hobby: "esportes, pintura e viagens",
+      filme: "O dublê (2024)",
+      jogo: "vôlei, Cs",
+      música: "Lazy Song (Bruno Mars)",
+      comida: "sushi e Mac"
+    },
+  },
 
 
 ];
@@ -379,6 +426,71 @@ const ExMembros = ['1 - Eduardo Vansetto 09/12/2010 até 03/03/2011,',
   '87 - Ronaldo Drecksler Farias Pacheco 06/12/2022 até 21/04/2025,',
   '88 - Leonardo Calsavara 29/09/2023 até 21/04/2025,',
   '89 - David Antonio Brocardo 06/12/2022 até 21/04/2025,']
+
+const ITEMS_PER_PAGE = 15;
+type TabelaExMembrosProps = {
+  ExMembros: string[];
+};
+
+function TabelaExMembros({ ExMembros }: TabelaExMembrosProps) {
+  const [paginaAtual, setPaginaAtual] = useState(1);
+
+  const totalPaginas = Math.ceil(ExMembros.length / ITEMS_PER_PAGE);
+  const inicioIndex = (paginaAtual - 1) * ITEMS_PER_PAGE;
+  const fimIndex = inicioIndex + ITEMS_PER_PAGE;
+  const dadosPagina = [...ExMembros].reverse().slice(inicioIndex, fimIndex);
+
+  const avancar = () => {
+    if (paginaAtual < totalPaginas) setPaginaAtual(paginaAtual + 1);
+  };
+
+  const voltar = () => {
+    if (paginaAtual > 1) setPaginaAtual(paginaAtual - 1);
+  };
+
+  return (
+    <>
+      <div className="table-responsive">
+        <table className="table table-bordered table-hover align-middle">
+          <thead className="table-light">
+            <tr>
+              <th>#</th>
+              <th>Nome</th>
+              <th>Período</th>
+            </tr>
+          </thead>
+          <tbody>
+            {dadosPagina.map((linha, index) => {
+              const [numeroENome, datas] = linha.split(/(?<=\d+\s-\s[^0-9]+?)\s(?=\d{2}\/\d{2}\/\d{4})/);
+              const [numero, nome] = numeroENome.split(' - ');
+              const [inicio, fim] = datas.replace(',', '').split(' até ');
+              return (
+                <tr key={index}>
+                  <td>{numero}</td>
+                  <td>{nome}</td>
+                  <td>{`${inicio} até ${fim}`}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+
+      <div className="d-flex justify-content-between align-items-center mt-1 mb-4">
+        <button className="btn btn-outline-light mt-3" onClick={voltar} disabled={paginaAtual === 1}>
+          Anterior
+        </button>
+        <span>Página {paginaAtual} de {totalPaginas}</span>
+        <button className="btn btn-outline-light mt-3" onClick={avancar} disabled={paginaAtual === totalPaginas}>
+          Próxima
+        </button>
+      </div>
+    </>
+  );
+}
+
+
+
 const Membros: React.FC = () => {
   const [selectedMembro, setSelectedMembro] = React.useState<number | null>(null);
   const [showExMembros, setShowExMembros] = React.useState(false);
@@ -496,7 +608,7 @@ const Membros: React.FC = () => {
               />
 
               <h3 className="fs-2">Marcio Seiji Oyamada</h3>
-              <p className="fs-4">Tutor desde 2016</p>
+              <p className="fs-4">Tutor 2016 - 2022</p>
             </div>
             <div className="col-md-4 d-flex flex-column align-items-center mb-4">
               <img
@@ -511,38 +623,15 @@ const Membros: React.FC = () => {
               />
 
               <h3 className="fs-2">Clodis Boscarioli</h3>
-              <p className="fs-4">Tutor desde 2010</p>
+              <p className="fs-4">Tutor 2010 - 2016</p>
             </div>
           </div>
 
           <h2 className="display-6 mb-4 mt-5">Ex-Membros</h2>
           <p>Aqui registramos os que já integraram o grupo ao longo dos anos.</p>
 
-          <div className="table-responsive">
-            <table className="table table-bordered table-hover align-middle">
-              <thead className="table-light">
-                <tr>
-                  <th>#</th>
-                  <th>Nome</th>
-                  <th>Período</th>
-                </tr>
-              </thead>
-              <tbody>
-                {ExMembros.map((linha, index) => {
-                  const [numeroENome, datas] = linha.split(/(?<=\d+\s-\s[^0-9]+?)\s(?=\d{2}\/\d{2}\/\d{4})/);
-                  const [numero, nome] = numeroENome.split(' - ');
-                  const [inicio, fim] = datas.replace(',', '').split(' até ');
-                  return (
-                    <tr key={index}>
-                      <td>{numero}</td>
-                      <td>{nome}</td>
-                      <td>{`${inicio} até ${fim}`}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+        <TabelaExMembros ExMembros={ExMembros} />
+
         </section>
       )}
     </main>

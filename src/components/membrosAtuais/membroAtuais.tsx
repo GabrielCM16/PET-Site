@@ -20,7 +20,7 @@ import altmeyer from "./../../assets/images/members/altmeyer.png";
 import tutorImg from "./../../assets/images/members/profile.png";
 import carol from "./../../assets/images/members/carol.png";
 import maria from "./../../assets/images/members/maria.png";
-import fabio from "./../../assets/images/members/profile.png";
+import fabio from "./../../assets/images/members/fabio.png";
 
 
 const membros = [

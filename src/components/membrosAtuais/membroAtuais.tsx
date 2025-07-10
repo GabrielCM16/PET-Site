@@ -17,9 +17,10 @@ import rafael from "./../../assets/images/members/rafael.png";
 import deitos from "./../../assets/images/members/deitos.png";
 import vinicius from "./../../assets/images/members/vinicius.png";
 import altmeyer from "./../../assets/images/members/altmeyer.png";
-import tutorImg from "./../../assets/images/members/profile.png"; 
-import carol from "./../../assets/images/members/carol.png"; 
-import maria from "./../../assets/images/members/maria.png"; 
+import tutorImg from "./../../assets/images/members/profile.png";
+import carol from "./../../assets/images/members/carol.png";
+import maria from "./../../assets/images/members/maria.png";
+import fabio from "./../../assets/images/members/profile.png";
 
 
 const membros = [
@@ -309,9 +310,9 @@ const membros = [
       jogo: "Stardew Valley",
       musica: "Roommates - Malcom Todd",
       comida: "Sushi e strogonoff.",
-    },
-  },
-{
+    },
+  },
+  {
     nome: "Maria Clara S. Guiotti",
     foto: maria,
     icv: "ICV: TBD",
@@ -330,8 +331,29 @@ const membros = [
       jogo: "vôlei, Cs",
       música: "Lazy Song (Bruno Mars)",
       comida: "sushi e Mac"
-    },
-  },
+    },
+  },
+  {
+    nome: "Fábio Kenji Sato",
+    foto: fabio,
+    icv: "ICV: Estudo do circuito de alimentação e proposta de correções do projeto da placa da estação EnvCity de coleta de qualidade do ar.",
+    membroDesde: "2018-2021, 2023",
+    links: {
+      lattes: "https://lattes.cnpq.br/4579969236899501",
+      github: "https://github.com/FabioKenjiSato",
+      email: "mailto:f.ksatoclass@gmail.com",
+    },
+    saibaMais: {
+      cidadeNatal: "Cascavel - PR",
+      motivoCurso: "Ampla gama de vagas de trabalho.",
+      alternativaCurso: "Engenharia de computação, Engenharia mecânica, Engenharia hidráulica, Engenharia Civil.",
+      academica: "Mestrado.",
+      hobby: "Fotografia analógica, Ciclismo, Jogos, Natureza.",
+      filme: "Senhor dos Anéis, O Hobbit.",
+      jogo: "Team Fortress 2 principalmente, horror, estratégia, fps, simuladores.",
+      comida: "Sim.",
+    },
+  }
 
 
 ];
@@ -504,7 +526,7 @@ const Membros: React.FC = () => {
       <h1 className="display-3 mt-5">MEMBROS</h1>
 
       {/* Tutor atual */}
-      <div className="mt-5">
+      <div className="mt-5 text-center">
         <h2 className="fs-2">Tutor</h2>
         <img
           src={galante}
@@ -514,7 +536,17 @@ const Membros: React.FC = () => {
         />
         <h3 className="fs-2">Guilherme Galante</h3>
         <p className="fs-3">Tutor desde 2022</p>
+
+        <div className="d-flex justify-content-center gap-3 mt-2">
+          <a href="http://lattes.cnpq.br/1467826050353891" target="_blank" rel="noopener noreferrer">
+            <i className="bi bi-file-earmark-person-fill text-white fs-4"></i>
+          </a>
+          <a href="mailto:Guilherme.Galante@unioeste.br">
+            <i className="bi bi-envelope-fill text-white fs-4"></i>
+          </a>
+        </div>
       </div>
+
 
       {/* Membros atuais */}
       <div className="row justify-content-center mt-5">
@@ -595,42 +627,54 @@ const Membros: React.FC = () => {
         <section className="mt-5">
           <h2 className="display-6 mb-4">Ex-Tutores</h2>
           <div className="row justify-content-center">
+            {/* Marcio */}
             <div className="col-md-4 d-flex flex-column align-items-center mb-4">
               <img
                 src={marcio}
                 alt="Tutor Marcio"
                 className="rounded-circle mb-3"
-                style={{
-                  width: "200px",
-                  height: "200px",
-                  objectFit: "cover",
-                }}
+                style={{ width: "200px", height: "200px", objectFit: "cover" }}
               />
-
               <h3 className="fs-2">Marcio Seiji Oyamada</h3>
               <p className="fs-4">Tutor 2016 - 2022</p>
+
+              <div className="d-flex justify-content-center gap-3 mt-2">
+                <a href="http://lattes.cnpq.br/6642959615863178" target="_blank" rel="noopener noreferrer">
+                  <i className="bi bi-file-earmark-person-fill text-white fs-4"></i>
+                </a>
+                <a href="mailto:msoyamada@gmail.com">
+                  <i className="bi bi-envelope-fill text-white fs-4"></i>
+                </a>
+              </div>
             </div>
+
+            {/* Clodis */}
             <div className="col-md-4 d-flex flex-column align-items-center mb-4">
               <img
                 src={clodis}
                 alt="Tutor Clodis"
                 className="rounded-circle mb-3"
-                style={{
-                  width: "200px",
-                  height: "200px",
-                  objectFit: "cover",
-                }}
+                style={{ width: "200px", height: "200px", objectFit: "cover" }}
               />
-
               <h3 className="fs-2">Clodis Boscarioli</h3>
               <p className="fs-4">Tutor 2010 - 2016</p>
+
+              <div className="d-flex justify-content-center gap-3 mt-2">
+                <a href="http://lattes.cnpq.br/2844207318576160" target="_blank" rel="noopener noreferrer">
+                  <i className="bi bi-file-earmark-person-fill text-white fs-4"></i>
+                </a>
+                <a href="mailto:Clodis.Boscarioli@unioeste.br">
+                  <i className="bi bi-envelope-fill text-white fs-4"></i>
+                </a>
+              </div>
             </div>
           </div>
+
 
           <h2 className="display-6 mb-4 mt-5">Ex-Membros</h2>
           <p>Aqui registramos os que já integraram o grupo ao longo dos anos.</p>
 
-        <TabelaExMembros ExMembros={ExMembros} />
+          <TabelaExMembros ExMembros={ExMembros} />
 
         </section>
       )}

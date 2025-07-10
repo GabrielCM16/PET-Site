@@ -19,112 +19,138 @@ import cinepet from './../../assets/images/projects/cinepet.png';
 
 const Projetos: React.FC = () => {
     const [mobile, setMobile] = useState(false);
+    const [expanded, setExpanded] = useState(false);
+    const [expandedLixo, setExpandedLixo] = useState(false);
+    const [expandedDivulgacao, setExpandedDivulgacao] = useState(false);
+const [expandedDocom, setExpandedDocom] = useState(false);
+
 
     useEffect(() => {
         setMobile(window.innerWidth < 1000);
     }, []);
 
     return (
-        <main className="container px-3 my-5 projetos-container">
+        <main className="container px-3 my-5 projetos-container text-center">
 
-            {/* PROJETOS */}
             <section className="text-center my-5">
-                <h1 className="display-1 mt-5">PROJETOS</h1>
-                <h2 className="display-4 mt-5">A&B Game Jam</h2>
-                <p className="fs-4 mx-auto" style={{ maxWidth: 1100 }}>
-                    A A&B Game Jam é um evento anual organizado pelo PETComp como parte do projeto de Organização de Eventos.
-                    Neste evento, tanto os estudantes da Unioeste quanto a comunidade externa são convidados a participar de uma GameJam,
-                    onde as equipes têm como objetivo criar um jogo do zero em uma semana seguindo um tema escolhido pelo PET.
-                </p>
-                <p className="fs-4 mx-auto mt-3" style={{ maxWidth: 1100 }}>
-                    Em 2025, será realizada a A&B Game Jam IX!
-                </p>
-                <p className="fs-4 mx-auto mt-2" style={{ maxWidth: 1100 }}>
-                    Confira os resultados anteriores da A&B Game Jam:
-                </p>
+    <h1 className="display-4 mb-5">Projetos</h1>
 
-                <div className="d-flex justify-content-around flex-wrap mx-auto" style={{ maxWidth: 600 }}>
-                    <a href="https://itch.io/jam/ab-game-jam-viii" className="fs-5 text-decoration-none" target="_blank" rel="noopener noreferrer">VIII 2024</a>
-                    <a href="https://itch.io/jam/ab-game-jam-vii" className="fs-5 text-decoration-none" target="_blank" rel="noopener noreferrer">VII 2023</a>
-                    <a href="https://itch.io/jam/ab-game-jam-vi" className="fs-5 text-decoration-none" target="_blank" rel="noopener noreferrer">VI 2022</a>
-                    <a href="https://gamejolt.com/search/games?q=abgamejam5" className="fs-5 text-decoration-none" target="_blank" rel="noopener noreferrer">V 2021</a>
-                    <a href="https://gamejolt.com/search/games?q=abgamejam4" className="fs-5 text-decoration-none" target="_blank" rel="noopener noreferrer">IV 2020</a>
-                    <a href="https://gamejolt.com/search/games?q=abgamejam3" className="fs-5 text-decoration-none" target="_blank" rel="noopener noreferrer">III 2019</a>
-                    <a href="https://gamejolt.com/search/games?q=abgamejam2" className="fs-5 text-decoration-none" target="_blank" rel="noopener noreferrer">II 2018</a>
-                    <a href="https://gamejolt.com/search/games?q=abgamejam" className="fs-5 text-decoration-none" target="_blank" rel="noopener noreferrer">I 2018</a>
-                </div>
+    {/* Primeira linha: Game Jam + Lixo Eletrônico */}
+    <div className="row justify-content-center">
+        {/* A&B Game Jam */}
+        <div className="col-lg-5 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+            <div className="card-custom text-white text-center p-3" style={{ maxWidth: "600px", width: "100%" }}>
+                <h2 className="display-5 mb-3">A&B Game Jam</h2>
+                <img src={gamejam} alt="Logo A&B Game Jam" className="img-fluid rounded mb-3" style={{ maxHeight: 200, objectFit: "contain" }} />
+                {!expanded && (
+                    <div className="mt-3">
+                        <button className="btn btn-outline-light" onClick={() => setExpanded(true)}>Saiba mais...</button>
+                    </div>
+                )}
+                {expanded && (
+                    <>
+                        <div className="text-center fs-6 mb-3">
+                            <div className="mb-2">A A&B Game Jam é um evento anual organizado pelo PETComp como parte do projeto de Organização de Eventos.</div>
+                            <div className="mb-2">Neste evento, estudantes da Unioeste e a comunidade externa criam um jogo do zero em uma semana seguindo um tema definido.</div>
+                            <div className="mb-2">Em 2025, será realizada a <strong>A&B Game Jam IX</strong>!</div>
+                            <div className="mb-2">Resultados anteriores:</div>
+                            <div className="d-flex flex-wrap justify-content-center gap-2">
+                                <a href="https://itch.io/jam/ab-game-jam-viii" className="text-white text-decoration-underline" target="_blank" rel="noopener noreferrer">VIII 2024</a>
+                                <a href="https://itch.io/jam/ab-game-jam-vii" className="text-white text-decoration-underline" target="_blank" rel="noopener noreferrer">VII 2023</a>
+                                <a href="https://itch.io/jam/ab-game-jam-vi" className="text-white text-decoration-underline" target="_blank" rel="noopener noreferrer">VI 2022</a>
+                                <a href="https://gamejolt.com/search/games?q=abgamejam5" className="text-white text-decoration-underline" target="_blank" rel="noopener noreferrer">V 2021</a>
+                                <a href="https://gamejolt.com/search/games?q=abgamejam4" className="text-white text-decoration-underline" target="_blank" rel="noopener noreferrer">IV 2020</a>
+                                <a href="https://gamejolt.com/search/games?q=abgamejam3" className="text-white text-decoration-underline" target="_blank" rel="noopener noreferrer">III 2019</a>
+                                <a href="https://gamejolt.com/search/games?q=abgamejam2" className="text-white text-decoration-underline" target="_blank" rel="noopener noreferrer">II 2018</a>
+                                <a href="https://gamejolt.com/search/games?q=abgamejam" className="text-white text-decoration-underline" target="_blank" rel="noopener noreferrer">I 2018</a>
+                            </div>
+                        </div>
+                        <button className="btn btn-outline-light" onClick={() => setExpanded(false)}>Mostrar menos</button>
+                    </>
+                )}
+            </div>
+        </div>
 
+        {/* Coleta de Lixo Eletrônico */}
+        <div className="col-lg-5 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+            <div className="card-custom text-white text-center p-3" style={{ maxWidth: "600px", width: "100%" }}>
+                <h2 className="display-5 mb-3">Coleta de lixo eletrônico</h2>
+                <img src={lixo} alt="Coleta de lixo eletrônico" className="img-fluid rounded mb-3" style={{ maxHeight: 200, objectFit: "contain" }} />
+                {!expandedLixo && (
+                    <div className="mt-3">
+                        <button className="btn btn-outline-light" onClick={() => setExpandedLixo(true)}>Saiba mais...</button>
+                    </div>
+                )}
+                {expandedLixo && (
+                    <>
+                        <div className="text-center fs-6 mb-3">
+                            <div className="mb-2">O grupo disponibiliza lixeiras exclusivas para a coleta de lixo eletrônico no Campus da Unioeste Cascavel.</div>
+                            <div className="mb-2">Essa iniciativa visa principalmente auxiliar a comunidade na destinação adequada desse tipo de resíduo, promovendo sustentabilidade e responsabilidade ambiental.</div>
+                        </div>
+                        <button className="btn btn-outline-light" onClick={() => setExpandedLixo(false)}>Mostrar menos</button>
+                    </>
+                )}
+            </div>
+        </div>
+    </div>
 
-                <div className="mx-auto" style={{ maxWidth: 700 }}>
-                    <img
-                        src={gamejam}
-                        alt="Logo Petcomp"
-                        className="img-fluid w-100 mt-4"
-                    />
-                </div>
-            </section>
+    {/* Segunda linha: Divulgação + DOCOM */}
+    <div className="row justify-content-center">
+        {/* Divulgação do curso */}
+        <div className="col-lg-5 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+            <div className="card-custom text-white text-center p-3" style={{ maxWidth: "600px", width: "100%" }}>
+                <h2 className="display-5 mb-3">Divulgação do curso</h2>
+                <img src={divulgacao} alt="Divulgação do curso" className="img-fluid rounded mb-3" style={{ maxHeight: 200, objectFit: "contain" }} />
+                {!expandedDivulgacao && (
+                    <div className="mt-3">
+                        <button className="btn btn-outline-light" onClick={() => setExpandedDivulgacao(true)}>Saiba mais...</button>
+                    </div>
+                )}
+                {expandedDivulgacao && (
+                    <>
+                        <div className="text-center fs-6 mb-3">
+                            <div className="mb-2">Para promover o curso de Ciência da Computação da Unioeste de Cascavel, a equipe se compromete a realizar visitas em escolas como estratégia fundamental de divulgação.</div>
+                            <div className="mb-2">Essa iniciativa visa informar a comunidade sobre as oportunidades educacionais disponíveis e atrair potenciais interessados na área.</div>
+                        </div>
+                        <button className="btn btn-outline-light" onClick={() => setExpandedDivulgacao(false)}>Mostrar menos</button>
+                    </>
+                )}
+            </div>
+        </div>
 
-            {/* COLETA DE LIXO ELETRÔNICO */}
-            <section className="text-center my-5">
-                <h2 className="display-4">Coleta de lixo eletrônico</h2>
-                <p className="fs-4 mx-auto" style={{ maxWidth: 1200 }}>
-                    O grupo disponibiliza lixeiras exclusivas para a coleta de lixo eletrônico no Campus da Unioeste Cascavel.
-                    Essa iniciativa visa principalmente auxiliar a comunidade na destinação adequada desse tipo de resíduo.
-                </p>
-                <div className="mx-auto" style={{ maxWidth: 600 }}>
-                    <img
-                        src={lixo}
-                        alt="Logo Petcomp"
-                        className="img-fluid w-100 mt-4"
-                    />
-                </div>
-
-            </section>
-
-            {/* DIVULGAÇÃO DO CURSO */}
-            <section className="text-center my-5">
-                <h2 className="display-4">Divulgação do curso</h2>
-                <p className="fs-4 mx-auto" style={{ maxWidth: 1200 }}>
-                    Para promover o curso de Ciência da Computação da Unioeste de Cascavel,
-                    a equipe se compromete a realizar visitas em escolas como uma estratégia fundamental de divulgação.
-                    Essa iniciativa visa não apenas informar a comunidade sobre as oportunidades educacionais disponíveis,
-                    mas também atrair potenciais interessados na área.
-                </p>
-                <div className="mx-auto" style={{ maxWidth: 800 }}>
-                    <img
-                        src={divulgacao}
-                        alt="Logo Petcomp"
-                        className="img-fluid w-100 mt-4"
-                    />
-                </div>
-
-            </section>
-
-            {/* DOCOM */}
-            <section className="text-center my-5">
-                <h2 className="display-4">DOCOM</h2>
-                <p className="fs-4 mx-auto" style={{ maxWidth: 1200 }}>
-                    Para documentar e divulgar as atividades realizadas, o grupo registra todos os projetos em locais de acesso exclusivo para os petianos vigentes e futuros,
-                    além de compartilhar publicamente suas atividades no{" "}
-                    <a
-                        href="https://www.instagram.com/petcomp_unioeste/"
-                        className="text-white text-decoration-underline"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Instagram
-                    </a>.
-                </p>
-                <div className="mx-auto" style={{ maxWidth: 600 }}>
-                    <img
-                        src={docom}
-                        alt="Logo Petcomp"
-                        className="img-fluid w-100 mt-4"
-                    />
-                </div>
-
-
-            </section>
+        {/* DOCOM */}
+        <div className="col-lg-5 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+            <div className="card-custom text-white text-center p-3" style={{ maxWidth: "600px", width: "100%" }}>
+                <h2 className="display-5 mb-3">DOCOM</h2>
+                <img src={docom} alt="DOCOM" className="img-fluid rounded mb-3" style={{ maxHeight: 200, objectFit: "contain" }} />
+                {!expandedDocom && (
+                    <div className="mt-3">
+                        <button className="btn btn-outline-light" onClick={() => setExpandedDocom(true)}>Saiba mais...</button>
+                    </div>
+                )}
+                {expandedDocom && (
+                    <>
+                        <div className="text-center fs-6 mb-3">
+                            <div className="mb-2">Para documentar e divulgar as atividades realizadas, o grupo registra todos os projetos em locais de acesso exclusivo para os petianos vigentes e futuros.</div>
+                            <div className="mb-2">
+                                Além disso, compartilha publicamente suas ações por meio do{" "}
+                                <a
+                                    href="https://www.instagram.com/petcomp_unioeste/"
+                                    className="text-white text-decoration-underline"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Instagram
+                                </a>.
+                            </div>
+                        </div>
+                        <button className="btn btn-outline-light" onClick={() => setExpandedDocom(false)}>Mostrar menos</button>
+                    </>
+                )}
+            </div>
+        </div>
+    </div>
+</section>
 
             {/* PETCODE */}
             <section className="text-center my-5 px-3">

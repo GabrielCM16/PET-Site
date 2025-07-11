@@ -23,8 +23,6 @@ const Header: React.FC = () => {
           <Link to="/sala">Sala</Link>
         </nav>
 
-        
-
         <button className="hamburger" onClick={toggleMenu} aria-label="Menu">
           <span />
           <span />
@@ -39,8 +37,6 @@ const Header: React.FC = () => {
           <Link to="/newspetletter" onClick={toggleMenu}>NewsPETLetter</Link>
           <Link to="/projetos" onClick={toggleMenu}>Projetos</Link>
           <Link to="/sala" onClick={toggleMenu}>Sala</Link>
-          <a href="https://app.pet.com/" className="btn login" target="_blank" rel="noopener noreferrer">Login</a>
-          <a href="https://app.pet.com/signup" className="btn signup" target="_blank" rel="noopener noreferrer">Cadastre-se</a>
         </div>
       )}
     </header>

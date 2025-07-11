@@ -1,23 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Pixelify+Sans:wght@400..700&display=swap'); /*importando a fonte*/
+
 html, body {
-  background-color: #44599ff1 !important;
+  background-color: #44599f !important;
   color: white;
   height: 100%;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+/* Ajuste do título para usar a mesma fonte e estilo do site */
+.instagram-section h2 {
+  font-family: 'custom-font', sans-serif; /* mesmo da sua custom-font */
+  font-weight: 600;
+  font-size: 2rem; /* similar ao display-4 */
+  margin-bottom: 1rem;
+  color: #222; /* cor consistente */
+}
+
+.instagram-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.instagram-post {
+  width: 280px;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.instagram-post:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important;
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
 }
 
 
+.instagram-post img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.instagram-post-title {
+  font-family: 'custom-font', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #222;
+  padding: 0.75rem;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+.press-start-font { 
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 12px; /* essa fonte é pequena por padrão */
+  color: white;
+}
+
+/* Se quiser sobrescrever especificamente os textos customizados */
+.custom-font {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #ffffff; /* ou qualquer outra cor desejada, ex: #FFEB3B */
+}
+
+.inter-regular {
+  font-family: "Inter", sans-serif; 
+  font-optical-sizing: auto;
+  font-weight: 220;
+  font-style: normal;
+  color: #ffffff; /* ou qualquer outra cor desejada */
+}
+
 .card-custom {
-  background-color: #576e8e;
+  background-color: #749BC2 !important ;
   border-radius: 25px;
   height: 300px;
   width: 270px;
   transition: background-color 0.3s ease;
   cursor: pointer;
+  color: white; /* garante que o texto dentro do card fique branco */
 }
 
 .card-custom:hover {
-  background-color: #435575; /* tom mais escuro/forte */
+  background-color: #173969 !important;
 }
-
 
 .group-img {
   width: 400px;
@@ -26,21 +110,8 @@ html, body {
 }
 
 .logo-img {
-  max-width: 350px;  /* controla o tamanho máximo da imagem */
-  width: 100%;       /* faz a imagem escalar dentro do container */
-  height: auto;      /* mantém proporção */
+  max-width: 350px;
+  width: 100%;
+  height: auto;
   margin-top: 80px;
-}
-
-.custom-font {
-  font-family: 'Poppins', sans-serif; 
-   font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-}
-.inter-regular {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 220;
-  font-style: normal;
 }

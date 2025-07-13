@@ -3,93 +3,10 @@ import './Inicio.css';
 
 import LogoPET from './../../assets/Logo_PETComp.png';
 import PetGroup from './../../assets/petGroup.png';
-
-// Interfaces para tipagem do feed JSON
-interface Author {
-  name: string;
-}
-
-interface Attachment {
-  url: string;
-}
-
-interface Post {
-  id: string;
-  url: string;
-  title: string;
-  content_text: string;
-  content_html: string;
-  image: string;
-  date_published: string;
-  authors: Author[];
-  attachments?: Attachment[];
-}
-
-interface JsonFeed {
-  version: string;
-  title: string;
-  home_page_url: string;
-  feed_url: string;
-  favicon: string;
-  language: string;
-  description: string;
-  items: Post[];
-}
-
-export const InstagramRSSFeed = () => {
-  const [posts, setPosts] = useState<Post[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  const rssJsonUrl = "https://rss.app/feeds/pS3FpvLzhLoVOIw2.json";
-
-  useEffect(() => {
-    fetch(rssJsonUrl)
-      .then((res) => {
-        if (!res.ok) throw new Error("Erro ao buscar feed JSON");
-        return res.json();
-      })
-      .then((data: JsonFeed) => {
-        setPosts(data.items || []);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error(error);
-        setLoading(false);
-      });
-  }, []);
+import YouTubeCarousel from './../youtube/YouTubeMiniWidget';
 
 
- return (
-  <section className="text-center my-5 instagram-section">
 
-    {loading && <p className="text-gray-500 text-lg">Carregando posts...</p>}
-
-    <div className="instagram-posts-grid">
-      {posts.length === 0 && !loading && (
-        <p className="text-gray-500 text-lg">Nenhum post encontrado.</p>
-      )}
-
-      {posts.map((post) => {
-        const imgSrcMatch = post.content_html.match(/<img src="([^"]+)"/);
-        const imgSrc = imgSrcMatch ? imgSrcMatch[1] : '';
-
-        return (
-          <a
-            key={post.id}
-            href={post.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="instagram-post"
-          >
-            <img src={imgSrc} alt={post.title} />
-            <p className="instagram-post-title">{post.title}</p>
-          </a>
-        );
-      })}
-    </div>
-  </section>
-);
-}
 const App: React.FC = () => {
   return (
     <>
@@ -166,7 +83,7 @@ const App: React.FC = () => {
           </p>
         </section>
 
-        <InstagramRSSFeed />
+        <YouTubeCarousel />
 
       </main>
     </>

@@ -4,7 +4,7 @@ import './Inicio.css';
 import LogoPET from './../../assets/Logo_PETComp.png';
 import PetGroup from './../../assets/petGroup.png';
 import YouTubeCarousel from './../youtube/YouTubeMiniWidget';
-
+import InstagramFeed from './../instagram/InstagramFeed';
 
 
 const App: React.FC = () => {
@@ -80,6 +80,15 @@ const App: React.FC = () => {
           <h1 className="display-6 custom-font">NOSSO DIA A DIA</h1>
           <p className="lead inter-regular mx-auto" style={{ maxWidth: '800px' }}>
             Acompanhe abaixo as publicações mais recentes do nosso perfil no Instagram. Compartilhamos os bastidores, eventos, projetos e momentos que fazem parte da nossa rotina no PET.
+          </p>
+        </section>
+
+        <InstagramFeed />
+
+        <section className="container my-5 px-3 text-center">
+          <h1 className="display-6 custom-font">NOSSO CANAL</h1>
+          <p className="lead inter-regular mx-auto" style={{ maxWidth: '800px' }}>
+            Acompanhe abaixo os vídeos mais recentes do nosso canal no YouTube. Compartilhamos palestras, workshops, eventos e conteúdos exclusivos que mostram o dia a dia e as conquistas do PETComp.
           </p>
         </section>
 

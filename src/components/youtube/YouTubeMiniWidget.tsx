@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Slider from 'react-slick';
 
-const API_KEY = ''; //bah pia
+const API_KEY = '';
 const CHANNEL_ID = '';
 
 const YouTubeCarousel: React.FC = () => {

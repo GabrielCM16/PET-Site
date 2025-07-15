@@ -45,7 +45,7 @@
 .pet-nav a {
   text-decoration: none;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;         /*Define tamanho da fonte das letras no header.*/
   color: rgba(0, 0, 0, 0.8);
   transition: color 0.3s ease;
   padding: 6px 8px;
@@ -151,6 +151,22 @@
 .menu-open .hamburger span:nth-child(3) {
   transform: rotate(-45deg) translateY(-8px);
 }
+/*=================================================================================================================================*/
+
+/*Animação Logo PETComp*/
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-logo {
+  animation: rotate360 1s ease-in-out;
+}
+/*=================================================================================================================================*/
 
 /* Responsivo */
 @media (max-width: 768px) {
@@ -220,5 +236,6 @@
     align-items: center;
   }
 }
+/*=================================================================================================================================*/
 
 }

@@ -1,18 +1,31 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
-import logoPetcomp from './../../assets/Logo_PET.png'; // ajuste o caminho se necessário
+import logoPetcomp from './../../assets/Logo_PET.png';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isRotating, setIsRotating] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+
+  const handleLogoClick = () => {
+    if (!isRotating) {
+      setIsRotating(true);
+      setTimeout(() => setIsRotating(false), 1000); // Duração da animação
+    }
+  };
 
   return (
     <header className={`pet-header ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="pet-header-container">
         <Link to="/" className="pet-logo" aria-label="Página inicial">
-          <img src={logoPetcomp} alt="Logo PETComp" className="logo-img-header" />
+          <img
+            src={logoPetcomp}
+            alt="Logo PETComp"
+            className={`logo-img-header ${isRotating ? 'rotate-logo' : ''}`}
+            onClick={handleLogoClick}
+          />
         </Link>
 
         <nav className="pet-nav desktop">

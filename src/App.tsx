@@ -6,6 +6,7 @@ import Membros from './components/membrosAtuais/membroAtuais';
 import ExMembros from './components/exmembros/exmembros';
 import Sala from './components/sala/sala';
 import PROJETOS from './components/projetos/projetos';
+import Newspetletter from './components/newspet/newspet'; // ✅ novo import
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/ex-membros" element={<ExMembros />} />
         <Route path="/sala" element={<Sala />} />
         <Route path="/projetos" element={<PROJETOS />} />
+        <Route path="/newspetletter" element={<Newspetletter />} /> {/* ✅ nova rota */}
       </Routes>
       <Footer />
     </Router>

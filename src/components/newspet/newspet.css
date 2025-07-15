@@ -1,0 +1,19 @@
+
+.newspetletter-container {
+  max-width: 900px;
+  margin: 100px auto 40px auto; /* margin-top compensando header fixo */
+  padding: 0 24px;
+  font-family: 'Archivo', sans-serif;
+  text-align: center;
+}
+
+.newspetletter-container h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+  color: #0152f8;
+}
+
+.newspetletter-container p {
+  font-size: 18px;
+  color: #333;
+}

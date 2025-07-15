@@ -1,6 +1,6 @@
 
 .newspetletter-container {
-  max-width: 900px;
+  max-width: 850px;      /* tamanho dos elementos */
   margin: 100px auto 40px auto; /* margin-top compensando header fixo */
   padding: 0 24px;
   font-family: 'Archivo', sans-serif;
@@ -10,10 +10,10 @@
 .newspetletter-container h1 {
   font-size: 36px;
   margin-bottom: 16px;
-  color: #0152f8;
+  color: #ffffff;
 }
 
 .newspetletter-container p {
-  font-size: 18px;
-  color: #333;
+  font-size: 17px;
+  color: #ffffff;
 }

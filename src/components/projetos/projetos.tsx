@@ -85,26 +85,7 @@ const Projetos: React.FC = () => {
                     </div>
 
                     {/* Coleta de Lixo Eletrônico */}
-                    <div className="col-lg-5 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-                        <div className="card-custom text-white text-center p-3" style={{ maxWidth: "600px", width: "100%" }}>
-                            <h2 className="display-5 mb-3">Coleta de lixo eletrônico</h2>
-                            <img src={lixo} alt="Coleta de lixo eletrônico" className="img-fluid rounded mb-3" style={{ maxHeight: 200, objectFit: "contain" }} />
-                            {!expandedLixo && (
-                                <div className="mt-3">
-                                    <button className="btn btn-outline-light" onClick={() => setExpandedLixo(true)}>Saiba mais...</button>
-                                </div>
-                            )}
-                            {expandedLixo && (
-                                <>
-                                    <div className="text-center fs-6 mb-3">
-                                        <div className="mb-2">O grupo disponibiliza lixeiras exclusivas para a coleta de lixo eletrônico no Campus da Unioeste Cascavel.</div>
-                                        <div className="mb-2">Essa iniciativa visa principalmente auxiliar a comunidade na destinação adequada desse tipo de resíduo, promovendo sustentabilidade e responsabilidade ambiental.</div>
-                                    </div>
-                                    <button className="btn btn-outline-light" onClick={() => setExpandedLixo(false)}>Mostrar menos</button>
-                                </>
-                            )}
-                        </div>
-                    </div>
+                    
                 </div>
 
                 {/* Segunda linha: Divulgação + DOCOM */}
@@ -604,6 +585,26 @@ const Projetos: React.FC = () => {
                                     <button className="btn btn-outline-light" onClick={() => setExpandedIndividuais(false)}>
                                         Mostrar menos
                                     </button>
+                                </>
+                            )}
+                        </div>
+                    </div>
+                    <div className="col-lg-5 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+                        <div className="card-custom text-white text-center p-3" style={{ maxWidth: "600px", width: "100%" }}>
+                            <h2 className="display-5 mb-3">Coleta de lixo eletrônico</h2>
+                            <img src={lixo} alt="Coleta de lixo eletrônico" className="img-fluid rounded mb-3" style={{ maxHeight: 200, objectFit: "contain" }} />
+                            {!expandedLixo && (
+                                <div className="mt-3">
+                                    <button className="btn btn-outline-light" onClick={() => setExpandedLixo(true)}>Saiba mais...</button>
+                                </div>
+                            )}
+                            {expandedLixo && (
+                                <>
+                                    <div className="text-center fs-6 mb-3">
+                                        <div className="mb-2">O grupo disponibiliza lixeiras exclusivas para a coleta de lixo eletrônico no Campus da Unioeste Cascavel.</div>
+                                        <div className="mb-2">Essa iniciativa visa principalmente auxiliar a comunidade na destinação adequada desse tipo de resíduo, promovendo sustentabilidade e responsabilidade ambiental.</div>
+                                    </div>
+                                    <button className="btn btn-outline-light" onClick={() => setExpandedLixo(false)}>Mostrar menos</button>
                                 </>
                             )}
                         </div>

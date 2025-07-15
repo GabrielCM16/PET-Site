@@ -20,9 +20,9 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="footer-section">
-            <h4>Termos e Condições de Uso</h4>
-            <a href="https://app.kirvano.com/terms-of-use#terms-of-use">Termos Gerais de Uso</a>
-            <a href="https://app.kirvano.com/terms-of-use#content-policy">Política de Conteúdo</a>
+            <h4>Extensões</h4>
+            <a href="https://app.kirvano.com/terms-of-use#terms-of-use">NewsPETLetter</a>
+            <a href="https://app.kirvano.com/terms-of-use#content-policy">Projetos</a>
           </div>
 
           <div className="footer-section">

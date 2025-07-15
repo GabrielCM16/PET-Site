@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Slider from 'react-slick';
 
-const API_KEY = '';
-const CHANNEL_ID = '';
+const API_KEY = 'AIzaSyCig063PBvMTT_7xBOPjeVrac7YXiXfVMg';
+const CHANNEL_ID = 'UC7c6zwLrLbuqVa4sjUn20Jg';
 
 const YouTubeCarousel: React.FC = () => {
   const [videos, setVideos] = useState<any[]>([]);

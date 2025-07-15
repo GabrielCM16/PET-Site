@@ -178,7 +178,7 @@ const membros = [
       lattes: "https://lattes.cnpq.br/5041997105837766",
       instagram: "https://www.instagram.com/thiagodpim/",
       github: "https://github.com/umthiago",
-      email: "mailto:thiagoflx.y@gmail.com",
+      email: "mailto:thiagodpim@gmail.com",
     },
     saibaMais: {
       cidadeNatal: "Cascavel - PR",
@@ -188,7 +188,7 @@ const membros = [
       academica: "Pretendo seguir atuando com ênfase em inteligência artificial, que é uma das áreas mais promissoras e transformadoras da atualidade",
       hobby: "Ensaiar com a banda, ir a academia",
       filme: "Ilha do Medo",
-      jogo: "Red Dead Redemption 2, Uncharted",
+      jogo: "Red Dead Redemption 2, ",
       musica: "Need 2 - Pinegrove.",
       comida: "Macarrão ao molho bechamel, BomBom Aberto",
     },

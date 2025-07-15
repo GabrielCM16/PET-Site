@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./projetos.css";
 
 import gamejam from './../../assets/images/projects/GameJam.png';
-import lixo from './../../assets/images/projects/lixo.png';
+import lixo from './../../assets/images/projects/lixoeletronico.png';
 import divulgacao from './../../assets/images/projects/DivulgacaoCurso.png';
 import docom from './../../assets/images/projects/insta.png';
 import minicurso from './../../assets/images/projects/minicurso.png';
@@ -243,6 +243,8 @@ const Projetos: React.FC = () => {
                     </div>
                 </div>
 
+                
+
                 <div className="row justify-content-center">
                     {/* Recepção dos Calouros */}
                     <div className="col-lg-5 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
@@ -283,47 +285,6 @@ const Projetos: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* CiPET */}
-                    <div className="col-lg-5 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-                        <div className="card-custom text-white text-center p-3" style={{ maxWidth: "600px", width: "100%" }}>
-                            <h2 className="display-5 mb-3">CiPET</h2>
-
-                            <img
-                                src={cipet}
-                                alt="CiPET"
-                                className="img-fluid rounded mb-3"
-                                style={{ maxHeight: 200, objectFit: "contain" }}
-                            />
-
-                            {!expandedCipet && (
-                                <div className="mt-3">
-                                    <button className="btn btn-outline-light" onClick={() => setExpandedCipet(true)}>
-                                        Saiba mais...
-                                    </button>
-                                </div>
-                            )}
-
-                            {expandedCipet && (
-                                <>
-                                    <div className="text-center fs-6 mb-3">
-                                        <div className="mb-2">
-                                            O CiPET promove palestras e painéis com convidados da área de Computação, incluindo ex-alunos, profissionais, startups e empresas.
-                                        </div>
-                                        <div className="mb-2">
-                                            O objetivo é proporcionar uma visão prática sobre tendências, trajetórias e oportunidades, aproximando o curso do mercado.
-                                        </div>
-                                    </div>
-
-                                    <button className="btn btn-outline-light" onClick={() => setExpandedCipet(false)}>
-                                        Mostrar menos
-                                    </button>
-                                </>
-                            )}
-                        </div>
-                    </div>
-                </div>
-
-                <div className="row justify-content-center">
                     {/* Avaliação de Disciplinas */}
                     <div className="col-lg-5 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
                         <div className="card-custom text-white text-center p-3" style={{ maxWidth: "600px", width: "100%" }}>
@@ -363,6 +324,10 @@ const Projetos: React.FC = () => {
                         </div>
                     </div>
 
+                    
+                </div>
+
+                <div className="row justify-content-center">
                     {/* Seminários Multidisciplinares */}
                     <div className="col-lg-5 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
                         <div className="card-custom text-white text-center p-3" style={{ maxWidth: "600px", width: "100%" }}>
@@ -395,6 +360,44 @@ const Projetos: React.FC = () => {
                                     </div>
 
                                     <button className="btn btn-outline-light" onClick={() => setExpandedSeminarios(false)}>
+                                        Mostrar menos
+                                    </button>
+                                </>
+                            )}
+                        </div>
+                    </div>
+                     {/* Eventos e Visitas Técnicas */}
+                    <div className="col-lg-5 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+                        <div className="card-custom text-white text-center p-3" style={{ maxWidth: "600px", width: "100%" }}>
+                            <h2 className="display-5 mb-3">Eventos e Visitas Técnicas</h2>
+
+                            <img
+                                src={visitasTEC}
+                                alt="Eventos e Visitas Técnicas"
+                                className="img-fluid rounded mb-3"
+                                style={{ maxHeight: 200, objectFit: "contain" }}
+                            />
+
+                            {!expandedEventos && (
+                                <div className="mt-3">
+                                    <button className="btn btn-outline-light" onClick={() => setExpandedEventos(true)}>
+                                        Saiba mais...
+                                    </button>
+                                </div>
+                            )}
+
+                            {expandedEventos && (
+                                <>
+                                    <div className="text-center fs-6 mb-3">
+                                        <div className="mb-2">
+                                            Incentivo e organização da participação em eventos técnico-científicos e visitas técnicas para ampliar a formação acadêmica e vivência prática.
+                                        </div>
+                                        <div className="mb-2">
+                                            Aproxima alunos do mercado e estimula o desenvolvimento profissional.
+                                        </div>
+                                    </div>
+
+                                    <button className="btn btn-outline-light" onClick={() => setExpandedEventos(false)}>
                                         Mostrar menos
                                     </button>
                                 </>
@@ -443,44 +446,46 @@ const Projetos: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Eventos e Visitas Técnicas */}
+                    {/* CiPET */}
                     <div className="col-lg-5 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
                         <div className="card-custom text-white text-center p-3" style={{ maxWidth: "600px", width: "100%" }}>
-                            <h2 className="display-5 mb-3">Eventos e Visitas Técnicas</h2>
+                            <h2 className="display-5 mb-3">CiPET</h2>
 
                             <img
-                                src={visitasTEC}
-                                alt="Eventos e Visitas Técnicas"
+                                src={cipet}
+                                alt="CiPET"
                                 className="img-fluid rounded mb-3"
                                 style={{ maxHeight: 200, objectFit: "contain" }}
                             />
 
-                            {!expandedEventos && (
+                            {!expandedCipet && (
                                 <div className="mt-3">
-                                    <button className="btn btn-outline-light" onClick={() => setExpandedEventos(true)}>
+                                    <button className="btn btn-outline-light" onClick={() => setExpandedCipet(true)}>
                                         Saiba mais...
                                     </button>
                                 </div>
                             )}
 
-                            {expandedEventos && (
+                            {expandedCipet && (
                                 <>
                                     <div className="text-center fs-6 mb-3">
                                         <div className="mb-2">
-                                            Incentivo e organização da participação em eventos técnico-científicos e visitas técnicas para ampliar a formação acadêmica e vivência prática.
+                                            O CiPET promove palestras e painéis com convidados da área de Computação, incluindo ex-alunos, profissionais, startups e empresas.
                                         </div>
                                         <div className="mb-2">
-                                            Aproxima alunos do mercado e estimula o desenvolvimento profissional.
+                                            O objetivo é proporcionar uma visão prática sobre tendências, trajetórias e oportunidades, aproximando o curso do mercado.
                                         </div>
                                     </div>
 
-                                    <button className="btn btn-outline-light" onClick={() => setExpandedEventos(false)}>
+                                    <button className="btn btn-outline-light" onClick={() => setExpandedCipet(false)}>
                                         Mostrar menos
                                     </button>
                                 </>
                             )}
                         </div>
                     </div>
+
+                   
                 </div>
 
                 <div className="row justify-content-center">

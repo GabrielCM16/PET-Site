@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Slider from 'react-slick';
 
-const API_KEY = 'AIzaSyCig063PBvMTT_7xBOPjeVrac7YXiXfVMg';
+const KEY = 'AIzaSyCig063PBvMTT_7xBOPjeVrac7YXiXfVMg';
 const CHANNEL_ID = 'UC7c6zwLrLbuqVa4sjUn20Jg';
 
 const YouTubeCarousel: React.FC = () => {
@@ -13,13 +13,13 @@ const YouTubeCarousel: React.FC = () => {
     const fetchChannelAndVideos = async () => {
       try {
         const channelRes = await axios.get('https://www.googleapis.com/youtube/v3/channels', {
-          params: { part: 'snippet,statistics', id: CHANNEL_ID, key: API_KEY },
+          params: { part: 'snippet,statistics', id: CHANNEL_ID, key: KEY },
         });
         setChannel(channelRes.data.items[0]);
 
         const searchRes = await axios.get('https://www.googleapis.com/youtube/v3/search', {
           params: {
-            key: API_KEY,
+            key: KEY,
             channelId: CHANNEL_ID,
             part: 'id',
             maxResults: 20,
@@ -31,7 +31,7 @@ const YouTubeCarousel: React.FC = () => {
         const videoIds = searchRes.data.items.map((item: any) => item.id.videoId).join(',');
 
         const videosRes = await axios.get('https://www.googleapis.com/youtube/v3/videos', {
-          params: { key: API_KEY, id: videoIds, part: 'snippet,statistics' },
+          params: { key: KEY, id: videoIds, part: 'snippet,statistics' },
         });
 
         const sortedVideos = videosRes.data.items

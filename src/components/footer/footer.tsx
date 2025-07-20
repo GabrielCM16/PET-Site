@@ -35,7 +35,20 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>© 2025 PETComp. Todos os direitos reservados.</p>
+          <p>
+            ©{' '}
+            <a
+              href="https://linktr.ee/ogrupodobolo"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'inherit', textDecoration: 'none', cursor: 'default' }}
+            >
+              2025
+            </a>{' '}
+            PETComp. Todos os direitos reservados.
+          </p>
+
+
 
           <div className="social-icons" style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
             <a href="https://www.instagram.com/petcomp_unioeste/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">

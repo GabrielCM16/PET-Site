@@ -4,14 +4,14 @@ const InstagramBasicFeed: React.FC = () => {
   const [media, setMedia] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
 
-  const accessToken = 'IGAAO1m4SCswNBZAFBxNjk0UVd2dVBocjlTN1hFanRwUUptYXB2SkFHZAzBlUGlPYTlDYWQwTUpMQ0RIWE1MVWxfcEVtSXViOVEwT1JFZA0lldDhFMHhpREdxamR4U2hGVk5pMFNIelpDOUtjRWdlSWZAXeGF0YXZAINHpwSk9rR2VENAZDZD';
+  const acess = 'IGAAO1m4SCswNBZAFBxNjk0UVd2dVBocjlTN1hFanRwUUptYXB2SkFHZAzBlUGlPYTlDYWQwTUpMQ0RIWE1MVWxfcEVtSXViOVEwT1JFZA0lldDhFMHhpREdxamR4U2hGVk5pMFNIelpDOUtjRWdlSWZAXeGF0YXZAINHpwSk9rR2VENAZDZD';
 
   useEffect(() => {
     const fetchMedia = async () => {
       setLoading(true);
       try {
         const res = await fetch(
-          `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink,timestamp&access_token=${accessToken}`
+          `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink,timestamp&access_token=${acess}`
         );
         const data = await res.json();
         if (data.data) {
@@ -42,7 +42,7 @@ const InstagramBasicFeed: React.FC = () => {
               {(post.media_type === 'IMAGE' || post.media_type === 'CAROUSEL_ALBUM') && (
                 <img
                   src={post.media_url}
-                  alt={post.caption}
+                  alt=""
                   className="img-fluid rounded"
                   style={{ width: '100%', aspectRatio: '4 / 5', objectFit: 'cover' }}
                 />
@@ -55,13 +55,6 @@ const InstagramBasicFeed: React.FC = () => {
                   style={{ width: '100%', aspectRatio: '4 / 5', objectFit: 'cover' }}
                 />
               )}
-              <p
-                className="mt-2 fw-semibold text-truncate"
-                title={post.caption || 'Sem legenda'}
-                style={{ maxWidth: '100%' }}
-              >
-                {post.caption || 'Sem legenda'}
-              </p>
             </a>
           </div>
         ))}

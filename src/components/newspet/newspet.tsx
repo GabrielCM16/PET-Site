@@ -6,7 +6,16 @@ import YouTubeCarousel from './../youtube/YouTubeMiniWidget';
 const Newspetletter: React.FC = () => {
   return (
     <main className="newspetletter-container">
-      <section className="section text-center">
+
+      <section className="container my-5 px-3 text-center">
+        <h1 className="display-6 custom-font">newsPETletter</h1>
+        <p className="lead inter-regular mx-auto" style={{ maxWidth: '800px' }}>
+          Projeto focado na divulgação de conteúdos atuais da área de Computação via Instagram, incluindo novidades tecnológicas e tendências.
+          <p></p>
+          Objetiva manter a comunidade acadêmica informada e engajada com as inovações tecnológicas.
+          <p></p>
+          Acompanhe abaixo as publicações mais recentes do nosso perfil no Instagram. Compartilhamos os bastidores, eventos, projetos e momentos que fazem parte da nossa rotina no PET.
+        </p>
       </section>
 
       <InstagramFeed />

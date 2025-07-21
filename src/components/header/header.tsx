@@ -34,6 +34,7 @@ const Header: React.FC = () => {
           <Link to="/newspetletter">NewsPETLetter</Link>
           <Link to="/projetos">Projetos</Link>
           <Link to="/sala">Sala</Link>
+          <Link to="/faq">Faq</Link>
         </nav>
 
         <button className="hamburger" onClick={toggleMenu} aria-label="Menu">
@@ -50,6 +51,7 @@ const Header: React.FC = () => {
           <Link to="/newspetletter" onClick={toggleMenu}>NewsPETLetter</Link>
           <Link to="/projetos" onClick={toggleMenu}>Projetos</Link>
           <Link to="/sala" onClick={toggleMenu}>Sala</Link>
+          <Link to="/faq" onClick={toggleMenu}>Faq</Link>
         </div>
       )}
     </header>

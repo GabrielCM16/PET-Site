@@ -1,0 +1,54 @@
+/* Botão da pergunta */
+.faq-btn {
+  background: transparent !important;
+  color: white !important;
+  box-shadow: none !important;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espaço entre seta e texto */
+  padding-left: 1rem; /* espaçamento maior da borda esquerda */
+}
+
+/* Remove efeito de foco */
+.faq-btn:focus {
+  box-shadow: none !important;
+}
+
+/* Cada item da FAQ */
+.accordion-item {
+  background-color: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* linha entre itens */
+  padding: 0.5rem 0; /* espaçamento vertical */
+}
+
+/* Remove a seta padrão do Bootstrap */
+.accordion-button::after {
+  background-image: none !important;
+}
+
+/* Ícone personalizado de seta */
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+/* Rotaciona a seta quando o item está aberto */
+.accordion-button:not(.collapsed) .arrow-icon {
+  transform: rotate(90deg);
+}
+
+/* Corpo da resposta */
+.accordion-body {
+  background: transparent !important;
+  color: white;
+  font-size: 1rem;
+  line-height: 1;
+  padding-left: 2rem; /* alinhamento mais à direita */
+}
+
+
+
+.faq-bottom-line {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+}

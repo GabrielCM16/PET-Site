@@ -27,7 +27,7 @@ const Faq: React.FC = () => {
             data-bs-parent="#faqAccordion"
           >
             <div className="accordion-body text-white">
-              Atualmente o PET conta com 12 vagas para bolsistas e 6 vagas para não-bolsistas. O valor da bolsa é equivalente a uma bolsa de iniciação científica (R$700,00). Não há distinção nas atribuições e responsabilidades dos bolsistas e não-bolsistas.
+              Atualmente o PET conta com 12 vagas para bolsistas e 2 vagas para não-bolsistas. O valor da bolsa é equivalente a uma bolsa de iniciação científica (R$700,00). Não há distinção nas atribuições e responsabilidades dos bolsistas e não-bolsistas.
             </div>
           </div>
         </div>

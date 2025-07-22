@@ -8,7 +8,7 @@ const Newspetletter: React.FC = () => {
     <main className="newspetletter-container">
 
       <section className="container my-5 px-3 text-center">
-        <h1 className="display-6 custom-font">newsPETletter</h1>
+        <h1 className="display-6 custom-font">NewsPETletter</h1>
         <p className="lead inter-regular mx-auto" style={{ maxWidth: '800px' }}>
           Projeto focado na divulgação de conteúdos atuais da área de Computação via Instagram, incluindo novidades tecnológicas e tendências.
           <p></p>

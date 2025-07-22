@@ -173,7 +173,7 @@
 
 /*=================================================================================================================================*/
 
-/*Animação Logo PETComp*/
+/*Animação de rotação Logo PETComp*/
 @keyframes rotate360 {
   from {
     transform: rotate(0deg);

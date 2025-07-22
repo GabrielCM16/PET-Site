@@ -29,8 +29,8 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h4>Contato</h4>
             <div className="app-buttons">
-              <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjgGkCxffJvQxttPZzhCzCvBPnLVGPfdtdVswhCVLKwGShzwVhqsXxhjvsnPQFLCrfxJWW">petcomp.cascavel@gmail.com</a>
               <a href="/sala">Sala PETComp</a>
+              <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjgGkCxffJvQxttPZzhCzCvBPnLVGPfdtdVswhCVLKwGShzwVhqsXxhjvsnPQFLCrfxJWW">petcomp.cascavel@gmail.com</a>
             </div>
           </div>
         </div>

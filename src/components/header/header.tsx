@@ -42,6 +42,7 @@ const Header: React.FC = () => {
           <span />
           <span />
         </button>
+
       </div>
 
       {isMenuOpen && (

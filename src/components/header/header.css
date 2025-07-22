@@ -146,21 +146,31 @@
   height: 2.5px;
   background-color: black;
   border-radius: 4px;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   transform-origin: center;
 }
 
+/* Deixa a barra de cima no lugar */
 .menu-open .hamburger span:nth-child(1) {
-  transform: rotate(45deg) translateY(8px);
+  transform: none;
+  opacity: 1;
 }
 
+/* Rotaciona a barra do meio para formar parte do X */
 .menu-open .hamburger span:nth-child(2) {
-  opacity: 0;
+  transform: rotate(45deg);
+  position: relative;
+  top: -1.5px;
 }
 
+/* Rotaciona a barra de baixo para formar a outra parte do X */
 .menu-open .hamburger span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-8px);
+  transform: rotate(-45deg);
+  position: relative;
+  top: -4px;
 }
+
+
 /*=================================================================================================================================*/
 
 /*Animação Logo PETComp*/
@@ -179,6 +189,7 @@
 /*=================================================================================================================================*/
 
 /* Responsivo */
+
 @media (max-width: 768px) {
   .pet-nav.desktop {
   display: flex;

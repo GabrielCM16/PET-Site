@@ -20,7 +20,7 @@ import icvs from './../../assets/images/projects/icvs.png';
 
 
 const Projetos: React.FC = () => {
-    const [mobile, setMobile] = useState(false);
+    const [, setMobile] = useState(false);
     const [expanded, setExpanded] = useState(false);
     const [expandedLixo, setExpandedLixo] = useState(false);
     const [expandedDivulgacao, setExpandedDivulgacao] = useState(false);

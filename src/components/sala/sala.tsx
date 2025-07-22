@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const Home: React.FC = () => {
-  const [mobile, setMobile] = useState(false);
+  const [, setMobile] = useState(false);
 
   useEffect(() => {
     setMobile(window.innerWidth < 1000);

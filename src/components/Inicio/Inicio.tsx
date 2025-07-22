@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import './Inicio.css';
 
 import LogoPET from './../../assets/Logo_PETComp.png';

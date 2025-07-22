@@ -52,9 +52,19 @@
   border-radius: 30px;
 }
 
+
+/*=================================================================================================================================*/
 .pet-nav a:hover {
-  color: #0152f8;
+  color: #2285c8;
+  text-decoration: none;  /* <- Isso remove o sublinhado azul */
 }
+
+.mobile-menu a:hover {
+  color: #184fbd;
+  text-decoration: none;  /* <- Isso remove o sublinhado azul no menu mobile também */
+}
+/*=================================================================================================================================*/
+
 
 .btn {
   padding: 8px 24px;

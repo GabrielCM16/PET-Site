@@ -1,6 +1,7 @@
 import React from "react";
 import "./footer.css";
 
+
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
@@ -16,20 +17,20 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h4>Aprenda com o PETComp</h4>
             <a href="https://www.youtube.com/@petcomputacao-unioeste7552">Canal do YouTube</a>
-            <a href="">Blog do PETComp</a>
+            <a href="/newspetletter">Blog do PETComp</a>
           </div>
 
           <div className="footer-section">
             <h4>Extensões</h4>
-            <a href="https://app.kirvano.com/terms-of-use#terms-of-use">NewsPETLetter</a>
-            <a href="https://app.kirvano.com/terms-of-use#content-policy">Projetos</a>
+            <a href="/newspetletter">NewsPETLetter</a>
+            <a href="/projetos">Projetos</a>
           </div>
 
           <div className="footer-section">
             <h4>Contato</h4>
             <div className="app-buttons">
-              <a href="">petcomp.cascavel@gmail.com</a>
-              <a href="">Sala PETComp</a>
+              <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjgGkCxffJvQxttPZzhCzCvBPnLVGPfdtdVswhCVLKwGShzwVhqsXxhjvsnPQFLCrfxJWW">petcomp.cascavel@gmail.com</a>
+              <a href="/sala">Sala PETComp</a>
             </div>
           </div>
         </div>

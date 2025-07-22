@@ -153,7 +153,7 @@ const Faq: React.FC = () => {
             data-bs-parent="#faqAccordion"
           >
             <div className="accordion-body text-white">
-              Sim. Não é possível acumular mais que duas reprovações após o ingresso no grupo.
+              Sim. Não é possível acumular mais que duas reprovações após o ingresso no curso.
             </div>
           </div>
         </div>

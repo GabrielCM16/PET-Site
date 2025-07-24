@@ -26,7 +26,7 @@ const App: React.FC = () => {
         <img
           src={PetGroup}
           alt="Grupo de pessoas ilustradas"
-          className="group-img mx-auto d-block"
+          className="img-fluid group-img mx-auto d-block"
         />
 
         <section className="container d-flex flex-wrap justify-content-center gap-4 mb-5">

@@ -124,7 +124,7 @@ const membros = [
   {
     nome: "Pedro Augusto Silva Cabrera",
     foto: cabrera,
-    icv: "ICV: TBD",
+    icv: "ICV: Sistema embarcado de controle para movimentos avançados da mão PARLOMA em braço robótico do projeto InMoov.",
     membroDesde: "2024",
     links: {
       lattes: "https://lattes.cnpq.br/5325089615556004",

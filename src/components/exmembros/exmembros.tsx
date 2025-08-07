@@ -93,7 +93,8 @@ const membros = ['1 - Eduardo Vansetto 09/12/2010 até 03/03/2011,',
  '86 - Gabriel Yudi Leite Higuchi 06/12/2022 até 02/04/2025,',
  '87 - Ronaldo Drecksler Farias Pacheco 06/12/2022 até 21/04/2025,',
  '88 - Leonardo Calsavara 29/09/2023 até 21/04/2025,',
- '89 - David Antonio Brocardo 06/12/2022 até 21/04/2025,']
+ '89 - David Antonio Brocardo 06/12/2022 até 21/04/2025,',
+ '90 - Maria Clara Salvadego Guiotti 27/05/2025 até 22/07/2025',]
 
 
 const Membros: React.FC = () => {

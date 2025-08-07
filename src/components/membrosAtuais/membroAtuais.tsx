@@ -19,7 +19,7 @@ import vinicius from "./../../assets/images/members/vinicius.png";
 import altmeyer from "./../../assets/images/members/altmeyer.png";
 import tutorImg from "./../../assets/images/members/profile.png";
 import carol from "./../../assets/images/members/carol.png";
-import maria from "./../../assets/images/members/maria.png";
+import fabricio from "./../../assets/images/members/fabricio.png";
 import fabio from "./../../assets/images/members/fabio.png";
 
 
@@ -292,7 +292,7 @@ const membros = [
   {
     nome: "Caroline Mayumi Grellmann Saito",
     foto: carol,
-    icv: "ICV: Manutenção lab 4.0",
+    icv: "Manutenção lab 4.0",
     membroDesde: "2025",
     links: {
       instagram: "https://www.instagram.com/c.mayymi?igsh=MXc4M2ltaW1peGpwbg%3D%3D&utm_source=qr",
@@ -313,24 +313,25 @@ const membros = [
     },
   },
   {
-    nome: "Maria Clara S. Guiotti",
-    foto: maria,
-    icv: "ICV: TBD",
+    nome: "Fabricio Keltika Tanquella",
+    foto: fabricio,
+    icv: "ICV",
     membroDesde: "2025",
     links: {
-      instagram: "mariaguiotti_",
-      email: "maria.guiotti@unioeste.br",
+      github: "https://github.com/Fabriciofkt157",
+      email: "mailto:fabriciotanquellafkt2@gmail.com",
     },
     saibaMais: {
-      cidadeNatal: "Brasília",
-      motivoCurso: "curso promissor e bem remunerado",
-      alternativaCurso: "Fisioterapia",
-      academica: "software",
-      hobby: "esportes, pintura e viagens",
-      filme: "O dublê (2024)",
-      jogo: "vôlei, Cs",
-      música: "Lazy Song (Bruno Mars)",
-      comida: "sushi e Mac"
+      cidadeNatal: "Cascavel - PR",
+      motivoCurso:
+        "Computação é meu mundo, eu apenas segui a linha do tempo. Sempre soube que era isso que queria pra mim, por isso escolhi Ciência da Computação.",
+      alternativaCurso: "Engenharia de Software",
+      academica: "Desenvolvimento de jogos.",
+      hobby: "Desenvolver meu jogo e meus projetos pessoais. As vezes gosto de desenhar.",
+      filme: "Pânico 6",
+      jogo: "Dead by Daylight, Phasmophobia, The Last of Us, Vôlei",
+      musica: "We Fell in Love in October",
+      comida: "Lasanha de frango.",
     },
   },
   {

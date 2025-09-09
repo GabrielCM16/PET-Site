@@ -186,6 +186,65 @@
 .rotate-logo {
   animation: rotate360 1s ease-in-out;
 }
+
+
+@keyframes spin {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+/* easter egg: sair rodando pela tela */
+.crazy-logo {
+  position: relative;
+  animation: crazyRun 3s linear infinite;
+}
+
+@keyframes crazyRun {
+  0%   { transform: translate(0, 0) rotate(0); }
+  20%  { transform: translate(200px, -50px) rotate(180deg); }
+  40%  { transform: translate(-150px, 100px) rotate(360deg); }
+  60%  { transform: translate(250px, 200px) rotate(540deg); }
+  80%  { transform: translate(-200px, -150px) rotate(720deg); }
+  100% { transform: translate(0, 0) rotate(1080deg); }
+}
+/* Navbar inteira com efeito maluco */
+/* Navbar inteira com efeito MUITO maluco */
+.crazy-navbar {
+  animation: navbarCrazy 2.5s linear infinite;
+}
+
+@keyframes navbarCrazy {
+  0% {
+    transform: translate(0, 0) rotate(0) scale(1);
+    filter: hue-rotate(0deg);
+  }
+  10% {
+    transform: translate(40px, -20px) rotate(15deg) scale(1.1);
+    filter: hue-rotate(90deg);
+  }
+  25% {
+    transform: translate(-50px, 30px) rotate(-25deg) scale(0.9);
+    filter: hue-rotate(180deg);
+  }
+  40% {
+    transform: translate(80px, -40px) rotate(45deg) scale(1.2);
+    filter: hue-rotate(270deg);
+  }
+  60% {
+    transform: translate(-70px, 50px) rotate(-60deg) scale(1.3);
+    filter: hue-rotate(360deg);
+  }
+  80% {
+    transform: translate(30px, -60px) rotate(120deg) scale(0.8);
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg) scale(1);
+    filter: hue-rotate(0deg);
+  }
+}
+
+
 /*=================================================================================================================================*/
 
 /* Responsivo */

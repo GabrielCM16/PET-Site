@@ -9,12 +9,10 @@ import clodis from "./../../assets/images/members/clodis.png";
 import gabrielImg from "./../../assets/images/members/gabriel.png";
 import qvd from "./../../assets/images/members/qvd.png";
 import dudu from "./../../assets/images/members/eduardo.png";
-import lenser from "./../../assets/images/members/Lenser.png";
 import thiago from "./../../assets/images/members/thiago.png";
 import cabrera from "./../../assets/images/members/cabrera.png";
 import thalita from "./../../assets/images/members/thalita.png";
 import rafael from "./../../assets/images/members/rafael.png";
-import deitos from "./../../assets/images/members/deitos.png";
 import vinicius from "./../../assets/images/members/vinicius.png";
 import altmeyer from "./../../assets/images/members/altmeyer.png";
 import tutorImg from "./../../assets/images/members/profile.png";
@@ -71,31 +69,6 @@ const membros = [
       musica: "Tear In My Heart - Twenty One Pilots",
       comida: "Pizza, Lasanha, Tacos, Chico balanceado, Pudim ",
     },
-  },
-  {
-    nome: "Gabriel Lenser",
-    foto: lenser,
-    icv: "ICV: Otimização de métodos de pré-processamento de texto com o uso de técnicas de programação paralela: uma análise comparativa de desempenho",
-    membroDesde: "2023",
-    links: {
-      lattes: "http://lattes.cnpq.br/1714539603430097",
-      instagram: "https://www.instagram.com/gabxlenser?igsh=dXF1a3M2N3hsZWE5",
-      github: "https://github.com/gabriellenser",
-      email: "gabxlenser1@gmail.com",
-    },
-    saibaMais: {
-      cidadeNatal: "Cascavel - PR",
-      motivoCurso:
-        "Impulsionado pela matemática, estatística e pelo contato com máquinas desde criança.",
-      alternativaCurso: "Música",
-      academica: "Ciência de Dados",
-      hobby: "instrumentos musicais, jogos, cozinhar etc. ",
-      filme: "slashers clássicos",
-      jogo: "jrpgs clássicos",
-      livro: "Toda luz que não podemos ver",
-      musica: "Let down - Radiohead",
-      comida: "Sushi, Hambúrguer, pistache, banoffee e risotos em geral",
-    }
   },
   {
     nome: "Maria Quevedo",
@@ -191,30 +164,6 @@ const membros = [
       jogo: "Red Dead Redemption 2, ",
       musica: "Need 2 - Pinegrove.",
       comida: "Macarrão ao molho bechamel, BomBom Aberto",
-    },
-  },
-  {
-    nome: "Guilherme Augusto Deitos Alves",
-    foto: deitos,
-    icv: "ICV: Portal de visualização sobre o financiamento das Universidades Estaduais do Paraná: ferramenta de apoio a decisões estratégicas sobre financiamento e expansão entre 2002 e 2023.",
-    membroDesde: "2023",
-    links: {
-      lattes: "https://lattes.cnpq.br/6399928456538096",
-      instagram: "https://www.instagram.com/guilherme_deitos/",
-      github: "https://github.com/GuilhermeDeitos",
-      email: "mailto:guilherme.cascavel@gmail.com",
-    },
-    saibaMais: {
-      cidadeNatal: "Cascavel - PR",
-      motivoCurso:
-        "Após finalizar o curso técnico em informática pelo IFPR não conseguia me ver em outra área (tirando nutrição, mas não dá dinheiro).",
-      alternativaCurso: "TADS, Engenharia de Software, Nutrição & Psicologia",
-      academica: "Trabalho visando a área de desenvolvimento WEB, tanto no front quanto no back-end. Além disso, tenho muito apreço pela área de dados e engenharia de software.",
-      hobby: "Treinar, ler, sair para cafezinhos e assistir séries",
-      filme: "Interestelar",
-      jogo: "Naruto Ultimate Ninja Storm (saga), Minecraft e Call Of Duty BO2",
-      musica: "Across the Line - Linkin Park",
-      comida: "Pizza de Atum, Sushi",
     },
   },
   {

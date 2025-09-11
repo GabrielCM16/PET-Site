@@ -1,10 +1,11 @@
 import React from "react";
 import "./footer.css";
-
+import Sus from "./sus";
 
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
+      <Sus />
       <div className="footer-content">
         <div className="footer-columns">
           <div className="footer-section">

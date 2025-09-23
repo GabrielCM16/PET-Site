@@ -21,6 +21,7 @@ function App() {
         <Route path="/projetos" element={<PROJETOS />} />
         <Route path="/newspetletter" element={<Newspetletter />} />
         <Route path="/faq" element={<Faq />} />  
+        <Route path="/logo_interessante" element={<Inicio />} />
       </Routes>
       <Footer />
     </Router>

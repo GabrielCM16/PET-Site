@@ -4,7 +4,7 @@ const InstagramBasicFeed: React.FC = () => {
   const [media, setMedia] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
 
-  const acess = 'IGAAO1m4SCswNBZAFBxNjk0UVd2dVBocjlTN1hFanRwUUptYXB2SkFHZAzBlUGlPYTlDYWQwTUpMQ0RIWE1MVWxfcEVtSXViOVEwT1JFZA0lldDhFMHhpREdxamR4U2hGVk5pMFNIelpDOUtjRWdlSWZAXeGF0YXZAINHpwSk9rR2VENAZDZD';
+  const acess = 'IGAAO1m4SCswNBZAE5KeFFaR0lndjE4NzdMc1M0V2JnSjJDQ1VMZAUxrVm50UEJuaTRmTEJNeEZAEVHdSX3prTGpzTGZAFVld0ZATRJSjhsVWhwYkRXWHE1eGt2ZAklwSE1FWVp4TC16YWdvVmFTeGpBMElEQkpZAR2U2cUg3RjAyZA2p6VQZDZD';
 
   useEffect(() => {
     const fetchMedia = async () => {

@@ -25,7 +25,7 @@ const Header: React.FC = () => {
       console.log("Efeito especial ativado!");
 
       // toca o áudio
-      const audio = new Audio('/metalpipe.mp3'); // coloque o arquivo em public/
+      const audio = new Audio('/metalpipe.mp3'); 
       audio.play();
 
       setIsCrazy(true);

@@ -6,6 +6,13 @@ import Fruta from "./../../assets/mango.png";
 const Sus: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [active, setActive] = useState(false);
+  const [modal, setModal] = useState<{ title: string; text: string } | null>(null);
+
+  // Função para mostrar modal
+  const showCustomModal = (title: string, text?: string) => {
+    setModal({ title, text: text ?? "" }); // se não passar nada, fica ""
+  };
+
 
   // Konami Code
   useEffect(() => {
@@ -69,7 +76,6 @@ const Sus: React.FC = () => {
     const fruitImg = new Image();
     fruitImg.src = Fruta;
 
-    // Função para spawnar frutinha em posição aleatória
     const spawnFruit = () => {
       fruit.x = Math.random() * (canvas.width - fruit.size);
       fruit.y = Math.random() * (canvas.height - fruit.size);
@@ -85,53 +91,24 @@ const Sus: React.FC = () => {
     document.body.style.overflow = "hidden";
 
     const loop = () => {
-      // Limpar áreas onde o jogador, inimigo, frutinha e contador estavam
-      ctx.clearRect(
-        player.x - player.speed,
-        player.y - player.speed,
-        player.size + player.speed * 2,
-        player.size + player.speed * 2
-      );
-      ctx.clearRect(
-        enemy.x - enemy.speed,
-        enemy.y - enemy.speed,
-        enemy.size + enemy.speed * 2,
-        enemy.size + enemy.speed * 2
-      );
-      ctx.clearRect(
-        fruit.x - 1,
-        fruit.y - 1,
-        fruit.size + 2,
-        fruit.size + 2
-      );
-      ctx.clearRect(canvas.width / 2 - 100, 0, 200, 40); // Limpar área do contador centralizado
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Movimentação do jogador com limites
-      if (keys["ArrowUp"]) {
-        player.y = Math.max(0, player.y - player.speed);
-      }
-      if (keys["ArrowDown"]) {
-        player.y = Math.min(canvas.height - player.size, player.y + player.speed);
-      }
-      if (keys["ArrowLeft"]) {
-        player.x = Math.max(0, player.x - player.speed);
-      }
-      if (keys["ArrowRight"]) {
-        player.x = Math.min(canvas.width - player.size, player.x + player.speed);
-      }
+      // Movimentação jogador
+      if (keys["ArrowUp"]) player.y = Math.max(0, player.y - player.speed);
+      if (keys["ArrowDown"]) player.y = Math.min(canvas.height - player.size, player.y + player.speed);
+      if (keys["ArrowLeft"]) player.x = Math.max(0, player.x - player.speed);
+      if (keys["ArrowRight"]) player.x = Math.min(canvas.width - player.size, player.x + player.speed);
 
-      // Inimigo segue o jogador com limites
+      // Inimigo segue jogador
       const dx = player.x - enemy.x;
       const dy = player.y - enemy.y;
       const dist = Math.sqrt(dx * dx + dy * dy);
       if (dist > 0) {
-        const newEnemyX = enemy.x + (dx / dist) * enemy.speed;
-        const newEnemyY = enemy.y + (dy / dist) * enemy.speed;
-        enemy.x = Math.max(0, Math.min(canvas.width - enemy.size, newEnemyX));
-        enemy.y = Math.max(0, Math.min(canvas.height - enemy.size, newEnemyY));
+        enemy.x = Math.max(0, Math.min(canvas.width - enemy.size, enemy.x + (dx / dist) * enemy.speed));
+        enemy.y = Math.max(0, Math.min(canvas.height - enemy.size, enemy.y + (dy / dist) * enemy.speed));
       }
 
-      // Detecção de colisão com a frutinha
+      // Colisão frutinha
       const fruitCollected =
         player.x < fruit.x + fruit.size &&
         player.x + player.size > fruit.x &&
@@ -139,27 +116,44 @@ const Sus: React.FC = () => {
         player.y + player.size > fruit.y;
 
       if (fruitCollected) {
-        score += 1;
-        player.speed += 0.3;
-        enemy.speed += 0.3;
-        spawnFruit();
+        score++;
+        if (score >= 10) {
+          const audio = new Audio("/victory.mp3");
+          audio.play();
+          showCustomModal("pet code");
+          setActive(false);
+          document.body.style.overflow = "auto";
+          return;
+        } else {
+          player.speed += 0.3;
+          enemy.speed += 0.3;
+          spawnFruit();
+        }
       }
 
-      // Desenhar frutinha
+      // Renderizar frutinha, player, inimigo
       if (fruitImg.complete) ctx.drawImage(fruitImg, fruit.x, fruit.y, fruit.size, fruit.size);
-
-      // Desenhar imagens do jogador e inimigo
       if (playerImg.complete) ctx.drawImage(playerImg, player.x, player.y, player.size, player.size);
       if (enemyImg.complete) ctx.drawImage(enemyImg, enemy.x, enemy.y, enemy.size, enemy.size);
 
-      // Desenhar contador de pontos
-      ctx.fillStyle = "white";
+      const text = `Pontos: ${score}`;
       ctx.font = "bold 20px Arial";
       ctx.textAlign = "center";
       ctx.textBaseline = "top";
-      ctx.fillText(`Pontos: ${score}`, canvas.width / 2, 10);
 
-      // Detecção de colisão com o inimigo
+      const textWidth = ctx.measureText(text).width;
+      const textHeight = 24; // altura aproximada da fonte (20px + margem)
+
+      // fundo branco com cantos retos
+      ctx.fillStyle = "white";
+      ctx.fillRect(canvas.width / 2 - textWidth / 2 - 6, 10, textWidth + 12, textHeight);
+
+      // texto preto
+      ctx.fillStyle = "black";
+      ctx.fillText(text, canvas.width / 2, 10);
+
+
+      // Colisão inimigo
       const collided =
         player.x < enemy.x + enemy.size &&
         player.x + player.size > enemy.x &&
@@ -167,7 +161,9 @@ const Sus: React.FC = () => {
         player.y + player.size > enemy.y;
 
       if (collided) {
-        alert(`Game Over! Pontos: ${score}`);
+        const audio = new Audio("/plankton.mp3");
+        audio.play();
+        showCustomModal("Game Over!", `Pontos: ${score}`);
         setActive(false);
         document.body.style.overflow = "auto";
         return;
@@ -207,6 +203,37 @@ const Sus: React.FC = () => {
             background: "transparent",
           }}
         />
+      )}
+
+      {/* Modal React */}
+      {modal && (
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            background: "rgba(0,0,0,0.6)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 10000,
+          }}
+        >
+          <div
+            style={{
+              background: "#ffffffff",
+              padding: "20px",
+              borderRadius: "12px",
+              textAlign: "center",
+            }}
+          >
+            <h2 style={{color: "black"}}>{modal.title}</h2>
+            <p style={{color: "black"}}>{modal.text}</p>
+            <button onClick={() => setModal(null)}>OK</button>
+          </div>
+        </div>
       )}
     </>
   );

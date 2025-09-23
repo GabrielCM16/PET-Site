@@ -1,18 +1,41 @@
 import React, { useEffect, useRef, useState } from "react";
-import LogoPET from "./../../assets/download.png";
-import GatoPet from "./../../assets/gatopet.png";
-import Fruta from "./../../assets/mango.png";
+import Tini1 from "./../../assets/images/game/tini1.png";
+import Tini2 from "./../../assets/images/game/tini2.png";
+import Tini3 from "./../../assets/images/game/tini3.png";
+import Tini4 from "./../../assets/images/game/tini4.png";
+import N1 from "./../../assets/images/game/neadertal1.png";
+import N2 from "./../../assets/images/game/neadertal2.png";
+import N3 from "./../../assets/images/game/neadertal3.png";
+import N4 from "./../../assets/images/game/neadertal4.png";
+import N5 from "./../../assets/images/game/neadertal5.png";
+import N6 from "./../../assets/images/game/neadertal6.png";
+import N7 from "./../../assets/images/game/neadertal7.png";
+import FrutaSrc from "./../../assets/mango.png";
+
+type Modal = { title: string; text: string } | null;
+
+const preloadImages = (paths: string[]) => {
+  return Promise.all(
+    paths.map(
+      (p) =>
+        new Promise<HTMLImageElement>((resolve, reject) => {
+          const img = new Image();
+          img.src = p;
+          img.onload = () => resolve(img);
+          img.onerror = (e) => reject(e);
+        })
+    )
+  );
+};
 
 const Sus: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [active, setActive] = useState(false);
-  const [modal, setModal] = useState<{ title: string; text: string } | null>(null);
+  const [modal, setModal] = useState<Modal>(null);
 
-  // Função para mostrar modal
   const showCustomModal = (title: string, text?: string) => {
-    setModal({ title, text: text ?? "" }); // se não passar nada, fica ""
+    setModal({ title, text: text ?? "" });
   };
-
 
   // Konami Code
   useEffect(() => {
@@ -52,7 +75,7 @@ const Sus: React.FC = () => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    // Usar tela cheia
+    // resize
     const resize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -60,133 +83,189 @@ const Sus: React.FC = () => {
     resize();
     window.addEventListener("resize", resize);
 
-    let animationFrameId: number;
+    // game state
     const player = { x: 50, y: 50, size: 80, speed: 2 };
-    const enemy = { x: 800, y: 500, size: 100, speed: 1.0 };
+    const enemy = { x: 800, y: 500, size: 120, speed: 1.0 };
     const fruit = { x: 0, y: 0, size: 30 };
     let score = 0;
     const keys: Record<string, boolean> = {};
 
-    const playerImg = new Image();
-    playerImg.src = LogoPET;
+    const playerFramesSrc = [Tini1, Tini2, Tini3, Tini4];
+    const enemyFramesSrc = [N1, N2, N3, N4, N5, N6, N7];
 
-    const enemyImg = new Image();
-    enemyImg.src = GatoPet;
-
-    const fruitImg = new Image();
-    fruitImg.src = Fruta;
+    // animation state
+    const animState = {
+      player: { frames: [] as HTMLImageElement[], frameIndex: 0, elapsed: 0, frameDuration: 120 },
+      enemy: { frames: [] as HTMLImageElement[], frameIndex: 0, elapsed: 0, frameDuration: 100 },
+      fruitImg: null as HTMLImageElement | null,
+    };
 
     const spawnFruit = () => {
       fruit.x = Math.random() * (canvas.width - fruit.size);
       fruit.y = Math.random() * (canvas.height - fruit.size);
     };
-    spawnFruit();
 
-    const handleKeyDown = (e: KeyboardEvent) => (keys[e.key] = true);
-    const handleKeyUp = (e: KeyboardEvent) => (keys[e.key] = false);
+    // preload all images then start loop
+    let rafId = 0;
+    let lastTime = performance.now();
 
-    window.addEventListener("keydown", handleKeyDown);
-    window.addEventListener("keyup", handleKeyUp);
+    Promise.all([
+      preloadImages(playerFramesSrc),
+      preloadImages(enemyFramesSrc),
+      preloadImages([FrutaSrc]),
+    ])
+      .then(([playerFrames, enemyFrames, [fruitImg]]) => {
+        animState.player.frames = playerFrames;
+        animState.enemy.frames = enemyFrames;
+        animState.fruitImg = fruitImg;
+        spawnFruit();
 
-    document.body.style.overflow = "hidden";
+        // input handlers
+        const handleKeyDown = (e: KeyboardEvent) => (keys[e.key] = true);
+        const handleKeyUp = (e: KeyboardEvent) => (keys[e.key] = false);
+        window.addEventListener("keydown", handleKeyDown);
+        window.addEventListener("keyup", handleKeyUp);
 
-    const loop = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+        document.body.style.overflow = "hidden";
 
-      // Movimentação jogador
-      if (keys["ArrowUp"]) player.y = Math.max(0, player.y - player.speed);
-      if (keys["ArrowDown"]) player.y = Math.min(canvas.height - player.size, player.y + player.speed);
-      if (keys["ArrowLeft"]) player.x = Math.max(0, player.x - player.speed);
-      if (keys["ArrowRight"]) player.x = Math.min(canvas.width - player.size, player.x + player.speed);
+        const loop = (timestamp: number) => {
+          const dt = timestamp - lastTime;
+          lastTime = timestamp;
 
-      // Inimigo segue jogador
-      const dx = player.x - enemy.x;
-      const dy = player.y - enemy.y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist > 0) {
-        enemy.x = Math.max(0, Math.min(canvas.width - enemy.size, enemy.x + (dx / dist) * enemy.speed));
-        enemy.y = Math.max(0, Math.min(canvas.height - enemy.size, enemy.y + (dy / dist) * enemy.speed));
-      }
+          // update animation timers
+          animState.player.elapsed += dt;
+          while (animState.player.elapsed >= animState.player.frameDuration) {
+            animState.player.elapsed -= animState.player.frameDuration;
+            animState.player.frameIndex = (animState.player.frameIndex + 1) % animState.player.frames.length;
+          }
 
-      // Colisão frutinha
-      const fruitCollected =
-        player.x < fruit.x + fruit.size &&
-        player.x + player.size > fruit.x &&
-        player.y < fruit.y + fruit.size &&
-        player.y + player.size > fruit.y;
+          animState.enemy.elapsed += dt;
+          while (animState.enemy.elapsed >= animState.enemy.frameDuration) {
+            animState.enemy.elapsed -= animState.enemy.frameDuration;
+            animState.enemy.frameIndex = (animState.enemy.frameIndex + 1) % animState.enemy.frames.length;
+          }
 
-      if (fruitCollected) {
-        score++;
-        if (score >= 10) {
-          const audio = new Audio("/victory.mp3");
-          audio.play();
-          showCustomModal("pet code");
-          setActive(false);
-          document.body.style.overflow = "auto";
-          return;
-        } else {
-          player.speed += 0.3;
-          enemy.speed += 0.3;
-          spawnFruit();
-        }
-      }
+          // movement
+          if (keys["ArrowUp"]) player.y = Math.max(0, player.y - player.speed);
+          if (keys["ArrowDown"]) player.y = Math.min(canvas.height - player.size, player.y + player.speed);
+          if (keys["ArrowLeft"]) player.x = Math.max(0, player.x - player.speed);
+          if (keys["ArrowRight"]) player.x = Math.min(canvas.width - player.size, player.x + player.speed);
 
-      // Renderizar frutinha, player, inimigo
-      if (fruitImg.complete) ctx.drawImage(fruitImg, fruit.x, fruit.y, fruit.size, fruit.size);
-      if (playerImg.complete) ctx.drawImage(playerImg, player.x, player.y, player.size, player.size);
-      if (enemyImg.complete) ctx.drawImage(enemyImg, enemy.x, enemy.y, enemy.size, enemy.size);
+          // enemy follows
+          const dx = player.x - enemy.x;
+          const dy = player.y - enemy.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist > 0) {
+            enemy.x = Math.max(0, Math.min(canvas.width - enemy.size, enemy.x + (dx / dist) * enemy.speed));
+            enemy.y = Math.max(0, Math.min(canvas.height - enemy.size, enemy.y + (dy / dist) * enemy.speed));
+          }
 
-      const text = `Pontos: ${score}`;
-      ctx.font = "bold 20px Arial";
-      ctx.textAlign = "center";
-      ctx.textBaseline = "top";
+          // collisions
+          const fruitCollected =
+            player.x < fruit.x + fruit.size &&
+            player.x + player.size > fruit.x &&
+            player.y < fruit.y + fruit.size &&
+            player.y + player.size > fruit.y;
 
-      const textWidth = ctx.measureText(text).width;
-      const textHeight = 24; // altura aproximada da fonte (20px + margem)
+          if (fruitCollected) {
+            score++;
+            if (score >= 10) {
+              const audio = new Audio("/victory.mp3");
+              audio.play();
+              showCustomModal("pet code");
+              setActive(false);
+              document.body.style.overflow = "auto";
+              window.removeEventListener("keydown", handleKeyDown);
+              window.removeEventListener("keyup", handleKeyUp);
+              cancelAnimationFrame(rafId);
+              return;
+            } else {
+              player.speed += 0.3;
+              enemy.speed += 0.3;
+              spawnFruit();
+            }
+          }
 
-      // fundo branco com cantos retos
-      ctx.fillStyle = "white";
-      ctx.fillRect(canvas.width / 2 - textWidth / 2 - 6, 10, textWidth + 12, textHeight);
+          // clear & draw
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // texto preto
-      ctx.fillStyle = "black";
-      ctx.fillText(text, canvas.width / 2, 10);
+          // draw fruit
+          if (animState.fruitImg) ctx.drawImage(animState.fruitImg, fruit.x, fruit.y, fruit.size, fruit.size);
+
+          // draw player frame
+          if (animState.player.frames.length) {
+            const pf = animState.player.frames[animState.player.frameIndex];
+            ctx.drawImage(pf, player.x, player.y, player.size, player.size);
+          }
+
+          // draw enemy frame
+          if (animState.enemy.frames.length) {
+            const ef = animState.enemy.frames[animState.enemy.frameIndex];
+            ctx.drawImage(ef, enemy.x, enemy.y, enemy.size, enemy.size);
+          }
+
+          // UI
+          const text = `Pontos: ${score}`;
+          ctx.font = "bold 20px Arial";
+          ctx.textAlign = "center";
+          ctx.textBaseline = "top";
+          const textWidth = ctx.measureText(text).width;
+          const textHeight = 24;
+          ctx.fillStyle = "white";
+          ctx.fillRect(canvas.width / 2 - textWidth / 2 - 6, 10, textWidth + 12, textHeight);
+          ctx.fillStyle = "black";
+          ctx.fillText(text, canvas.width / 2, 10);
+
+          const enemyPadding = 20;
+
+          const collided =
+            player.x < enemy.x + enemy.size - enemyPadding &&
+            player.x + player.size > enemy.x + enemyPadding &&
+            player.y < enemy.y + enemy.size - enemyPadding &&
+            player.y + player.size > enemy.y + enemyPadding;
 
 
-      // Colisão inimigo
-      const collided =
-        player.x < enemy.x + enemy.size &&
-        player.x + player.size > enemy.x &&
-        player.y < enemy.y + enemy.size &&
-        player.y + player.size > enemy.y;
+          if (collided) {
+            const audio = new Audio("/plankton.mp3");
+            audio.play();
+            showCustomModal("Game Over!", `Pontos: ${score}`);
+            setActive(false);
+            document.body.style.overflow = "auto";
+            window.removeEventListener("keydown", handleKeyDown);
+            window.removeEventListener("keyup", handleKeyUp);
+            cancelAnimationFrame(rafId);
+            return;
+          }
 
-      if (collided) {
-        const audio = new Audio("/plankton.mp3");
-        audio.play();
-        showCustomModal("Game Over!", `Pontos: ${score}`);
+          rafId = requestAnimationFrame(loop);
+        };
+
+        rafId = requestAnimationFrame(loop);
+
+        // cleanup when promise resolves and effect later unmounts
+        const cleanup = () => {
+          window.removeEventListener("keydown", handleKeyDown);
+          window.removeEventListener("keyup", handleKeyUp);
+        };
+
+        // attach cleanup to outer scope via return below
+      })
+      .catch((err) => {
+        console.error("Erro ao carregar frames:", err);
+        showCustomModal("Erro ao carregar imagens", String(err));
         setActive(false);
         document.body.style.overflow = "auto";
-        return;
-      }
+      });
 
-      animationFrameId = requestAnimationFrame(loop);
-    };
-
-    const startGame = () => {
-      if (playerImg.complete && enemyImg.complete && fruitImg.complete) loop();
-      else {
-        playerImg.onload = enemyImg.onload = fruitImg.onload = loop;
-      }
-    };
-
-    startGame();
+    // event listeners for resize were added above; add generic input listeners here to be removed on cleanup
+    const handleKeyDown = (e: KeyboardEvent) => (keys[e.key] = true);
+    const handleKeyUp = (e: KeyboardEvent) => (keys[e.key] = false);
+    // they will be added again after preload; keep them removed here
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
-      window.removeEventListener("keydown", handleKeyDown);
-      window.removeEventListener("keyup", handleKeyUp);
-      window.removeEventListener("resize", resize);
+      // cancel RAF and restore page
       document.body.style.overflow = "auto";
+      window.removeEventListener("resize", resize);
     };
   }, [active]);
 
@@ -205,7 +284,6 @@ const Sus: React.FC = () => {
         />
       )}
 
-      {/* Modal React */}
       {modal && (
         <div
           style={{
@@ -229,8 +307,8 @@ const Sus: React.FC = () => {
               textAlign: "center",
             }}
           >
-            <h2 style={{color: "black"}}>{modal.title}</h2>
-            <p style={{color: "black"}}>{modal.text}</p>
+            <h2 style={{ color: "black" }}>{modal.title}</h2>
+            <p style={{ color: "black" }}>{modal.text}</p>
             <button onClick={() => setModal(null)}>OK</button>
           </div>
         </div>

@@ -19,7 +19,7 @@ import tutorImg from "./../../assets/images/members/profile.png";
 import carol from "./../../assets/images/members/carol.png";
 import fabricio from "./../../assets/images/members/fabricio.png";
 import fabio from "./../../assets/images/members/fabio.png";
-
+import jose from "./../../assets/images/members/jose.png";
 
 const membros = [
   {
@@ -303,7 +303,32 @@ const membros = [
       jogo: "Team Fortress 2 principalmente, horror, estratégia, fps, simuladores.",
       comida: "Sim.",
     },
+  },
+
+  {
+    nome: "José Bahls",
+    foto: jose,
+    ICV: "-",
+    membroDesde: "2025",
+    links: {
+      instagram: "https://www.instagram.com/josebahls?igsh=aGJnNW1ucTdvczRn",
+      github: "https://github.com/josebahls",
+      email: "mailto:josebahls@gmail.com",
+    },
+    saibaMais: {
+      cidadeNatal: "Cascavel - PR",
+      motivoCurso:
+        "Escolhi o curso porque quero trabalhar home office e este é o melhor curso para se ter essa opção.",
+      alternativaCurso: "Design gráfico ou Matemática",
+      academica: "Quero seguir na área de UI/UX Designer, Front-end. Possivelmente uma segunda graduação em Design.",
+      hobby: "Jogar xadrez e ir ao cinema.",
+      filme: "Nimona",
+      jogo: "Fran Bow",
+      musica: "Atopos - Björk",
+      comida: "Sushi",
+    },
   }
+
 
 
 ];

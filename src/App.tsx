@@ -8,6 +8,7 @@ import Sala from './components/sala/sala';
 import PROJETOS from './components/projetos/projetos';
 import Newspetletter from './components/newspet/newspet'; 
 import Faq from './components/faq/faq'; 
+import Bagre from './components/membrosAtuais/bagre';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/newspetletter" element={<Newspetletter />} />
         <Route path="/faq" element={<Faq />} />  
         <Route path="/logo_interessante" element={<Inicio />} />
+        <Route path="/bagre" element={<Bagre />} />
       </Routes>
       <Footer />
     </Router>

@@ -33,6 +33,8 @@ const Sus: React.FC = () => {
   const [active, setActive] = useState(false);
   const [modal, setModal] = useState<Modal>(null);
 
+  const audioMusicaRef = useRef<HTMLAudioElement | null>(null);
+
   const showCustomModal = (title: string, text?: string) => {
     setModal({ title, text: text ?? "" });
   };
@@ -67,8 +69,46 @@ const Sus: React.FC = () => {
     return () => window.removeEventListener("keydown", handler);
   }, []);
 
+  // Bagre Code
   useEffect(() => {
-    if (!active) return;
+    const bagreCode = ["b", "a", "g", "r", "e"];
+    let index = 0;
+
+    const handler = (e: KeyboardEvent) => {
+      if (e.key.toLowerCase() === bagreCode[index]) {
+        index++;
+        if (index === bagreCode.length) {
+          // Ação ao digitar "bagre"
+          window.location.href = "/bagre"; // ou use navigate se for React Router
+          index = 0;
+        }
+      } else {
+        index = 0;
+      }
+    };
+
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, []);
+
+
+  useEffect(() => {
+
+    if (active) {
+      if (!audioMusicaRef.current) {
+        audioMusicaRef.current = new Audio("/audiotini.mp3");
+        audioMusicaRef.current.loop = true;
+      }
+      audioMusicaRef.current.play();
+    } else {
+      // Pausa e reseta quando o jogo termina
+      if (audioMusicaRef.current) {
+        audioMusicaRef.current.pause();
+        audioMusicaRef.current.currentTime = 0;
+      }
+    }
+
+
 
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -234,6 +274,13 @@ const Sus: React.FC = () => {
             window.removeEventListener("keydown", handleKeyDown);
             window.removeEventListener("keyup", handleKeyUp);
             cancelAnimationFrame(rafId);
+
+            // 🔇 pausa a música
+            audioMusicaRef.current?.pause();
+
+
+            setActive(false);
+
             return;
           }
 
@@ -242,11 +289,7 @@ const Sus: React.FC = () => {
 
         rafId = requestAnimationFrame(loop);
 
-        // cleanup when promise resolves and effect later unmounts
-        const cleanup = () => {
-          window.removeEventListener("keydown", handleKeyDown);
-          window.removeEventListener("keyup", handleKeyUp);
-        };
+
 
         // attach cleanup to outer scope via return below
       })
@@ -257,10 +300,6 @@ const Sus: React.FC = () => {
         document.body.style.overflow = "auto";
       });
 
-    // event listeners for resize were added above; add generic input listeners here to be removed on cleanup
-    const handleKeyDown = (e: KeyboardEvent) => (keys[e.key] = true);
-    const handleKeyUp = (e: KeyboardEvent) => (keys[e.key] = false);
-    // they will be added again after preload; keep them removed here
 
     return () => {
       // cancel RAF and restore page

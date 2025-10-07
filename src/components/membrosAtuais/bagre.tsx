@@ -34,7 +34,7 @@ const Bagre: React.FC = () => {
         style={{ maxWidth: "700px", width: "100%", height: "auto" }}
       />
 
-      <audio id="audio1" src="/plankton.mp3" autoPlay />
+      <audio id="audio1" src="/grito.mp3" autoPlay />
       <audio id="audio2" src="/fundosuspeito.mp3" />
     </div>
   );

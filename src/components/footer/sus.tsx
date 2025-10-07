@@ -10,7 +10,7 @@ import N4 from "./../../assets/images/game/neadertal4.png";
 import N5 from "./../../assets/images/game/neadertal5.png";
 import N6 from "./../../assets/images/game/neadertal6.png";
 import N7 from "./../../assets/images/game/neadertal7.png";
-import FrutaSrc from "./../../assets/mango.png";
+import FrutaSrc from "./../../assets/cake.png";
 
 type Modal = { title: string; text: string } | null;
 
@@ -96,7 +96,7 @@ const Sus: React.FC = () => {
 
     if (active) {
       if (!audioMusicaRef.current) {
-        audioMusicaRef.current = new Audio("/audiotini.mp3");
+        audioMusicaRef.current = new Audio("/audiotinibom.mp3");
         audioMusicaRef.current.loop = true;
       }
       audioMusicaRef.current.play();
@@ -209,6 +209,15 @@ const Sus: React.FC = () => {
 
           if (fruitCollected) {
             score++;
+            const audio = new Audio("/teams.mp3");
+            // ajusta velocidade aleatoriamente entre 0.8x e 1.5x
+            audio.playbackRate = 0.8 + Math.random() * 0.7;
+
+            // ajusta volume aleatório entre 0.5 e 1
+            audio.volume = 1;
+
+            audio.play();
+
             if (score >= 10) {
               const audio = new Audio("/victory.mp3");
               audio.play();

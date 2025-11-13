@@ -303,31 +303,9 @@ const membros = [
       jogo: "Team Fortress 2 principalmente, horror, estratégia, fps, simuladores.",
       comida: "Sim.",
     },
-  },
-
-  {
-    nome: "José Bahls",
-    foto: jose,
-    ICV: "-",
-    membroDesde: "2025",
-    links: {
-      instagram: "https://www.instagram.com/josebahls?igsh=aGJnNW1ucTdvczRn",
-      github: "https://github.com/josebahls",
-      email: "mailto:josebahls@gmail.com",
-    },
-    saibaMais: {
-      cidadeNatal: "Cascavel - PR",
-      motivoCurso:
-        "Escolhi o curso porque quero trabalhar home office e este é o melhor curso para se ter essa opção.",
-      alternativaCurso: "Design gráfico ou Matemática",
-      academica: "Quero seguir na área de UI/UX Designer, Front-end. Possivelmente uma segunda graduação em Design.",
-      hobby: "Jogar xadrez e ir ao cinema.",
-      filme: "Nimona",
-      jogo: "Fran Bow",
-      musica: "Atopos - Björk",
-      comida: "Sushi",
-    },
   }
+
+  
 
 
 
@@ -422,7 +400,11 @@ const ExMembros = ['1 - Eduardo Vansetto 09/12/2010 até 03/03/2011,',
   '86 - Gabriel Yudi Leite Higuchi 06/12/2022 até 02/04/2025,',
   '87 - Ronaldo Drecksler Farias Pacheco 06/12/2022 até 21/04/2025,',
   '88 - Leonardo Calsavara 29/09/2023 até 21/04/2025,',
-  '89 - David Antonio Brocardo 06/12/2022 até 21/04/2025,']
+  '89 - David Antonio Brocardo 06/12/2022 até 21/04/2025,',
+  '90 - Maria Clara Salvadego Guiotti 04/06/2025 até 06/08/2025',
+  '91 - Guilherme Augusto Deitos Alves 29/09/2023 até 29/08/2025',
+  '91 - Gabriel Lenser 29/09/2023 até 02/09/2025',
+  '92 - José Daniel Bahls 13/09/2025 até 07/11/2025',]
 
 const ITEMS_PER_PAGE = 15;
 type TabelaExMembrosProps = {

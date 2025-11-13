@@ -19,7 +19,7 @@ import tutorImg from "./../../assets/images/members/profile.png";
 import carol from "./../../assets/images/members/carol.png";
 import fabricio from "./../../assets/images/members/fabricio.png";
 import fabio from "./../../assets/images/members/fabio.png";
-import jose from "./../../assets/images/members/jose.png";
+
 
 const membros = [
   {
@@ -145,7 +145,7 @@ const membros = [
   {
     nome: "Thiago Oliveira Dupim",
     foto: thiago,
-    icv: "ICV: TBD",
+    icv: "ICV: Realidade Virtual como ferramenta de divulgação do curso de Ciência da Computação",
     membroDesde: "2025",
     links: {
       lattes: "https://lattes.cnpq.br/5041997105837766",
@@ -192,7 +192,7 @@ const membros = [
   {
     nome: "Rafael Mendonça Vaz",
     foto: rafael,
-    icv: "ICV: TBD",
+    icv: "ICV: Escalabilidade de banco de dados em serviços de cloud e performance com o uso de turing",
     membroDesde: "2025",
     links: {
       instagram: "https://www.instagram.com/rafaellmv",
@@ -241,7 +241,7 @@ const membros = [
   {
     nome: "Caroline Mayumi Grellmann Saito",
     foto: carol,
-    icv: "Manutenção lab 4.0",
+    icv: "Suporte ao lab 4.0",
     membroDesde: "2025",
     links: {
       instagram: "https://www.instagram.com/c.mayymi?igsh=MXc4M2ltaW1peGpwbg%3D%3D&utm_source=qr",
@@ -264,7 +264,7 @@ const membros = [
   {
     nome: "Fabricio Keltika Tanquella",
     foto: fabricio,
-    icv: "ICV",
+    icv: "TBD",
     membroDesde: "2025",
     links: {
       github: "https://github.com/Fabriciofkt157",

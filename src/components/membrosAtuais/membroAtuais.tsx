@@ -145,7 +145,7 @@ const membros = [
   {
     nome: "Thiago Oliveira Dupim",
     foto: thiago,
-    icv: "ICV: TBD",
+    icv: "ICV: Realidade Virtual como ferramenta de divulgação do curso de Ciência da Computação",
     membroDesde: "2025",
     links: {
       lattes: "https://lattes.cnpq.br/5041997105837766",
@@ -192,7 +192,7 @@ const membros = [
   {
     nome: "Rafael Mendonça Vaz",
     foto: rafael,
-    icv: "ICV: TBD",
+    icv: "ICV: Escalabilidade de banco de dados em serviços de cloud e performance com o uso de turing",
     membroDesde: "2025",
     links: {
       instagram: "https://www.instagram.com/rafaellmv",
@@ -241,7 +241,7 @@ const membros = [
   {
     nome: "Caroline Mayumi Grellmann Saito",
     foto: carol,
-    icv: "Manutenção lab 4.0",
+    icv: "Suporte ao lab 4.0",
     membroDesde: "2025",
     links: {
       instagram: "https://www.instagram.com/c.mayymi?igsh=MXc4M2ltaW1peGpwbg%3D%3D&utm_source=qr",
@@ -264,7 +264,7 @@ const membros = [
   {
     nome: "Fabricio Keltika Tanquella",
     foto: fabricio,
-    icv: "ICV",
+    icv: "TBD",
     membroDesde: "2025",
     links: {
       github: "https://github.com/Fabriciofkt157",
@@ -304,6 +304,9 @@ const membros = [
       comida: "Sim.",
     },
   }
+
+  
+
 
 
 ];
@@ -397,7 +400,11 @@ const ExMembros = ['1 - Eduardo Vansetto 09/12/2010 até 03/03/2011,',
   '86 - Gabriel Yudi Leite Higuchi 06/12/2022 até 02/04/2025,',
   '87 - Ronaldo Drecksler Farias Pacheco 06/12/2022 até 21/04/2025,',
   '88 - Leonardo Calsavara 29/09/2023 até 21/04/2025,',
-  '89 - David Antonio Brocardo 06/12/2022 até 21/04/2025,']
+  '89 - David Antonio Brocardo 06/12/2022 até 21/04/2025,',
+  '90 - Maria Clara Salvadego Guiotti 04/06/2025 até 06/08/2025',
+  '91 - Guilherme Augusto Deitos Alves 29/09/2023 até 29/08/2025',
+  '91 - Gabriel Lenser 29/09/2023 até 02/09/2025',
+  '92 - José Daniel Bahls 13/09/2025 até 07/11/2025',]
 
 const ITEMS_PER_PAGE = 15;
 type TabelaExMembrosProps = {

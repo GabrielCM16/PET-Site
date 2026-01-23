@@ -10,7 +10,7 @@ import N4 from "./../../assets/images/game/neadertal4.png";
 import N5 from "./../../assets/images/game/neadertal5.png";
 import N6 from "./../../assets/images/game/neadertal6.png";
 import N7 from "./../../assets/images/game/neadertal7.png";
-import FrutaSrc from "./../../assets/cake.png";
+import FrutaSrc from "./../../assets/images/game/cake.png";
 
 type Modal = { title: string; text: string } | null;
 

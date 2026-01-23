@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import bagreimg from "./../../assets/bagre.png";
+import bagreimg from "./../../assets/images/game/bagre.png";
 
 const Bagre: React.FC = () => {
   useEffect(() => {

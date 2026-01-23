@@ -14,7 +14,6 @@ import cabrera from "./../../assets/images/members/cabrera.png";
 import thalita from "./../../assets/images/members/thalita.png";
 import rafael from "./../../assets/images/members/rafael.png";
 import vinicius from "./../../assets/images/members/vinicius.png";
-import altmeyer from "./../../assets/images/members/altmeyer.png";
 import tutorImg from "./../../assets/images/members/profile.png";
 import carol from "./../../assets/images/members/carol.png";
 import fabricio from "./../../assets/images/members/fabricio.png";
@@ -49,7 +48,7 @@ const membros = [
   {
     nome: "Gabriel Costa de Moraes",
     foto: gabrielImg,
-    icv: "ICV: Construção de Material de Divulgação do Curso de Ciência da Computação utilizando matriz de LED",
+    icv: "ICV: Exploração dos Pinos GPIO em TV Box para Aplicações Embarcadas",
     membroDesde: "2025",
     links: {
       lattes: "https://lattes.cnpq.br/1734464258932426",
@@ -169,7 +168,7 @@ const membros = [
   {
     nome: "Vinícius A. Hermes",
     foto: vinicius,
-    icv: "ICV: TBD",
+    icv: "ICV: Visualização Imersiva de Portas Lógicas Com Meta Quest 3s",
     membroDesde: "2025",
     links: {
       lattes: "",
@@ -216,32 +215,9 @@ const membros = [
     },
   },
   {
-    nome: "Guilherme Altmeyer Soares",
-    foto: altmeyer,
-    icv: "ICV: Evolução e Segurança no HTTP: Uma Análise Comparativa das suas Principais Versões",
-    membroDesde: "2024",
-    links: {
-      lattes: " http://lattes.cnpq.br/8705018917673747",
-      instagram: "https://www.instagram.com/gui_alt_soa/",
-      github: "https://github.com/Gstyx",
-      email: "altmeyergui@gmail.com",
-    },
-    saibaMais: {
-      cidadeNatal: "Laranjeiras do Sul - PR",
-      motivoCurso: "Gostar de puzzles",
-      alternativaCurso: "Relações Internacionais",
-      academica: "Tenho bastante interesse na área de CyberSegurança focado na análise Forense",
-      hobby: "Leitura e Piano",
-      filme: "Jojo Rabbit",
-      jogo: "Futebol, xadrez e vôlei",
-      música: "nope your too late i already died",
-      comida: "bife a parmegiana"
-    },
-  },
-  {
     nome: "Caroline Mayumi Grellmann Saito",
     foto: carol,
-    icv: "Suporte ao lab 4.0",
+    icv: "ICV: Suporte ao lab 4.0",
     membroDesde: "2025",
     links: {
       instagram: "https://www.instagram.com/c.mayymi?igsh=MXc4M2ltaW1peGpwbg%3D%3D&utm_source=qr",
@@ -264,7 +240,7 @@ const membros = [
   {
     nome: "Fabricio Keltika Tanquella",
     foto: fabricio,
-    icv: "TBD",
+    icv: "ICV: Análise do Processamento Linguístico em Português com o Modelo DeepSeek",
     membroDesde: "2025",
     links: {
       github: "https://github.com/Fabriciofkt157",
@@ -404,7 +380,8 @@ const ExMembros = ['1 - Eduardo Vansetto 09/12/2010 até 03/03/2011,',
   '90 - Maria Clara Salvadego Guiotti 04/06/2025 até 06/08/2025',
   '91 - Guilherme Augusto Deitos Alves 29/09/2023 até 29/08/2025',
   '91 - Gabriel Lenser 29/09/2023 até 02/09/2025',
-  '92 - José Daniel Bahls 13/09/2025 até 07/11/2025',]
+  '92 - José Daniel Bahls 13/09/2025 até 07/11/2025',
+  '93 - Guilherme Altmeyer Soares 13/08/2024 até 01/12/2025',]
 
 const ITEMS_PER_PAGE = 15;
 type TabelaExMembrosProps = {

@@ -4,8 +4,7 @@ const InstagramBasicFeed: React.FC = () => {
   const [media, setMedia] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
 
-  const acess = 'IGAAO1m4SCswNBZAE5KeFFaR0lndjE4NzdMc1M0V2JnSjJDQ1VMZAUxrVm50UEJuaTRmTEJNeEZAEVHdSX3prTGpzTGZAFVld0ZATRJSjhsVWhwYkRXWHE1eGt2ZAklwSE1FWVp4TC16YWdvVmFTeGpBMElEQkpZAR2U2cUg3RjAyZA2p6VQZDZD';
-
+const acess = 'IGAAO1m4SCswNBZAFppZAl9TTXRtR3J6ZATBSTmpGTTA1blVtTTFMVE8yT0VWUHBJRVhleGh6ZAi1LRFpoajVtV0EyQjdoUERCNjc4aTlCaDJRenV2OVVaVjlMS0otMFJOaDJyMFhmejhHbE1PWnVhc1ktYXNYTGMzMzBoRVNjV0NKVQZDZD';
   useEffect(() => {
     const fetchMedia = async () => {
       setLoading(true);
@@ -30,7 +29,7 @@ const InstagramBasicFeed: React.FC = () => {
     <div className="container my-4">
       {loading && <p>Carregando posts...</p>}
 
-      <div className="carousel-row">
+      <div className="row g-3 justify-content-center">
         {media.map((post) => (
           <div key={post.id} className="col-12 col-sm-6 col-md-4" style={{ maxWidth: 350 }}>
             <a

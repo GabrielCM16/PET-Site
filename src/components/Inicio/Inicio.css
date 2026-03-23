@@ -61,22 +61,23 @@ html, body {
   object-fit: cover;
 }
 
-/* SCROLL HORIZONTAL */
-.carousel-container {
-  display: flex;
-  justify-content: center;
+
+.card-processo-img {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 180px;
 }
 
-.carousel-row {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.carousel-item-custom {
-  max-width: 350px;
+.card-processo-img img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+.carousel-item {
+  padding: 10px 0;
+}
+
 
 /* MOBILE */
 @media (max-width: 768px) {
@@ -100,5 +101,35 @@ html, body {
 
   h1 {
     font-size: 1.5rem;
+  }
+}
+
+/* MOBILE SCROLL */
+.news-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.news-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.news-card {
+  flex: 0 0 85%;
+  scroll-snap-align: center;
+}
+
+/* melhora visual */
+.news-card .card {
+  height: 250px;
+}
+
+/* DESKTOP mantém padrão */
+@media (min-width: 768px) {
+  .news-scroll {
+    overflow: visible;
   }
 }

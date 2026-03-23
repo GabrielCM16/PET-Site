@@ -25,64 +25,70 @@ const App: React.FC = () => {
             Fique por dentro de tudo que acontece no PETComp. Confira edital,
             eventos e atividades relacionadas ao processo seletivo.
           </p>
-          <div
-            id="carouselPET"
-            className="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div className="carousel-inner">
 
-              {/* Card 1 */}
-              <div className="carousel-item active">
-                <div className="d-flex justify-content-center">
-                  <div className="col-12 col-sm-6 col-md-4">
-                    <div className="card card-processo-img h-100 shadow-sm border-0">
-                      <img src={processoseletivo} className="card-img" alt="Processo Seletivo" />
-                      <div className="card-img-overlay d-flex flex-column justify-content-end">
-                        <a href="https://drive.google.com/file/d/1by5ktz1D7XkLkGLRwqeMoNGuhInIPRk9/view?usp=drivesdk" className="btn btn-light mt-2">Ver edital</a>
-                      </div>
-                    </div>
+          {/* MOBILE: scroll horizontal */}
+          <div className="news-mobile d-md-none">
+            <div className="news-scroll">
+
+              <div className="news-card">
+                <div className="card card-processo-img shadow-sm border-0">
+                  <img src={processoseletivo} alt="Processo Seletivo" />
+                  <div className="card-img-overlay d-flex flex-column justify-content-end">
+                    <a
+                      href="https://drive.google.com/file/d/1by5ktz1D7XkLkGLRwqeMoNGuhInIPRk9/view?usp=drivesdk"
+                      className="btn btn-light"
+                    >
+                      Ver edital
+                    </a>
                   </div>
                 </div>
               </div>
 
-              {/* Card 2 */}
-              <div className="carousel-item">
-                <div className="d-flex justify-content-center">
-                  <div className="col-12 col-sm-6 col-md-4">
-                    <div className="card card-processo-img h-100 shadow-sm border-0">
-                      <img src={minicursolinux} className="card-img" alt="Minicurso Linux" />
-                      <div className="card-img-overlay d-flex flex-column justify-content-end">
-                        <a href="#" className="btn btn-light mt-2">Ver detalhes</a>
-                      </div>
-                    </div>
+              <div className="news-card">
+                <div className="card card-processo-img shadow-sm border-0">
+                  <img src={minicursolinux} alt="Minicurso Linux" />
+                  <div className="card-img-overlay d-flex flex-column justify-content-end">
+                    <a
+                      href="https://www.canva.com/design/DAHC_NYMO8g/Re0a37elR5U1CnMN-wyIoQ/view"
+                      className="btn btn-light"
+                    >
+                      Ver detalhes
+                    </a>
                   </div>
                 </div>
               </div>
 
             </div>
+          </div>
 
-            {/* Controles */}
-            <button
-              className="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselPET"
-              data-bs-slide="prev"
-            >
-              <span className="carousel-control-prev-icon"></span>
-            </button>
+          {/* DESKTOP: layout simples (sem carousel) */}
+          <div className="row justify-content-center g-4 d-none d-md-flex">
+            <div className="col-md-4">
+              <div className="card card-processo-img shadow-sm border-0">
+                <img src={processoseletivo} alt="Processo Seletivo" />
+                <div className="card-img-overlay d-flex flex-column justify-content-end">
+                  <a href="https://drive.google.com/file/d/1by5ktz1D7XkLkGLRwqeMoNGuhInIPRk9/view" className="btn btn-light">
+                    Ver edital
+                  </a>
+                </div>
+              </div>
+            </div>
 
-            <button
-              className="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselPET"
-              data-bs-slide="next"
-            >
-              <span className="carousel-control-next-icon"></span>
-            </button>
+            <div className="col-md-4">
+              <div className="card card-processo-img shadow-sm border-0">
+                <img src={minicursolinux} alt="Minicurso Linux" />
+                <div className="card-img-overlay d-flex flex-column justify-content-end">
+                  <a href="https://www.canva.com/design/DAHC_NYMO8g/Re0a37elR5U1CnMN-wyIoQ/view" className="btn btn-light">
+                    Ver detalhes
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
-        <h1 className="mt-5 display-5 press-start-font">O QUE É?</h1>
+
+
+        <h1 className="mt-5 display-5 custom-font">Quem somos?</h1>
 
         <p className="lead mx-auto inter-regular" style={{ maxWidth: '1000px' }}>
           O Programa de Educação Tutorial (PET) insere estudantes de graduação em projetos de

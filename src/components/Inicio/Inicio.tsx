@@ -5,17 +5,83 @@ import LogoPET from './../../assets/Logo_PETComp.png';
 import PetGroup from './../../assets/petGroup.png';
 import YouTubeCarousel from './../youtube/YouTubeMiniWidget';
 import InstagramFeed from './../instagram/InstagramFeed';
-
+import processoseletivo from "./../../assets/images/projects/processoseletivo.png";
+import minicursolinux from "./../../assets/images/projects/minicursolinux.png";
 
 const App: React.FC = () => {
   return (
     <>
+
       <main className="container text-center mt-5 ">
         <img
           src={LogoPET}
           alt="Logo Petcomp"
           className="logo-img mx-auto d-block"
         />
+
+        <section className="container my-5 px-3 text-center">
+          <h1 className="display-6 custom-font">Últimas Notícias</h1>
+          <p className="lead inter-regular mx-auto mb-4" style={{ maxWidth: '800px' }}>
+            Fique por dentro de tudo que acontece no PETComp. Confira edital,
+            eventos e atividades relacionadas ao processo seletivo.
+          </p>
+          <div
+            id="carouselPET"
+            className="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div className="carousel-inner">
+
+              {/* Card 1 */}
+              <div className="carousel-item active">
+                <div className="d-flex justify-content-center">
+                  <div className="col-12 col-sm-6 col-md-4">
+                    <div className="card card-processo-img h-100 shadow-sm border-0">
+                      <img src={processoseletivo} className="card-img" alt="Processo Seletivo" />
+                      <div className="card-img-overlay d-flex flex-column justify-content-end">
+                        <a href="https://drive.google.com/file/d/1by5ktz1D7XkLkGLRwqeMoNGuhInIPRk9/view?usp=drivesdk" className="btn btn-light mt-2">Ver edital</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div className="carousel-item">
+                <div className="d-flex justify-content-center">
+                  <div className="col-12 col-sm-6 col-md-4">
+                    <div className="card card-processo-img h-100 shadow-sm border-0">
+                      <img src={minicursolinux} className="card-img" alt="Minicurso Linux" />
+                      <div className="card-img-overlay d-flex flex-column justify-content-end">
+                        <a href="#" className="btn btn-light mt-2">Ver detalhes</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Controles */}
+            <button
+              className="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselPET"
+              data-bs-slide="prev"
+            >
+              <span className="carousel-control-prev-icon"></span>
+            </button>
+
+            <button
+              className="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselPET"
+              data-bs-slide="next"
+            >
+              <span className="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </section>
         <h1 className="mt-5 display-5 press-start-font">O QUE É?</h1>
 
         <p className="lead mx-auto inter-regular" style={{ maxWidth: '1000px' }}>
@@ -61,7 +127,7 @@ const App: React.FC = () => {
         <section className="container my-5 px-3">
           <div className="text-start mb-4">
             <h1 className="display-6 custom-font">UMA HISTÓRIA</h1>
-            <p className="lead inter-regular" style={{ maxWidth: '75%' }}>
+            <p className="lead inter-regular mx-auto" style={{ maxWidth: '800px' }}>
               O PET Ciência da Computação (PETComp) foi criado em dezembro de 2010 e é o 5º Grupo PET da
               UNIOESTE (1º do campus de Cascavel), destinado exclusivamente aos alunos regularmente
               matriculados no Curso.
@@ -85,6 +151,7 @@ const App: React.FC = () => {
 
         <InstagramFeed />
 
+
         <section className="container my-5 px-3 text-center">
           <h1 className="display-6 custom-font">NOSSO CANAL</h1>
           <p className="lead inter-regular mx-auto" style={{ maxWidth: '800px' }}>
@@ -93,6 +160,7 @@ const App: React.FC = () => {
         </section>
 
         <YouTubeCarousel />
+
 
       </main>
     </>

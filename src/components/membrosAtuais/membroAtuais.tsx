@@ -456,7 +456,7 @@ const Membros: React.FC = () => {
   const toggleExMembros = () => setShowExMembros(!showExMembros);
 
   return (
-    <main className="container text-center mt-5">
+    <main className="container text-center mt-5 pt-4">
       <h1 className="display-3 mt-5">MEMBROS</h1>
 
       {/* Tutor atual */}

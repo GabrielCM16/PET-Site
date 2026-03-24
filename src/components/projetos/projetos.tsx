@@ -43,7 +43,7 @@ const Projetos: React.FC = () => {
     }, []);
 
     return (
-        <main className="container px-3 my-5 projetos-container text-center">
+        <main className="container px-3 my-5 projetos-container text-center pt-5 mt-5">
 
             <section className="text-center my-5">
                 <h1 className="display-4 mb-5">Projetos</h1>

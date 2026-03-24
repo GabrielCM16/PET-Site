@@ -4,7 +4,7 @@ import mapa from './../../assets/MapaUnioeste.pdf';
 
 const Home: React.FC = () => {
   return (
-    <main className="container text-center mt-3">
+    <main className="container text-center mt-3 pt-5 mt-5">
       {/* Título mais alto */}
       <h1 className="display-5 mb-4">Sala PETComp</h1>
 

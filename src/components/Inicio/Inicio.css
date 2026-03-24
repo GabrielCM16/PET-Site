@@ -6,6 +6,18 @@ html, body {
   height: 100%;
 }
 
+/* RESET GLOBAL */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* REMOVE ESPAÇO DO MAIN */
+main {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
 /* FONTS */
 .custom-font {
   font-family: "Pixelify Sans", sans-serif;
@@ -40,43 +52,6 @@ html, body {
   }
 }
 
-/* CARDS */
-.card-custom {
-  background-color: #749BC2;
-  border-radius: 25px;
-  max-width: 270px;
-  width: 100%;
-  padding: 20px;
-}
-
-/* CARDS IMAGEM */
-.card-processo-img {
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.card-processo-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
-.card-processo-img {
-  border-radius: 12px;
-  overflow: hidden;
-  height: 180px;
-}
-
-.card-processo-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.carousel-item {
-  padding: 10px 0;
-}
 
 
 /* MOBILE */
@@ -132,4 +107,195 @@ html, body {
   .news-scroll {
     overflow: visible;
   }
+}
+
+/* HERO FULL */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+
+/* BACKGROUND */
+.hero-bg-image {
+  position: absolute;
+  inset: 0;
+  background: url('./../../assets/images/members/fotogeral.jpeg') center/cover no-repeat;
+  z-index: 0;
+}
+
+/* overlay leve pra contraste */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+/* CONTEÚDO */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  /* chave aqui */
+  justify-content: flex-start; /* esquerda */
+  padding-left: 8%;
+}
+
+/* LOGO */
+.hero-logo {
+  width: 320px;
+  max-width: 80%;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-content {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .hero-logo {
+    width: 200px;
+  }
+}
+
+.hero::before {
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.6) 0%,
+    rgba(0,0,0,0.3) 40%,
+    rgba(0,0,0,0.1) 100%
+  );
+}
+
+
+.section-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+h1 {
+  margin-bottom: 16px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.section-wrapper {
+  backdrop-filter: blur(6px);
+}
+
+.about-section {
+  padding: 40px 20px;
+  margin-top: -40px; /* puxa levemente pra cima */
+}
+
+/* TEXTO ESQUERDA */
+.about-content h3 {
+  font-size: 14px;
+  background: rgba(255,255,255,0.1);
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.about-content h2 {
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  margin-bottom: 12px;
+}
+
+/* CARDS */
+.about-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+
+  padding: 30px 25px;
+  border-radius: 16px;
+
+  text-align: center;
+  height: 100%;
+
+  transition: 0.3s;
+}
+
+.about-card i {
+  font-size: 28px;
+  margin-bottom: 15px;
+
+  width: 60px;
+  height: 60px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+}
+
+.about-card h3 {
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.about-card p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* HOVER */
+.about-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.15);
+}
+
+/* HISTÓRIA */
+.about-history p {
+  max-width: 700px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .about-content {
+    text-align: center;
+  }
+
+  .about-content img {
+    display: block;              /* 🔑 essencial */
+    margin: 10px auto 20px auto; /* centraliza */
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.about-content img {
+  max-width: 180px;   /* controla tamanho */
+  width: 100%;
+  height: auto;
+
+  margin: 10px 0 20px 0; /* espaçamento vertical equilibrado */
+  display: block;
 }

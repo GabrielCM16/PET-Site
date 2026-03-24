@@ -1,54 +1,94 @@
-/* Botão da pergunta */
-.faq-btn {
-  background: transparent !important;
-  color: white !important;
-  box-shadow: none !important;
-  font-size: 1.1rem;
+
+#faq {
+  padding-top: 100px; /* ajuste conforme altura do header */
+}
+/*--------------------------------------------------------------
+# Faq Section
+--------------------------------------------------------------*/
+.faq .content h3 {
+  font-weight: 400;
+  font-size: 34px;
+}
+
+
+
+.faq .content p {
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.faq .faq-container .faq-item {
+  background-color: var(--surface-color);
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.faq .faq-container .faq-item:last-child {
+  margin-bottom: 0;
+}
+
+.faq .faq-container .faq-item h3 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 30px 0 0;
+  transition: 0.3s;
+  cursor: pointer;
   display: flex;
-  align-items: center;
-  gap: 8px; /* espaço entre seta e texto */
-  padding-left: 1rem; /* espaçamento maior da borda esquerda */
+  align-items: flex-start;
 }
 
-/* Remove efeito de foco */
-.faq-btn:focus {
-  box-shadow: none !important;
+.faq .faq-container .faq-item h3 .num {
+  color: var(--accent-color);
+  padding-right: 5px;
 }
 
-/* Cada item da FAQ */
-.accordion-item {
-  background-color: transparent !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* linha entre itens */
-  padding: 0.5rem 0; /* espaçamento vertical */
+.faq .faq-container .faq-item h3:hover {
+  color: var(--accent-color);
 }
 
-/* Remove a seta padrão do Bootstrap */
-.accordion-button::after {
-  background-image: none !important;
+.faq .faq-container .faq-item .faq-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
 }
 
-/* Ícone personalizado de seta */
-.arrow-icon {
-  transition: transform 0.3s ease;
+.faq .faq-container .faq-item .faq-content p {
+  margin-bottom: 0;
+  overflow: hidden;
 }
 
-/* Rotaciona a seta quando o item está aberto */
-.accordion-button:not(.collapsed) .arrow-icon {
+.faq .faq-container .faq-item .faq-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+  line-height: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.faq .faq-container .faq-item .faq-toggle:hover {
+  color: var(--accent-color);
+}
+
+.faq .faq-container .faq-active h3 {
+  color: var(--accent-color);
+}
+
+.faq .faq-container .faq-active .faq-content {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  opacity: 1;
+  padding-top: 10px;
+}
+
+.faq .faq-container .faq-active .faq-toggle {
   transform: rotate(90deg);
-}
-
-/* Corpo da resposta */
-.accordion-body {
-  background: transparent !important;
-  color: white;
-  font-size: 1rem;
-  line-height: 1;
-  padding-left: 2rem; /* alinhamento mais à direita */
-}
-
-
-
-.faq-bottom-line {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  width: 100%;
+  color: var(--accent-color);
 }

@@ -1,22 +1,34 @@
+
+
 .pet-header {
-  background-color: white;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
-  padding: 12px 24px;
-  border-radius: 80px;
-  max-width: 1100px;
-  margin: 24px auto;
-  font-family: 'Archivo', sans-serif;
-  position: relative;
+  position: fixed; /* FIXA NA TELA */
+  top: 0;
+  left: 0;
+  width: 100%;
+
   z-index: 1000;
+
+  background: transparent; /* REMOVE FUNDO */
+  box-shadow: none; /* REMOVE SOMBRA */
+  border-radius: 0;
+
+  margin: 0; /* REMOVE GAP */
+  padding: 16px 40px;
 }
 
 .pet-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
-  position: relative;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+
+  padding: 10px 20px;
 }
 
 .pet-logo {
@@ -32,26 +44,37 @@
 }
 
 .pet-nav.desktop {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: static; /* ESSENCIAL */
+  transform: none;
+
   display: flex;
   gap: 24px;
-  background-color: rgba(0, 0, 0, 0.04);
-  padding: 6px 16px;
+
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 6px 20px;
   border-radius: 50px;
+
+  align-items: center; /* centraliza vertical */
+}
+.pet-nav.desktop {
+  margin: 0 auto;
+}
+.pet-header-container {
+  height: 60px;
+}
+
+.pet-nav.desktop {
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .pet-nav a {
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;         /*Define tamanho da fonte das letras no header.*/
-  color: rgba(0, 0, 0, 0.8);
-  transition: color 0.3s ease;
-  padding: 6px 8px;
-  border-radius: 30px;
+  color: white;
 }
 
+.hamburger span {
+  background-color: white;
+}
 
 /*=================================================================================================================================*/
 .pet-nav a:hover {

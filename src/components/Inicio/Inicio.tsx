@@ -1,161 +1,265 @@
 import React from "react";
 import './Inicio.css';
 
-import LogoPET from './../../assets/Logo_PETComp.png';
-import PetGroup from './../../assets/petGroup.png';
 import YouTubeCarousel from './../youtube/YouTubeMiniWidget';
 import InstagramFeed from './../instagram/InstagramFeed';
-import processoseletivo from "./../../assets/images/projects/processoseletivo.png";
-import minicursolinux from "./../../assets/images/projects/minicursolinux.png";
+import logo from './../../assets/Logo_PETComp.png';
+import gamejamimg from './../../assets/images/projects/gamejam2025.jpg';
+import petcodeimg from './../../assets/images/projects/cursolinuximg.jpeg';
+import eventosimg from './../../assets/images/projects/petdiscute.png';
+import calourosimg from './../../assets/images/projects/recepcao.png';
+import divulgacaoimg from './../../assets/images/projects/DivulgacaoCurso.png';
 
 const App: React.FC = () => {
   return (
     <>
 
-      <main className="container text-center mt-5 ">
-        <img
-          src={LogoPET}
-          alt="Logo Petcomp"
-          className="logo-img mx-auto d-block"
-        />
+      <main>
+        <section id="hero" className="hero">
+          <div className="hero-bg-image"></div>
 
-        <section className="container my-5 px-3 text-center">
-          <h1 className="display-6 custom-font">Últimas Notícias</h1>
-          <p className="lead inter-regular mx-auto mb-4" style={{ maxWidth: '800px' }}>
-            Fique por dentro de tudo que acontece no PETComp. Confira edital,
-            eventos e atividades relacionadas ao processo seletivo.
-          </p>
-
-          {/* MOBILE: scroll horizontal */}
-          <div className="news-mobile d-md-none">
-            <div className="news-scroll">
-
-              <div className="news-card">
-                <div className="card card-processo-img shadow-sm border-0">
-                  <img src={processoseletivo} alt="Processo Seletivo" />
-                  <div className="card-img-overlay d-flex flex-column justify-content-end">
-                    <a
-                      href="https://drive.google.com/file/d/1by5ktz1D7XkLkGLRwqeMoNGuhInIPRk9/view?usp=drivesdk"
-                      className="btn btn-light"
-                    >
-                      Ver edital
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="news-card">
-                <div className="card card-processo-img shadow-sm border-0">
-                  <img src={minicursolinux} alt="Minicurso Linux" />
-                  <div className="card-img-overlay d-flex flex-column justify-content-end">
-                    <a
-                      href="https://www.canva.com/design/DAHC_NYMO8g/Re0a37elR5U1CnMN-wyIoQ/view"
-                      className="btn btn-light"
-                    >
-                      Ver detalhes
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          {/* DESKTOP: layout simples (sem carousel) */}
-          <div className="row justify-content-center g-4 d-none d-md-flex">
-            <div className="col-md-4">
-              <div className="card card-processo-img shadow-sm border-0">
-                <img src={processoseletivo} alt="Processo Seletivo" />
-                <div className="card-img-overlay d-flex flex-column justify-content-end">
-                  <a href="https://drive.google.com/file/d/1by5ktz1D7XkLkGLRwqeMoNGuhInIPRk9/view" className="btn btn-light">
-                    Ver edital
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="card card-processo-img shadow-sm border-0">
-                <img src={minicursolinux} alt="Minicurso Linux" />
-                <div className="card-img-overlay d-flex flex-column justify-content-end">
-                  <a href="https://www.canva.com/design/DAHC_NYMO8g/Re0a37elR5U1CnMN-wyIoQ/view" className="btn btn-light">
-                    Ver detalhes
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-
-        <h1 className="mt-5 display-5 custom-font">Quem somos?</h1>
-
-        <p className="lead mx-auto inter-regular" style={{ maxWidth: '1000px' }}>
-          O Programa de Educação Tutorial (PET) insere estudantes de graduação em projetos de
-          educação tutorial com o objetivo de aplicar seus conhecimentos e ampliar sua formação
-          através da realização de projetos de ensino, pesquisa e extensão.
-        </p>
-        <img
-          src={PetGroup}
-          alt="Grupo de pessoas ilustradas"
-          className="img-fluid group-img mx-auto d-block"
-        />
-
-        <section className="container d-flex flex-wrap justify-content-center gap-4 mb-5">
-          <div className="text-decoration-none text-dark">
-            <div className="card shadow card-custom d-flex align-items-center justify-content-center p-3">
-              <h2 className='custom-font'>PESQUISA</h2>
-              <p className="mt-3 text-center inter-regular">
-                Para incentivar a pesquisa, no PET, todos os membros devem ter um projeto de
-                iniciação científica.
-              </p>
-            </div>
-          </div>
-          <a href="/ensino" className="text-decoration-none text-dark">
-            <div className="card shadow card-custom d-flex align-items-center justify-content-center p-3">
-              <h2 className='custom-font'>ENSINO</h2>
-              <p className="mt-3 text-center inter-regular">
-                O PET organiza eventos como minicursos e palestras para compartilhar conhecimento com
-                o curso de Ciência da Computação.
-              </p>
-            </div>
-          </a>
-          <a href="/projetos" className="text-decoration-none text-dark">
-            <div className="card shadow card-custom d-flex align-items-center justify-content-center p-3">
-              <h2 className='custom-font'>EXTENSÃO</h2>
-              <p className="mt-3 text-center inter-regular">
-                Os projetos de extensão do PET estabelecem uma conexão ativa com a comunidade externa.
-              </p>
-            </div>
-          </a>
-        </section>
-
-        <section className="container my-5 px-3">
-          <div className="text-start mb-4">
-            <h1 className="display-6 custom-font">UMA HISTÓRIA</h1>
-            <p className="lead inter-regular mx-auto" style={{ maxWidth: '800px' }}>
-              O PET Ciência da Computação (PETComp) foi criado em dezembro de 2010 e é o 5º Grupo PET da
-              UNIOESTE (1º do campus de Cascavel), destinado exclusivamente aos alunos regularmente
-              matriculados no Curso.
-            </p>
-          </div>
-          <div className="text-end">
-            <h1 className="display-6 custom-font">DE CONQUISTA</h1>
-            <p className="lead inter-regular" style={{ maxWidth: '75%', marginLeft: 'auto' }}>
-              Sua aprovação junto ao MEC foi uma conquista do Prof. Dr. Clodis Boscarioli, muito bem
-              recebida, após 5 tentativas de submissão de projeto por parte de vários professores.
-            </p>
-          </div>
-        </section>
-
-        <section className="container my-5 px-3 text-center">
-          <h1 className="display-6 custom-font">NOSSO DIA A DIA</h1>
-          <p className="lead inter-regular mx-auto" style={{ maxWidth: '800px' }}>
-            Acompanhe abaixo as publicações mais recentes do nosso perfil no Instagram. Compartilhamos os bastidores, eventos, projetos e momentos que fazem parte da nossa rotina no PET.
-          </p>
         </section>
 
         <InstagramFeed />
+
+        <section className="about-section">
+          <div className="container">
+            <div className="row align-items-center gy-3">
+
+              {/* ESQUERDA - TEXTO */}
+              <div className="col-lg-5 about-content">
+                <h3>Quem somos</h3>
+
+                <img src={logo} alt="logo" />
+
+                <p className="inter-regular">
+                  O Programa de Educação Tutorial (PET) insere estudantes de graduação em projetos de
+                  ensino, pesquisa e extensão, promovendo uma formação completa e integrada.
+                </p>
+
+                <p className="inter-regular">
+                  No PETComp, os alunos desenvolvem habilidades técnicas, científicas e sociais,
+                  aplicando conhecimento na prática e gerando impacto dentro e fora da universidade.
+                </p>
+              </div>
+
+              {/* DIREITA - CARDS */}
+              <div className="col-lg-7">
+                <div className="row gy-4">
+
+                  <div className="col-md-6">
+                    <div className="about-card">
+                      <i className="bi bi-search"></i>
+                      <h3>PESQUISA</h3>
+                      <p>
+                        Desenvolvimento de projetos científicos e iniciação à pesquisa,
+                        estimulando pensamento crítico e produção acadêmica.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="col-md-6">
+                    <div className="about-card">
+                      <i className="bi bi-book"></i>
+                      <h3>ENSINO</h3>
+                      <p>
+                        Organização de minicursos, workshops e eventos que ampliam o
+                        aprendizado dos estudantes de computação.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="col-md-6">
+                    <div className="about-card">
+                      <i className="bi bi-people"></i>
+                      <h3>EXTENSÃO</h3>
+                      <p>
+                        Projetos que conectam a universidade à sociedade,
+                        promovendo impacto social e tecnológico.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="col-md-6">
+                    <div className="about-card">
+                      <i className="bi bi-trophy"></i>
+                      <h3>TRAJETÓRIA</h3>
+                      <p>
+                        Desde 2010, formando profissionais e contribuindo
+                        para o crescimento acadêmico e institucional.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+            {/* HISTÓRIA (embaixo, centralizado) */}
+            <div className="about-history text-center mt-5">
+              <h2 className="custom-font mb-3">UMA HISTÓRIA DE CONQUISTA</h2>
+
+              <p className="inter-regular mx-auto">
+                O PET Ciência da Computação (PETComp) foi criado em dezembro de 2010,
+                sendo o 5º grupo PET da UNIOESTE e o primeiro do campus de Cascavel.
+              </p>
+
+              <p className="inter-regular mx-auto">
+                Sua aprovação junto ao MEC foi resultado de múltiplas tentativas e do
+                esforço coletivo de professores, consolidando hoje um programa de excelência.
+              </p>
+            </div>
+          </div>
+        </section>
+
+         <section>
+      <div
+        id="heroCarousel"
+        className="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
+      >
+        {/* Indicators */}
+        <div className="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" className="active" />
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" />
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" />
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" />
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" />
+        </div>
+
+        {/* Slides */}
+        <div className="carousel-inner">
+
+          {/* Slide 1 */}
+          <div className="carousel-item active">
+            <img
+              src={gamejamimg}
+              className="d-block w-100 carousel-img"
+              alt="A&B Game Jam"
+            />
+            <div className="carousel-caption d-flex flex-column justify-content-center h-100">
+              <h1 className="fw-bold">A&B Game Jam</h1>
+              <p className="lead">
+                Neste evento, estudantes da Unioeste e a comunidade externa criam um jogo do zero em uma semana seguindo um tema definido.
+              </p>
+            </div>
+          </div>
+
+          {/* Slide 2 */}
+          <div className="carousel-item">
+            <img
+              src={petcodeimg}
+              className="d-block w-100 carousel-img"
+              alt="PETCode"
+            />
+            <div className="carousel-caption d-flex flex-column justify-content-center h-100">
+              <h1 className="fw-bold">PETCode</h1>
+              <p className="lead">
+                Neste projeto, o grupo tem como compromisso realizar atividades relacionadas a programação.
+              </p>
+            </div>
+          </div>
+
+          {/* Slide 3 */}
+          <div className="carousel-item">
+            <img
+              src={eventosimg}
+              className="d-block w-100 carousel-img"
+              alt="Eventos e Visitas Técnicas"
+            />
+            <div className="carousel-caption d-flex flex-column justify-content-center h-100">
+              <h1 className="fw-bold">Eventos e Visitas Técnicas</h1>
+              <p className="lead">
+                Incentivo e organização da participação em eventos técnico-científicos e visitas técnicas para ampliar a formação acadêmica e vivência prática.
+              </p>
+            </div>
+          </div>
+
+          {/* Slide 4 */}
+         <div className="carousel-item ">
+            <img
+              src={calourosimg}
+              className="d-block w-100 carousel-img"
+              alt="Recepção dos calouros"
+            />
+            <div className="carousel-caption d-flex flex-column justify-content-center h-100">
+              <h1 className="fw-bold">Recepção dos Calouros</h1>
+              <p className="lead">
+                Acolhimento e integração dos novos estudantes ao curso, promovendo um ambiente colaborativo e apresentando oportunidades acadêmicas e projetos do PET.
+              </p>
+            </div>
+          </div>
+
+          {/* Slide 2 */}
+          <div className="carousel-item">
+            <img
+              src={divulgacaoimg}
+              className="d-block w-100 carousel-img"
+              alt="Divulgação do curso"
+            />
+            <div className="carousel-caption d-flex flex-column justify-content-center h-100">
+              <h1 className="fw-bold">Divulgação do Curso</h1>
+              <p className="lead">
+                Ações estratégicas para promover o curso de Ciência da Computação, destacando oportunidades, projetos e o impacto acadêmico para atrair novos estudantes.
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+
+        {/* Controls */}
+        <button className="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span className="carousel-control-prev-icon" />
+        </button>
+        <button className="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span className="carousel-control-next-icon" />
+        </button>
+      </div>
+
+      {/* CSS inline ou externo */}
+      <style>
+        {`
+          .carousel-img {
+            height: 80vh;
+            object-fit: cover;
+            filter: brightness(0.6);
+          }
+
+          .carousel-caption {
+            bottom: 0;
+            top: 0;
+            text-align: center;
+          }
+
+          .carousel-caption h1 {
+            font-size: 3rem;
+          }
+
+          .carousel-caption p {
+            max-width: 700px;
+            margin: 0 auto;
+          }
+
+          @media (max-width: 768px) {
+            .carousel-img {
+              height: 60vh;
+            }
+
+            .carousel-caption h1 {
+              font-size: 1.8rem;
+            }
+
+            .carousel-caption p {
+              font-size: 0.95rem;
+              padding: 0 15px;
+            }
+          }
+        `}
+      </style>
+    </section>
 
 
         <section className="container my-5 px-3 text-center">

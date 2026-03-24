@@ -1,190 +1,109 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import "./Faq.css";
+import { useState } from "react"
+import "./faq.css"
 
-const Faq: React.FC = () => {
+type FaqItem = {
+  question: string
+  answer: string
+}
+
+export default function Faq() {
+  const [activeIndex, setActiveIndex] = useState<number>(0)
+
+  const toggle = (index: number) => {
+    setActiveIndex(activeIndex === index ? -1 : index)
+  }
+
+  const faqData: FaqItem[] = [
+    {
+      question: "Os petianos recebem bolsa?",
+      answer:
+        "Atualmente o PET conta com 12 vagas para bolsistas e 2 vagas para não-bolsistas. O valor da bolsa é equivalente a uma bolsa de iniciação científica (R$700,00). Não há distinção nas atribuições e responsabilidades dos bolsistas e não-bolsistas.",
+    },
+    {
+      question: "Quem pode fazer parte do PET Computação?",
+      answer:
+        "Todo estudante regularmente matriculado no curso de Ciência da Computação da Unioeste. Buscamos pessoas comprometidas, colaborativas, com disposição para aprender, compartilhar conhecimento e participar ativamente das atividades de ensino, pesquisa e extensão do grupo.",
+    },
+    {
+      question: "O que os petianos fazem no PET?",
+      answer:
+        "Cada petiano é membro ou coordenador dentro dos diversos projetos do PET. Além disso, auxiliamos em algumas atividades no contexto universitário como a feira de profissões, a recepção dos calouros e a semana acadêmica.",
+    },
+    {
+      question: "Preciso de alguma habilidade ou conhecimento específico pra entrar?",
+      answer:
+        "Não. Alguns conhecimentos podem ser considerados nos editais do processo seletivo, mas não são determinantes para entrar no grupo.",
+    },
+    {
+      question: "Preciso ter algum rendimento acadêmico específico para entrar?",
+      answer:
+        "Sim. É necessário que a média de notas seja igual ou superior a 70 para participar do PET Computação.",
+    },
+    {
+      question: "É necessário manter alguma condição para continuar no PET?",
+      answer:
+        "Sim. Não é possível acumular mais que duas reprovações após o ingresso no curso.",
+    },
+    {
+      question: "Quando ocorrem os processos seletivos?",
+      answer:
+        "Os processos seletivos do PET Computação não têm uma periodicidade fixa. Eles são realizados apenas quando há novas vagas disponíveis, seja por ampliação do grupo ou pela saída de algum integrante. Nesses casos, um edital é publicado com todas as informações. Para ficar por dentro das datas e novidades, acompanhe nosso perfil no Instagram.",
+    },
+  ]
+
   return (
-    <section className="container my-5 px-4">
-      <h1 className="display-6 custom-font text-center mb-4">PERGUNTAS FREQUENTES</h1>
+    <section id="faq" className="faq section ">
+      <div className="container">
+        <div className="row gy-4">
 
-      <div className="accordion accordion-flush" id="faqAccordion">
-        {/* Item 1 */}
-        <div className="accordion-item bg-transparent border-0">
-          <h2 className="accordion-header">
-            <button
-              className="accordion-button collapsed faq-btn"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#faq1"
-            >
-              <span className="arrow-icon">▶</span> Os petianos recebem bolsa?
-            </button>
-          </h2>
-          <div
-            id="faq1"
-            className="accordion-collapse collapse"
-            data-bs-parent="#faqAccordion"
-          >
-            <div className="accordion-body text-white">
-              Atualmente o PET conta com 12 vagas para bolsistas e 2 vagas para não-bolsistas. O valor da bolsa é equivalente a uma bolsa de iniciação científica (R$700,00). Não há distinção nas atribuições e responsabilidades dos bolsistas e não-bolsistas.
+          {/* Lado esquerdo */}
+          <div className="col-lg-4">
+            <div className="content px-xl-5">
+              <h3>
+                <span>Perguntas </span>
+                <strong>Frequentes</strong>
+              </h3>
+              <p>
+                Reunimos aqui as principais dúvidas sobre o PET Computação,
+                incluindo ingresso, atividades e funcionamento do grupo.
+                Caso ainda tenha dúvidas, entre em contato conosco.
+              </p>
             </div>
           </div>
-        </div>
 
-        <div className="faq-bottom-line mt-4"></div>
+          {/* Lado direito */}
+          <div className="col-lg-8">
+            <div className="faq-container">
+              {faqData.map((item, index) => {
+                const isActive = activeIndex === index
 
+                return (
+                  <div
+                    key={index}
+                    className={`faq-item ${isActive ? "faq-active" : ""}`}
+                  >
+                    <h3 onClick={() => toggle(index)}>
+                      <span className="num">{index + 1}.</span>{" "}
+                      <span>{item.question}</span>
+                    </h3>
 
-        {/* Item 2 */}
-        <div className="accordion-item bg-transparent border-0">
-          <h2 className="accordion-header">
-            <button
-              className="accordion-button collapsed faq-btn"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#faq2"
-            >
-              <span className="arrow-icon">▶</span> Quem pode fazer parte do PET Computação?
-            </button>
-          </h2>
-          <div
-            id="faq2"
-            className="accordion-collapse collapse"
-            data-bs-parent="#faqAccordion"
-          >
-            <div className="accordion-body text-white">
-              Todo estudante regularmente matriculado no curso de Ciência da Computação da Unioeste. Buscamos pessoas comprometidas, colaborativas, com disposição para aprender, compartilhar conhecimento e participar ativamente das atividades de ensino, pesquisa e extensão do grupo.
+                    <div className="faq-content">
+                      <p>{item.answer}</p>
+                    </div>
+
+                    <i
+                      className={`faq-toggle bi ${
+                        isActive ? "bi-chevron-down" : "bi-chevron-right"
+                      }`}
+                    />
+                  </div>
+                )
+              })}
             </div>
           </div>
-        </div>
 
-        <div className="faq-bottom-line mt-4"></div>
-
-        {/* Item 3 */}
-        <div className="accordion-item bg-transparent border-0">
-          <h2 className="accordion-header">
-            <button
-              className="accordion-button collapsed faq-btn"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#faq3"
-            >
-              <span className="arrow-icon">▶</span> O que os petianos fazem no PET?
-            </button>
-          </h2>
-          <div
-            id="faq3"
-            className="accordion-collapse collapse"
-            data-bs-parent="#faqAccordion"
-          >
-            <div className="accordion-body text-white">
-              Cada petiano é membro ou coordenador dentro dos diversos projetos do PET. Além disso, auxiliamos em algumas atividades no contexto universitário como a feira de profissões, a recepção dos calouros e a semana acadêmica.
-            </div>
-          </div>
-        </div>
-
-        <div className="faq-bottom-line mt-4"></div>
-
-        {/* Item 4 */}
-        <div className="accordion-item bg-transparent border-0">
-          <h2 className="accordion-header">
-            <button
-              className="accordion-button collapsed faq-btn"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#faq4"
-            >
-              <span className="arrow-icon">▶</span> Preciso de alguma habilidade ou conhecimento específico pra entrar?
-            </button>
-          </h2>
-          <div
-            id="faq4"
-            className="accordion-collapse collapse"
-            data-bs-parent="#faqAccordion"
-          >
-            <div className="accordion-body text-white">
-              Não. Alguns conhecimentos podem ser considerados nos editais do processo seletivo, mas não são determinantes para entrar no grupo.
-            </div>
-          </div>
-        </div>
-
-        <div className="faq-bottom-line mt-4"></div>
-
-        {/* Item 5 */}
-        <div className="accordion-item bg-transparent border-0">
-          <h2 className="accordion-header">
-            <button
-              className="accordion-button collapsed faq-btn"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#faq5"
-            >
-              <span className="arrow-icon">▶</span> Preciso ter algum rendimento acadêmico específico para entrar?
-            </button>
-          </h2>
-          <div
-            id="faq5"
-            className="accordion-collapse collapse"
-            data-bs-parent="#faqAccordion"
-          >
-            <div className="accordion-body text-white">
-              Sim. É necessário que a média de notas seja igual ou superior a 70 para participar do PET Computação.
-            </div>
-          </div>
-        </div>
-
-        <div className="faq-bottom-line mt-4"></div>
-
-        {/* Item 6 */}
-        <div className="accordion-item bg-transparent border-0">
-          <h2 className="accordion-header">
-            <button
-              className="accordion-button collapsed faq-btn"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#faq6"
-            >
-              <span className="arrow-icon">▶</span> É necessário manter alguma condição para continuar no PET?
-            </button>
-          </h2>
-          <div
-            id="faq6"
-            className="accordion-collapse collapse"
-            data-bs-parent="#faqAccordion"
-          >
-            <div className="accordion-body text-white">
-              Sim. Não é possível acumular mais que duas reprovações após o ingresso no curso.
-            </div>
-          </div>
-        </div>
-
-        <div className="faq-bottom-line mt-4"></div>
-
-        {/* Item 7 */}
-        <div className="accordion-item bg-transparent border-0">
-          <h2 className="accordion-header">
-            <button
-              className="accordion-button collapsed faq-btn"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#faq7"
-            >
-              <span className="arrow-icon">▶</span> Quando ocorrem os processos seletivos?
-            </button>
-          </h2>
-          <div
-            id="faq7"
-            className="accordion-collapse collapse"
-            data-bs-parent="#faqAccordion"
-          >
-            <div className="accordion-body text-white">
-              Os processos seletivos do PET Computação não têm uma periodicidade fixa. Eles são realizados apenas quando há novas vagas disponíveis, seja por ampliação do grupo ou pela saída de algum integrante. Nesses casos, um edital é publicado com todas as informações. Para ficar por dentro das datas e novidades, acompanhe nosso perfil no Instagram.
-            </div>
-          </div>
         </div>
       </div>
     </section>
-  );
-};
-
-export default Faq;
+  )
+}

@@ -113,115 +113,115 @@ const App: React.FC = () => {
           </div>
         </section>
 
-         <section>
-      <div
-        id="heroCarousel"
-        className="carousel slide carousel-fade"
-        data-bs-ride="carousel"
-        data-bs-interval="3000"
-      >
-        {/* Indicators */}
-        <div className="carousel-indicators">
-          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" className="active" />
-          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" />
-          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" />
-          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" />
-          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" />
-        </div>
-
-        {/* Slides */}
-        <div className="carousel-inner">
-
-          {/* Slide 1 */}
-          <div className="carousel-item active">
-            <img
-              src={gamejamimg}
-              className="d-block w-100 carousel-img"
-              alt="A&B Game Jam"
-            />
-            <div className="carousel-caption d-flex flex-column justify-content-center h-100">
-              <h1 className="fw-bold">A&B Game Jam</h1>
-              <p className="lead">
-                Neste evento, estudantes da Unioeste e a comunidade externa criam um jogo do zero em uma semana seguindo um tema definido.
-              </p>
+        <section>
+          <div
+            id="heroCarousel"
+            className="carousel slide carousel-fade"
+            data-bs-ride="carousel"
+            data-bs-interval="3000"
+          >
+            {/* Indicators */}
+            <div className="carousel-indicators">
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" className="active" />
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" />
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" />
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" />
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" />
             </div>
+
+            {/* Slides */}
+            <div className="carousel-inner">
+
+              {/* Slide 1 */}
+              <div className="carousel-item active">
+                <img
+                  src={gamejamimg}
+                  className="d-block w-100 carousel-img"
+                  alt="A&B Game Jam"
+                />
+                <div className="carousel-caption d-flex flex-column justify-content-center h-100">
+                  <h1 className="fw-bold">A&B Game Jam</h1>
+                  <p className="lead">
+                    Neste evento, estudantes da Unioeste e a comunidade externa criam um jogo do zero em uma semana seguindo um tema definido.
+                  </p>
+                </div>
+              </div>
+
+              {/* Slide 2 */}
+              <div className="carousel-item">
+                <img
+                  src={petcodeimg}
+                  className="d-block w-100 carousel-img"
+                  alt="PETCode"
+                />
+                <div className="carousel-caption d-flex flex-column justify-content-center h-100">
+                  <h1 className="fw-bold">PETCode</h1>
+                  <p className="lead">
+                    Neste projeto, o grupo tem como compromisso realizar atividades relacionadas a programação.
+                  </p>
+                </div>
+              </div>
+
+              {/* Slide 3 */}
+              <div className="carousel-item">
+                <img
+                  src={eventosimg}
+                  className="d-block w-100 carousel-img"
+                  alt="Eventos e Visitas Técnicas"
+                />
+                <div className="carousel-caption d-flex flex-column justify-content-center h-100">
+                  <h1 className="fw-bold">Eventos e Visitas Técnicas</h1>
+                  <p className="lead">
+                    Incentivo e organização da participação em eventos técnico-científicos e visitas técnicas para ampliar a formação acadêmica e vivência prática.
+                  </p>
+                </div>
+              </div>
+
+              {/* Slide 4 */}
+              <div className="carousel-item ">
+                <img
+                  src={calourosimg}
+                  className="d-block w-100 carousel-img"
+                  alt="Recepção dos calouros"
+                />
+                <div className="carousel-caption d-flex flex-column justify-content-center h-100">
+                  <h1 className="fw-bold">Recepção dos Calouros</h1>
+                  <p className="lead">
+                    Acolhimento e integração dos novos estudantes ao curso, promovendo um ambiente colaborativo e apresentando oportunidades acadêmicas e projetos do PET.
+                  </p>
+                </div>
+              </div>
+
+              {/* Slide 2 */}
+              <div className="carousel-item">
+                <img
+                  src={divulgacaoimg}
+                  className="d-block w-100 carousel-img"
+                  alt="Divulgação do curso"
+                />
+                <div className="carousel-caption d-flex flex-column justify-content-center h-100">
+                  <h1 className="fw-bold">Divulgação do Curso</h1>
+                  <p className="lead">
+                    Ações estratégicas para promover o curso de Ciência da Computação, destacando oportunidades, projetos e o impacto acadêmico para atrair novos estudantes.
+                  </p>
+                </div>
+              </div>
+
+
+            </div>
+
+            {/* Controls */}
+            <button className="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+              <span className="carousel-control-prev-icon" />
+            </button>
+            <button className="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+              <span className="carousel-control-next-icon" />
+            </button>
           </div>
 
-          {/* Slide 2 */}
-          <div className="carousel-item">
-            <img
-              src={petcodeimg}
-              className="d-block w-100 carousel-img"
-              alt="PETCode"
-            />
-            <div className="carousel-caption d-flex flex-column justify-content-center h-100">
-              <h1 className="fw-bold">PETCode</h1>
-              <p className="lead">
-                Neste projeto, o grupo tem como compromisso realizar atividades relacionadas a programação.
-              </p>
-            </div>
-          </div>
-
-          {/* Slide 3 */}
-          <div className="carousel-item">
-            <img
-              src={eventosimg}
-              className="d-block w-100 carousel-img"
-              alt="Eventos e Visitas Técnicas"
-            />
-            <div className="carousel-caption d-flex flex-column justify-content-center h-100">
-              <h1 className="fw-bold">Eventos e Visitas Técnicas</h1>
-              <p className="lead">
-                Incentivo e organização da participação em eventos técnico-científicos e visitas técnicas para ampliar a formação acadêmica e vivência prática.
-              </p>
-            </div>
-          </div>
-
-          {/* Slide 4 */}
-         <div className="carousel-item ">
-            <img
-              src={calourosimg}
-              className="d-block w-100 carousel-img"
-              alt="Recepção dos calouros"
-            />
-            <div className="carousel-caption d-flex flex-column justify-content-center h-100">
-              <h1 className="fw-bold">Recepção dos Calouros</h1>
-              <p className="lead">
-                Acolhimento e integração dos novos estudantes ao curso, promovendo um ambiente colaborativo e apresentando oportunidades acadêmicas e projetos do PET.
-              </p>
-            </div>
-          </div>
-
-          {/* Slide 2 */}
-          <div className="carousel-item">
-            <img
-              src={divulgacaoimg}
-              className="d-block w-100 carousel-img"
-              alt="Divulgação do curso"
-            />
-            <div className="carousel-caption d-flex flex-column justify-content-center h-100">
-              <h1 className="fw-bold">Divulgação do Curso</h1>
-              <p className="lead">
-                Ações estratégicas para promover o curso de Ciência da Computação, destacando oportunidades, projetos e o impacto acadêmico para atrair novos estudantes.
-              </p>
-            </div>
-          </div>
-
-
-        </div>
-
-        {/* Controls */}
-        <button className="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" />
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-          <span className="carousel-control-next-icon" />
-        </button>
-      </div>
-
-      {/* CSS inline ou externo */}
-      <style>
-        {`
+          {/* CSS inline ou externo */}
+          <style>
+            {`
           .carousel-img {
             height: 80vh;
             object-fit: cover;
@@ -258,8 +258,8 @@ const App: React.FC = () => {
             }
           }
         `}
-      </style>
-    </section>
+          </style>
+        </section>
 
 
         <section className="container my-5 px-3 text-center">

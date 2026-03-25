@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
-import logoPetcomp from './../../assets/Logo_PET.png';
+import logoPetcomp from './../../assets/testelogo.png';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

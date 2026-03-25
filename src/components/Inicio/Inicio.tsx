@@ -6,7 +6,7 @@ import InstagramFeed from './../instagram/InstagramFeed';
 import logo from './../../assets/Logo_PETComp.png';
 import gamejamimg from './../../assets/images/projects/gamejam2025.jpg';
 import petcodeimg from './../../assets/images/projects/cursolinuximg.jpeg';
-import eventosimg from './../../assets/images/projects/petdiscute.png';
+import eventosimg from './../../assets/images/projects/curitibaevento.png';
 import calourosimg from './../../assets/images/projects/recepcao.png';
 import divulgacaoimg from './../../assets/images/projects/DivulgacaoCurso.png';
 

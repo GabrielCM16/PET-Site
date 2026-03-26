@@ -9,7 +9,7 @@ const InstagramCarousel: React.FC = () => {
   const startX = useRef(0)
   const isDragging = useRef(false)
 
-  const acess = 'IGAAO1m4SCswNBZAFppZAl9TTXRtR3J6ZATBSTmpGTTA1blVtTTFMVE8yT0VWUHBJRVhleGh6ZAi1LRFpoajVtV0EyQjdoUERCNjc4aTlCaDJRenV2OVVaVjlMS0otMFJOaDJyMFhmejhHbE1PWnVhc1ktYXNYTGMzMzBoRVNjV0NKVQZDZD';
+  const acess = 'IGAAO1m4SCswNBZAFlMWTVSMmpBRDUtdm52STVUQ2g1al9MZA1FTTURDWmFjbmxUYV9LSnM5RTBvMnFXMkxtVTkzUEtwMTRSWFZAmTnk1bER2dnRDTDVSbFpEWlk3TmNaZAU9wSzhkMVMtTm5hRVpwWlhIQzlvclpJTHN0RVY0SHE4QQZDZD';
 
   useEffect(() => {
     const fetchMedia = async () => {

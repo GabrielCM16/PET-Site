@@ -4,7 +4,7 @@ import "./projetos.css";
 
 import gamejam from './../../assets/images/projects/GameJam.png';
 import lixo from './../../assets/images/projects/lixoeletronico.png';
-import divulgacao from './../../assets/images/projects/DivulgacaoCurso.png';
+import divulgacao from './../../assets/images/projects/divulgacaocurso.jpg';
 import docom from './../../assets/images/projects/insta.png';
 import minicurso from './../../assets/images/projects/minicurso.png';
 import agasalho from './../../assets/images/projects/Agasalho.png';

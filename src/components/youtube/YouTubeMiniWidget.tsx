@@ -78,11 +78,11 @@ const YouTubeCarousel: React.FC = () => {
             className="mb-3"
           />
           <h2 className="custom-font mb-2">{channel.snippet.title}</h2>
-          <div className="d-flex justify-content-center gap-4 mb-3" style={{ fontWeight: '600', color: '#555' }}>
+          <div className="d-flex justify-content-center gap-4 mb-3" style={{ fontWeight: '600', color: '#ffffff' }}>
             <div>{Number(channel.statistics.subscriberCount).toLocaleString()} inscritos</div>
             <div>{Number(channel.statistics.videoCount).toLocaleString()} vídeos</div>
           </div>
-          <p className="text-center" style={{ color: '#666' }}>
+          <p className="text-center" style={{ color: '#ffffff' }}>
             {channel.snippet.description}
           </p>
         </div>

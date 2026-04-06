@@ -8,7 +8,7 @@ import gamejamimg from './../../assets/images/projects/gamejam2025.jpg';
 import petcodeimg from './../../assets/images/projects/cursolinuximg.jpeg';
 import eventosimg from './../../assets/images/projects/curitibaevento.png';
 import calourosimg from './../../assets/images/projects/recepcao.png';
-import divulgacaoimg from './../../assets/images/projects/DivulgacaoCurso.png';
+import divulgacaoimg from './../../assets/images/projects/divulgacaocurso.jpg';
 
 const App: React.FC = () => {
   return (

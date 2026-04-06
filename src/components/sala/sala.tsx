@@ -8,15 +8,7 @@ const Home: React.FC = () => {
       {/* Título mais alto */}
       <h1 className="display-5 mb-4">Sala PETComp</h1>
 
-      {/* PDF com mapa */}
-      <div className="mb-5">
-        <iframe
-          src={mapa}
-          title="Mapa da Sala PETComp"
-          className="w-100 rounded shadow"
-          style={{ maxWidth: '900px', height: '450px' }}
-        />
-      </div>
+      
 
       {/* Textos */}
       <p className="lead mx-auto" style={{ maxWidth: '1100px' }}>
@@ -26,6 +18,18 @@ const Home: React.FC = () => {
       <p className="lead fw-bold mt-3 mx-auto" style={{ maxWidth: '650px' }}>
         Rua Universitária, n° 2069, Bloco F, sala 15, CEP 85819-110, Bairro Jardim Universitário, Cascavel - PR.
       </p>
+      <p className="lead fw-bold mt-3 mx-auto" style={{ maxWidth: '650px'}}>
+        Mapa Universitario
+      </p>
+      {/* PDF com mapa */}
+      <div className="mb-5">
+        <iframe
+          src={mapa}
+          title="Mapa da Sala PETComp"
+          className="w-100 rounded shadow"
+          style={{ maxWidth: '900px', height: '450px' }}
+        />
+      </div>
 
       {/* Card de horário */}
       <div
@@ -38,6 +42,7 @@ const Home: React.FC = () => {
           Segunda a sexta, das <span className="fw-bold">8h às 22h</span>.
         </p>
       </div>
+      
     </main>
   );
 };

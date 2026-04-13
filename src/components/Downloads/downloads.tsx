@@ -17,10 +17,32 @@ export default function Downloads() {
       category: "Editais",
       items: [
         {
+          title: "Edital 05/2026",
+          description: "Retificação do cronograma do Edital Nº 04/2026",
+          file:"https://docs.google.com/document/d/1nLLmVcfQNl97l6zRIQZtzcFhWjMbR-QG/edit?usp=sharing&ouid=103498010659382140051&rtpof=true&sd=true",
+        },
+        {
+          title: "Edital 04/2026",
+          description: "datas e horários das próximas etapas do processo seletivo para as inscrições homologadas",
+          file: "https://docs.google.com/document/d/1nDH8dBRm534u1B2v3mGUtG_vNUgt0Ho8/edit?usp=sharing&ouid=103498010659382140051&rtpof=true&sd=true",
+        },
+        {
+          title: "Edital 03/2026",
+          description: "lista das inscrições homologadas para o processo seletivo.",
+          file: "https://docs.google.com/document/d/1cb3VUP0Z2LDsVLsboaaBhAgcI8oIsAD7/edit?usp=sharing&ouid=103498010659382140051&rtpof=true&sd=true",
+        },
+        {
+          title: "Edital 02/2026",
+          description: "Retificação do edital 01/2026, vagas para o processo seletivo.",
+          file: "https://docs.google.com/document/d/1EeDyDYei0_8ton9YIwErM_6Db9r71LuUBHYy1w2YLSo/edit?usp=sharing",
+
+        },
+        {
           title: "Edital 01/2026",
           description: "Processo seletivo para novos integrantes",
           file: "https://drive.google.com/file/d/1C_0UFgj-C81hUt1vfA2z8uOcDiugtdkU/view?usp=sharing",
-        },
+        }
+
       ],
     },
     {
@@ -56,20 +78,22 @@ export default function Downloads() {
 
               <div className="download-list">
                 {section.items.map((item, i) => (
-                  <div key={i} className="download-item">
+                  <a
+                    key={i}
+                    href={item.file}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="download-item"
+                  >
                     <div className="download-info">
                       <h4>{item.title}</h4>
                       {item.description && <p>{item.description}</p>}
                     </div>
 
-                    <a
-                      href={item.file}
-                      download
-                      className="download-btn"
-                    >
+                    <span className="download-btn">
                       Baixar
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 ))}
               </div>
             </div>

@@ -19,7 +19,6 @@ const App: React.FC = () => {
           <div className="hero-bg-image"></div>
 
         </section>
-
         <InstagramFeed />
 
         <section className="about-section">
@@ -260,6 +259,7 @@ const App: React.FC = () => {
         `}
           </style>
         </section>
+        
 
 
         <section className="container my-5 px-3 text-center">
@@ -268,7 +268,7 @@ const App: React.FC = () => {
             Acompanhe abaixo os vídeos mais recentes do nosso canal no YouTube. Compartilhamos palestras, workshops, eventos e conteúdos exclusivos que mostram o dia a dia e as conquistas do PETComp.
           </p>
         </section>
-
+        
         <YouTubeCarousel />
 
 

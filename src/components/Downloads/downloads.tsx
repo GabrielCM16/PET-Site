@@ -35,7 +35,6 @@ export default function Downloads() {
           title: "Edital 02/2026",
           description: "Retificação do edital 01/2026, vagas para o processo seletivo.",
           file: "https://docs.google.com/document/d/1EeDyDYei0_8ton9YIwErM_6Db9r71LuUBHYy1w2YLSo/edit?usp=sharing",
-
         },
         {
           title: "Edital 01/2026",
@@ -63,7 +62,7 @@ export default function Downloads() {
 
         {/* Título */}
         <div className="section-title">
-          <h2>Downloads</h2>
+          <h2>Publicações</h2>
           <p>
             Aqui você encontra editais, materiais de minicursos e outros
             conteúdos disponibilizados pelo PET Computação.

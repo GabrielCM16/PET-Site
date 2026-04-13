@@ -1,165 +1,181 @@
+/* Importa a fonte Pixelify Sans do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
 
+/* Define estilo global da página */
 html, body {
-  background-color: #44599f !important;
-  color: white;
-  height: 100%;
+  background-color: #44599f !important; /* Cor de fundo azul */
+  color: white; /* Cor padrão do texto */
+  height: 100%; /* Altura total da tela */
 }
 
-/* RESET GLOBAL */
+/* RESET GLOBAL - remove espaçamentos padrão do navegador */
 body {
   margin: 0;
   padding: 0;
 }
 
-/* REMOVE ESPAÇO DO MAIN */
+/* REMOVE ESPAÇO DO MAIN - útil quando frameworks adicionam padding/margin */
 main {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* FONTS */
+/* ================= FONTS ================= */
+
+/* Classe para usar a fonte Pixelify */
 .custom-font {
   font-family: "Pixelify Sans", sans-serif;
   color: white;
 }
 
+/* Classe para usar a fonte Inter */
 .inter-regular {
   font-family: "Inter", sans-serif;
   color: white;
 }
 
-/* LOGO */
+/* ================= LOGO ================= */
+
+/* Estilo da logo principal */
 .logo-img {
-  max-width: 350px;
-  width: 90%;
-  height: auto;
-  margin-top: 60px;
+  max-width: 350px; /* largura máxima */
+  width: 90%; /* ocupa até 90% do container */
+  height: auto; /* mantém proporção */
+  margin-top: 60px; /* espaço acima */
 }
 
-/* IMAGEM GRUPO (CORRIGIDO) */
+/* ================= IMAGEM DE GRUPO ================= */
+
+/* Imagem do grupo */
 .group-img {
   width: 400px;
   height: 410px;
-  margin: 50px auto;
+  margin: 50px auto; /* centraliza horizontalmente */
   display: block;
 }
 
+/* Ajustes para telas menores (mobile) */
 @media (max-width: 768px) {
   .group-img {
-    width: 90%;
-    height: auto;
+    width: 90%; /* ocupa quase toda largura */
+    height: auto; /* mantém proporção */
   }
 }
 
+/* ================= MOBILE (CARROSSEL) ================= */
 
-
-/* MOBILE */
 @media (max-width: 768px) {
 
+  /* Linha de itens com scroll horizontal */
   .carousel-row {
-    overflow-x: auto;
-    flex-wrap: nowrap;
+    overflow-x: auto; /* ativa scroll horizontal */
+    flex-wrap: nowrap; /* impede quebra de linha */
     padding: 10px;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory; /* efeito de "encaixe" no scroll */
   }
 
+  /* Esconde a barra de scroll no Chrome */
   .carousel-row::-webkit-scrollbar {
     display: none;
   }
 
+  /* Cada item do carrossel */
   .carousel-item-custom {
-    flex: 0 0 80%;
+    flex: 0 0 80%; /* ocupa 80% da tela */
     max-width: 80%;
-    scroll-snap-align: center;
+    scroll-snap-align: center; /* centraliza ao parar scroll */
   }
 
+  /* Ajusta título no mobile */
   h1 {
     font-size: 1.5rem;
   }
 }
 
-/* MOBILE SCROLL */
+/* ================= SCROLL DE NOTÍCIAS ================= */
+
+/* Container de cards com scroll horizontal */
 .news-scroll {
   display: flex;
-  gap: 16px;
+  gap: 16px; /* espaço entre cards */
   overflow-x: auto;
   padding: 10px;
   scroll-snap-type: x mandatory;
 }
 
+/* Remove scrollbar */
 .news-scroll::-webkit-scrollbar {
   display: none;
 }
 
+/* Cada card */
 .news-card {
   flex: 0 0 85%;
   scroll-snap-align: center;
 }
 
-/* melhora visual */
+/* Ajuste visual dos cards */
 .news-card .card {
   height: 250px;
 }
 
-/* DESKTOP mantém padrão */
+/* Desktop mantém layout normal */
 @media (min-width: 768px) {
   .news-scroll {
     overflow: visible;
   }
 }
 
-/* HERO FULL */
+/* ================= HERO (SEÇÃO PRINCIPAL) ================= */
+
+/* Container principal */
 .hero {
   position: relative;
   width: 100%;
-  height: 75vh;
+  height: 75vh; /* altura relativa à tela */
   overflow: hidden;
 }
 
-
-
-/* BACKGROUND */
+/* Imagem de fundo */
 .hero-bg-image {
   position: absolute;
-  inset: 0;
+  inset: 0; /* ocupa todo espaço */
   background: url('./../../assets/images/members/fotogeral.jpg') center/cover no-repeat;
   z-index: 0;
 }
 
-/* overlay leve pra contraste */
+/* Camada escura sobre a imagem (overlay) */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.35); /* escurece imagem */
   z-index: 1;
 }
 
-/* CONTEÚDO */
+/* Conteúdo do hero */
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* fica acima da imagem */
   height: 100%;
 
   display: flex;
-  align-items: center;
+  align-items: center; /* centraliza vertical */
 
-  /* chave aqui */
-  justify-content: flex-start; /* esquerda */
-  padding-left: 8%;
+  justify-content: flex-start; /* alinha à esquerda */
+  padding-left: 8%; /* espaço da borda */
 }
 
-/* LOGO */
+/* Logo dentro do hero */
 .hero-logo {
   width: 320px;
   max-width: 80%;
 }
 
-/* MOBILE */
+/* Ajustes mobile */
 @media (max-width: 768px) {
   .hero-content {
-    justify-content: center;
+    justify-content: center; /* centraliza no mobile */
     padding-left: 0;
   }
 
@@ -168,6 +184,7 @@ main {
   }
 }
 
+/* Gradiente no overlay (mais bonito que cor sólida) */
 .hero::before {
   background: linear-gradient(
     to right,
@@ -177,37 +194,46 @@ main {
   );
 }
 
+/* ================= LAYOUT GERAL ================= */
 
+/* Container padrão das seções */
 .section-wrapper {
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 auto; /* centraliza */
   padding: 60px 20px;
 }
 
+/* Grid responsivo de cards */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 24px;
 }
 
+/* Títulos */
 h1 {
   margin-bottom: 16px;
 }
 
+/* Espaçamento entre seções */
 section {
   margin-bottom: 40px;
 }
 
+/* Efeito de vidro (glassmorphism) */
 .section-wrapper {
   backdrop-filter: blur(6px);
 }
 
+/* ================= SOBRE ================= */
+
+/* Seção "sobre" */
 .about-section {
   padding: 40px 20px;
-  margin-top: -40px; /* puxa levemente pra cima */
+  margin-top: -40px; /* puxa para cima */
 }
 
-/* TEXTO ESQUERDA */
+/* Texto pequeno tipo badge */
 .about-content h3 {
   font-size: 14px;
   background: rgba(255,255,255,0.1);
@@ -215,20 +241,21 @@ section {
   padding: 6px 14px;
   border-radius: 20px;
   margin-bottom: 10px;
-  
 }
 
+/* Título principal */
 .about-content h2 {
   margin-bottom: 20px;
-  
 }
 
+/* Parágrafos */
 .about-content p {
   margin-bottom: 12px;
-  
 }
 
-/* CARDS */
+/* ================= CARDS ================= */
+
+/* Card individual */
 .about-card {
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(10px);
@@ -236,13 +263,11 @@ section {
   padding: 20px 25px;
   border-radius: 16px;
 
-  
   height: 100%;
-
   transition: 0.3s;
-  
 }
 
+/* Ícone dentro do card */
 .about-card i {
   font-size: 28px;
   margin-bottom: 15px;
@@ -256,41 +281,45 @@ section {
 
   border-radius: 50%;
   background: rgba(255,255,255,0.1);
-  
 }
 
+/* Título do card */
 .about-card h3 {
   font-family: "Pixelify Sans", sans-serif;
   font-size: 18px;
   margin-bottom: 10px;
 }
 
+/* Texto do card */
 .about-card p {
   font-size: 14px;
   margin: 0;
-  
 }
 
-/* HOVER */
+/* Efeito ao passar o mouse */
 .about-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px); /* levanta o card */
   background: rgba(255,255,255,0.15);
 }
 
-/* HISTÓRIA */
+/* ================= HISTÓRIA ================= */
+
 .about-history p {
-  max-width: 700px;
-  
+  max-width: 700px; /* limita largura do texto */
 }
 
-/* RESPONSIVO */
+/* ================= RESPONSIVO ================= */
+
 @media (max-width: 768px) {
+
+  /* Centraliza conteúdo no mobile */
   .about-content {
     text-align: center;
   }
 
+  /* Ajusta imagem */
   .about-content img {
-    display: block;              /* 🔑 essencial */
+    display: block;
     margin: 10px auto 20px auto; /* centraliza */
     max-width: 180px;
     width: 100%;
@@ -298,11 +327,12 @@ section {
   }
 }
 
+/* Imagem padrão da seção about */
 .about-content img {
-  max-width: 180px;   /* controla tamanho */
+  max-width: 180px;
   width: 100%;
   height: auto;
 
-  margin: 10px 0 20px 0; /* espaçamento vertical equilibrado */
+  margin: 10px 0 20px 0;
   display: block;
 }

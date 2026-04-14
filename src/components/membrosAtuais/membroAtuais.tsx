@@ -10,7 +10,6 @@ import gabrielImg from "./../../assets/images/members/gabriel.png";
 import qvd from "./../../assets/images/members/qvd.png";
 import dudu from "./../../assets/images/members/eduardo.png";
 import thiago from "./../../assets/images/members/thiago.png";
-import cabrera from "./../../assets/images/members/cabrera.png";
 import thalita from "./../../assets/images/members/thalita.png";
 import rafael from "./../../assets/images/members/rafael.png";
 import vinicius from "./../../assets/images/members/vinicius.png";
@@ -24,7 +23,7 @@ const membros = [
   {
     nome: "Eduardo Nogueira Korte",
     foto: dudu,
-    icv: "ICV: Ferramenta gamificada de criação de jogos para auxiliar no aprendizado de geometria analítica e álgebra linear",
+    icv: "ICV: Ferramenta gamificada de criação de Jogos para auxiliar no aprendizado de geometria analítica e álgebra linear",
     membroDesde: "2025",
     links: {
       lattes: "http://lattes.cnpq.br/5439196476136251",
@@ -33,20 +32,23 @@ const membros = [
       email: "mailto:dudu.korte@gmail.com",
     },
     saibaMais: {
-      cidadeNatal: "Curitiba - PR",
-      motivoCurso:
+      CidadeNatal: "Curitiba - PR",
+      MotivoCurso:
         "Sou apaixonado por programação desde pequeno, minha primeira experiência refazendo um Megaman clássico no construct 2 em 2016 foi só o início de uma jornada que cada vez mais eu descubro o quanto a computação combina comigo e segue sendo minha paixão ao lado do cafézinho clássico que todos amam.",
-      alternativaCurso: "TADS ou, na pior das hipóteses engenharia de computação.",
-      academica: "Não planejo, tenho grandes sonhos e ambições que quero seguir, as quais a área acadêmica não pode me proporcionar, infelizmente.",
-      hobby: "Meu canal no YouTube: www.youtube.com/@esquilopng junto disso a edição de vídeos, design e claro... Jogos, amo jogos e nunca vou deixar esse hobby de lado.",
-      filme: "Deu a louca na chapeuzinho",
-      jogo: "Bioshock infinite, Bully e The Outer Worlds",
-      musica: "Nothing Else Matters - Metallica e War Pigs - Black Sabbath",
-      comida: "Sushi, café, Petit gateau e qualquer coisa com Beacon e barbecue.",
+      /*alternativaCurso: "TADS ou, na pior das hipóteses engenharia de computação.",
+      */
+      /*academica: "Não planejo, tenho grandes sonhos e ambições que quero seguir, as quais a área acadêmica não pode me proporcionar, infelizmente.",
+      */
+      Hobby: "Meu canal no YouTube: www.youtube.com/@esquilopng junto disso a edição de vídeos, design e claro... Jogos, amo Jogos e nunca vou deixar esse Hobby de lado.",
+      Filme: "Deu a louca na chapeuzinho",
+      Jogo: "Bioshock infinite, Bully e The Outer Worlds",
+      Música: "Nothing Else Matters - Metallica e War Pigs - Black Sabbath",
+      Comida: "Sushi, café, Petit gateau e qualquer coisa com Beacon e barbecue.",
     },
   },
   {
     nome: "Gabriel Costa de Moraes",
+    cargo: "Desenvolvedor do Site",
     foto: gabrielImg,
     icv: "ICV: Exploração dos Pinos GPIO em TV Box para Aplicações Embarcadas",
     membroDesde: "2025",
@@ -57,16 +59,18 @@ const membros = [
       email: "mailto:gabrielcostademoraes13@gmail.com",
     },
     saibaMais: {
-      cidadeNatal: "Cascavel - PR",
-      motivoCurso:
+      CidadeNatal: "Cascavel - PR",
+      MotivoCurso:
         "Fazendo técnico em informática junto com o Ensino Médio descobri que gosto bastante de programar e de resolver problemas usando programação. Também tive alguns professores que foram fonte de inspiração e incentivo, o que me levou a considerar e, em 2024, escolher o curso como graduação.",
-      alternativaCurso: "TADS, Engenharia da Computação ou Engenharia de Controle e Automação.",
-      academica: "Minha empresa? Talvez em breve. Mestrado? Grande duvida por enquanto, mas acho que sim... depende... talvez?! quem sabe.",
-      hobby: "tocar teclado/piano, fazer um som com a galera da banda, jogar quando tenho um tempo livre. ",
-      filme: "Corações de Ferro",
-      jogo: "battlefield 1, PvZGW2, Truco.",
-      musica: "Tear In My Heart - Twenty One Pilots",
-      comida: "Pizza, Lasanha, Tacos, Chico balanceado, Pudim ",
+      /*alternativaCurso: "TADS, Engenharia da Computação ou Engenharia de Controle e Automação.",
+      */
+      /*academica: "Minha empresa? Talvez em breve. Mestrado? Grande duvida por enquanto, mas acho que sim... depende... talvez?! quem sabe.",
+      */
+      Hobby: "tocar teclado/piano, fazer um som com a galera da banda, jogar quando tenho um tempo livre. ",
+      Filme: "Corações de Ferro",
+      Jogo: "battlefield 1, PvZGW2, Truco.",
+      Música: "Tear In My Heart - Twenty One Pilots",
+      Comida: "Pizza, Lasanha, Tacos, Chico balanceado, Pudim ",
     },
   },
   {
@@ -80,42 +84,20 @@ const membros = [
       email: "mariaquevedo.capanema@gmail.com",
     },
     saibaMais: {
-      cidadeNatal: "Capanema - PR",
-      motivoCurso:
+      CidadeNatal: "Capanema - PR",
+      MotivoCurso:
         "Busquei um meio-termo entre algo com o qual eu minimamente me identifico e que também ofereça boas oportunidades de atuação. Como gosto de resolver problemas e pesquisar, escolhi Ciência da Computação.",
-      alternativaCurso: "Filosofia ou Psicologia.",
-      academica: "Tenho bastante vontade de realizar programas de pós-graduação fora do Brasil.",
-      hobby: "Beber muito café, escutar muita música, ir no bar com os amigos, pesquisar, crochetar e não fazer absolutamente nada.",
-      filme: "Kill Bill e The Handmaiden",
-      jogo: "Earthbound, Fran Bow e Lisa: The Painful",
+      /*alternativaCurso: "Filosofia ou Psicologia.",
+      */
+      /*academica: "Tenho bastante vontade de realizar programas de pós-graduação fora do Brasil.",
+      */
+      Hobby: "Beber muito café, escutar muita música, ir no bar com os amigos, pesquisar, crochetar e não fazer absolutamente nada.",
+      Filme: "Kill Bill e The Handmaiden",
+      Jogo: "Earthbound, Fran Bow e Lisa: The Painful",
       LIVRO: "Qualquer obra do Junji Ito",
-      musica: "Blow Out - Radiohead",
-      comida: "Arroz e feijão da minha vó e churrasco hmm"
+      Música: "Blow Out - Radiohead",
+      Comida: "Arroz e feijão da minha vó e churrasco hmm"
     },
-  },
-  {
-    nome: "Pedro Augusto Silva Cabrera",
-    foto: cabrera,
-    icv: "ICV: Sistema embarcado de controle para movimentos avançados da mão PARLOMA em braço robótico do projeto InMoov.",
-    membroDesde: "2024",
-    links: {
-      lattes: "https://lattes.cnpq.br/5325089615556004",
-      instagram: "https://www.instagram.com/peedrocabrera",
-      github: "https://github.com/peedrocabrera",
-      email: "pedroaugusto8720@gmail.com",
-    },
-    saibaMais: {
-      cidadeNatal: "Ubiratã - PR",
-      motivoCurso: "Sempre gostei de tecnologia e com o passar do tempo isso foi se fortificando. Acredito que essa área oferece muitas oportunidades de aprendizado, inovação e impacto no futuro",
-      alternaticaCurso: "Engenharia Civil",
-      academica: "Por enquanto analisando sobre, mas quem sabe talvez um dia",
-      hobby: "Assistir filmes e séries, vídeos sobre tecnologia. Rolê de música eletrônica e sair com pessoas próximas ",
-      filme: "Franquia Resident Evil",
-      jogo: "cs",
-      livro: "Sherlock Holmes",
-      musica: "I Will Find - Vintage Culture",
-      comida: "pizza, comida japonesa e massas em geral",
-    }
   },
   {
     nome: "Thalita Wiederkehr Pereira",
@@ -128,21 +110,24 @@ const membros = [
       email: "mailto:talitaw09@gmail.com",
     },
     saibaMais: {
-      cidadeNatal: "Cascavel - PR",
-      motivoCurso:
+      CidadeNatal: "Cascavel - PR",
+      MotivoCurso:
         "Sempre gostei de tecnologia e acredito que devemos perseguir aquilo que realmente gostamos.",
-      alternativaCurso: "Engenharia Civil, Pedagogia ou Biologia",
-      academica: "Não sei ainda... talvez fazer um mestrado.",
-      hobby: "Assistir filmes, séries e animes, aprender sobre curiosidades e comer bem.",
+      /*alternativaCurso: "Engenharia Civil, Pedagogia ou Biologia",
+      */
+      /*academica: "Não sei ainda... talvez fazer um mestrado.",
+      */
+      Hobby: "Assistir Filmes, séries e animes, aprender sobre curiosidades e comer bem.",
       livro: "Assassinato no Expresso do Oriente",
-      filme: "Indiana Jones",
-      jogo: "Loop Hero e Guitar Hero",
-      musica: "Tim Maia - Você e Pet Shop Boys - Domino Dancing",
-      comida: "Não me fazendo mal, o que vier é lucro!",
+      Filme: "Indiana Jones",
+      Jogo: "Loop Hero e Guitar Hero",
+      Música: "Tim Maia - Você e Pet Shop Boys - Domino Dancing",
+      Comida: "Não me fazendo mal, o que vier é lucro!",
     },
   },
   {
     nome: "Thiago Oliveira Dupim",
+    cargo: "Desenvolvedor do Site",
     foto: thiago,
     icv: "ICV: Realidade Virtual como ferramenta de divulgação do curso de Ciência da Computação",
     membroDesde: "2025",
@@ -153,22 +138,24 @@ const membros = [
       email: "mailto:thiagodpim@gmail.com",
     },
     saibaMais: {
-      cidadeNatal: "Cascavel - PR",
-      motivoCurso:
+      CidadeNatal: "Cascavel - PR",
+      MotivoCurso:
         "Optei por Ciência da Computação porque é uma área em constante crescimento e com ampla demanda no mercado e a possibilidade de atuar em diversos setores, que foi um grande atrativo para mim",
-      alternativaCurso: "TADS & Engenharia de Software",
-      academica: "Pretendo seguir atuando com ênfase em inteligência artificial, que é uma das áreas mais promissoras e transformadoras da atualidade",
-      hobby: "Ensaiar com a banda, ir a academia",
-      filme: "Ilha do Medo",
-      jogo: "Red Dead Redemption 2, ",
-      musica: "Need 2 - Pinegrove.",
-      comida: "Macarrão ao molho bechamel, BomBom Aberto",
+      /*alternativaCurso: "TADS & Engenharia de Software",
+      */
+      /*academica: "Pretendo seguir atuando com ênfase em inteligência artificial, que é uma das áreas mais promissoras e transformadoras da atualidade",
+      */
+      Hobby: "Ensaiar com a banda, ir a academia",
+      Filme: "Ilha do Medo",
+      Jogo: "Red Dead Redemption 2 ",
+      Música: "Need 2 - Pinegrove.",
+      Comida: "Macarrão ao molho bechamel, BomBom Aberto",
     },
   },
   {
-    nome: "Vinícius A. Hermes",
+    nome: "Vinícius Almeida Hermes",
     foto: vinicius,
-    icv: "ICV: Visualização Imersiva de Portas Lógicas Com Meta Quest 3s",
+    icv: "ICV: Arduino",
     membroDesde: "2025",
     links: {
       lattes: "",
@@ -177,15 +164,17 @@ const membros = [
       email: "vinicius.hermes@unioeste.br",
     },
     saibaMais: {
-      cidadeNatal: "Corbélia - PR",
-      motivoCurso: "Ter tido experiência de trabalho no setor de suporte de informática e gostar de hardware",
-      alternativaCurso: "Letras, PT-ING",
-      academica: "Gosto muito de infra, redes, database e hardware, pretendo seguir nesta área",
-      hobby: "Leitura, música, ciclismo",
-      filme: "Sacrface (1983)",
-      jogo: "Futebol, truco, xadrez",
+      CidadeNatal: "Corbélia - PR",
+      MotivoCurso: "Ter tido experiência de trabalho no setor de suporte de informática e gostar de hardware",
+      /*alternativaCurso: "Letras, PT-ING",
+      */
+      /*academica: "Gosto muito de infra, redes, database e hardware, pretendo seguir nesta área",
+      */
+      Hobby: "Leitura, música, ciclismo",
+      Filme: "Sacrface (1983)",
+      Jogo: "Futebol, truco, xadrez",
       música: "So Appalled - Ye",
-      comida: "Arroz, feijão, bife e salada"
+      Comida: "Arroz, feijão, bife e salada"
     },
   },
   {
@@ -199,19 +188,21 @@ const membros = [
       email: "rafael.vaz1@unioeste.br",
     },
     saibaMais: {
-      cidadeNatal: "São Paulo - SP",
-      motivoCurso:
+      CidadeNatal: "São Paulo - SP",
+      MotivoCurso:
         "Decidi retornar a minha vida na área de tecnologia, e após voltar dos EUA, decidi que iria tentar. Comprei um curso de Desenvolvedor Web, e me apaixonei a ponto de consumir conteúdos que iam além. Quando notei que o que queria aprender ia além do curso, decidi ingressar em Ciência da Computação.",
-      alternativaCurso: null,
-      academica:
-        "Grande dúvida por enquanto, mas acho que sim... depende... talvez?! quem sabe.",
-      hobby:
+      /*alternativaCurso: null,
+      */
+      /*academica:
+      "Grande dúvida por enquanto, mas acho que sim... depende... talvez?! quem sabe.",
+      */
+      Hobby:
         "Futebol Americano, Basquete, Esportes em Geral, Academia, Leitura, Programar, Passear com meu Cachorro.",
-      filme: "Bastardos Inglórios",
-      jogo: "Counter-Strike, Madden, Resident Evil, RDR2",
+      Filme: "Bastardos Inglórios",
+      Jogo: "Counter-Strike, Madden, Resident Evil, RDR2",
       livro: "O Senhor dos Anéis",
       música: "Space Oddity - David Bowie",
-      comida: "Lasanha, Pizza, Guisado de Carne, Churrasco",
+      Comida: "Lasanha, Pizza, Guisado de Carne, Churrasco",
     },
   },
   {
@@ -225,16 +216,18 @@ const membros = [
       email: "mailto:carolinegrell@hotmail.com",
     },
     saibaMais: {
-      cidadeNatal: "Foz do Iguaçu - PR",
-      motivoCurso:
+      CidadeNatal: "Foz do Iguaçu - PR",
+      MotivoCurso:
         "Escolhi o curso de Ciência da Computação porque é uma área em expansão, com múltiplas oportunidades de atuação, o que me motivou bastante.",
-      alternativaCurso: "Engenharia de Software & Publicidade Propaganda",
-      academica: "Ainda não tenho certeza de que área quero seguir.",
-      hobby: "Jogar jogos online, pilates",
-      filme: "Como treinar seu dragão",
-      jogo: "Stardew Valley",
-      musica: "Roommates - Malcom Todd",
-      comida: "Sushi e strogonoff.",
+      /*alternativaCurso: "Engenharia de Software & Publicidade Propaganda",
+      */
+      /*academica: "Ainda não tenho certeza de que área quero seguir.",
+      */
+      Hobby: "Jogar Jogos online, pilates",
+      Filme: "Como treinar seu dragão",
+      Jogo: "Stardew Valley",
+      Música: "Roommates - Malcom Todd",
+      Comida: "Sushi e strogonoff.",
     },
   },
   {
@@ -247,41 +240,45 @@ const membros = [
       email: "mailto:fabriciotanquellafkt2@gmail.com",
     },
     saibaMais: {
-      cidadeNatal: "Cascavel - PR",
-      motivoCurso:
+      CidadeNatal: "Cascavel - PR",
+      MotivoCurso:
         "Computação é meu mundo, eu apenas segui a linha do tempo. Sempre soube que era isso que queria pra mim, por isso escolhi Ciência da Computação.",
-      alternativaCurso: "Engenharia de Software",
-      academica: "Desenvolvimento de jogos.",
-      hobby: "Desenvolver meu jogo e meus projetos pessoais. As vezes gosto de desenhar.",
-      filme: "Pânico 6",
-      jogo: "Dead by Daylight, Phasmophobia, The Last of Us, Vôlei",
-      musica: "We Fell in Love in October",
-      comida: "Lasanha de frango.",
+      /*alternativaCurso: "Engenharia de Software",
+      */
+      /*academica: "Desenvolvimento de Jogos.",
+      */
+      Hobby: "Desenvolver meu Jogo e meus projetos pessoais. As vezes gosto de desenhar.",
+      Filme: "Pânico 6",
+      Jogo: "Dead by Daylight, Phasmophobia, The Last of Us, Vôlei",
+      Música: "We Fell in Love in October",
+      Comida: "Lasanha de frango.",
     },
   },
   {
     nome: "Fábio Kenji Sato",
     foto: fabio,
     icv: "ICV: Estudo do circuito de alimentação e proposta de correções do projeto da placa da estação EnvCity de coleta de qualidade do ar.",
-    membroDesde: "2018-2021, 2023",
+    membroDesde: "2023",
     links: {
       lattes: "https://lattes.cnpq.br/4579969236899501",
       github: "https://github.com/FabioKenjiSato",
       email: "mailto:f.ksatoclass@gmail.com",
     },
     saibaMais: {
-      cidadeNatal: "Cascavel - PR",
-      motivoCurso: "Ampla gama de vagas de trabalho.",
-      alternativaCurso: "Engenharia de computação, Engenharia mecânica, Engenharia hidráulica, Engenharia Civil.",
-      academica: "Mestrado.",
-      hobby: "Fotografia analógica, Ciclismo, Jogos, Natureza.",
-      filme: "Senhor dos Anéis, O Hobbit.",
-      jogo: "Team Fortress 2 principalmente, horror, estratégia, fps, simuladores.",
-      comida: "Sim.",
+      CidadeNatal: "Cascavel - PR",
+      MotivoCurso: "Ampla gama de vagas de trabalho.",
+      /*alternativaCurso: "Engenharia de computação, Engenharia mecânica, Engenharia hidráulica, Engenharia Civil.",
+      */
+      /*academica: "Mestrado.",
+      */
+      Hobby: "Fotografia analógica, Ciclismo, Jogos, Natureza.",
+      Filme: "Senhor dos Anéis, O Hobbit.",
+      Jogo: "Team Fortress 2 principalmente, horror, estratégia, fps, simuladores.",
+      Comida: "Sim.",
     },
   }
 
-  
+
 
 
 
@@ -381,7 +378,8 @@ const ExMembros = ['1 - Eduardo Vansetto 09/12/2010 até 03/03/2011,',
   '91 - Guilherme Augusto Deitos Alves 29/09/2023 até 29/08/2025',
   '91 - Gabriel Lenser 29/09/2023 até 02/09/2025',
   '92 - José Daniel Bahls 13/09/2025 até 07/11/2025',
-  '93 - Guilherme Altmeyer Soares 13/08/2024 até 01/12/2025',]
+  '93 - Guilherme Altmeyer Soares 13/08/2024 até 01/12/2025',
+  '94 - Pedro Augusto Silva Cabrera 12/12/2024 até 09/04/2026',]
 
 const ITEMS_PER_PAGE = 15;
 type TabelaExMembrosProps = {
@@ -457,7 +455,7 @@ const Membros: React.FC = () => {
 
   return (
     <main className="container text-center mt-5 pt-4">
-      <h1 className="display-3 mt-5">MEMBROS</h1>
+      <h1 className="display-3 mt-5">Equipe PETComp</h1>
 
       {/* Tutor atual */}
       <div className="mt-5 text-center">
@@ -520,7 +518,7 @@ const Membros: React.FC = () => {
               </div>
 
               <button className="btn btn-outline-light mt-3" onClick={() => handleShowModal(index)}>
-                Saiba mais...
+                Saber mais
               </button>
             </div>
           </div>
@@ -540,7 +538,15 @@ const Membros: React.FC = () => {
           <div className="modal-dialog modal-lg">
             <div className="modal-content text-black">
               <div className="modal-header">
-                <h5 className="modal-title">{membros[selectedMembro].nome}</h5>
+                <h5 className="modal-title">
+                  {membros[selectedMembro].nome}
+
+                  {membros[selectedMembro].cargo && (
+                    <span style={{ marginLeft: "10px", fontSize: "14px", color: "#666" }}>
+                      - {membros[selectedMembro].cargo}
+                    </span>
+                  )}
+                </h5>
                 <button type="button" className="btn-close" onClick={handleCloseModal}></button>
               </div>
               <div className="modal-body">

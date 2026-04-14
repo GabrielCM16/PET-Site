@@ -348,8 +348,5 @@ section {
   display: block;
 }
 html, body {
-  overflow-x: hidde;
-}
-* {
-  box-sizing: border-box;
+  overflow-x: hidden;
 }

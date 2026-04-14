@@ -135,6 +135,16 @@ main {
   height: 75vh; /* altura relativa à tela */
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .hero {
+    height: 45vh; /* 👈 controla o tamanho no celular */
+  }
+}
+@media (max-width: 768px) {
+  .hero-bg-image {
+    background-position: center top;
+  }
+}
 
 /* Imagem de fundo */
 .hero-bg-image {
@@ -143,6 +153,7 @@ main {
   background: url('./../../assets/images/members/fotogeral.jpg') center/cover no-repeat;
   z-index: 0;
 }
+
 
 /* Camada escura sobre a imagem (overlay) */
 .hero::before {
@@ -335,4 +346,10 @@ section {
 
   margin: 10px 0 20px 0;
   display: block;
+}
+html, body {
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
 }

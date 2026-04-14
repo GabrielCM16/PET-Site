@@ -1,21 +1,19 @@
-
-
 .pet-header {
-  position: fixed; /* FIXA NA TELA */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-
   z-index: 1000;
 
-  background: transparent; /* REMOVE FUNDO */
-  box-shadow: none; /* REMOVE SOMBRA */
+  background: transparent;
+  box-shadow: none;
   border-radius: 0;
 
-  margin: 0; /* REMOVE GAP */
+  margin: 0;
   padding: 16px 40px;
 }
 
+/* CONTAINER */
 .pet-header-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -29,8 +27,10 @@
   border-radius: 50px;
 
   padding: 10px 20px;
+  height: 60px;
 }
 
+/* LOGO */
 .pet-logo {
   display: flex;
   align-items: center;
@@ -43,52 +43,29 @@
   object-fit: contain;
 }
 
+/* NAV DESKTOP */
 .pet-nav.desktop {
-  position: static; /* ESSENCIAL */
-  transform: none;
-
   display: flex;
   gap: 24px;
+  align-items: center;
 
-  background-color: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
   padding: 6px 20px;
   border-radius: 50px;
-
-  align-items: center; /* centraliza vertical */
-}
-.pet-nav.desktop {
-  margin: 0 auto;
-}
-.pet-header-container {
-  height: 60px;
-}
-
-.pet-nav.desktop {
-  backdrop-filter: blur(8px);
-  background: rgba(0, 0, 0, 0.25);
 }
 
 .pet-nav a {
   color: white;
+  text-decoration: none;
 }
 
-.hamburger span {
-  background-color: white;
-}
-
-/*=================================================================================================================================*/
 .pet-nav a:hover {
   color: #2285c8;
-  text-decoration: none;  /* <- Isso remove o sublinhado azul */
+  text-decoration: none;
 }
 
-.mobile-menu a:hover {
-  color: #184fbd;
-  text-decoration: none;  /* <- Isso remove o sublinhado azul no menu mobile também */
-}
-/*=================================================================================================================================*/
-
-
+/* BOTÕES */
 .btn {
   padding: 8px 24px;
   border-radius: 80px;
@@ -122,7 +99,7 @@
   opacity: 0.9;
 }
 
-/* Menu Mobile */
+/* MENU MOBILE */
 .mobile-menu {
   display: flex;
   flex-direction: column;
@@ -138,11 +115,6 @@
   animation: fadeIn 0.3s ease;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 .mobile-menu a {
   font-weight: 600;
   color: black;
@@ -151,7 +123,12 @@
   padding: 6px 0;
 }
 
-/* Botão hambúrguer animado */
+.mobile-menu a:hover {
+  color: #184fbd;
+  text-decoration: none;
+}
+
+/* HAMBURGER */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -161,154 +138,19 @@
   cursor: pointer;
   padding: 8px;
   z-index: 1001;
-  transition: all 0.3s ease-in-out;
 }
 
 .hamburger span {
   width: 24px;
   height: 2.5px;
-  background-color: black;
+  background-color: white;
   border-radius: 4px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  transform-origin: center;
+  transition: all 0.3s ease;
 }
 
-/* Deixa a barra de cima no lugar */
+/* ANIMAÇÃO MENU */
 .menu-open .hamburger span:nth-child(1) {
-  transform: none;
-  opacity: 1;
-}
-
-/* Rotaciona a barra do meio para formar parte do X */
-.menu-open .hamburger span:nth-child(2) {
-  transform: rotate(45deg);
-  position: relative;
-  top: -1.5px;
-}
-
-/* Rotaciona a barra de baixo para formar a outra parte do X */
-.menu-open .hamburger span:nth-child(3) {
-  transform: rotate(-45deg);
-  position: relative;
-  top: -4px;
-}
-
-
-/*=================================================================================================================================*/
-
-/*Animação de rotação Logo PETComp*/
-@keyframes rotate360 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.rotate-logo {
-  animation: rotate360 1s ease-in-out;
-}
-
-
-@keyframes spin {
-  from { transform: rotate(0); }
-  to { transform: rotate(360deg); }
-}
-
-/* easter egg: sair rodando pela tela */
-.crazy-logo {
-  position: relative;
-  animation: crazyRun 3s linear infinite;
-}
-
-@keyframes crazyRun {
-  0%   { transform: translate(0, 0) rotate(0); }
-  20%  { transform: translate(200px, -50px) rotate(180deg); }
-  40%  { transform: translate(-150px, 100px) rotate(360deg); }
-  60%  { transform: translate(250px, 200px) rotate(540deg); }
-  80%  { transform: translate(-200px, -150px) rotate(720deg); }
-  100% { transform: translate(0, 0) rotate(1080deg); }
-}
-/* Navbar inteira com efeito maluco */
-/* Navbar inteira com efeito MUITO maluco */
-.crazy-navbar {
-  animation: navbarCrazy 2.5s linear infinite;
-}
-
-@keyframes navbarCrazy {
-  0% {
-    transform: translate(0, 0) rotate(0) scale(1);
-    filter: hue-rotate(0deg);
-  }
-  10% {
-    transform: translate(40px, -20px) rotate(15deg) scale(1.1);
-    filter: hue-rotate(90deg);
-  }
-  25% {
-    transform: translate(-50px, 30px) rotate(-25deg) scale(0.9);
-    filter: hue-rotate(180deg);
-  }
-  40% {
-    transform: translate(80px, -40px) rotate(45deg) scale(1.2);
-    filter: hue-rotate(270deg);
-  }
-  60% {
-    transform: translate(-70px, 50px) rotate(-60deg) scale(1.3);
-    filter: hue-rotate(360deg);
-  }
-  80% {
-    transform: translate(30px, -60px) rotate(120deg) scale(0.8);
-    filter: hue-rotate(180deg);
-  }
-  100% {
-    transform: translate(0, 0) rotate(360deg) scale(1);
-    filter: hue-rotate(0deg);
-  }
-}
-
-
-/*=================================================================================================================================*/
-
-/* Responsivo */
-
-@media (max-width: 768px) {
-  .pet-nav.desktop {
-  display: flex;
-}
-
-@media (max-width: 768px) {
-  .pet-nav.desktop {
-    display: none;
-  }
-}
-
-
-  /* ... (estilos anteriores permanecem) ... */
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  z-index: 1001;
-  transition: all 0.3s ease-in-out;
-}
-
-.hamburger span {
-  width: 24px;
-  height: 2.5px;
-  background-color: black;
-  border-radius: 4px;
-  transition: all 0.3s ease-in-out;
-  transform-origin: center;
-}
-
-.menu-open .hamburger span:nth-child(1) {
-  transform: rotate(45deg) translateY(8px);
+  transform: rotate(-45deg) translateY(11px);
 }
 
 .menu-open .hamburger span:nth-child(2) {
@@ -316,29 +158,38 @@
 }
 
 .menu-open .hamburger span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-8px);
+  transform: rotate(45deg) translateY(-11px);
 }
 
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
+
+  /* 🔥 CENTRALIZA O HEADER DE VERDADE */
+  .pet-header {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    padding: 10px 0;
+  }
+
+  .pet-header-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* ESCONDE MENU DESKTOP */
   .pet-nav.desktop {
     display: none;
   }
 
+  /* MOSTRA HAMBURGER */
   .hamburger {
     display: flex;
   }
-
-  .pet-header {
-    max-width: 95%;
-    padding: 12px 16px;
-  }
-
-  .pet-header-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-/*=================================================================================================================================*/
-
 }

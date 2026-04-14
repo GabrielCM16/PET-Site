@@ -78,7 +78,7 @@ const Header: React.FC = () => {
         <div className="mobile-menu">
           <Link to="/" onClick={toggleMenu}>Início</Link>
           <Link to="/membros" onClick={toggleMenu}>Membros</Link>
-          <Link to="/downloads" onClick={toggleMenu}>Downloads</Link>
+          <Link to="/downloads" onClick={toggleMenu}>Publicações</Link>
           <Link to="/projetos" onClick={toggleMenu}>Projetos</Link>
           <Link to="/sala" onClick={toggleMenu}>Sala</Link>
           <Link to="/faq" onClick={toggleMenu}>Faq</Link>

@@ -1,0 +1,194 @@
+/* NotFound.css */
+
+.notfound-container {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at top,
+      rgba(65, 105, 225, 0.15),
+      transparent 35%),
+    linear-gradient(
+      180deg,
+      #050816 0%,
+      #02040d 100%
+    );
+
+  color: white;
+
+  padding: 24px;
+}
+
+.notfound-glow {
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0, 132, 255, 0.18),
+      transparent 70%
+    );
+
+  filter: blur(80px);
+
+  animation: pulseGlow 5s ease-in-out infinite;
+}
+
+.notfound-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 700px;
+
+  text-align: center;
+}
+
+.notfound-badge {
+  display: inline-block;
+
+  padding: 8px 16px;
+
+  border: 1px solid rgba(255,255,255,.12);
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.04);
+
+  backdrop-filter: blur(12px);
+
+  font-size: .85rem;
+  letter-spacing: .15em;
+
+  margin-bottom: 24px;
+
+  color: rgba(255,255,255,.75);
+}
+
+.notfound-title {
+
+  font-size: clamp(3rem, 8vw, 7rem);
+
+  font-weight: 900;
+
+  line-height: .95;
+
+  margin-bottom: 24px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      rgba(255,255,255,.65)
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.notfound-description {
+
+  font-size: 1.15rem;
+
+  line-height: 1.7;
+
+  color: rgba(255,255,255,.68);
+
+  margin-bottom: 42px;
+}
+
+.notfound-actions {
+
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 16px;
+}
+
+.notfound-button {
+
+  padding: 14px 26px;
+
+  border-radius: 14px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition:
+    transform .25s ease,
+    opacity .25s ease,
+    background .25s ease;
+}
+
+.notfound-button:hover {
+  transform: translateY(-3px);
+}
+
+.notfound-button.primary {
+
+  background: white;
+  color: black;
+}
+
+.notfound-button.primary:hover {
+  opacity: .9;
+}
+
+.notfound-button.secondary {
+
+  border: 1px solid rgba(255,255,255,.12);
+
+  background: rgba(255,255,255,.05);
+
+  color: white;
+
+  backdrop-filter: blur(12px);
+}
+
+.notfound-button.secondary:hover {
+
+  background: rgba(255,255,255,.08);
+}
+
+.notfound-code {
+
+  margin-top: 80px;
+
+  font-size: .95rem;
+
+  color: rgba(255,255,255,.25);
+
+  letter-spacing: .2em;
+}
+
+@keyframes pulseGlow {
+
+  0% {
+    transform: scale(1);
+    opacity: .6;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: .6;
+  }
+}

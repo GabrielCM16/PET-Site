@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X GameJam</title>
+  
+  <!-- Favicon geral do site -->
+  <link rel="icon" type="image/png" href="/images/logo.png">
+
+  <!-- CSS isolado na pasta gamejam -->
+  <link rel="stylesheet" href="/gamejam/scrollPica.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+  <!-- HERO INICIAL -->
+  <section class="hero-intro">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img src="/gamejam/img/SemFundo_Composition.png" class="hero-title-img">
+      <p>
+        A maior edição já realizada.<br>
+        11 DE JULHO • 2026
+      </p>
+    </div>
+    <div class="scroll-indicator">
+      <span>SCROLL</span>
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO DE TESTE -->
+  <section class="video-scroll-container">
+    <div class="video-container sticky-top overflow-hidden" style="z-index: 0;">
+      <div id="video-jason">
+        <div class="rolo-de-filme">
+          <!-- Todos padronizados para /gamejam/img/ -->
+          <img src="/gamejam/img/frame_0001.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0002.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0004.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0005.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0006.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0008.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0009.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0010.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0011.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0013.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0014.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0015.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0017.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0018.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0019.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0021.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0022.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0023.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0024.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0026.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0027.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0028.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0030.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0031.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0032.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0034.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0035.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0036.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0038.jpg" decoding="sync">
+          <img src="/gamejam/img/frame_0039.jpg" decoding="sync">
+        </div>
+      </div>
+    </div>
+
+   
+
+    <section id="vsfd-gemini">
+      <div id="video-text-container" class="sticky-top">
+        <div id="video-text" class="position-absolute text-white" style="z-index: 10;">
+          <h2 class="display-5 fw-bold text-uppercase mb-0">A Maior de Todos os tempos!</h2>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section class="bio mt-3">
+    <div class="container">
+      <div class="row justify-content-center align-items-center p-5 pb-0">
+        <div class="col-lg-5 scrollAnimation overflow-hidden">
+          <video autoplay muted loop playsinline class="mb-5" style="object-fit: cover; object-position: center; width: 100%; height: 55vh;">
+            <source src="/gamejam/img/tinidancando.mp4" type="video/mp4">
+          </video>
+          <img src="/gamejam/img/gamejam2025.jpg" class="" style="object-fit: cover; object-position: 60%; max-width: 100%; min-height: 60vh;" />
+        </div>
+        <div class="col-lg-7">
+          <h2 class="display-4 text-white">X Game Jam</h2>
+          <h3 class="display-6 text-white">Uma edição histórica.</h3>
+          <p class="pb-5 text-white">Mais do que uma edição comemorativa, este é um marco estratégico. Reunindo talentos, criatividade e execução sob pressão, a X Game Jam consolida um ecossistema onde ideias saem do papel e se transformam em experiências reais. É sobre construir, iterar e entregar, elevando o nível a cada ciclo.</p>
+          <!-- Corrigido de src/assets/GameJam.png para a pasta img -->
+          <img src="/gamejam/img/GameJam.png" class="overflow-hidden" style="object-fit: cover; object-position: 40%; max-width: 130%; min-height:50vh;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ending" class="py-3" style="margin-top: -200px;">
+    <div class="container text-center justify-content-center sticky-top">
+      <h1 class="footer-gradient-text fw-bold mb-5">
+        <br>11 DE JULHO<br>2026
+      </h1>
+      <div class="qr-wrapper">
+        <div class="bio text-center">
+          <p class="mb-3 text-white" style="line-height: 1;">
+            INSCRIÇÕES EM BREVE
+          </p>
+        </div>
+        <div class="qr-container">
+          <a href="https://www.instagram.com/petcomp_unioeste/" target="_blank">
+            <img src="/images/qr.png" class="qr-blur">
+          </a>
+          <a href="https://www.instagram.com/petcomp_unioeste/" target="_blank">
+            <img src="/images/qr.png" class="qr-blur">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer-pica" class="py-3" style="margin-top: 100px;">
+    <div class="container text-center">
+      <div class="bio text-center mb-3">
+        <p class="mb-2 text-white">
+          REALIZAÇÃO
+        </p>
+        <div class="col-6 col-md-12 mx-auto">
+          <img src="/images/Logo_PETComp.png" class="img-fluid" style="max-width: 200px;" alt="PETComp">
+        </div>
+      </div>
+      <ul class="list-inline mb-3 d-flex flex-wrap justify-content-center gap-3">
+        <li class="list-inline-item m-0">
+          <a href="https://petcomp.unioeste.br" target="_blank" class="text-white text-decoration-none">Site</a>
+        </li>
+        <li class="list-inline-item m-0">
+          <a href="https://www.instagram.com/petcomp_unioeste/" target="_blank" class="text-white text-decoration-none">Instagram</a>
+        </li>
+        <li class="list-inline-item m-0">
+          <a href="mailto:petcomp@unioeste.br" class="text-white text-decoration-none">Contato</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
+  <script>
+    const lenis = new Lenis({
+      duration: 2.0,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      wheelMultiplier: 2.5,
+      touchMultiplies: 0.5,
+      smoothTouch: true,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  </script>
+
+  <!-- Pre Download das imagens corrigido (padStart 4 e pasta correta) -->
+  <script>
+    const segurancaMemoria = [];
+    window.addEventListener('load', () => {
+      const totalframe = 40; // Ajustei para 40 para cobrir até o frame_0039
+      for (let i = 1; i < totalframe; i++) {
+        const img = new Image();
+        img.src = `/gamejam/img/frame_${i.toString().padStart(4, '0')}.jpg`;
+        segurancaMemoria.push(img);
+      }
+    })
+  </script>
+
+  <script>
+    const hero = document.querySelector(".hero-intro");
+    const content = document.querySelector(".hero-content");
+    const logo = document.querySelector(".hero-title-img");
+
+    let currentX = 0;
+    let currentY = 0;
+
+    let targetX = 0;
+    let targetY = 0;
+
+    hero.addEventListener("mousemove", (e) => {
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+      targetX = (x - 0.5);
+      targetY = (y - 0.5);
+    });
+
+    function animate() {
+      currentX += (targetX - currentX) * 0.08;
+      currentY += (targetY - currentY) * 0.08;
+
+      const moveX = currentX * 90;
+      const moveY = currentY * 70;
+      const rotateY = currentX * 25;
+      const rotateX = -currentY * 18;
+
+      content.style.transform = `
+      perspective(1400px)
+      rotateX(${rotateX}deg)
+      rotateY(${rotateY}deg)
+      translate3d(${moveX}px, ${moveY}px, 0)
+    `;
+
+      logo.style.transform = `
+      translateZ(120px)
+      scale(1.04)
+    `;
+
+      logo.style.filter = `
+      drop-shadow(${-moveX * 0.25}px ${-moveY * 0.25}px 45px rgba(255,255,255,.22))
+    `;
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    hero.addEventListener("mouseleave", () => {
+      targetX = 0;
+      targetY = 0;
+    });
+  </script>
+</body>
+</html>

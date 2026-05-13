@@ -1,0 +1,966 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+/* =========================================
+   HERO INTRO
+========================================= */
+
+.hero-content{
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  transform-style: preserve-3d;
+  will-change: transform;
+
+transition: none;
+}
+
+.hero-title-img{
+  width: clamp(320px, 70vw, 900px);
+
+  margin-bottom: 20px;
+
+  filter:
+    drop-shadow(0 0 30px rgba(255,255,255,.12));
+
+transition: none;
+
+  will-change: transform;
+}
+.hero-intro{
+  position: relative;
+  z-index: 20;
+}
+
+.video-scroll-container{
+  position: relative;
+  z-index: 1;
+}
+.hero-intro{
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+  margin-bottom: -20vh;
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image:
+    url('/gamejam/img/frame_0001.jpg');
+
+  background-size: cover;
+  background-position: center;
+
+  isolation: isolate;
+}
+
+/* Overlay cinematográfico */
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.75),
+      rgba(0,0,0,.35),
+      rgba(0,0,0,.85)
+    );
+
+  z-index: 1;
+}
+
+/* Conteúdo */
+.hero-content{
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  animation: heroReveal 1.2s ease forwards;
+}
+
+.hero-logo{
+  width: 120px;
+  margin-bottom: 20px;
+
+  filter:
+    drop-shadow(0 0 20px rgba(255,255,255,.15));
+}
+
+.hero-title-img{
+  width: clamp(320px, 70vw, 900px);
+
+  margin-bottom: 20px;
+
+  filter:
+    drop-shadow(0 0 30px rgba(255,255,255,.12));
+
+  animation:
+    heroFloat 4s ease-in-out infinite;
+}
+
+/* movimento leve */
+@keyframes heroFloat{
+  0%,100%{
+    transform: translateY(0px);
+  }
+
+  50%{
+    transform: translateY(-8px);
+  }
+}
+
+.hero-content p{
+  color: #fff;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  opacity: .9;
+}
+
+/* Scroll Indicator */
+.scroll-indicator{
+  position: absolute;
+
+  bottom: 40px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 12px;
+
+  color: white;
+
+  animation: bounce 2s infinite;
+}
+
+.scroll-indicator span{
+  font-size: .8rem;
+  letter-spacing: 3px;
+  opacity: .8;
+}
+
+.mouse{
+  width: 28px;
+  height: 46px;
+
+  border: 2px solid rgba(255,255,255,.8);
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.wheel{
+  width: 4px;
+  height: 10px;
+
+  background: white;
+
+  border-radius: 999px;
+
+  margin-top: 8px;
+
+  animation: scrollWheel 1.8s infinite;
+}
+
+/* Entrada inicial */
+@keyframes heroReveal{
+  from{
+    opacity: 0;
+    transform: translateY(30px) scale(1.03);
+    filter: blur(8px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Scroll mouse */
+@keyframes scrollWheel{
+  0%{
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  30%{
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+/* Bounce */
+@keyframes bounce{
+  0%,100%{
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50%{
+    transform: translateX(-50%) translateY(6px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+
+  .hero-content h1{
+    letter-spacing: -2px;
+  }
+
+  .hero-content p{
+    font-size: .95rem;
+  }
+
+  .hero-logo{
+    width: 90px;
+  }
+
+}
+
+
+/*TEMPORÁRIO MUDAR DEPOIS!!!*/
+*, ::after, ::before{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+/* RED BAR ANIMATION TEST */
+@keyframes grow-progress {
+  from{
+    transform: scaleX(0);
+  }to{
+    transform: scaleX(var(--scroll-position-delayed));
+  }
+}
+
+#progress{
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1em;
+    transform-origin: 0 50%;
+    background: red;
+}
+
+#progress{
+    animation: grow-progress linear forwards;
+    animation-timeline: scroll();
+    animation-range-start: 0vh;
+    animation-range-end: 400vh;
+}
+
+
+#navigation{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#hero{
+  height: 800vh;
+}
+
+/*Initial mask scrolling animation*/
+@keyframes mask-opacity-anim {
+  0%{
+    opacity: 1.0;
+  }70%{
+    opacity: 0.0;
+  }100%{
+    opacity: 0.0;
+  }
+}
+
+@property --mask-initial-size{
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 4000%;
+}
+@property --mask-initial-x{
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 47%;
+}
+@property --mask-initial-y{
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 42%;
+}
+/* MASK SIZE ANIMATION */
+@keyframes mask-size-anim {
+  0%{
+    mask-size: var(--mask-initial-size);
+    mask-position: var(--mask-initial-x) var(--mask-initial-y);
+  }
+  65%{
+    mask-position: var(--mask-initial-x) 43%;
+  }
+  100%{
+    mask-size: 350px;
+    mask-position: 50% calc(50vh - 300px);
+  }
+}
+#mask{
+  animation: mask-opacity-anim ease-in-out forwards, mask-size-anim ease-in-out forwards;
+  animation-timeline: scroll();
+  /*Aqui ele faz a animação de 0 até 200vh*/
+  animation-range-start: 200vh, 0vh;
+  animation-range-end: 250vh, 200vh;
+}
+
+#mask{
+  /* A TAL DA MASK */
+  mask: url(../assets/mask.svg) no-repeat center;
+  mask-size: 300px;
+  mask-position: 50% 20%;
+}
+
+/* Arrumando a porra od tamanho no celular */
+@media (max-width: 1024px){
+  #intro{
+    transform: translateY(-50px);
+  }
+
+  #intro img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  #mask{
+    mask-position: 50% 30%;
+    --mask-initial-x: 45%;
+    --mask-initial-y: 42%;
+    --mask-initial-size: 9000%;
+  }
+
+  #pos-intro-text h1{
+    font-size: 40px;
+  }
+
+  #pos-intro-text h2{
+    font-size: 16px;
+  }
+
+  #pos-intro-text{
+    width: 90%;
+  }
+}
+
+/*Background Animation (Scale)*/
+@keyframes background-scale-anim {
+  from{
+    scale: 1.2;
+  }to{
+    scale: 1.0;
+  }
+}
+#background{
+  animation: background-scale-anim linear;
+  animation-timeline: scroll(root);
+  
+  animation-range-start: 0vh;
+  animation-range-end: 150vh;
+}
+
+#background{
+  height: 100vh;
+  background-image: url(https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2FheroKeyArt.acb9b343.jpg&w=2560&q=100);
+  /* background: url(https://grupodobolo.com.br/images/parque.jpg); */
+  background-position: center;
+  background-size: cover;
+}
+
+/* Content opacity animation */
+@keyframes content-opacity-anim {
+  from{
+    opacity: 1.0;
+  }to{
+    opacity: 0.0;
+  }
+}
+#content{
+  animation: content-opacity-anim linear;
+  animation-timeline: scroll(root);
+  animation-range-start: 0vh;
+  animation-range-end: 50vh;
+}
+
+#content{
+  /* Sem a opacity aqui a animação quebra*/
+  opacity: 0;
+
+  height: 100vh;
+  background-image: url(https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2FheroKeyArt.0338a8a4.png&w=2560&q=100);
+  background-position: center;
+  background-size: cover;
+}
+
+/* OVERLAY */
+@keyframes overlay-opacity-anim {
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+}
+#overlay{
+  animation: overlay-opacity-anim linear forwards;
+  animation-timeline: scroll(root);
+  animation-range-start: 50vh;
+  animation-range-end: 200vh;
+}
+
+#overlay{
+  opacity: 0;
+  background-color: #ffffff !important;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+
+/* INTRO ANIMATION */
+@keyframes intro-fade-anim {
+  0%{
+    opacity: 0;
+  }10%{
+    opacity: 0;
+  }15%{
+    opacity: 0.5;
+  }50%{
+    opacity: 1;
+  }100%{
+    opacity: 0;
+  }
+}
+@keyframes intro-scale-anim {
+  0%{
+    scale: 1;
+  }25%{
+    scale: 1;
+  }50%{
+    scale: 0.8;
+  }100%{
+    scale: 0.7;
+  }
+}
+#intro{
+  animation: intro-fade-anim ease-in, intro-scale-anim ease-in-out;
+  animation-timeline: scroll();
+  animation-range-start: 150vh, 90vh;
+  animation-range-end: 500vh, 500vh;
+}
+
+#intro{
+  opacity: 0;
+  transform: translateY(-200px);
+}
+
+/* LOGO VI */
+#logo-color{
+  margin-bottom: 40px;
+  margin-top: calc(50vh - 100px)
+}
+
+/*WELCOME TEXT*/
+#pos-intro-text{
+  width: 70%;
+
+  background-image: radial-gradient(circle at 50% -30vh, #ffd687 0, #fb766a 50vh, #9d2f6a 90vh, rgba(32, 31, 66, 0) 150vh);
+  background-clip: text;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#pos-intro-text h1{
+  font-size: 80px;
+	line-height: 0.9;
+	font-weight: 900;
+	color: #fff;
+}
+#pos-intro-text h2{
+	font-weight: 700;
+	color: #fff;
+}
+
+/* Texto gradiente */
+/*(roubei de um vídeo hehehe)*/
+
+#intro h1 {
+	font-size: 60px;
+	line-height: 0.9;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+	background-image: radial-gradient(circle at 50% -30vh, #ffd687 0, #fb766a 50vh, #9d2f6a 90vh, rgba(32, 31, 66, 0) 150vh);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* Roubei de um vídeo isso aqui tbm:*/
+/* Bio styles */
+
+.bio {
+  padding-bottom: 12rem;
+}
+
+.bio h2 {
+  color: #fff9cb;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.8em;
+}
+
+.bio h3 {
+  color: #ffb0c4;
+  font-weight: bold;
+  margin-bottom: 1.2em;
+}
+
+.bio p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 2em;
+}
+
+
+@media (min-width: 768px) {
+  #intro h1 {
+    font-size: 150px;
+  }
+}
+
+@property --progress-pos-vtmnc{
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 5000%;
+}
+@property --progress-mask-vtmnc{
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: -50%;
+}
+
+/* MASCARA DE OPACIDADE EM CIRCULO */
+.circle-opacity-mask{
+  --progress-mask-vtmnc: -50%;
+  --progress-pos-vtmnc: 5000%;
+  --progress-gradient-vtmnc: 50%;
+
+  mask-image: radial-gradient(circle at 50% var(--progress-pos-vtmnc), black 0%, black calc(var(--progress-mask-vtmnc) - var(--progress-gradient-vtmnc)), transparent var(--progress-mask-vtmnc));
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+@keyframes circle-fadein-mask {
+  100%{
+    --progress-pos-vtmnc: 50%;
+    --progress-mask-vtmnc: 100%;
+  }0%{
+    --progress-pos-vtmnc: 5000%;
+    --progress-mask-vtmnc: -50%;
+  }
+}
+@keyframes circle-fadeout-mask {
+  0%{
+    --progress-pos-vtmnc: 50%;
+    --progress-mask-vtmnc: 100%;
+  }100%{
+    --progress-pos-vtmnc: -5000%;
+    --progress-mask-vtmnc: -50%;
+  }
+}
+
+#pos-intro-mask{
+  animation: circle-fadein-mask linear forwards, circle-fadeout-mask linear forwards;
+  animation-timeline: scroll(root);
+  animation-range-start: 150vh, 650vh;
+  animation-range-end: 600vh, 1000vh;
+}
+
+/* VIDEO ANIMATION */
+
+.frame-inicial{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.frame-inicial img{
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+}
+
+.video-scroll-container:has(.video-container){
+  --scroll: 0;
+}
+
+
+.video-scroll-container{
+  height: 800vh;
+  margin-top: 0;
+  position: relative;
+  view-timeline-name: --linha-do-video;
+}
+
+@media (max-width: 1024px){
+  .video-scroll-container{
+    height: 800vh;
+  }
+}
+
+.video-container{
+  position: sticky;
+  top: 0;
+  margin-top: 0;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.rolo-de-filme{
+  display: flex;
+  width: max-content;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  /*hack do perigo*/
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+
+  animation: puxarFilme steps(29) forwards;
+  animation-timeline: --linha-do-video;
+
+  animation-range: contain 0% contain 50%;
+}
+
+.rolo-de-filme img{
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+
+  /* hack do perigo */
+  content-visibility: visible !important;
+}
+
+@keyframes puxarFilme {
+  to{
+    transform: translateX(calc(-100% + 100vw));
+  }
+}
+
+/* Animação dos personagens */
+@keyframes scroll-trans-anim {
+  0%{
+    transform: translateY(0px);
+  }100%{
+    transform: translateY(-200px);
+  }
+}
+.scrollAnimation{
+  animation: scroll-trans-anim ease-in-out forwards;
+  animation-timeline: scroll();
+}
+
+.ajusta-essa-porra-img{
+  object-fit: cover;
+  max-width: 100%;
+  min-height: 60vh;
+}
+
+@media (max-width: 768px) {
+  .rolo-de-filme img {
+    object-fit: contain;        /* mantém exatamente como está agora */
+  }
+
+  .video-container {
+    margin-top: 0;
+    
+    /* 🔥 NOVA PARTE - cobre as barras pretas */
+    background-image: url('/gamejam/img/frame_0001.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+
+/* =========================================
+   CONSERTO DA BIO NO CELULAR (MOBILE ONLY)
+   ========================================= */
+@media (max-width: 991px) {
+  
+  /* Pega TODAS as imagens dentro da seção .bio */
+  .bio img {
+    /* 1. Mata o 200% e o 130% que tão quebrando a tela */
+    max-width: 100% !important; 
+    
+    /* 2. Mata o translateX(-50%) da Lucia que tá jogando ela pra fora */
+    transform: none !important; 
+    
+    /* 3. Força a imagem a caber perfeitamente no celular */
+    width: 100% !important; 
+    
+    /* 4. Tira aquela altura gigantesca que fica estranha no mobile */
+    min-height: auto !important;
+    height: auto !important;
+    
+    /* Um respiro embaixo de cada foto e uma bordinha suave */
+    margin-bottom: 24px !important;
+    border-radius: 8px; 
+  }
+
+  /* O texto da Lucia tava com um p-5 (padding gigante) no HTML. 
+     No celular isso espreme o texto todo. Vamos reduzir. */
+  .bio .col-lg-5.p-5 {
+    padding: 1.5rem !important;
+  }
+  
+  /* Centraliza os textos no celular pra ficar mais elegante */
+  .bio h2, .bio h3, .bio p {
+    text-align: center;
+  }
+}
+
+/* FOOTER */
+
+@keyframes footer-opacity-anim {
+  10%{
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(3px);
+  }20%{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0px);
+  }
+}
+#footer-pica{
+  opacity: 0;
+  animation: footer-opacity-anim ease-in-out;
+  animation-timeline: view();
+}
+
+/* Título Gigante com Gradiente (Diferente do Radial, esse é Linear de cima pra baixo) */
+.footer-gradient-text {
+  /* clamp(Mínimo Celular, Tamanho Dinâmico, Máximo PC) */
+  font-size: clamp(3rem, 8vw, 8rem); 
+  line-height: 0.9;
+  letter-spacing: -2px;
+  
+  /* O gradiente imitando a imagem (Laranja -> Vermelho -> Vinho) */
+  background-image: linear-gradient(to bottom, #ff9b7a 0%, #ff4d4d 50%, #9d2f6a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Botões da Wishlist */
+.wishlist-btn {
+  background-color: #1a1a24; /* Um cinza um pouco mais claro que o fundo */
+  border: 1px solid #1a1a24;
+  transition: all 0.3s ease;
+}
+
+.wishlist-btn:hover {
+  background-color: #2a2a35;
+  border-color: #ffffff;
+}
+
+/* Caixa de Propaganda */
+.propaganda-box {
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.03); /* Fundo super translúcido */
+}
+
+.qr-wrapper {
+  margin-top: 100px; /* diminui espaço acima */
+}
+
+/* Label */
+.qr-label {
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px; /* aproxima dos QR */
+  font-size: 0.9rem;
+}
+
+/* Container */
+.qr-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: -135px; /* <-- resolve o “colado” */
+}
+
+/* QR */
+.qr-blur {
+  width: clamp(180px, 20vw, 260px);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+
+  filter: blur(8px);
+  opacity: 0.85;
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.qr-blur:hover {
+  transform: scale(1.08);
+  filter: blur(5px);
+  opacity: 1;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .qr-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .qr-blur {
+    width: 60vw;
+    max-width: 220px;
+  }
+}
+
+/* Ajuste sutil para a borda divisória na caixa de propaganda sumir no celular */
+@media (max-width: 768px) {
+  .border-md-end {
+    border-right: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .border-md-end {
+    border-right: 1px solid #6c757d !important; /* Cor do border-secondary do Bootstrap */
+  }
+}
+
+@keyframes video-jason-opacity-anim {
+
+  0%{
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
+
+#video-jason{
+  opacity: 1;
+
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  animation: video-jason-opacity-anim ease-in-out;
+  animation-timeline: --linha-do-video;
+}
+
+
+@keyframes video-text-anim {
+  0%{
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  15%{
+    transform: translateY(50px);
+    opacity: 0;
+  }50%{
+    transform: translateY(0px);
+    opacity: 1;
+  }100%{
+    opacity: 1;
+  }
+}
+#video-text{
+  animation: video-text-anim ease-in-out;
+  animation-timeline: view();
+  opacity: 0;
+}
+
+#video-text{
+  /* bottom: 0; */
+  left: 10vw;
+  /* display: flex; */
+  /* display: block; */
+  text-shadow: 4px 3px 2px #9d2f6a;
+
+  width: auto;
+  max-width: 60%;
+  text-align: left;
+
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+
+  line-height: 1.1;
+
+  color: #fff8e8 !important;
+
+  margin-top: 75vh;
+  /* transform: translateY(30px); */
+}
+
+#video-text-container{
+  position: sticky;
+  top: 0;
+  margin-top: 290vh;
+}
+
+#vsfd-gemini{
+  height: 310vh;
+  position: relative;
+  margin-top: 100vh;
+}

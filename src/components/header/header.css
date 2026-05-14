@@ -1,40 +1,44 @@
-
-
+/*=================================================================================================================================*/
+/* HEADER PRINCIPAL */
+/*=================================================================================================================================*/
 .pet-header {
   position: fixed; /* FIXA NA TELA */
   top: 0;
   left: 0;
   width: 100%;
-
   z-index: 1000;
-
   background: transparent; /* REMOVE FUNDO */
   box-shadow: none; /* REMOVE SOMBRA */
   border-radius: 0;
-
   margin: 0; /* REMOVE GAP */
   padding: 16px 40px;
 }
 
 .pet-header-container {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
-
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
+  justify-content: center;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   border-radius: 50px;
-
   padding: 10px 20px;
+  height: 72px;
 }
 
+/*=================================================================================================================================*/
+/* LOGO */
+/*=================================================================================================================================*/
 .pet-logo {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
-  text-decoration: none;
+  z-index: 10;
 }
 
 .logo-img-header {
@@ -43,52 +47,99 @@
   object-fit: contain;
 }
 
+/*=================================================================================================================================*/
+/* NAVBAR DESKTOP */
+/*=================================================================================================================================*/
 .pet-nav.desktop {
-  position: static; /* ESSENCIAL */
-  transform: none;
-
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
   display: flex;
-  gap: 24px;
-
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 6px 20px;
-  border-radius: 50px;
-
-  align-items: center; /* centraliza vertical */
-}
-.pet-nav.desktop {
-  margin: 0 auto;
-}
-.pet-header-container {
-  height: 60px;
-}
-
-.pet-nav.desktop {
+  align-items: center;
+  justify-content: center;
+  gap: 30px; /* Cria o espaço entre os itens da esquerda, o botão GameJam e os da direita */
+  padding: 8px 28px;
+  border-radius: 999px;
   backdrop-filter: blur(8px);
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.28);
+  z-index: 5;
+}
+
+.nav-side {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .pet-nav a {
   color: white;
 }
 
-.hamburger span {
-  background-color: white;
-}
-
-/*=================================================================================================================================*/
 .pet-nav a:hover {
   color: #2285c8;
-  text-decoration: none;  /* <- Isso remove o sublinhado azul */
+  text-decoration: none;
 }
 
-.mobile-menu a:hover {
-  color: #184fbd;
-  text-decoration: none;  /* <- Isso remove o sublinhado azul no menu mobile também */
-}
 /*=================================================================================================================================*/
+/* BOTÃO GAME JAM */
+/*=================================================================================================================================*/
+.gamejam-link {
+  position: relative; /* Mudado de absolute para relative para respeitar o flexbox */
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .6rem 1rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  overflow: hidden;
+  transition: transform .3s ease, background .3s ease, box-shadow .3s ease;
+  box-shadow: 0 0 15px rgba(255, 0, 140, 0.05), 0 0 20px rgba(0, 183, 255, 0.05) !important;
+}
 
+.gamejam-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,0,128,.14), rgba(0,183,255,.14));
+  opacity: .9;
+}
 
+.gamejam-link span,
+.gamejam-link strong {
+  position: relative;
+  z-index: 2;
+}
+
+.gamejam-link span {
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: .5px;
+  color: white;
+}
+
+.gamejam-link strong {
+  font-size: 1.15rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ff4fd8, #4dc8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(255,255,255,.15);
+}
+
+.gamejam-link:hover {
+  /* Removido o translate(-50%, -50%) para ele não pular na tela ao passar o mouse */
+  transform: translateY(-2px) scale(1.03);
+  background: rgba(255,255,255,0.08);
+  box-shadow: 0 0 20px rgba(255, 0, 140, 0.12), 0 0 25px rgba(0, 183, 255, 0.12);
+}
+
+/*=================================================================================================================================*/
+/* BOTÕES GERAIS */
+/*=================================================================================================================================*/
 .btn {
   padding: 8px 24px;
   border-radius: 80px;
@@ -122,7 +173,9 @@
   opacity: 0.9;
 }
 
-/* Menu Mobile */
+/*=================================================================================================================================*/
+/* MENU MOBILE & HAMBURGER */
+/*=================================================================================================================================*/
 .mobile-menu {
   display: flex;
   flex-direction: column;
@@ -151,140 +204,10 @@
   padding: 6px 0;
 }
 
-/* Botão hambúrguer animado */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  z-index: 1001;
-  transition: all 0.3s ease-in-out;
+.mobile-menu a:hover {
+  color: #184fbd;
+  text-decoration: none;
 }
-
-.hamburger span {
-  width: 24px;
-  height: 2.5px;
-  background-color: black;
-  border-radius: 4px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  transform-origin: center;
-}
-
-/* Deixa a barra de cima no lugar */
-.menu-open .hamburger span:nth-child(1) {
-  transform: none;
-  opacity: 1;
-}
-
-/* Rotaciona a barra do meio para formar parte do X */
-.menu-open .hamburger span:nth-child(2) {
-  transform: rotate(45deg);
-  position: relative;
-  top: -1.5px;
-}
-
-/* Rotaciona a barra de baixo para formar a outra parte do X */
-.menu-open .hamburger span:nth-child(3) {
-  transform: rotate(-45deg);
-  position: relative;
-  top: -4px;
-}
-
-
-/*=================================================================================================================================*/
-
-/*Animação de rotação Logo PETComp*/
-@keyframes rotate360 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.rotate-logo {
-  animation: rotate360 1s ease-in-out;
-}
-
-
-@keyframes spin {
-  from { transform: rotate(0); }
-  to { transform: rotate(360deg); }
-}
-
-/* easter egg: sair rodando pela tela */
-.crazy-logo {
-  position: relative;
-  animation: crazyRun 3s linear infinite;
-}
-
-@keyframes crazyRun {
-  0%   { transform: translate(0, 0) rotate(0); }
-  20%  { transform: translate(200px, -50px) rotate(180deg); }
-  40%  { transform: translate(-150px, 100px) rotate(360deg); }
-  60%  { transform: translate(250px, 200px) rotate(540deg); }
-  80%  { transform: translate(-200px, -150px) rotate(720deg); }
-  100% { transform: translate(0, 0) rotate(1080deg); }
-}
-/* Navbar inteira com efeito maluco */
-/* Navbar inteira com efeito MUITO maluco */
-.crazy-navbar {
-  animation: navbarCrazy 2.5s linear infinite;
-}
-
-@keyframes navbarCrazy {
-  0% {
-    transform: translate(0, 0) rotate(0) scale(1);
-    filter: hue-rotate(0deg);
-  }
-  10% {
-    transform: translate(40px, -20px) rotate(15deg) scale(1.1);
-    filter: hue-rotate(90deg);
-  }
-  25% {
-    transform: translate(-50px, 30px) rotate(-25deg) scale(0.9);
-    filter: hue-rotate(180deg);
-  }
-  40% {
-    transform: translate(80px, -40px) rotate(45deg) scale(1.2);
-    filter: hue-rotate(270deg);
-  }
-  60% {
-    transform: translate(-70px, 50px) rotate(-60deg) scale(1.3);
-    filter: hue-rotate(360deg);
-  }
-  80% {
-    transform: translate(30px, -60px) rotate(120deg) scale(0.8);
-    filter: hue-rotate(180deg);
-  }
-  100% {
-    transform: translate(0, 0) rotate(360deg) scale(1);
-    filter: hue-rotate(0deg);
-  }
-}
-
-
-/*=================================================================================================================================*/
-
-/* Responsivo */
-
-@media (max-width: 768px) {
-  .pet-nav.desktop {
-  display: flex;
-}
-
-@media (max-width: 768px) {
-  .pet-nav.desktop {
-    display: none;
-  }
-}
-
-
-  /* ... (estilos anteriores permanecem) ... */
 
 .hamburger {
   display: none;
@@ -319,6 +242,49 @@
   transform: rotate(-45deg) translateY(-8px);
 }
 
+/*=================================================================================================================================*/
+/* ANIMAÇÕES GERAIS E EASTER EGGS */
+/*=================================================================================================================================*/
+@keyframes rotate360 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rotate-logo {
+  animation: rotate360 1s ease-in-out;
+}
+
+.crazy-logo {
+  position: relative;
+  animation: crazyRun 3s linear infinite;
+}
+
+@keyframes crazyRun {
+  0%   { transform: translate(0, 0) rotate(0); }
+  20%  { transform: translate(200px, -50px) rotate(180deg); }
+  40%  { transform: translate(-150px, 100px) rotate(360deg); }
+  60%  { transform: translate(250px, 200px) rotate(540deg); }
+  80%  { transform: translate(-200px, -150px) rotate(720deg); }
+  100% { transform: translate(0, 0) rotate(1080deg); }
+}
+
+.crazy-navbar {
+  animation: navbarCrazy 2.5s linear infinite;
+}
+
+@keyframes navbarCrazy {
+  0% { transform: translate(0, 0) rotate(0) scale(1); filter: hue-rotate(0deg); }
+  10% { transform: translate(40px, -20px) rotate(15deg) scale(1.1); filter: hue-rotate(90deg); }
+  25% { transform: translate(-50px, 30px) rotate(-25deg) scale(0.9); filter: hue-rotate(180deg); }
+  40% { transform: translate(80px, -40px) rotate(45deg) scale(1.2); filter: hue-rotate(270deg); }
+  60% { transform: translate(-70px, 50px) rotate(-60deg) scale(1.3); filter: hue-rotate(360deg); }
+  80% { transform: translate(30px, -60px) rotate(120deg) scale(0.8); filter: hue-rotate(180deg); }
+  100% { transform: translate(0, 0) rotate(360deg) scale(1); filter: hue-rotate(0deg); }
+}
+
+/*=================================================================================================================================*/
+/* RESPONSIVO */
+/*=================================================================================================================================*/
 @media (max-width: 768px) {
   .pet-nav.desktop {
     display: none;
@@ -338,8 +304,17 @@
     justify-content: space-between;
     align-items: center;
   }
+  .pet-logo{
+    position: relative;
+
+    left: unset;
+    top: unset;
+
+    transform: none;
+  }
+
+  .pet-header-container{
+    justify-content: space-between;
+  }
 }
 
-/*=================================================================================================================================*/
-
-}

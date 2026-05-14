@@ -5,18 +5,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>X GameJam</title>
-  
+
   <!-- Favicon geral do site -->
-  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="icon" type="image/png" href="/gamejam/img/Logo_PET.png" />
 
   <!-- CSS isolado na pasta gamejam -->
-  <link rel="stylesheet" href="/gamejam/scrollPica.css" />
+  <link rel="stylesheet" href="/gamejam/scrollgamejam.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -79,7 +81,7 @@
       </div>
     </div>
 
-   
+
 
     <section id="vsfd-gemini">
       <div id="video-text-container" class="sticky-top">
@@ -94,17 +96,63 @@
     <div class="container">
       <div class="row justify-content-center align-items-center p-5 pb-0">
         <div class="col-lg-5 scrollAnimation overflow-hidden">
-          <video autoplay muted loop playsinline class="mb-5" style="object-fit: cover; object-position: center; width: 100%; height: 55vh;">
+          <!-- <video autoplay muted loop playsinline class="mb-5"
+            style="object-fit: cover; object-position: center; width: 100%; height: 55vh;">
+            <source src="/gamejam/img/tinidancando.mp4" type="video/mp4">
+          </video> -->
+
+          <img src="/gamejam/img/gamejam2025.jpg" class=""
+            style="object-fit: cover; object-position: 60%; max-width: 100%; min-height: 60vh;" />
+
+          <video autoplay muted loop playsinline class="mb-5"
+            style="object-fit: cover; object-position: center; width: 100%; height: 55vh;">
             <source src="/gamejam/img/tinidancando.mp4" type="video/mp4">
           </video>
-          <img src="/gamejam/img/gamejam2025.jpg" class="" style="object-fit: cover; object-position: 60%; max-width: 100%; min-height: 60vh;" />
+
         </div>
         <div class="col-lg-7">
           <h2 class="display-4 text-white">X Game Jam</h2>
           <h3 class="display-6 text-white">Uma edição histórica.</h3>
-          <p class="pb-5 text-white">Mais do que uma edição comemorativa, este é um marco estratégico. Reunindo talentos, criatividade e execução sob pressão, a X Game Jam consolida um ecossistema onde ideias saem do papel e se transformam em experiências reais. É sobre construir, iterar e entregar, elevando o nível a cada ciclo.</p>
+          <p class="pb-5 text-white">Mais do que uma edição comemorativa, este é um marco estratégico. Reunindo
+            talentos, criatividade e execução sob pressão, a X Game Jam consolida um ecossistema onde ideias saem do
+            papel e se transformam em experiências reais. É sobre construir, iterar e entregar, elevando o nível a cada
+            ciclo.</p>
           <!-- Corrigido de src/assets/GameJam.png para a pasta img -->
-          <img src="/gamejam/img/GameJam.png" class="overflow-hidden" style="object-fit: cover; object-position: 40%; max-width: 130%; min-height:50vh;" />
+          <div id="gameJamCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+            <div class="carousel-inner overflow-hidden rounded-4">
+
+              <div class="carousel-item active">
+                <div class="carousel-image-wrapper">
+                  <img src="/gamejam/img/GameJam.png" class="carousel-image" />
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="carousel-image-wrapper">
+                  <img src="/gamejam/img/IMG_8432.jpg" class="carousel-image" />
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="carousel-image-wrapper">
+                  <img src="/gamejam/img/IMG_8437.jpg" class="carousel-image" />
+                </div>
+              </div>
+
+            </div>
+
+            <!-- SETA ESQUERDA -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#gameJamCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <!-- SETA DIREITA -->
+            <button class="carousel-control-next" type="button" data-bs-target="#gameJamCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+
+          </div>
         </div>
       </div>
     </div>
@@ -148,7 +196,8 @@
           <a href="https://petcomp.unioeste.br" target="_blank" class="text-white text-decoration-none">Site</a>
         </li>
         <li class="list-inline-item m-0">
-          <a href="https://www.instagram.com/petcomp_unioeste/" target="_blank" class="text-white text-decoration-none">Instagram</a>
+          <a href="https://www.instagram.com/petcomp_unioeste/" target="_blank"
+            class="text-white text-decoration-none">Instagram</a>
         </li>
         <li class="list-inline-item m-0">
           <a href="mailto:petcomp@unioeste.br" class="text-white text-decoration-none">Contato</a>
@@ -241,4 +290,5 @@
     });
   </script>
 </body>
+
 </html>

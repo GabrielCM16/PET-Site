@@ -25,7 +25,7 @@ const Header: React.FC = () => {
       console.log("Efeito especial ativado!");
 
       // toca o áudio
-      const audio = new Audio('/metalpipe.mp3'); 
+      const audio = new Audio('/metalpipe.mp3');
       audio.play();
 
       setIsCrazy(true);
@@ -35,10 +35,10 @@ const Header: React.FC = () => {
       }, 3000);
     }
   };
-  
+
 
   return (
-    <header 
+    <header
       className={`pet-header ${isMenuOpen ? 'menu-open' : ''} ${isCrazy ? 'crazy-navbar' : ''}`}
     >
       <div className="pet-header-container">
@@ -57,12 +57,24 @@ const Header: React.FC = () => {
 
         {/* Navbar desktop */}
         <nav className="pet-nav desktop">
-          <Link to="/">Início</Link>
-          <Link to="/membros">Membros</Link>
-          <Link to="/downloads">Publicações</Link>
-          <Link to="/projetos">Projetos</Link>
-          <Link to="/sala">Sala</Link>
-          <Link to="/faq">Faq</Link>
+
+          <div className="nav-side left">
+            <Link to="/">Início</Link>
+            <Link to="/membros">Membros</Link>
+            <Link to="/downloads">Publicações</Link>
+          </div>
+
+          <Link to="/gamejam10" className="gamejam-link">
+            <span>GameJam</span>
+            <strong>X</strong>
+          </Link>
+
+          <div className="nav-side right">
+            <Link to="/projetos">Projetos</Link>
+            <Link to="/sala">Sala</Link>
+            <Link to="/faq">Faq</Link>
+          </div>
+
         </nav>
 
         {/* Botão hamburguer */}
@@ -77,7 +89,10 @@ const Header: React.FC = () => {
       {isMenuOpen && (
         <div className="mobile-menu">
           <Link to="/" onClick={toggleMenu}>Início</Link>
-          <Link to="/membros" onClick={toggleMenu}>Membros</Link>
+          <Link to="/gamejam10" className="gamejam-link">
+            <span>GameJam</span>
+            <strong>X</strong>
+          </Link>          <Link to="/membros" onClick={toggleMenu}>Membros</Link>
           <Link to="/downloads" onClick={toggleMenu}>Publicações</Link>
           <Link to="/projetos" onClick={toggleMenu}>Projetos</Link>
           <Link to="/sala" onClick={toggleMenu}>Sala</Link>

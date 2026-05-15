@@ -11,6 +11,8 @@
 
   <!-- CSS isolado na pasta gamejam -->
   <link rel="stylesheet" href="/gamejam/scrollgamejam.css" />
+  <link rel="stylesheet" href="minicursos.css">
+  <link rel="stylesheet" href="cronograma.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -181,6 +183,182 @@
     </div>
   </section>
 
+  <!-- SECTION CRONOGRAMA -->
+  <section id="schedule" class="py-5">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="display-4 text-white text-uppercase fw-900"
+            style="font-family: 'Orbitron', sans-serif; letter-spacing: 4px;">
+            Cronograma
+          </h2>
+        </div>
+      </div>
+
+      <div class="schedule-wrapper">
+        <!-- Cabeçalho (Escondido no Mobile para um look melhor) -->
+        <div class="schedule-header d-none d-md-flex row mx-0 py-3 mb-2">
+          <div class="col-md-4 text-uppercase text-secondary fw-bold small">Evento</div>
+          <div class="col-md-2 text-uppercase text-secondary fw-bold small">Data</div>
+          <div class="col-md-3 text-uppercase text-secondary fw-bold small text-center">Horário</div>
+          <div class="col-md-3 text-uppercase text-secondary fw-bold small text-end">Local</div>
+        </div>
+
+        <!-- Item 1 -->
+        <div class="schedule-row row mx-0 align-items-center mb-3">
+          <div class="col-md-4 mb-2 mb-md-0">
+            <span class="event-title">Início das Inscrições</span>
+          </div>
+          <div class="col-md-2 mb-2 mb-md-0">
+            <span class="badge-date">15 JUN</span>
+          </div>
+          <div class="col-md-3 text-md-center mb-2 mb-md-0">
+            <span class="text-white-50">08:00h — 23:59h</span>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <span class="location-tag"><i class="bi bi-geo-alt"></i> Online</span>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="schedule-row row mx-0 align-items-center mb-3 active-event">
+          <div class="col-md-4 mb-2 mb-md-0">
+            <span class="event-title">Abertura Oficial</span>
+          </div>
+          <div class="col-md-2 mb-2 mb-md-0">
+            <span class="badge-date">11 JUL</span>
+          </div>
+          <div class="col-md-3 text-md-center mb-2 mb-md-0">
+            <span class="text-white-50">13:30h</span>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <span class="location-tag">Auditório Central</span>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="schedule-row row mx-0 align-items-center mb-3">
+          <div class="col-md-4 mb-2 mb-md-0">
+            <span class="event-title">Keynote & Temas</span>
+          </div>
+          <div class="col-md-2 mb-2 mb-md-0">
+            <span class="badge-date">11 JUL</span>
+          </div>
+          <div class="col-md-3 text-md-center mb-2 mb-md-0">
+            <span class="text-white-50">14:00h</span>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <span class="location-tag">Palco Principal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION MINICURSOS -->
+  <section id="minicursos" class="py-5 bg-darker">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="display-4 text-white text-uppercase fw-900"
+            style="font-family: 'Orbitron', sans-serif; letter-spacing: 4px;">
+            Minicursos
+          </h2>
+          <p class="text-secondary text-uppercase small" style="letter-spacing: 2px;">Aprimore suas habilidades para a
+            Jam</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Minicurso: Godot para Iniciantes -->
+        <div class="col-lg-4">
+          <div class="course-card">
+            <div class="course-header">
+              <!-- Representação das Integrantes -->
+              <div class="author-photo-wrapper d-flex align-items-center justify-content-center bg-dark overflow-hidden"
+                style="border: 1px solid var(--text-violet);">
+                <i class="bi bi-people-fill text-violet" style="font-size: 1.5rem;"></i>
+                <!-- Se tiver foto delas, use a tag abaixo e remova o <i> acima: -->
+                <!-- <img src="/gamejam/img/carla-giovanna.jpg" alt="Carla e Giovanna" class="author-img"> -->
+              </div>
+              <div class="course-date">
+                <span class="day">10</span>
+                <span class="month">JUL</span>
+              </div>
+            </div>
+
+            <div class="course-body">
+              <span class="author-name">Carla & Giovanna (IFPR)</span>
+              <h3 class="course-title">Godot para Iniciantes</h3>
+              <p class="course-desc">Aprenda os fundamentos da engine e crie seu primeiro jogo básico de plataforma do
+                zero.</p>
+            </div>
+
+            <div class="course-footer">
+              <a href="https://youtube.com/live/link-do-pet" target="_blank" class="btn-watch">
+                <i class="fab fa-youtube"></i> ASSISTIR NO YOUTUBE
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Minicurso 2 -->
+        <div class="col-lg-4">
+          <div class="course-card">
+            <div class="course-header">
+              <div class="author-photo-wrapper">
+                <img src="https://i.pravatar.cc/150?u=2" alt="Autor" class="author-img">
+              </div>
+              <div class="course-date">
+                <span class="day">09</span>
+                <span class="month">JUL</span>
+              </div>
+            </div>
+
+            <div class="course-body">
+              <span class="author-name">Por Eduardo Nogueira Korte</span>
+              <h3 class="course-title">Pixel Art: Do rascunho à animação</h3>
+              <p class="course-desc">Técnicas de design 2D focadas em character design e ambientação.</p>
+            </div>
+
+            <div class="course-footer">
+              <a href="https://www.youtube.com/@petcomputacao-unioeste7552" target="_blank" class="btn-watch">
+                <i class="fab fa-youtube"></i> ASSISTIR AGORA
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Minicurso 3 -->
+        <div class="col-lg-4">
+          <div class="course-card">
+            <div class="course-header">
+              <div class="author-photo-wrapper">
+                <img src="https://i.pravatar.cc/150?u=3" alt="Autor" class="author-img">
+              </div>
+              <div class="course-date">
+                <span class="day">10</span>
+                <span class="month">JUL</span>
+              </div>
+            </div>
+
+            <div class="course-body">
+              <span class="author-name">Por Fabricio</span>
+              <h3 class="course-title">Game Design & Storytelling</h3>
+              <p class="course-desc">Como estruturar mecânicas que contam histórias envolventes.</p>
+            </div>
+
+            <div class="course-footer">
+              <a href="https://www.youtube.com/@petcomputacao-unioeste7552" target="_blank" class="btn-watch">
+                <i class="fab fa-youtube"></i> ASSISTIR AGORA
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer id="footer-pica" class="py-3" style="margin-top: 100px;">
     <div class="container text-center">
       <div class="bio text-center mb-3">
@@ -205,6 +383,7 @@
       </ul>
     </div>
   </footer>
+
 
   <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
   <script>
@@ -289,6 +468,8 @@
       targetY = 0;
     });
   </script>
+
+
 </body>
 
 </html>

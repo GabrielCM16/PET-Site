@@ -17,6 +17,10 @@ import tutorImg from "./../../assets/images/members/profile.png";
 import carol from "./../../assets/images/members/carol.png";
 import fabricio from "./../../assets/images/members/fabricio.png";
 import fabio from "./../../assets/images/members/fabio.png";
+import abner from "./../../assets/images/members/abner.png";
+import joao from "./../../assets/images/members/joao.png";
+import eliel from "./../../assets/images/members/eliel.png";
+import furlan from "./../../assets/images/members/furlan.png";
 
 
 const membros = [
@@ -155,7 +159,7 @@ const membros = [
   {
     nome: "Vinícius Almeida Hermes",
     foto: vinicius,
-    icv: "ICV: Arduino",
+    icv: "ICV: Descaracterização de TvBOX",
     membroDesde: "2025",
     links: {
       lattes: "",
@@ -276,12 +280,97 @@ const membros = [
       Jogo: "Team Fortress 2 principalmente, horror, estratégia, fps, simuladores.",
       Comida: "Sim.",
     },
-  }
-
-
-
-
-
+  },
+  {
+    nome: "Abner de Oliveira Moraes",
+    foto: abner,
+    icv: "TBD",
+    membroDesde: "2026",
+    links: {
+      lattes: "...",
+      instagram: "https://www.instagram.com/abner_oli",
+      github: "https://github.com/abnerolimor",
+      email: "abnerolimoraes@gmail.com",
+    },
+    saibaMais: {
+      cidadeNatal: "Cascavel - PR",
+      motivoCurso: "Fiz ensino médio técnico em ADS, me identifiquei com a área e escolhi Ciência da Computação pela base mais ampla e flexível.",
+      hobby: "Cinéfilo",
+      filme: "Monty Python and the Holy Grail",
+      jogo: "Journey",
+      musica: "I Can't Take My Eyes Off You - Frank Sinatra",
+      comida: "Média Luna",
+    },
+  },
+  {
+    nome: "João Pedro Milani",
+    foto: joao,
+    icv: "TBD",
+    membroDesde: "2026",
+    links: {
+      lattes: "...",
+      instagram: "https://www.instagram.com/j_pedr_/",
+      github: "https://github.com/JoaoPedrM1La",
+      email: "jpmilani123@gmail.com",
+    },
+    saibaMais: {
+      cidadeNatal: "Cascavel - PR",
+      motivoCurso:
+        "Gosto da área de programação e quero me aprofundar nos diversos conteúdos que ela possui, como cybersegurança, IoTs e robótica.",
+      hobby: "Jogos, Cozinhar e Desenho PixelArt",
+      filme: "O labirinto do fauno",
+      jogo: "Forza Horizon 4",
+      musica: "Seek & Destroy - Metallica",
+      comida: "Pirogui",
+    },
+  },
+  {
+    nome: "Eliel Rodrigo Cordeiro da Rocha",
+    foto: eliel,
+    icv: "TBD",
+    membroDesde: "2026",
+    links: {
+      lattes: "",
+      instagram: "https://www.instagram.com/elielcdr?igsh=OHJiNmhleXE1OXoz",
+      github: "https://github.com/eliel2703",
+      email: "elielrodrigocordeiro@gmail.com",
+    },
+    saibaMais: {
+      cidadeNatal: "Cascavel - PR",
+      motivoCurso:
+        "Escolhi a área da tecnologia por gostar de criar soluções, desenvolver projetos e transformar ideias em algo útil para as pessoas.",
+      hobby:
+        "Tocar violão, teclado, criar designs, desenvolver projetos pessoais e jogar um pouco com os amigos.",
+      filme: "Carros",
+      jogo: "Rocket League",
+      musica: "505 - Arctic Monkeys",
+      comida:
+        "Churrasco, Strogonoff, Lasanha, Pidê e aquela batata frita do BK",
+    },
+  },
+  {
+    
+    nome: "João Vitor Furlan",
+    foto: furlan,
+    icv: "TBD",
+    membroDesde: "2026",
+    links: {
+      lattes: "...",
+      instagram: "https://www.instagram.com/furlanjoaovitor/",
+      github: "https://github.com/furlas",
+      email: "joaovitorfurlan03@gmail.com",
+    },
+    saibaMais: {
+      cidadeNatal: "Cascavel, PR",
+      motivoCurso:
+        "Área bem vasta e com varias oportunidade de trabalho",
+      hobby: "jogar basquete e ouvir musicas",
+      filme: "Obsessão",
+      jogo: "Gris",
+      musica: "Amem amem” bk",
+      comida: "lasanha",
+    },
+  },
 ];
 
 

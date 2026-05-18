@@ -8,7 +8,7 @@ import marcio from "./../../assets/images/members/marcio.png";
 import clodis from "./../../assets/images/members/clodis.png";
 import gabrielImg from "./../../assets/images/members/gabriel.png";
 import qvd from "./../../assets/images/members/qvd.png";
-import dudu from "./../../assets/images/members/eduardo.png";
+import dudu from "./../../assets/images/members/esquilo.png";
 import thiago from "./../../assets/images/members/thiago.png";
 import thalita from "./../../assets/images/members/thalita.png";
 import rafael from "./../../assets/images/members/rafael.png";

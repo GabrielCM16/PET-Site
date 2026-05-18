@@ -287,7 +287,7 @@ const membros = [
     icv: "TBD",
     membroDesde: "2026",
     links: {
-      lattes: "...",
+      /*lattes: "...",*/
       instagram: "https://www.instagram.com/abner_oli",
       github: "https://github.com/abnerolimor",
       email: "abnerolimoraes@gmail.com",
@@ -308,7 +308,7 @@ const membros = [
     icv: "TBD",
     membroDesde: "2026",
     links: {
-      lattes: "...",
+      /*lattes: "...",*/
       instagram: "https://www.instagram.com/j_pedr_/",
       github: "https://github.com/JoaoPedrM1La",
       email: "jpmilani123@gmail.com",
@@ -330,7 +330,7 @@ const membros = [
     icv: "TBD",
     membroDesde: "2026",
     links: {
-      lattes: "",
+      /*lattes: "...",*/
       instagram: "https://www.instagram.com/elielcdr?igsh=OHJiNmhleXE1OXoz",
       github: "https://github.com/eliel2703",
       email: "elielrodrigocordeiro@gmail.com",
@@ -355,7 +355,7 @@ const membros = [
     icv: "TBD",
     membroDesde: "2026",
     links: {
-      lattes: "...",
+      /*lattes: "...",*/
       instagram: "https://www.instagram.com/furlanjoaovitor/",
       github: "https://github.com/furlas",
       email: "joaovitorfurlan03@gmail.com",

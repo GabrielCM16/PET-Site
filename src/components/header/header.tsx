@@ -64,10 +64,10 @@ const Header: React.FC = () => {
             <Link to="/downloads">Publicações</Link>
           </div>
 
-          <Link to="/gamejam10" className="gamejam-link">
+          <a href="/gamejam10/" className="gamejam-link">
             <span>GameJam</span>
             <strong>X</strong>
-          </Link>
+          </a>
 
           <div className="nav-side right">
             <Link to="/projetos">Projetos</Link>
@@ -89,10 +89,11 @@ const Header: React.FC = () => {
       {isMenuOpen && (
         <div className="mobile-menu">
           <Link to="/" onClick={toggleMenu}>Início</Link>
-          <Link to="/gamejam10" className="gamejam-link">
+          <a href="/gamejam10/" className="gamejam-link">
             <span>GameJam</span>
             <strong>X</strong>
-          </Link>          <Link to="/membros" onClick={toggleMenu}>Membros</Link>
+          </a>
+          <Link to="/membros" onClick={toggleMenu}>Membros</Link>
           <Link to="/downloads" onClick={toggleMenu}>Publicações</Link>
           <Link to="/projetos" onClick={toggleMenu}>Projetos</Link>
           <Link to="/sala" onClick={toggleMenu}>Sala</Link>

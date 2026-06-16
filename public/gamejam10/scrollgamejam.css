@@ -85,7 +85,7 @@ transition: none;
   align-items: center;
 
   background-image:
-    url('/gamejam/img/frame_0001.jpg');
+    url('/gamejam10/img/frame_0001.jpg');
 
   background-size: cover;
   background-position: center;
@@ -754,7 +754,7 @@ body{
     margin-top: 0;
     
     /* 🔥 NOVA PARTE - cobre as barras pretas */
-    background-image: url('/gamejam/img/frame_0001.jpg');
+    background-image: url('/gamejam10/img/frame_0001.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -863,20 +863,56 @@ body{
   font-size: 0.9rem;
 }
 
-/* Container */
+/* Container que segura os dois blocos de QR */
 .qr-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: -135px; /* <-- resolve o “colado” */
+  gap: 40px; /* Espaço entre os dois QR Codes */
 }
 
-/* QR */
+/* Bloco individual de cada QR + Texto */
+.qr-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo do texto de identificação */
+.qr-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+/* Apaga um pouco o texto do QR Code que está bloqueado/borrado */
+.label-blur {
+  opacity: 0.6;
+}
+
+/* --- QR CODE ATIVO (Minicursos) --- */
+.qr-active {
+  width: clamp(180px, 20vw, 260px);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px; /* Opcional: deixa os cantos do QR levemente arredondados */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.qr-active:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* --- QR CODE BORRADO (Geral) --- */
 .qr-blur {
   width: clamp(180px, 20vw, 260px);
   aspect-ratio: 1/1;
   object-fit: cover;
+  border-radius: 8px;
 
   filter: blur(8px);
   opacity: 0.85;
@@ -886,20 +922,21 @@ body{
 }
 
 .qr-blur:hover {
-  transform: scale(1.08);
-  filter: blur(5px);
+  transform: scale(1.05);
+  filter: blur(4px); /* Diminui um pouco o blur no hover para dar feedback */
   opacity: 1;
 }
 
-/* Mobile */
+
+/* --- Mobile --- */
 @media (max-width: 768px) {
   .qr-container {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
   }
 
-  .qr-blur {
+  .qr-active, .qr-blur {
     width: 60vw;
     max-width: 220px;
   }

@@ -8,6 +8,10 @@
     ],
     "rewrites": [
       {
+        "source": "/gamejam10/**",
+        "destination": "/gamejam10/index.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

@@ -10,7 +10,6 @@ import Newspetletter from './components/newspet/newspet';
 import Faq from './components/faq/faq'; 
 import Bagre from './components/membrosAtuais/bagre';
 import Downloads from './components/Downloads/downloads';
-import GameJam10 from './components/GameJam10/Gamejam10';
 import NotFound from "./components/NotFound/NotFound";
 
 // Componente de Layout para agrupar as rotas que USAM header e footer
@@ -42,9 +41,6 @@ function App() {
           <Route path="/logo_interessante" element={<Inicio />} />
           <Route path="/bagre" element={<Bagre />} />
         </Route>
-
-        {/* Rota da GameJam 10 - Fora do MainLayout (Sem Header/Footer) */}
-        <Route path="/gamejam10" element={<GameJam10 />} />
 
         {/* Rota 404 - Captura qualquer URL não definida acima */}
         <Route path="*" element={<NotFound />} />

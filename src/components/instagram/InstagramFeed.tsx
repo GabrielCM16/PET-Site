@@ -9,9 +9,15 @@ const InstagramCarousel: React.FC = () => {
   const startX = useRef(0)
   const isDragging = useRef(false)
 
-  const acess = 'IGAAO1m4SCswNBZAFlMWTVSMmpBRDUtdm52STVUQ2g1al9MZA1FTTURDWmFjbmxUYV9LSnM5RTBvMnFXMkxtVTkzUEtwMTRSWFZAmTnk1bER2dnRDTDVSbFpEWlk3TmNaZAU9wSzhkMVMtTm5hRVpwWlhIQzlvclpJTHN0RVY0SHE4QQZDZD';
+  const acess = import.meta.env.VITE_INSTAGRAM_ACCESS_TOKEN;
 
   useEffect(() => {
+    // Evita tentar fazer o fetch caso a variável não esteja configurada
+    if (!acess) {
+      console.error("Token do Instagram não foi encontrado nas variáveis de ambiente.");
+      return;
+    }
+    
     const fetchMedia = async () => {
       setLoading(true)
       try {

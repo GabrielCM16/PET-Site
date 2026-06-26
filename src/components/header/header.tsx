@@ -64,7 +64,7 @@ const Header: React.FC = () => {
             <Link to="/downloads">Publicações</Link>
           </div>
 
-          <a href="/gamejam10/" className="gamejam-link">
+          <a href="/gamejam10/index.html" className="gamejam-link">
             <span>GameJam</span>
             <strong>X</strong>
           </a>

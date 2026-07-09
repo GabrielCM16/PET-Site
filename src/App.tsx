@@ -39,8 +39,9 @@ function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/downloads" element={<Downloads />} />
           <Route path="/logo_interessante" element={<Inicio />} />
-          <Route path="/bagre" element={<Bagre />} />
         </Route>
+
+        <Route path="/bagre" element={<Bagre />} />
 
         {/* Rota 404 - Captura qualquer URL não definida acima */}
         <Route path="*" element={<NotFound />} />

@@ -96,7 +96,7 @@ const Sus: React.FC = () => {
 
     if (active) {
       if (!audioMusicaRef.current) {
-        audioMusicaRef.current = new Audio("/audiotinibom.mp3");
+        audioMusicaRef.current = new Audio("/sounds/audiotinibom.mp3");
         audioMusicaRef.current.loop = true;
       }
       audioMusicaRef.current.play();
@@ -209,7 +209,7 @@ const Sus: React.FC = () => {
 
           if (fruitCollected) {
             score++;
-            const audio = new Audio("/teams.mp3");
+            const audio = new Audio("/sounds/teams.mp3");
             // ajusta velocidade aleatoriamente entre 0.8x e 1.5x
             audio.playbackRate = 0.8 + Math.random() * 0.7;
 
@@ -219,9 +219,9 @@ const Sus: React.FC = () => {
             audio.play();
 
             if (score >= 10) {
-              const audio = new Audio("/victory.mp3");
+              const audio = new Audio("/sounds/victory.mp3");
               audio.play();
-              showCustomModal("pet code");
+              showCustomModal("Parabéns!", `Você alimentou o Tini ${score} vezes.`);
               setActive(false);
               document.body.style.overflow = "auto";
               window.removeEventListener("keydown", handleKeyDown);
@@ -275,7 +275,7 @@ const Sus: React.FC = () => {
 
 
           if (collided) {
-            const audio = new Audio("/plankton.mp3");
+            const audio = new Audio("/sounds/plankton.mp3");
             audio.play();
             showCustomModal("Game Over!", `Pontos: ${score}`);
             setActive(false);

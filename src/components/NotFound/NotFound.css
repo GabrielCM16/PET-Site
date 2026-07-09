@@ -192,3 +192,45 @@
     opacity: .6;
   }
 }
+
+/* Animação do chase (Tini e Neandertal no rodapé) */
+.notfound-floor {
+  position: absolute;
+  bottom: 0; /* De volta ao chão (base da tela) */
+  left: 0;
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1; /* Passa atrás do conteúdo do meio se sobrepor */
+}
+
+.notfound-chase {
+  position: absolute;
+  bottom: 5px;
+  display: flex;
+  align-items: flex-end;
+  gap: 25px; /* Distância entre o Neandertal e o Tini */
+  animation: runAcross 16s linear infinite;
+  will-change: transform;
+}
+
+.notfound-sprite {
+  height: 55px; /* Tamanho maior */
+  width: auto;
+  image-rendering: pixelated; /* Mantém o pixel art nítido */
+}
+
+.notfound-sprite.neandertal {
+  height: 62px; /* O neandertal é um pouco maior */
+  transform: scaleX(-1); /* Espelha o neandertal horizontalmente para correr para frente */
+}
+
+@keyframes runAcross {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}

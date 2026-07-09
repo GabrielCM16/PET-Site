@@ -25,7 +25,7 @@ const Header: React.FC = () => {
       console.log("Efeito especial ativado!");
 
       // toca o áudio
-      const audio = new Audio('/metalpipe.mp3');
+      const audio = new Audio('/sounds/metalpipe.mp3');
       audio.play();
 
       setIsCrazy(true);
@@ -64,7 +64,7 @@ const Header: React.FC = () => {
             <Link to="/downloads">Publicações</Link>
           </div>
 
-          <a href="/gamejam10/index.html" className="gamejam-link">
+          <a href="/gamejam10/" className="gamejam-link">
             <span>GameJam</span>
             <strong>X</strong>
           </a>

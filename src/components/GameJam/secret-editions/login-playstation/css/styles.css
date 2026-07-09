@@ -1,0 +1,236 @@
+.ps-login-wrapper {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: 'SST', 'Helvetica', 'Arial', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.ps-login-wrapper .cabecalho {
+    background-color: rgb(0, 0, 0);
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.ps-login-wrapper .logo-sony {
+    position: absolute;
+    right: 0;
+}
+
+.ps-login-wrapper .background-image {
+    position: absolute; /* Posiciona o elemento no fundo */
+    width: 100%; /* Largura da viewport */
+    height: 100%; /* Altura da viewport */
+    z-index: -1; /* Garante que a imagem fique atrás do conteúdo */
+    object-fit: cover;
+}
+
+.ps-login-wrapper .logo-playstation {
+    width: 250px;
+    height: 250px;
+}
+
+.ps-login-wrapper .container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-top: 40px; /* Para não ficar atrás do cabeçalho */
+}
+
+.ps-login-wrapper .left-side, .ps-login-wrapper .right-side {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ps-login-wrapper .right-side {
+    background-color: rgb(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+.ps-login-wrapper .right-side h1 {
+    font-weight: 200; /* Peso da fonte */
+    font-style: normal; /* Estilo da fonte */
+    font-size: 28px; /* Tamanho da fonte */
+    line-height: 35px; /* Altura da linha */
+    color: #ffffff; /* Cor do texto */
+    margin-bottom: 20px;
+}
+
+.ps-login-wrapper .right-side input {
+    font-weight: 400; /* Peso da fonte */
+    font-style: normal; /* Estilo da fonte */
+    font-size: 18px; /* Tamanho da fonte */
+    line-height: 27px; /* Altura da linha */
+    color: #fff; /* Cor do texto */
+
+    background-color: rgb(117, 117, 117, 0.15);
+    border-radius: 50px; /* Bordas arredondadas */
+    border: 2px solid transparent;
+    padding: 15px 20px; /* Espaçamento interno para aumentar a área clicável */
+    height: 60px;
+    width: 57%; /* Ocupa toda a largura do contêiner pai */
+    box-sizing: border-box; /* Inclui o padding e border na largura total do input */
+    transition: border-color 0.3s ease; /* Transição suave para a cor da borda */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.ps-login-wrapper .right-side input::placeholder {
+    color: #ffffff; /* Cor branca */
+    opacity: 0.5; /* Garante que a opacidade seja 100% */
+}
+
+.ps-login-wrapper .right-side input:focus {
+    border-color: rgb(0, 132, 240); /* Muda a cor da borda para azul ao focar */
+    outline: none; /* Remove a borda padrão ao focar */
+    background-color: rgb(255, 255, 255, 0.2);
+}
+
+.ps-login-wrapper .right-side button {
+    font-weight: 700; /* Peso da fonte */
+    font-style: normal; /* Estilo da fonte */
+    font-size: 18px; /* Tamanho da fonte */
+    line-height: 23px; /* Altura da linha */
+    color: #000; /* Cor do texto */
+
+    background-color: rgb(117, 117, 117);
+    border-radius: 50px; /* Bordas arredondadas */
+    border: none;
+    padding: 15px; /* Espaçamento interno para aumentar a área clicável */
+    height: 50px;
+    width: 57%; /* Ocupa toda a largura do contêiner pai */
+    margin-bottom: 25px; /* Espaçamento abaixo do botão */
+}
+
+.ps-login-wrapper .right-side .btn-seguinte {
+    margin-top: 20px; /* Espaçamento acima do botão */
+    cursor: not-allowed; /* Cursor padrão para botão desativado */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+.ps-login-wrapper .right-side .btn-seguinte.active {
+    background-color: #fff; /* Cor do botão quando ativado */
+    color: #000; /* Cor do texto quando ativado */
+    cursor: pointer; /* Cursor para botão clicável */
+}
+
+.ps-login-wrapper .right-side .btn-seguinte.active:hover {
+    background-color: rgb(200, 200, 200); /* Clareia o fundo ao passar o mouse quando ativado */
+}
+
+.ps-login-wrapper .right-side .btn-criar-conta {
+    margin-top: 20px;
+    background-color: rgb(117, 117, 117, 0.15);
+    color: #fff;
+}
+
+.ps-login-wrapper .right-side .btn-criar-conta:hover {
+    background-color: rgb(117, 117, 117, 0.4); /* Clareia o fundo ao passar o mouse */
+}
+
+.ps-login-wrapper .close-btn {
+    position: absolute;
+    top: 50px; /* Distância do topo */
+    right: 25px; /* Distância da direita */
+    display: inline-block; /* Garante que o link se comporte como um bloco para o padding */
+}
+
+.ps-login-wrapper .right-side a {
+    font-weight: 300; /* Peso da fonte */
+    font-style: normal; /* Estilo da fonte */
+    font-size: 19px; /* Tamanho da fonte */
+    line-height: 23px; /* Altura da linha */
+    color: rgb(0, 132, 240); /* Cor do texto */
+    margin-bottom: 15px;
+    margin-top: 5px;
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.ps-login-wrapper .right-side a:hover {
+    color: rgb(0, 102, 204); /* Cor do texto ao passar o mouse (escurecida) */
+}
+
+/* Ajustes para tablets */
+@media (max-width: 1024px) {
+    .ps-login-wrapper .right-side {
+        padding: 10px;
+    }
+
+    .ps-login-wrapper .right-side h1 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .ps-login-wrapper .right-side input {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .ps-login-wrapper .right-side button {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .ps-login-wrapper .right-side a {
+        font-size: 16px;
+    }
+}
+
+/* Ajustes para telefones */
+@media (max-width: 768px) {
+    .ps-login-wrapper .container {
+        flex-direction: column;
+    }
+
+    .ps-login-wrapper .left-side {
+        display: none; /* Remove a parte esquerda do site */
+    }
+
+    .ps-login-wrapper .right-side {
+        width: 100%; /* Garante que a parte direita ocupe toda a largura */
+        padding: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza horizontalmente os itens */
+    }
+
+    .ps-login-wrapper .logo-playstation {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 10px; /* Ajusta a distância do topo */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Ajusta a posição para centralizar */
+    }
+
+    .ps-login-wrapper .right-side h1 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .ps-login-wrapper .right-side input, .ps-login-wrapper .right-side button {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .ps-login-wrapper .close-btn {
+        top: 10px; /* Ajusta a distância do topo para o telefone */
+        right: 10px; /* Ajusta a distância da direita para o telefone */
+    }
+}

@@ -12,6 +12,7 @@ import Bagre from './components/membrosAtuais/bagre';
 import Downloads from './components/Downloads/downloads';
 import NotFound from "./components/NotFound/NotFound";
 import GameJamHistory from "./components/GameJam/GameJamHistory";
+import SecretGameJamLoader from "./components/GameJam/secret-editions/SecretGameJamLoader";
 
 // Componente de Layout para agrupar as rotas que USAM header e footer
 const MainLayout = () => {
@@ -44,6 +45,7 @@ function App() {
         </Route>
 
         <Route path="/bagre" element={<Bagre />} />
+        <Route path="/gamejam/:editionId" element={<SecretGameJamLoader />} />
 
         {/* Rota 404 - Captura qualquer URL não definida acima */}
         <Route path="*" element={<NotFound />} />

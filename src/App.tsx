@@ -11,6 +11,7 @@ import Faq from './components/faq/faq';
 import Bagre from './components/membrosAtuais/bagre';
 import Downloads from './components/Downloads/downloads';
 import NotFound from "./components/NotFound/NotFound";
+import GameJamHistory from "./components/GameJam/GameJamHistory";
 
 // Componente de Layout para agrupar as rotas que USAM header e footer
 const MainLayout = () => {
@@ -39,6 +40,7 @@ function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/downloads" element={<Downloads />} />
           <Route path="/logo_interessante" element={<Inicio />} />
+          <Route path="/gamejam" element={<GameJamHistory />} />
         </Route>
 
         <Route path="/bagre" element={<Bagre />} />

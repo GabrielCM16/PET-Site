@@ -120,7 +120,12 @@
           <p class="pb-5 text-white">Mais do que uma edição comemorativa, este é um marco estratégico. Reunindo
             talentos, criatividade e execução sob pressão, a X Game Jam consolida um ecossistema onde ideias saem do
             papel e se transformam em experiências reais. É sobre construir, iterar e entregar, elevando o nível a cada
-            ciclo.</p>
+            ciclo.
+            <span class="d-block mt-4" style="font-size: 0.95rem; opacity: 0.85; font-family: 'Orbitron', sans-serif; letter-spacing: 0.5px;">
+              Saiba mais sobre a Game Jam e confira as edições anteriores em 
+              <a href="https://petcomp.unioeste.br/gamejam" target="_blank" style="color: #007bff; text-decoration: underline; font-weight: bold;">petcomp.unioeste.br/gamejam</a>.
+            </span>
+          </p>
           <!-- Corrigido de src/assets/GameJam.png para a pasta img -->
           <div id="gameJamCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
 
@@ -168,26 +173,32 @@
         <br>11 DE JULHO<br>2026
       </h1>
       <div class="qr-wrapper">
-        <div class="bio text-center">
-          <p class="mb-4 text-white" style="line-height: 1; font-weight: bold; letter-spacing: 1px;">
-            INSCRIÇÕES
+        <div class="text-center">
+          <p class="mb-4 text-white text-uppercase" style="line-height: 1; font-weight: bold; letter-spacing: 2px; font-size: 24px;">
+            INSCRIÇÕES ENCERRADAS
           </p>
         </div>
 
         <div class="qr-container">
           <div class="qr-box">
-            <a href="https://forms.gle/zLh7eoqtiH3N7bcM6" target="_blank">
-              <img src="/gamejam10/img/qrcodeminicursos.png" class="qr-active">
-            </a>
-            <p class="qr-label text-white mt-2">Minicursos</p>
+            <img src="/gamejam10/img/qrcodeminicursos.png" class="qr-blur" style="pointer-events: none;">
+            <p class="qr-label label-blur text-white mt-2">Minicursos</p>
           </div>
 
           <div class="qr-box">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScJ7HwKCIksihf5DnSDCs8DjehgoH1t0IMvRw4UFRcaG3ioBQ/viewform?usp=dialog" target="_blank">
-              <img src="/gamejam10/img/qrcodeinscricao.png" class="qr-active"  >
-            </a>
-            <p class="qr-label text-white mt-2">Inscrição Geral</p>
+            <img src="/gamejam10/img/qrcodeinscricao.png" class="qr-blur" style="pointer-events: none;">
+            <p class="qr-label label-blur text-white mt-2">Inscrição Geral</p>
           </div>
+        </div>
+
+        <!-- Botão de Submissão no Itch.io -->
+        <div class="text-center mt-5">
+          <a href="https://itch.io/jam/ab-game-jam-x" target="_blank" class="btn btn-lg px-5 py-3 fw-bold text-white text-uppercase" style="background: linear-gradient(135deg, #007bff 0%, #ff007f 100%); border: none; border-radius: 50px; font-family: 'Orbitron', sans-serif; letter-spacing: 2px; box-shadow: 0 0 20px rgba(0, 123, 255, 0.5); transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 30px rgba(255, 0, 127, 0.8)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 20px rgba(0, 123, 255, 0.5)'">
+            Submeta seu jogo
+          </a>
+          <p class="text-secondary mt-3 text-uppercase" style="letter-spacing: 1.5px; font-size: 0.85rem; font-family: 'Orbitron', sans-serif;">
+            Envio disponível de 14/07 até 23/07
+          </p>
         </div>
       </div>
     </div>
@@ -217,7 +228,7 @@
 
 
         <!-- Item 3 -->
-        <div class="schedule-row row mx-0 align-items-center mb-3 active-event">
+        <div class="schedule-row row mx-0 align-items-center mb-3 active-event" data-start="2026-06-16" data-end="2026-06-20">
           <div class="col-md-4 mb-2 mb-md-0">
             <span class="event-title">Curso de Modelagem 3D</span>
           </div>
@@ -233,7 +244,7 @@
         </div>
 
         <!-- Item 4 -->
-        <div class="schedule-row row mx-0 align-items-center mb-3 active-event">
+        <div class="schedule-row row mx-0 align-items-center mb-3 active-event" data-start="2026-06-22" data-end="2026-06-26">
           <div class="col-md-4 mb-2 mb-md-0">
             <span class="event-title">Curso de Unreal Engine 5</span>
           </div>
@@ -249,7 +260,7 @@
         </div>
 
         <!-- Item 1 -->
-        <div class="schedule-row row mx-0 align-items-center mb-3 active-event">
+        <div class="schedule-row row mx-0 align-items-center mb-3 active-event" data-start="2026-06-25">
           <div class="col-md-4 mb-2 mb-md-0">
             <span class="event-title">Início das Inscrições</span>
           </div>
@@ -265,7 +276,7 @@
         </div>
 
         <!-- Item 3 -->
-        <div class="schedule-row row mx-0 align-items-center mb-3 active-event">
+        <div class="schedule-row row mx-0 align-items-center mb-3 active-event" data-start="2026-07-03">
           <div class="col-md-4 mb-2 mb-md-0">
             <span class="event-title">Curso de Godot</span>
           </div>
@@ -283,7 +294,7 @@
 
 
         <!-- Item 2 -->
-        <div class="schedule-row row mx-0 align-items-center mb-3 active-event">
+        <div class="schedule-row row mx-0 align-items-center mb-3 active-event" data-start="2026-07-09">
           <div class="col-md-4 mb-2 mb-md-0">
             <span class="event-title">Encerramento das Inscrições</span>
           </div>
@@ -299,50 +310,82 @@
         </div>
 
         <!-- Item 2 -->
-        <div class="schedule-row row mx-0 align-items-center mb-3 active-event">
+        <div class="schedule-row row mx-0 align-items-center mb-3 active-event" data-start="2026-07-11">
           <div class="col-md-4 mb-2 mb-md-0">
-            <span class="event-title">Abertura Oficial</span>
+            <span class="event-title">Live de Abertura</span>
           </div>
           <div class="col-md-2 mb-2 mb-md-0">
             <span class="badge-date">11 JUL</span>
           </div>
           <div class="col-md-3 text-md-center mb-2 mb-md-0">
-            <span class="text-white-50">a definir</span>
+            <span class="text-white-50">14:00h</span>
           </div>
           <div class="col-md-3 text-md-end">
-            <span class="location-tag">a definir</span>
+            <span class="location-tag">
+              <a href="https://www.youtube.com/@petcomputacao-unioeste7552" target="_blank" style="color: #007bff; text-decoration: none;">
+                <i class="fab fa-youtube"></i> YouTube
+              </a>
+            </span>
           </div>
         </div>
 
         <!-- Item 2 -->
-        <div class="schedule-row row mx-0 align-items-center mb-3 active-event">
+        <div class="schedule-row row mx-0 align-items-center mb-3 active-event" data-start="2026-07-18">
           <div class="col-md-4 mb-2 mb-md-0">
-            <span class="event-title">Checkpoint</span>
+            <span class="event-title">Checkpoint (Presencial)</span>
           </div>
           <div class="col-md-2 mb-2 mb-md-0">
             <span class="badge-date">18 JUL</span>
           </div>
           <div class="col-md-3 text-md-center mb-2 mb-md-0">
-            <span class="text-white-50">a definir</span>
+            <span class="text-white-50">14:00h</span>
           </div>
           <div class="col-md-3 text-md-end">
-            <span class="location-tag">a definir</span>
+            <span class="location-tag">
+              <a href="https://www.google.com/maps/search/?api=1&query=Unioeste+Cascavel+Rua+Universit%C3%A1ria+1619" target="_blank" style="color: #007bff; text-decoration: none;">
+                Unioeste
+              </a>
+            </span>
+          </div>
+        </div>
+
+        <!-- Item: Submissão dos Jogos -->
+        <div class="schedule-row row mx-0 align-items-center mb-3 active-event" data-start="2026-07-14" data-end="2026-07-23">
+          <div class="col-md-4 mb-2 mb-md-0">
+            <span class="event-title">Submissão dos Jogos</span>
+          </div>
+          <div class="col-md-2 mb-2 mb-md-0">
+            <span class="badge-date">14/23 JUL</span>
+          </div>
+          <div class="col-md-3 text-md-center mb-2 mb-md-0">
+            <span class="text-white-50">Até às 23:59h</span>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <span class="location-tag">
+              <a href="https://itch.io/jam/ab-game-jam-x" target="_blank" style="color: #007bff; text-decoration: none;">
+                Itch.io
+              </a>
+            </span>
           </div>
         </div>
 
         <!-- Item 4 -->
-        <div class="schedule-row row mx-0 align-items-center mb-3 active-event">
+        <div class="schedule-row row mx-0 align-items-center mb-3 active-event" data-start="2026-07-25">
           <div class="col-md-4 mb-2 mb-md-0">
-            <span class="event-title">Encerramento GameJam</span>
+            <span class="event-title">Cerimônia de Encerramento e Premiação (Presencial)</span>
           </div>
           <div class="col-md-2 mb-2 mb-md-0">
-            <span class="badge-date">25 Jul</span>
+            <span class="badge-date">25 JUL</span>
           </div>
           <div class="col-md-3 text-md-center mb-2 mb-md-0">
-            <span class="text-white-50">a definir</span>
+            <span class="text-white-50">a divulgar</span>
           </div>
           <div class="col-md-3 text-md-end">
-            <span class="location-tag">AcicLabs</span>
+            <span class="location-tag">
+              <a href="https://www.google.com/maps/search/?api=1&query=Associa%C3%A7%C3%A3o+Comercial+e+Industrial+de+Cascavel+Rua+Pernambuco+1800" target="_blank" style="color: #007bff; text-decoration: none;">
+                ACIC Labs / SICOOB
+              </a>
+            </span>
           </div>
         </div>
 
@@ -573,6 +616,75 @@
     });
   </script>
 
+  <!-- Script para marcar automaticamente a data atual ou o próximo evento no Cronograma -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      const rows = document.querySelectorAll(".schedule-row");
+      let todayEventFound = false;
+      let nextUpcomingRow = null;
+      let nextUpcomingDiff = Infinity;
+
+      function parseLocalDate(dateStr) {
+        if (!dateStr) return null;
+        const [y, m, d] = dateStr.split('-').map(Number);
+        return new Date(y, m - 1, d);
+      }
+
+      rows.forEach(row => {
+        const startStr = row.getAttribute("data-start");
+        const endStr = row.getAttribute("data-end");
+        
+        if (!startStr) return;
+
+        const startDate = parseLocalDate(startStr);
+        const endDate = endStr ? parseLocalDate(endStr) : startDate;
+
+        // Verifica se hoje está dentro do intervalo do evento
+        if (today >= startDate && today <= endDate) {
+          row.classList.add("current-event");
+          
+          const title = row.querySelector(".event-title");
+          if (title) {
+            const badge = document.createElement("span");
+            badge.className = "badge bg-danger ms-2";
+            badge.style.fontSize = "0.75rem";
+            badge.style.fontFamily = "'Orbitron', sans-serif";
+            badge.style.verticalAlign = "middle";
+            badge.style.letterSpacing = "1px";
+            badge.textContent = "HOJE";
+            title.appendChild(badge);
+          }
+          todayEventFound = true;
+        } else if (startDate > today) {
+          const diff = startDate - today;
+          if (diff < nextUpcomingDiff) {
+            nextUpcomingDiff = diff;
+            nextUpcomingRow = row;
+          }
+        }
+      });
+
+      // Se nenhum evento for hoje, destaca o próximo evento futuro mais próximo
+      if (!todayEventFound && nextUpcomingRow) {
+        nextUpcomingRow.classList.add("current-event");
+        
+        const title = nextUpcomingRow.querySelector(".event-title");
+        if (title) {
+          const badge = document.createElement("span");
+          badge.className = "badge bg-primary ms-2";
+          badge.style.fontSize = "0.75rem";
+          badge.style.fontFamily = "'Orbitron', sans-serif";
+          badge.style.verticalAlign = "middle";
+          badge.style.letterSpacing = "1px";
+          badge.textContent = "PRÓXIMO";
+          title.appendChild(badge);
+        }
+      }
+    });
+  </script>
 
 </body>
 

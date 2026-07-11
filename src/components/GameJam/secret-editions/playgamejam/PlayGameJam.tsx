@@ -5,6 +5,7 @@ import { signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { useXMB } from './js/useXMB';
 import SupportChatModal from './SupportChatModal';
+import PhotosModal from './PhotosModal';
 import './scss/main.css';
 import asset0 from './images/vid.mp4';
 import asset1 from './images/user.png';
@@ -32,6 +33,7 @@ const PlayGameJam: React.FC = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
   const [isSupportOpen, setIsSupportOpen] = useState(false);
+  const [isPhotosOpen, setIsPhotosOpen] = useState(false);
 
   const handleLogout = async () => {
     try {
@@ -47,6 +49,7 @@ const PlayGameJam: React.FC = () => {
   return (
     <>
     {isSupportOpen && <SupportChatModal onClose={() => setIsSupportOpen(false)} />}
+    {isPhotosOpen && <PhotosModal onClose={() => setIsPhotosOpen(false)} />}
     <div className="ps3-theme-container">
       
     <audio id="startup" src={asset18} />
@@ -143,9 +146,9 @@ Esta interface é uma homenagem ao sistema XMB do PlayStation® 3 e não possui 
                 <p className="titletext">Photos</p>
                 
                 <div className="xmb-contents">
-                    <div className="submenu one"  id="about">
+                    <div className="submenu one" id="about" onClick={() => setIsPhotosOpen(true)} style={{ cursor: 'pointer' }}>
                         <img id ="aboutimage" className="abimg" src={asset7} alt="" />
-                        <p id="about">test</p>
+                        <p id="about">Artes</p>
                     </div>
                     <div className="submenu two" id="two">
                         <img className="twoimg" src={asset8} alt="" />

@@ -286,9 +286,12 @@ export const useXMB = () => {
 
         else if(e.key === 'Enter' || e.key === ' '){
             e.preventDefault();
-            const activeSubmenu = document.querySelector('.submenu.active') as HTMLElement;
-            if (activeSubmenu) {
-                activeSubmenu.click();
+            const activeSection = document.querySelector('.xmb-title.active');
+            if (activeSection) {
+                const activeSubmenu = activeSection.querySelector('.submenu.active') as HTMLElement;
+                if (activeSubmenu) {
+                    activeSubmenu.click();
+                }
             }
         }
     };

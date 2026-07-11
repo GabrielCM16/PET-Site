@@ -1,19 +1,41 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../../../firebase';
 import './css/styles.css';
 import backgroundBg from './Imagens/Background.jpg';
 import sonyLogo from './Imagens/Logo.svg';
 import playstationLogo from './Imagens/Playstation.svg';
 
 const LoginPlaystation: React.FC = () => {
-  const [id, setId] = useState<string>('login123');
+  const [id, setId] = useState<string>('gabriel@gmail.com');
   const [password, setPassword] = useState<string>('');
+  const [error, setError] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Ação do login - não faz nada por padrão conforme os requisitos
+    setError(null);
+    setIsLoading(true);
+
+    try {
+      // Assuming the user types a full email in the ID field.
+      // If they type just an ID, you might need to append a domain e.g. `${id}@enigma.com`
+      const emailToLogin = id.includes('@') ? id : `${id}@enigma.com`;
+      await signInWithEmailAndPassword(auth, emailToLogin, password);
+      
+      // Redirect to the new protected route
+      navigate('/gamejam/playgamejam');
+    } catch (err: any) {
+      console.error("Login Error:", err);
+      setError("Falha no login. Verifique as credenciais.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
-  const isFormValid = id.trim() !== '' && password.trim() !== '';
+  const isFormValid = id.trim() !== '' && password.trim() !== '' && !isLoading;
 
   return (
     <div className="ps-login-wrapper">
@@ -44,6 +66,7 @@ const LoginPlaystation: React.FC = () => {
               placeholder="ID de início de sessão (endereço de correio eletrónico)"
               value={id}
               onChange={(e) => setId(e.target.value)}
+              disabled={isLoading}
             />
 
             {/* Input de Senha */}
@@ -53,7 +76,10 @@ const LoginPlaystation: React.FC = () => {
               placeholder="Senha"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              disabled={isLoading}
             />
+
+            {error && <div style={{ color: 'red', marginTop: '10px', marginBottom: '10px' }}>{error}</div>}
 
             {/* Botão Iniciar sessão */}
             <button
@@ -62,7 +88,7 @@ const LoginPlaystation: React.FC = () => {
               className={`btn-seguinte ${isFormValid ? 'active' : ''}`}
               disabled={!isFormValid}
             >
-              Iniciar sessão
+              {isLoading ? 'Iniciando sessão...' : 'Iniciar sessão'}
             </button>
           </form>
 

@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useAuth } from '../../../../context/AuthContext';
 import { auth } from '../../../../firebase';
 import { signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { useXMB } from './js/useXMB';
+import SupportChatModal from './SupportChatModal';
 import './scss/main.css';
 import asset0 from './images/vid.mp4';
 import asset1 from './images/user.png';
@@ -30,6 +31,7 @@ import suporte from './images/atendimento-ao-cliente.png'
 const PlayGameJam: React.FC = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
+  const [isSupportOpen, setIsSupportOpen] = useState(false);
 
   const handleLogout = async () => {
     try {
@@ -43,6 +45,8 @@ const PlayGameJam: React.FC = () => {
   useXMB();
 
   return (
+    <>
+    {isSupportOpen && <SupportChatModal onClose={() => setIsSupportOpen(false)} />}
     <div className="ps3-theme-container">
       
     <audio id="startup" src={asset18} />
@@ -96,7 +100,7 @@ Esta interface é uma homenagem ao sistema XMB do PlayStation® 3 e não possui 
                         <p className="subtext" style={{ position: 'absolute', marginLeft: '120px', marginTop: '65px', fontSize: '14px', color: '#dadada' }}>Selecione para sair</p>
                     </div>
                     
-                    <div className="submenu three" id="three" style={{ cursor: 'pointer' }}>
+                    <div className="submenu three" id="three" onClick={() => setIsSupportOpen(true)} style={{ cursor: 'pointer' }}>
                         <img className="resimg" src={suporte} alt="" style={{ filter: 'grayscale(90%)' }} />
                         <p style={{ position: 'absolute', marginLeft: '120px', fontSize: '1.5rem', textShadow: '2px 2px 5px black' }}>Suporte</p>
                         <p className="subtext" style={{ position: 'absolute', marginLeft: '120px', marginTop: '65px', fontSize: '14px', color: '#dadada' }}>Entre em contato com o suporte</p>
@@ -203,6 +207,7 @@ Esta interface é uma homenagem ao sistema XMB do PlayStation® 3 e não possui 
 
 
     </div>
+    </>
   );
 };
 

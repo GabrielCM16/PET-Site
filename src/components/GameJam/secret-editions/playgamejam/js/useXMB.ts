@@ -218,9 +218,14 @@ export const useXMB = () => {
     };
     
     const handleKeyDown = (e: KeyboardEvent) => {
-        if (!menuLoaded) {
+        if (!menuLoaded || document.querySelector('.psn-modal-open')) {
             if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Enter', ' '].includes(e.key)) {
-                e.preventDefault();
+                // If a modal is open, we do NOT want to preventDefault for Enter/Space
+                // so that the user can type or submit forms inside the modal.
+                // We only preventDefault if the menu is not loaded.
+                if (!menuLoaded) {
+                    e.preventDefault();
+                }
             }
             return;
         }

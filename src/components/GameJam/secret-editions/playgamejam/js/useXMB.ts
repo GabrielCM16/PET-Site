@@ -286,11 +286,12 @@ export const useXMB = () => {
 
         else if(e.key === 'Enter' || e.key === ' '){
             e.preventDefault();
-            const activeSection = document.querySelector('.xmb-title.active');
+            const activeSection = section[sectionNumber];
             if (activeSection) {
-                const activeSubmenu = activeSection.querySelector('.submenu.active') as HTMLElement;
-                if (activeSubmenu) {
-                    activeSubmenu.click();
+                const submenus = activeSection.querySelectorAll('.submenu');
+                const targetSubmenu = submenus[subsection] as HTMLElement;
+                if (targetSubmenu) {
+                    targetSubmenu.click();
                 }
             }
         }

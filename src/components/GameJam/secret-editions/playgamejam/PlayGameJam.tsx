@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useXMB } from './js/useXMB';
 import SupportChatModal from './SupportChatModal';
 import PhotosModal from './PhotosModal';
+import UpdateModal from './UpdateModal';
 import './scss/main.css';
 import asset0 from './images/vid.mp4';
 import asset1 from './images/user.png';
@@ -34,6 +35,7 @@ const PlayGameJam: React.FC = () => {
   const navigate = useNavigate();
   const [isSupportOpen, setIsSupportOpen] = useState(false);
   const [isPhotosOpen, setIsPhotosOpen] = useState(false);
+  const [isUpdateOpen, setIsUpdateOpen] = useState(false);
 
   const handleLogout = async () => {
     try {
@@ -50,6 +52,7 @@ const PlayGameJam: React.FC = () => {
     <>
     {isSupportOpen && <SupportChatModal onClose={() => setIsSupportOpen(false)} />}
     {isPhotosOpen && <PhotosModal onClose={() => setIsPhotosOpen(false)} />}
+    {isUpdateOpen && <UpdateModal onClose={() => setIsUpdateOpen(false)} />}
     <div className="ps3-theme-container">
       
     <audio id="startup" src={asset18} />
@@ -117,7 +120,7 @@ Esta interface é uma homenagem ao sistema XMB do PlayStation® 3 e não possui 
                 <p className="titletext">Settings</p>
                 
                 <div className="xmb-contents">
-                    <div className="submenu one"  id="about">
+                    <div className="submenu one" id="about" onClick={() => setIsUpdateOpen(true)} style={{ cursor: 'pointer' }}>
                         <img id ="aboutimage" className="abimg" src={asset3} alt="" />
                         <div className="context">
                             <p id="about">System Update</p>

@@ -80,15 +80,22 @@ const SupportChatModal: React.FC<SupportChatModalProps> = ({ onClose }) => {
         "como termino o enigma": "A resposta deve ser encontrada por você.",
         "qual e a resposta": "Não posso responder.",
         "qual a resposta": "Não posso responder.",
-        "me de uma dica": "Faça a pergunta certa.",
-        "posso ganhar uma dica": "Faça a pergunta certa.",
-        "dica": "Faça a pergunta certa."
+        "me de uma dica": "Não não pode",
+        "posso ganhar uma dica": "Não...",
+        "dica": "Não...",
+        "fi": "paaraaa fi",
+        "fi cade": "cade o que fi?",
+        "fih": "paaraaa fih",
+        "fih cade": "cade o que fih?",
+        "a resposta": "😂​😂​😂​"
     };
 
     const checkSecret = (input: string) => {
-        const t = [97, 32, 109, 97, 105, 111, 114, 32, 101, 100, 105, 99, 97, 111, 32, 106, 97, 32, 114, 101, 97, 108, 105, 122, 97, 100, 97];
-        const s = String.fromCharCode(...t);
-        return input === s;
+        let h = 5381;
+        for (let i = 0; i < input.length; i++) {
+            h = ((h << 5) + h) + input.charCodeAt(i);
+        }
+        return h === -6342331365;
     };
 
     const handleSend = () => {
@@ -122,7 +129,7 @@ const SupportChatModal: React.FC<SupportChatModalProps> = ({ onClose }) => {
                 triggerCompletion = true;
             } else if (predefinedQuestions[cleanedInput] !== undefined) {
                 agentResponseText = predefinedQuestions[cleanedInput];
-            } else if (normalizedInput.includes("game jam")) {
+            } else if (normalizedInput.includes("game jam") || normalizedInput.includes("gamejam")) {
                 agentResponseText = "O que ela é?";
             } else {
                 const randomIndex = Math.floor(Math.random() * genericResponses.length);
@@ -155,7 +162,8 @@ const SupportChatModal: React.FC<SupportChatModalProps> = ({ onClose }) => {
     const handleSaveTeam = async () => {
         if (!teamName.trim()) return;
         setIsSaving(true);
-        const code = Math.random().toString(36).substring(2, 6).toUpperCase() + '-' + Math.random().toString(36).substring(2, 6).toUpperCase();
+        // "42" ofuscado usando Base64
+        const code = atob("NDI=");
         
         try {
             await addDoc(collection(db, "enigmaFinal"), {

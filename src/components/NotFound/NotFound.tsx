@@ -59,7 +59,7 @@ const NotFound = () => {
         </div>
 
         <div className="notfound-code">
-          &lt;/404&gt;
+          &lt;/1001&gt;
         </div>
       </div>
 

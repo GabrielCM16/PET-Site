@@ -8,7 +8,7 @@ import sonyLogo from './Imagens/Logo.svg';
 import playstationLogo from './Imagens/Playstation.svg';
 
 const LoginPlaystation: React.FC = () => {
-  const [id, setId] = useState<string>('gabriel@gmail.com');
+  const [id, setId] = useState<string>('WintryHeart6883');
   const [password, setPassword] = useState<string>('');
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -20,12 +20,9 @@ const LoginPlaystation: React.FC = () => {
     setIsLoading(true);
 
     try {
-      // Assuming the user types a full email in the ID field.
-      // If they type just an ID, you might need to append a domain e.g. `${id}@enigma.com`
       const emailToLogin = id.includes('@') ? id : `${id}@enigma.com`;
       await signInWithEmailAndPassword(auth, emailToLogin, password);
       
-      // Redirect to the new protected route
       navigate('/gamejam/playgamejam');
     } catch (err: any) {
       console.error("Login Error:", err);
@@ -56,6 +53,12 @@ const LoginPlaystation: React.FC = () => {
 
         {/* Lado Direito (Formulário) */}
         <div className="right-side">
+          <button 
+            onClick={() => navigate(-1)} 
+            style={{ alignSelf: 'flex-start', background: 'none', border: 'none', color: '#0070cc', cursor: 'pointer', marginBottom: '20px', fontSize: '16px', fontWeight: 'bold' }}
+          >
+            &#8592; Voltar
+          </button>
           <h1>Inicie uma sessão no PlayStation</h1>
 
           <form onSubmit={handleSubmit} style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -66,7 +69,7 @@ const LoginPlaystation: React.FC = () => {
               placeholder="ID de início de sessão (endereço de correio eletrónico)"
               value={id}
               onChange={(e) => setId(e.target.value)}
-              disabled={isLoading}
+              disabled={true}
             />
 
             {/* Input de Senha */}

@@ -47,7 +47,7 @@
             }
         }
 
-        &.two{
+        &.two, &.three, &.four{
             transition: all 250ms ease, opacity 200ms ease;
 
             #twotext{

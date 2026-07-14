@@ -184,13 +184,10 @@ export const useXMB = () => {
             // Remove active from previous
             if (sub > 0 && submenus[sub - 1]) {
                 submenus[sub - 1].classList.remove('active');
-                if (sn === 0 || sn === 1) {
-                    if (sub === 1) submenus[0].classList.add('inactive');
-                    if (sub === 2) submenus[0].classList.add('gotop');
-                    // For sub === 3, we don't have CSS for .submenu.two.gotop, so we just remove active from sub-1
-                } else {
-                    submenus[sub - 1].classList.add('inactive');
-                }
+                if (sub === 1) submenus[0].classList.add('inactive');
+                if (sub === 2) submenus[0].classList.add('gotop');
+                if (sub === 3) submenus[0].classList.add('gotop2');
+                if (sub === 4) submenus[0].classList.add('gotop3');
             }
             // Add active to current
             if (submenus[sub]) submenus[sub].classList.add('active');
@@ -203,15 +200,17 @@ export const useXMB = () => {
             // Add active to current
             if (submenus[sub]) {
                 submenus[sub].classList.add('active');
-                if (sn === 0 || sn === 1) {
-                    if (sub === 0) {
-                        submenus[0].classList.remove('inactive');
-                    }
-                    if (sub === 1) {
-                        submenus[0].classList.remove('gotop');
-                    }
-                } else {
-                    submenus[sub].classList.remove('inactive');
+                if (sub === 0) {
+                    submenus[0].classList.remove('inactive');
+                }
+                if (sub === 1) {
+                    submenus[0].classList.remove('gotop');
+                }
+                if (sub === 2) {
+                    submenus[0].classList.remove('gotop2');
+                }
+                if (sub === 3) {
+                    submenus[0].classList.remove('gotop3');
                 }
             }
         }
@@ -234,7 +233,10 @@ export const useXMB = () => {
             try { navSound.play(); } catch(e){}
             e.preventDefault();
             subsection++;
-            let maxSub = (sectionNumber === 0 || sectionNumber === 1) ? 2 : 1;
+            
+            const activeSection = section[sectionNumber];
+            let maxSub = activeSection ? activeSection.querySelectorAll('.submenu').length - 1 : 0;
+            
             if(subsection < 0){
                 subsection = 0;
             }
@@ -248,7 +250,10 @@ export const useXMB = () => {
             try { navSound.play(); } catch(e){}
             e.preventDefault();
             subsection--;
-            let maxSub = (sectionNumber === 0 || sectionNumber === 1) ? 2 : 1;
+            
+            const activeSection = section[sectionNumber];
+            let maxSub = activeSection ? activeSection.querySelectorAll('.submenu').length - 1 : 0;
+            
             if (subsection < 0) {
                 subsection = 0;
             }

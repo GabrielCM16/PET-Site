@@ -391,10 +391,18 @@ body {
   z-index: 2;
 }
 .xmb-contents .submenu.one.inactive {
-  margin-top: -250px;
   margin-bottom: 0px;
   margin-top: -270px;
   transition: all 250ms ease, opacity 200ms ease;
+}
+.xmb-contents .submenu.one.inactive.gotop {
+  margin-top: -350px;
+}
+.xmb-contents .submenu.one.inactive.gotop2 {
+  margin-top: -450px;
+}
+.xmb-contents .submenu.one.inactive.gotop3 {
+  margin-top: -550px;
 }
 .xmb-contents .submenu.one.inactive .subtext {
   opacity: 0;
@@ -410,21 +418,31 @@ body {
   transition: scale 300ms;
   scale: 0.7;
 }
-.xmb-contents .submenu.two {
+.xmb-contents .submenu.two,
+.xmb-contents .submenu.three,
+.xmb-contents .submenu.four {
   transition: all 250ms ease, opacity 200ms ease;
 }
-.xmb-contents .submenu.two #twotext {
+.xmb-contents .submenu.two #twotext,
+.xmb-contents .submenu.three #twotext,
+.xmb-contents .submenu.four #twotext {
   font-size: 1.5rem;
   position: absolute;
   margin-left: 120px;
 }
-.xmb-contents .submenu.two img {
+.xmb-contents .submenu.two img,
+.xmb-contents .submenu.three img,
+.xmb-contents .submenu.four img {
   scale: 0.7;
 }
-.xmb-contents .submenu.two.active {
+.xmb-contents .submenu.two.active,
+.xmb-contents .submenu.three.active,
+.xmb-contents .submenu.four.active {
   margin-top: 200px;
 }
-.xmb-contents .submenu.two.active #twotext {
+.xmb-contents .submenu.two.active #twotext,
+.xmb-contents .submenu.three.active #twotext,
+.xmb-contents .submenu.four.active #twotext {
   -webkit-animation: glow 1s ease-in-out infinite alternate;
           animation: glow 1s ease-in-out infinite alternate;
 }
@@ -436,7 +454,9 @@ body {
     text-shadow: 0 0 5px #dfdfdf, 0 0 8px #c9c9c9, 0 0 15px #b6b6b4, 0 0 20px #b9b9b9;
   }
 }
-.xmb-contents .submenu.two.active img {
+.xmb-contents .submenu.two.active img,
+.xmb-contents .submenu.three.active img,
+.xmb-contents .submenu.four.active img {
   transition: scale 100ms ease-in-out;
   scale: 1;
 }
@@ -586,6 +606,16 @@ body {
 }
 .xmb-title.games .xmb-contents .submenu.two.active {
   margin-top: 200px;
+}
+.xmb-title.games .xmb-contents .submenu.three.active {
+  margin-top: 200px;
+}
+.xmb-title.games .xmb-contents .submenu.four.active {
+  margin-top: 200px;
+}
+.xmb-title.games .xmb-contents .submenu img {
+  width: 200px;
+  height: auto;
 }
 
 .about-bg {

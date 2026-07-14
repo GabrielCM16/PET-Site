@@ -24,12 +24,18 @@ import asset12 from './images/video.png';
 import asset13 from './images/youtube.png';
 import asset14 from './images/prime.png';
 import asset15 from './images/games.png';
-import asset16 from './images/uncharted.png';
-import asset17 from './images/gow3.png';
+import logoVii from './images/logo-vii-ps3.png';
+import logoViii from './images/logo-viii-ps3.png';
+import logoIx from './images/logo-ix-ps3.png';
+import logoX from './images/logo-x-ps3.png';
+import spotifyIcon from './images/spotify.png';
+import netflixIcon from './images/netflix.png';
+import twitchIcon from './images/twitch.png';
 import asset18 from './audio/startup.mp3';
 import asset19 from './audio/nav.mp3';
+import woodkidMusic from './audio/Woodkid.mp3';
 import suporte from './images/atendimento-ao-cliente.png'
-
+ 
 const PlayGameJam: React.FC = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -57,7 +63,7 @@ const PlayGameJam: React.FC = () => {
       
     <audio id="startup" src={asset18} />
     <audio id="nav" src={asset19} />
-    <audio id="my-music" src={asset18} loop />
+    <audio id="my-music" src={woodkidMusic} loop />
     <video autoPlay loop muted playsInline className="back-vid" id="vid" src={asset0}></video>
     
     <header>
@@ -155,7 +161,7 @@ Esta interface é uma homenagem ao sistema XMB do PlayStation® 3 e não possui 
                     </div>
                     <div className="submenu two" id="two">
                         <img className="twoimg" src={asset8} alt="" />
-                        <p id="twotext">test</p>
+                        <p id="twotext">Capturas de Tela</p>
                     </div>
                 </div>
             </div>
@@ -166,12 +172,12 @@ Esta interface é uma homenagem ao sistema XMB do PlayStation® 3 e não possui 
                 
                 <div className="xmb-contents">
                     <div className="submenu one"  id="about">
-                        <img id ="aboutimage" className="abimg" src={asset10} alt="" />
-                        <p id="about">Minha música</p>
+                        <img id ="aboutimage" className="abimg" src={asset9} alt="" />
+                        <p id="about">Minus Sixty One</p>
                     </div>
                     <div className="submenu two" id="two">
-                        <img className="twoimg" src={asset11} alt="" />
-                        <p id="twotext">Biggie</p>
+                        <img className="twoimg" src={spotifyIcon} alt="" />
+                        <p id="twotext">Spotify</p>
                     </div>
                 </div>
             </div>
@@ -189,6 +195,14 @@ Esta interface é uma homenagem ao sistema XMB do PlayStation® 3 e não possui 
                         <img className="twoimg" src={asset14} alt="" />
                         <p id="twotext">Amazon Prime Video</p>
                     </div>
+                    <div className="submenu three" id="three">
+                        <img className="twoimg" src={netflixIcon} alt="" />
+                        <p id="twotext">Netflix</p>
+                    </div>
+                    <div className="submenu four" id="four">
+                        <img className="twoimg" src={twitchIcon} alt="" />
+                        <p id="twotext">Twitch</p>
+                    </div>
                 </div>
             </div>
 
@@ -197,13 +211,21 @@ Esta interface é uma homenagem ao sistema XMB do PlayStation® 3 e não possui 
                 <p className="titletext">Games</p>
                 
                 <div className="xmb-contents">
-                    <div className="submenu one">
-                        <img id ="aboutimage" className="abimg" src={asset16} alt="" />
-                        <p id="about">Uncharted 3</p>
+                    <div className="submenu one" onClick={() => window.open('https://itch.io/jam/ab-game-jam-vii', '_blank')} style={{ cursor: 'pointer' }}>
+                        <img id ="aboutimage" className="abimg" src={logoVii} alt="" />
+                        <p id="about">A&B Game Jam VII</p>
                     </div>
-                    <div className="submenu two" id="two">
-                        <img className="twoimg" src={asset17} alt="" />
-                        <p id="twotext">God of War 3</p>
+                    <div className="submenu two" id="two" onClick={() => window.open('https://itch.io/jam/ab-game-jam-viii', '_blank')} style={{ cursor: 'pointer' }}>
+                        <img className="twoimg" src={logoViii} alt="" />
+                        <p id="twotext">A&B Game Jam VIII</p>
+                    </div>
+                    <div className="submenu three" id="three" onClick={() => window.open('https://itch.io/jam/ab-gamejam-ix', '_blank')} style={{ cursor: 'pointer' }}>
+                        <img className="twoimg" src={logoIx} alt="" />
+                        <p id="twotext">A&B Game Jam IX</p>
+                    </div>
+                    <div className="submenu four" id="four" onClick={() => window.open('https://itch.io/jam/ab-game-jam-x', '_blank')} style={{ cursor: 'pointer' }}>
+                        <img className="twoimg" src={logoX} alt="" />
+                        <p id="twotext">A&B Game Jam X</p>
                     </div>
                 </div>
             </div>

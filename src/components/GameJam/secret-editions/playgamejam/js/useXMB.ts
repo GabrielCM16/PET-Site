@@ -26,7 +26,10 @@ export const useXMB = () => {
     let sectionNumber = 0;
     let subsection = 0;
     let multiSection = false;
+    multiSection;
     let menuLoaded = false;
+
+    console.log(submenu);
     
     // Some browsers block autoplay without interaction, wrapped in a try/catch just in case
     try {

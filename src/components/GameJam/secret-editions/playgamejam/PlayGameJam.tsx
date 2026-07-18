@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { useAuth } from '../../../../context/AuthContext';
 import { auth } from '../../../../firebase';
 import { signOut } from 'firebase/auth';
@@ -18,8 +18,6 @@ import asset6 from './images/photo.png';
 import asset7 from './images/photo.png';
 import asset8 from './images/resume.png';
 import asset9 from './images/music.png';
-import asset10 from './images/music.png';
-import asset11 from './images/resume.png';
 import asset12 from './images/video.png';
 import asset13 from './images/youtube.png';
 import asset14 from './images/prime.png';
@@ -38,6 +36,7 @@ import suporte from './images/atendimento-ao-cliente.png'
  
 const PlayGameJam: React.FC = () => {
   const { user } = useAuth();
+  user;
   const navigate = useNavigate();
   const [isSupportOpen, setIsSupportOpen] = useState(false);
   const [isPhotosOpen, setIsPhotosOpen] = useState(false);

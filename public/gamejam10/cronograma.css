@@ -68,3 +68,20 @@
     transform: translateY(-5px); /* No mobile, sobe em vez de ir pro lado */
   }
 }
+
+/* Destaque especial para o evento atual ou próximo */
+.current-event {
+  border-left: 4px solid #ff007f !important; /* Rosa neon */
+  background: rgba(255, 0, 127, 0.08) !important;
+  box-shadow: 0 0 15px rgba(255, 0, 127, 0.25);
+  animation: pulse-glow 2s infinite alternate;
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.15);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.35);
+  }
+}

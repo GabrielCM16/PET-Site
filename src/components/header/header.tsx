@@ -64,7 +64,7 @@ const Header: React.FC = () => {
             <Link to="/downloads">Publicações</Link>
           </div>
 
-          <a href="/gamejam/" className="gamejam-link">
+          <a href="/gamejam10/" className="gamejam-link">
             <span>GameJam</span>
           </a>
 
@@ -88,7 +88,7 @@ const Header: React.FC = () => {
       {isMenuOpen && (
         <div className="mobile-menu">
           <Link to="/" onClick={toggleMenu}>Início</Link>
-          <a href="/gamejam/" className="gamejam-link">
+          <a href="/gamejam10/" className="gamejam-link">
             <span>GameJam</span>
           </a>
           <Link to="/membros" onClick={toggleMenu}>Membros</Link>

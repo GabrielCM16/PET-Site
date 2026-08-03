@@ -38,7 +38,7 @@ function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/downloads" element={<Downloads />} />
           <Route path="/logo_interessante" element={<Inicio />} />
-          <Route path="/gamejam" element={<GameJamHistory />} />
+          <Route path="/gamejam10" element={<GameJamHistory />} />
         </Route>
 
         <Route path="/bagre" element={<Bagre />} />

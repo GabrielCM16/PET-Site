@@ -10,12 +10,12 @@ import docom from './../../assets/images/projects/insta.png';
 import minicurso from './../../assets/images/projects/minicurso.png';
 import agasalho from './../../assets/images/projects/Agasalho.png';
 import recepcao from './../../assets/images/projects/recepcao.png';
-import cipet from './../../assets/images/projects/cipet.png';
+import cipet from './../../assets/images/projects/CIPET.png';
 import avaliacao from './../../assets/images/projects/avaliacaoDisciplinas.png';
 import seminarios from './../../assets/images/projects/SeminariosMult.png';
 import newspet from './../../assets/images/projects/newspet.png';
 import visitasTEC from './../../assets/images/projects/VisitasTec.png';
-import cinepet from './../../assets/images/projects/cinepet.png';
+import cinepet from './../../assets/images/projects/CinePET.png';
 import petdiscute from './../../assets/images/projects/petdiscute.png';
 import icvs from './../../assets/images/projects/icvs.png';
 

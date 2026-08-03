@@ -59,7 +59,7 @@ const Header: React.FC = () => {
         <nav className="pet-nav desktop">
 
           <div className="nav-side left">
-            <Link to="/">Início</Link>
+            <Link to="/">TESTE</Link>
             <Link to="/membros">Membros</Link>
             <Link to="/downloads">Publicações</Link>
           </div>

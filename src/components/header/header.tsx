@@ -70,7 +70,7 @@ const Header: React.FC = () => {
 
           <div className="nav-side right">
             <Link to="/projetos">Projetos</Link>
-            <Link to="/sala">TESTEEEEEAHAHAHA</Link>
+            <Link to="/sala">PETSala</Link>
             <Link to="/faq">Faq</Link>
           </div>
 

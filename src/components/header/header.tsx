@@ -64,13 +64,15 @@ const Header: React.FC = () => {
             <Link to="/downloads">Publicações</Link>
           </div>
 
-          {/* TODO: ARRUMAR AQUI PARA RECEBER UNIPET*/}
-          <a href="/gamejam10/" className="gamejam-link">
+          {/* TODO: ARRUMAR AQUI PARA RECEBER UNIPET
+         <a href="/gamejam10/" className="gamejam-link">
             <span>GameJam</span>
           </a>
 
+          */}
+
           <div className="nav-side right">
-            <Link to="/projetos">TESTE DNV</Link>
+            <Link to="/projetos">Projetos</Link>
             <Link to="/sala">PETSala</Link>
             <Link to="/faq">Faq</Link>
           </div>

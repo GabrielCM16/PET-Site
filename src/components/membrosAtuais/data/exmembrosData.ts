@@ -94,4 +94,7 @@ export const ExMembros: string[] = [
   '92 - José Daniel Bahls 13/09/2025 até 07/11/2025',
   '93 - Guilherme Altmeyer Soares 13/08/2024 até 01/12/2025',
   '94 - Pedro Augusto Silva Cabrera 12/12/2024 até 09/04/2026',
+  '95 - Thalita Wiederkehr Pereira 01/01/2024 até 01/07/2026',
+  '96 - Gabriel Costa de Moraes 12/12/2024 até 07/07/2026',
+  '97 - Thiago Oliveira Dupim 15/05/2025 até 14/07/2026',
 ];

@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import bugPcIcon from "./icons/bug-do-computador.png";
 import fantasmaIcon from "./icons/fantasma.png";
 import espacoSideralIcon from "./icons/espaco-sideral.png";
@@ -8,6 +9,7 @@ import pragaMedicoIcon from "./icons/medico-da-peste.png";
 import pacmanIcon from "./icons/jogo.png";
 import aventuraIcon from "./icons/aventura.png";
 import espadasIcon from "./icons/espadas.png";
+import dado from "./icons/dado.png"
 
 // Pixel Art Helper to render retro sprites using inline SVGs
 interface PixelArtProps {
@@ -56,6 +58,7 @@ interface EditionItem {
 }
 
 const editions: EditionItem[] = [
+    { edition: "X", year: "2026", url: "gamejam10", color: "#FFD700", spriteType: "image", spriteImage: dado },
     { edition: "IX", year: "2025", url: "https://itch.io/jam/ab-gamejam-ix", color: "#39ff14", spriteType: "image", spriteImage: bugPcIcon },
     { edition: "VIII", year: "2024", url: "https://itch.io/jam/ab-game-jam-viii", color: "#ff2a5f", spriteType: "image", spriteImage: fantasmaIcon },
     { edition: "VII", year: "2023", url: "https://itch.io/jam/ab-game-jam-vii", color: "#ffea00", spriteType: "svg", matrix: marioMatrix, colors: { R: "#ff0000", K: "#6b3e26", S: "#ffcc99" } },

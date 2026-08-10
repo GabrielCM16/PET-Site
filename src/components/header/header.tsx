@@ -90,8 +90,8 @@ const Header: React.FC = () => {
       {isMenuOpen && (
         <div className="mobile-menu">
           <Link to="/" onClick={toggleMenu}>Início</Link>
-          <a href="/gamejam10/" className="gamejam-link">
-            <span>GameJam</span>
+          <a href="/unipet/" className="unipet-link">
+            <span>UniPET</span>
           </a>
           <Link to="/membros" onClick={toggleMenu}>Membros</Link>
           <Link to="/downloads" onClick={toggleMenu}>Publicações</Link>

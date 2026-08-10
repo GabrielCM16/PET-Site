@@ -1,0 +1,17 @@
+name: Deploy Automático PET-Site
+
+on:
+  push:
+    branches:
+      - main  # ⚠️ Certifique-se de que este é o nome real da branch principal no GitHub
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Atualizar pasta do servidor e rodar Build
+        run: |
+          cd /var/www/html
+          git reset --hard origin/main
+          git pull origin main
+          npm run build

@@ -12,6 +12,10 @@
         "destination": "/gamejam10/index.html"
       },
       {
+        "source": "/unipet/**",
+        "destination": "/unipet/index.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

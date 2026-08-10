@@ -137,6 +137,90 @@
   box-shadow: 0 0 20px rgba(255, 0, 140, 0.12), 0 0 25px rgba(0, 183, 255, 0.12);
 }
 
+
+/*=================================================================================================================================*/
+/* BOTÃO UNIPET 2026 */
+/*=================================================================================================================================*/
+.unipet-link {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .6rem 1rem;
+  border-radius: 999px;
+  
+  /* Fundo escuro com um gradiente colorido bem forte por trás */
+  background: #181738; 
+  overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease;
+  
+  /* Super brilho neon misturando Rosa, Roxo e Azul */
+  box-shadow: 0 0 15px rgba(254, 2, 113, 0.4), 
+              0 0 30px rgba(101, 84, 212, 0.3), 
+              0 0 45px rgba(0, 41, 226, 0.2);
+}
+
+/* Borda colorida em degradê usando TODAS as suas cores vibrantes */
+/* Borda colorida ultra destacada com todas as cores aparentes */
+.unipet-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  padding: 3px; /* Aumentado para 3px para as cores aparecerem bem */
+  /* Sequência de cores calibrada para o amarelo brilhar no meio/fim */
+  background: linear-gradient(90deg, #fe0271, #6554d4, #0029e2, #ebce06, #b5335e);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+
+/* Fundo interno colorido bem sutil e brilhante */
+.unipet-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(254, 2, 113, 0.15), rgba(0, 41, 226, 0.15));
+  z-index: 1;
+}
+
+.unipet-link span,
+.unipet-link strong {
+  position: relative;
+  z-index: 2;
+}
+
+/* Texto normal com sombra colorida */
+.unipet-link span {
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: .5px;
+  color: #white;
+  text-shadow: 0 0 8px rgba(101, 84, 212, 0.6);
+}
+
+/* Texto em destaque com gradiente Arco-Íris Ultra Colorido */
+.unipet-link strong {
+  font-size: 1.15rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #fe0271, #ebce06, #6554d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 5px rgba(235, 206, 6, 0.5));
+}
+
+/* Efeito ao passar o mouse: Brilha muito mais e cresce levemente */
+.unipet-link:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 25px rgba(254, 2, 113, 0.7), 
+              0 0 40px rgba(101, 84, 212, 0.6), 
+              0 0 60px rgba(0, 41, 226, 0.5);
+}
+
+
 /*=================================================================================================================================*/
 /* BOTÕES GERAIS */
 /*=================================================================================================================================*/

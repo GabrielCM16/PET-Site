@@ -60,7 +60,7 @@ const Header: React.FC = () => {
 
           <div className="nav-side left">
             <Link to="/">Início</Link>
-            <Link to="/membros">Teste automacao</Link>
+            <Link to="/membros">Membros</Link>
             <Link to="/downloads">Publicações</Link>
           </div>
 

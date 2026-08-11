@@ -9,6 +9,8 @@ import joao from "../../../assets/images/members/joao.png";
 import qvd from "../../../assets/images/members/qvd.png";
 import rafael from "../../../assets/images/members/rafael.png";
 import vinicius from "../../../assets/images/members/vinicius.png";
+import antunes from "../../../assets/images/members/antunes.jpeg";
+
 import noPic from "../../../assets/images/members/noPic.jpg"
 
 export interface MembroLinks {
@@ -196,7 +198,6 @@ export const membros: Membro[] = [
       Hobby: "",
       Filme: "",
       Jogo: "",
-      LIVRO: "",
       Música: "",
       Comida: "",
     },
@@ -272,22 +273,22 @@ export const membros: Membro[] = [
 
   {
     nome: "Mateus Antunes Belo",
-    foto: noPic,
+    foto: antunes,
     icv: "ICV: TBD",
     membroDesde: "2026",
     links: {
-      instagram: "",
-      email: "",
+      github:  "https://github.com/belou-devv",
+      instagram: "https://www.instagram.com/mateus_annttunes/",
+      email: "mateus.antunes2@unioestebr.onmicrosoft.com",
     },
     saibaMais: {
       CidadeNatal: "Foz do Iguaçu - PR",
       MotivoCurso:
         "",
-      Hobby: "",
-      Filme: "",
-      Jogo: "",
-      LIVRO: "",
-      Música: "",
+      Hobby: "Jogos e vôlei",
+      Filme: "Kung Fu Panda 2",
+      Jogo: "Zelda: Breath of the Wild",
+      Música: "Coragem - Sant",
       Comida: "",
     },
   },
@@ -333,11 +334,10 @@ export const membros: Membro[] = [
       MotivoCurso: "Ter tido experiência de trabalho no setor de suporte de informática e gostar de hardware",
       Hobby: "Leitura, música, ciclismo",
       Filme: "Sacrface (1983)",
-      Jogo: "Futebol, truco, xadrez",
+      Jogo: "Truco, xadrez",
       música: "So Appalled - Ye",
       Comida: "Arroz, feijão, bife e salada",
     },
   },
-
 
 ];

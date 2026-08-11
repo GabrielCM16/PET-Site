@@ -10,6 +10,7 @@ import qvd from "../../../assets/images/members/qvd.png";
 import rafael from "../../../assets/images/members/rafael.png";
 import vinicius from "../../../assets/images/members/vinicius.png";
 import antunes from "../../../assets/images/members/antunes.jpeg";
+import iokio from "../../../assets/images/members/iokio.jpeg";
 
 import noPic from "../../../assets/images/members/noPic.jpg"
 
@@ -184,22 +185,19 @@ export const membros: Membro[] = [
 
   {
     nome: "Iokio Caina Hirai Rocha",
-    foto: noPic,
+    foto: iokio,
     icv: "ICV: TBD",
     membroDesde: "2026",
     links: {
-      instagram: "",
-      email: "",
+      instagram: "https://instagram.com/cainaiokio",
+      email: "iokiocaina@gmail.com",
     },
     saibaMais: {
       CidadeNatal: "Cascavel - PR",
-      MotivoCurso:
-        "",
-      Hobby: "",
-      Filme: "",
-      Jogo: "",
-      Música: "",
-      Comida: "",
+      Hobby: "instrumentos musicais, música, canto, fotografia e edição",
+      Filme: "O Aprendiz de Feiticeiro",
+      Jogo: "Valorant",
+      Música: "Bohemian Rhapsody - Freddie Mercury",
     },
   },
 
@@ -283,13 +281,10 @@ export const membros: Membro[] = [
     },
     saibaMais: {
       CidadeNatal: "Foz do Iguaçu - PR",
-      MotivoCurso:
-        "",
       Hobby: "Jogos e vôlei",
       Filme: "Kung Fu Panda 2",
       Jogo: "Zelda: Breath of the Wild",
       Música: "Coragem - Sant",
-      Comida: "",
     },
   },
 

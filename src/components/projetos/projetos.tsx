@@ -114,7 +114,7 @@ const Projetos: React.FC = () => {
                                     Em 2026, será realizada a <strong>A&B Game Jam X</strong>!
                                 </div>
                                 <div className="button-group-projeto">
-                                    <Link to="/gamejam10" className="btn-gamejam-custom">Ver Histórico de Game Jams 🎮</Link>
+                                    <Link to="/gamejam" className="btn-gamejam-custom">Ver Histórico de Game Jams 🎮</Link>
                                 </div>
                             </div>
                         </div>

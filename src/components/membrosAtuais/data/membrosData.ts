@@ -12,7 +12,7 @@ import vinicius from "../../../assets/images/members/vinicius.png";
 import antunes from "../../../assets/images/members/antunes.jpeg";
 import iokio from "../../../assets/images/members/iokio.jpeg";
 
-import noPic from "../../../assets/images/members/noPic.jpg"
+// import noPic from "../../../assets/images/members/noPic.jpg"
 
 export interface MembroLinks {
   lattes?: string;

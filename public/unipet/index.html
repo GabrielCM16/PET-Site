@@ -17,6 +17,34 @@
 </head>
 <body>
 
+  <!-- ── MENU FLUTUANTE ── -->
+  <header class="floating-nav" id="topo">
+    <div class="floating-nav-inner">
+      <a class="floating-nav-brand" href="#hero" aria-label="Voltar ao topo">UniPET 26</a>
+
+      <button
+        class="floating-nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="floating-nav-links"
+        aria-label="Abrir menu"
+      >
+        <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+      </button>
+
+      <nav class="floating-nav-links" id="floating-nav-links" aria-label="Navegação principal">
+        <a href="#hero">Início</a>
+        <a href="#formulario">Inscrição</a>
+        <a href="#save-the-date">Data</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#programacao">Programação</a>
+        <a href="#organizacao">Organização</a>
+        <a href="#local">Local</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
   <!-- ══════════════════════════════════
        MAIN CONTENT
   ══════════════════════════════════ -->
@@ -478,7 +506,7 @@
   <!-- ══════════════════════════════════
        FOOTER
   ══════════════════════════════════ -->
-  <footer>
+  <footer id="contato">
     <div class="footer-grid">
 
       <!-- Brand -->
@@ -560,6 +588,54 @@
 
       tick();
       setInterval(tick, 1000);
+    })();
+  </script>
+
+  <!-- ── Floating Menu Script ── -->
+  <script>
+    (function () {
+      const nav = document.querySelector('.floating-nav');
+      const toggle = document.querySelector('.floating-nav-toggle');
+      const linksWrap = document.querySelector('.floating-nav-links');
+      const links = document.querySelectorAll('.floating-nav-links a');
+
+      if (!nav || !toggle || !linksWrap) return;
+
+      function closeMenu() {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Abrir menu');
+        const icon = toggle.querySelector('.material-symbols-outlined');
+        if (icon) icon.textContent = 'menu';
+      }
+
+      function openMenu() {
+        nav.classList.add('is-open');
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Fechar menu');
+        const icon = toggle.querySelector('.material-symbols-outlined');
+        if (icon) icon.textContent = 'close';
+      }
+
+      toggle.addEventListener('click', function () {
+        if (nav.classList.contains('is-open')) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      links.forEach(function (link) {
+        link.addEventListener('click', function () {
+          closeMenu();
+        });
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 900) {
+          closeMenu();
+        }
+      });
     })();
   </script>
 

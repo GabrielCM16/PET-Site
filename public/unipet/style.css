@@ -52,6 +52,9 @@
   /* Border */
   --border-std: 2px solid var(--color-on-background);
   --border-thin: 1px solid var(--color-on-background);
+
+  /* Floating nav */
+  --nav-height: 68px;
 }
 
 /* ── Reset ── */
@@ -63,6 +66,11 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+section[id],
+footer[id] {
+  scroll-margin-top: calc(var(--nav-height) + 16px);
 }
 
 body {
@@ -122,6 +130,96 @@ main {
   flex: 1;
   position: relative;
   z-index: 1;
+}
+
+/* ============================================================
+   FLOATING NAV
+   ============================================================ */
+.floating-nav {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: min(1240px, calc(100% - 24px));
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border: var(--border-std);
+  box-shadow: var(--shadow-md);
+}
+
+.floating-nav-inner {
+  min-height: var(--nav-height);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.floating-nav-brand {
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: var(--color-on-background);
+}
+
+.floating-nav-links {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.floating-nav-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 6px 12px;
+  border: var(--border-thin);
+  background: var(--color-surface-container-lowest);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.floating-nav-links a:hover,
+.floating-nav-links a:focus-visible {
+  background: var(--color-primary-container);
+  color: var(--color-on-primary);
+  transform: translate(-2px, -2px);
+  outline: none;
+}
+
+.floating-nav-toggle {
+  display: none;
+  margin-left: auto;
+  width: 42px;
+  height: 42px;
+  border: var(--border-std);
+  background: var(--color-surface-container-lowest);
+  color: var(--color-on-background);
+  box-shadow: var(--shadow-sm);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.floating-nav-toggle .material-symbols-outlined {
+  font-size: 26px;
+}
+
+.floating-nav-toggle:hover,
+.floating-nav-toggle:focus-visible {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--color-on-background);
+  outline: none;
 }
 
 /* ============================================================
@@ -318,6 +416,48 @@ main {
 
   .formulario-button {
     width: 100%;
+  }
+
+  .floating-nav {
+    top: 10px;
+    width: calc(100% - 16px);
+  }
+
+  .floating-nav-inner {
+    min-height: 58px;
+    padding: 8px 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .floating-nav-brand {
+    font-size: 20px;
+  }
+
+  .floating-nav-toggle {
+    display: inline-flex;
+  }
+
+  .floating-nav-links {
+    display: none;
+    width: 100%;
+    margin-left: 0;
+    padding-top: 8px;
+    gap: 8px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .floating-nav.is-open .floating-nav-links {
+    display: flex;
+  }
+
+  .floating-nav-links a {
+    width: 100%;
+    justify-content: flex-start;
+    min-height: 40px;
+    padding: 8px 12px;
+    font-size: 11px;
   }
 
   .lanyard-wrap {
@@ -1250,6 +1390,7 @@ footer {
   :root {
     --section-gap: 56px;
     --gutter:      16px;
+    --nav-height: 58px;
   }
 
   /* ── Save the Date ── */

@@ -1,17 +1,17 @@
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
-import Header from './components/header/header';
-import Footer from './components/footer/footer';
-import Inicio from './components/Inicio/Inicio';
-import Membros from './components/membrosAtuais/membroAtuais';
-import Sala from './components/sala/sala';
-import PROJETOS from './components/projetos/projetos';
-import Newspetletter from './components/newspet/newspet'; 
-import Faq from './components/faq/faq'; 
-import Bagre from './components/membrosAtuais/bagre';
-import Downloads from './components/Downloads/downloads';
-import NotFound from "./components/NotFound/NotFound";
-import GameJamHistory from "./components/GameJam/GameJamHistory";
-import SecretGameJamLoader from "./components/GameJam/secret-editions/SecretGameJamLoader";
+import Header from './components/layout/Header/Header';
+import Footer from './components/layout/Footer/Footer';
+import Inicio from './pages/Inicio/Inicio';
+import Membros from './pages/Membros/Membros';
+import Sala from './pages/Sala/Sala';
+import PROJETOS from './pages/Projetos/Projetos';
+import Newspetletter from './pages/NewsPET/NewsPET'; 
+import Faq from './pages/Faq/Faq'; 
+import Bagre from './pages/Bagre/Bagre';
+import Downloads from './pages/Downloads/Downloads';
+import NotFound from "./pages/NotFound/NotFound";
+import GameJamHistory from "./pages/GameJam/GameJamHistory";
+import SecretGameJamLoader from "./pages/GameJam/secret-editions/SecretGameJamLoader";
 import { AuthProvider } from './context/AuthContext';
 
 // Componente de Layout para agrupar as rotas que USAM header e footer

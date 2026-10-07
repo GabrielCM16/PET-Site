@@ -11,6 +11,8 @@ import Bagre from './components/membrosAtuais/bagre';
 import Downloads from './components/Downloads/downloads';
 import NotFound from "./components/NotFound/NotFound";
 import GameJamHistory from "./components/GameJam/GameJamHistory";
+import SecretGameJamLoader from "./components/GameJam/secret-editions/SecretGameJamLoader";
+import { AuthProvider } from './context/AuthContext';
 
 // Componente de Layout para agrupar as rotas que USAM header e footer
 const MainLayout = () => {
@@ -23,30 +25,32 @@ const MainLayout = () => {
   );
 };
 
-
 function App() {
   return (
-    <Router>
-      <Routes>
-        {/* Agrupamento das rotas que possuem Header e Footer */}
-        <Route element={<MainLayout />}>
-          <Route path="/" element={<Inicio />} />
-          <Route path="/membros" element={<Membros />} />
-          <Route path="/sala" element={<Sala />} />
-          <Route path="/projetos" element={<PROJETOS />} />
-          <Route path="/newspetletter" element={<Newspetletter />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/downloads" element={<Downloads />} />
-          <Route path="/logo_interessante" element={<Inicio />} />
-          <Route path="/gamejam" element={<GameJamHistory />} />
-        </Route>
+    <AuthProvider>
+      <Router>
+        <Routes>
+          {/* Agrupamento das rotas que possuem Header e Footer */}
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<Inicio />} />
+            <Route path="/membros" element={<Membros />} />
+            <Route path="/sala" element={<Sala />} />
+            <Route path="/projetos" element={<PROJETOS />} />
+            <Route path="/newspetletter" element={<Newspetletter />} />
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/downloads" element={<Downloads />} />
+            <Route path="/logo_interessante" element={<Inicio />} />
+            <Route path="/gamejam" element={<GameJamHistory />} />
+          </Route>
 
-        <Route path="/bagre" element={<Bagre />} />
+          <Route path="/bagre" element={<Bagre />} />
+          <Route path="/gamejam/:editionId" element={<SecretGameJamLoader />} />
 
-        {/* Rota 404 - Captura qualquer URL não definida acima */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
+          {/* Rota 404 - Captura qualquer URL não definida acima */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
 
